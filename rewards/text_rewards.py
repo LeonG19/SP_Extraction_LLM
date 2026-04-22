@@ -236,6 +236,112 @@ class TextRewards(object):
         )
 
     @staticmethod
+    def WES(preds: list, refs: list, lam: float = 0.1, k: float = 5.0, x0: float = 0.6) -> list:
+        """
+        Sliding-window Word Edit Similarity (WES) reward function from LeakAgent (Appendix A.1).
+
+        For each (pred u, ref d) pair:
+          1. Compute Word Edit Distance (WED) at word level via Levenshtein.
+          2. Apply sliding window when |u| >= |d|:
+               SWES(u, d) = max_{i in [0, |u|-|d|]} -log(WED(u[i:i+|d|], d))
+             and when |u| < |d|:
+               SWES(u, d) = -log(WED(u, d))
+          3. Normalize via sigmoid:
+               SWESnorm = 1 / (1 + exp(-k * (SWES - x0)))   with k=5, x0=0.6
+          4. Final reward:
+               R(u, d) = (1 - lam) * SWESnorm + lam * (1 / ||u| - |d||)
+             with lam=0.1. When |u| == |d|, the length penalty term is 1.0
+             (perfect length match).
+
+        :param preds: list of generated responses u
+        :param refs:  list of target/reference strings d (same length as preds)
+        :param lam:   weight for length penalty term (default 0.1)
+        :param k:     sigmoid steepness (default 5.0)
+        :param x0:    sigmoid intercept (default 0.6)
+        :return:      list of reward scores in [0, 1]
+        """
+        try:
+            find("tokenizers/punkt")
+        except LookupError:
+            nltk.download("punkt", quiet=True)
+        try:
+            find("tokenizers/punkt_tab")
+        except LookupError:
+            nltk.download("punkt_tab", quiet=True)
+
+        def word_edit_distance(words1: list, words2: list) -> float:
+            """Normalized word-level Levenshtein distance between two word lists."""
+            len1, len2 = len(words1), len(words2)
+            if len1 == 0 and len2 == 0:
+                return 0.0
+            if len1 == 0 or len2 == 0:
+                return 1.0
+
+            dp = np.zeros((len1 + 1, len2 + 1), dtype=float)
+            for i in range(len1 + 1):
+                dp[i][0] = i
+            for j in range(len2 + 1):
+                dp[0][j] = j
+
+            for i in range(1, len1 + 1):
+                for j in range(1, len2 + 1):
+                    if words1[i - 1] == words2[j - 1]:
+                        dp[i][j] = dp[i - 1][j - 1]
+                    else:
+                        dp[i][j] = 1.0 + min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1])
+
+            # Normalize by the length of the longer sequence
+            return dp[len1][len2] / max(len1, len2)
+
+        def _swes(u_words: list, d_words: list) -> float:
+            """Sliding-window Word Edit Similarity (Eq. 4 in paper)."""
+            len_u, len_d = len(u_words), len(d_words)
+
+            if len_u < len_d:
+                # u is shorter than d: compare directly
+                wed = word_edit_distance(u_words, d_words)
+                if wed == 0.0:
+                    return np.inf
+                return -np.log(wed)
+            else:
+                # slide a window of size |d| over u, take the best match
+                best = -np.inf
+                for start in range(len_u - len_d + 1):
+                    window = u_words[start: start + len_d]
+                    wed = word_edit_distance(window, d_words)
+                    if wed == 0.0:
+                        return np.inf  # perfect window match found
+                    score = -np.log(wed)
+                    if score > best:
+                        best = score
+                return best
+
+        def _swes_norm(swes_val: float, k: float, x0: float) -> float:
+            """Sigmoid normalization of SWES (Eq. 5 in paper)."""
+            if np.isinf(swes_val):
+                return 1.0
+            return 1.0 / (1.0 + np.exp(-k * (swes_val - x0)))
+
+        rewards = []
+        for u, d in zip(preds, refs):
+            u_words = word_tokenize(u)
+            d_words = word_tokenize(d)
+
+            # --- SWESnorm term ---
+            swes_val = _swes(u_words, d_words)
+            norm_val = _swes_norm(swes_val, k, x0)
+
+            # --- Length penalty term: 1 / ||u| - |d||; 1.0 when lengths match ---
+            len_diff = abs(len(u_words) - len(d_words))
+            length_term = 1.0 if len_diff == 0 else 1.0 / len_diff
+
+            # --- Final reward R (Eq. 6 in paper) ---
+            reward = (1.0 - lam) * norm_val + lam * length_term
+            rewards.append(float(reward))
+
+        return rewards
+
+    @staticmethod
     def SELFBLEU(preds, max_n=4):
         total_selfbleu = 0
         for n in range(1, max_n + 1):

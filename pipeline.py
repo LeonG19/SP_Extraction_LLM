@@ -21,12 +21,17 @@ def train_model(method_name, train_set, seeds, helper_model, target_model, args)
         method.train(train_set)
     elif method_name == "fuzz":
         method = FuzzingMethod(
-            seeds, train_set, helper_model=helper_model, target_model=target_model
+            seeds, train_set, helper_model=helper_model, target_model=target_model,
+            target_server_url=args.target_server_url, target_api_key=args.target_api_key
         )
         method.train()
     elif method_name == "re":
+        reason_model = getattr(args, 'reason_model', 'gpt-4o-mini')
+        reflect_model = getattr(args, 'reflect_model', 'gpt-4o-mini')
         method = ReActMethod(
-            seeds, train_set, helper_model=helper_model, target_model=target_model
+            seeds, train_set, helper_model=helper_model, target_model=target_model,
+            reason_model=reason_model, reflect_model=reflect_model,
+            target_server_url=args.target_server_url, target_api_key=args.target_api_key
         )
         method.train()
     elif method_name == "sent_rl":
@@ -58,6 +63,8 @@ if __name__ == "__main__":
     )
     argument.add_argument("--method", type=str, default="fuzz")
     argument.add_argument("--env_num", type=int, default=2)
+    argument.add_argument("--reason_model", type=str, default="gpt-4o-mini", help="Model for reasoning in ReAct method")
+    argument.add_argument("--reflect_model", type=str, default="gpt-4o-mini", help="Model for reflection in ReAct method")
     args = argument.parse_args()
     # use dotenv to load the environment variables
     prompt_path = os.path.join(PROMPT_PATH, args.prompts_data_path)

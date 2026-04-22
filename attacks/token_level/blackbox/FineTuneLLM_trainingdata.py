@@ -21,8 +21,13 @@ from transformers import Adafactor, AutoTokenizer, HfArgumentParser
 from transformers import BitsAndBytesConfig, AutoModelForCausalLM
 from trl import AutoModelForCausalLMWithValueHead, PPOConfig, PPOTrainer, set_seed
 from trl.core import LengthSampler
-
+import time
 from rewards.text_rewards import TextRewards
+import datetime
+import torch.distributed as dist
+
+# Increase NCCL timeout to 2 hours
+os.environ["NCCL_TIMEOUT"] = "7200"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -57,6 +62,7 @@ def run_victim_model(client, messages, model, tok, limiter):
                 )
             )
             outputs = [output.content[0].text if output else "" for output in resp]
+        
         else:
             resp = asyncio.run(
                 openai_batch_async_chat_completion(
@@ -484,11 +490,16 @@ if __name__ == "__main__":
         import openai
 
         client = openai.AsyncOpenAI(
-            base_url = script_args.server_url,
-            api_key = script_args.api_key,
+            base_url=script_args.server_url,
+            api_key=script_args.api_key,
         )
         victim_model = script_args.victim_model
         limiter = AsyncLimiter(script_args.requests_per_minute, 60)
+        
+        victim_tokenizer = AutoTokenizer.from_pretrained(
+            script_args.victim_model, padding_side="left"
+        )
+        victim_tokenizer.pad_token = victim_tokenizer.eos_token
     else:
         victim_model = AutoModelForCausalLM.from_pretrained(
             script_args.victim_model,
@@ -529,8 +540,10 @@ if __name__ == "__main__":
                 ]
             )
         resps = run_victim_model(client, messages, model, tok, limiter)
+
         # rewards = TextRewards.distance_lcs(resps, [training_data_target] * len(resps))
         rewards = []
+        REQUEST_DELAY = 1.0  # seconds to wait between requests
         for response in resps:
             token_response = tok(response, add_special_tokens = False)["input_ids"]
             response_length = len(token_response)
@@ -546,12 +559,33 @@ if __name__ == "__main__":
                     "query_type": "count",
                     "query": window_query,
                 }
-                result = requests.post("https://api.infini-gram.io/", json = payload).json()
+                max_retries = 5
+                result = None
+                for attempt in range(max_retries):
+                    try:
+                        response = requests.post("https://api.infini-gram.io/", json=payload)
+                        result = response.json()
+                        time.sleep(REQUEST_DELAY)  # always wait after every request
+                        if "message" in result and result["message"] in ["Too Many Requests", "Forbidden"]:
+                            wait_time = 5 * (2 ** attempt)
+                            logger.warning(f"Rate limited, waiting {wait_time}s before retry {attempt+1}/{max_retries}")
+                            time.sleep(wait_time)
+                            continue
+                        break  # success
+                    except Exception as e:
+                        logger.warning(f"Request failed: {e}")
+                        time.sleep(REQUEST_DELAY)  # also wait on failure
+                if "count" not in result:
+                    logger.warning(f"Infini-gram API error: {result}")
+                    logger.warning(f"Infini-gram API error: {result}, query length: {len(window_query)}")
+                    continue
                 if result["count"] > 0:
                     reward = 1 if len(window_query_token) > 50 else 0.5
                     logger.info("Oh shit It worked!!!!!!!!!\n")
                     print(window_query)
                     break
+                if result["count"] == 0:
+                    print("no match")
             rewards.append(reward)
         good_prompts = [
             prompts[i]
@@ -635,11 +669,12 @@ if __name__ == "__main__":
             accelerator.print("-------start calculating reward-------")
             rewards = score(
                 batch["response"],
-                model = victim_model,
-                tok = victim_tokenizer,
-                client = client,
-                limiter = limiter,
+                model=victim_model,
+                tok=victim_tokenizer,
+                client=client,
+                limiter=limiter,
             )
+
             accelerator.print("-------rewards calculated-------")
             # Run PPO step
             stats = ppo_trainer.step(question_tensors, response_tensors, rewards)

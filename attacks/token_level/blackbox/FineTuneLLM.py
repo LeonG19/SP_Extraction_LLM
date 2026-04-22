@@ -42,6 +42,11 @@ from trl.core import LengthSampler
 
 from project_env import PROMPT_PATH
 from rewards.text_rewards import TextRewards
+import datetime
+import torch.distributed as dist
+
+# Increase NCCL timeout to 2 hours
+os.environ["NCCL_TIMEOUT"] = "7200"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)

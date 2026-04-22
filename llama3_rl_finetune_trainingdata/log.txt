@@ -1,0 +1,2678 @@
+2026-03-12 22:49:22,966 - __main__ - WARNING - Infini-gram API error: {'message': 'Too Many Requests'}
+2026-03-12 22:49:22,967 - __main__ - WARNING - Infini-gram API error: {'message': 'Too Many Requests'}, query length: 452
+2026-03-12 22:49:35,240 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-12 22:49:35,240 - __main__ - INFO - []
+2026-03-12 22:49:35,240 - __main__ - INFO - []
+2026-03-12 22:49:35,240 - __main__ - INFO - --------------------------------------
+2026-03-12 22:49:39,236 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}
+2026-03-12 22:49:39,236 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}, query length: 533
+2026-03-12 22:49:43,650 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}
+2026-03-12 22:49:43,650 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}, query length: 441
+2026-03-12 22:49:48,011 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}
+2026-03-12 22:49:48,011 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}, query length: 511
+2026-03-12 22:49:52,346 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}
+2026-03-12 22:49:52,346 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}, query length: 431
+2026-03-12 22:49:56,631 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}
+2026-03-12 22:49:56,631 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}, query length: 461
+2026-03-12 22:50:01,016 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}
+2026-03-12 22:50:01,016 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}, query length: 627
+2026-03-12 22:50:05,352 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}
+2026-03-12 22:50:05,353 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}, query length: 523
+2026-03-12 22:50:09,740 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}
+2026-03-12 22:50:09,740 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}, query length: 518
+2026-03-12 22:50:14,186 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}
+2026-03-12 22:50:14,186 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}, query length: 473
+2026-03-12 22:56:04,737 - __main__ - WARNING - Rate limited, waiting 1s before retry 1/5
+2026-03-12 22:56:04,737 - __main__ - WARNING - Request failed: name 'time' is not defined
+2026-03-12 22:56:05,197 - __main__ - WARNING - Rate limited, waiting 1s before retry 1/5
+2026-03-12 22:56:05,197 - __main__ - WARNING - Request failed: name 'time' is not defined
+2026-03-12 22:56:41,715 - __main__ - WARNING - Rate limited, waiting 1s before retry 1/5
+2026-03-12 22:56:41,962 - __main__ - WARNING - Rate limited, waiting 1s before retry 1/5
+2026-03-12 22:56:42,881 - __main__ - WARNING - Rate limited, waiting 2s before retry 2/5
+2026-03-12 22:56:43,134 - __main__ - WARNING - Rate limited, waiting 2s before retry 2/5
+2026-03-12 22:56:45,047 - __main__ - WARNING - Rate limited, waiting 4s before retry 3/5
+2026-03-12 22:56:45,307 - __main__ - WARNING - Rate limited, waiting 4s before retry 3/5
+2026-03-12 22:56:49,222 - __main__ - WARNING - Rate limited, waiting 8s before retry 4/5
+2026-03-12 22:56:49,472 - __main__ - WARNING - Rate limited, waiting 8s before retry 4/5
+2026-03-12 22:56:57,394 - __main__ - WARNING - Rate limited, waiting 16s before retry 5/5
+2026-03-12 22:56:57,646 - __main__ - WARNING - Rate limited, waiting 16s before retry 5/5
+2026-03-12 22:57:13,395 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}
+2026-03-12 22:57:13,395 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}, query length: 454
+2026-03-12 22:57:13,617 - __main__ - WARNING - Rate limited, waiting 1s before retry 1/5
+2026-03-12 22:57:13,646 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}
+2026-03-12 22:57:13,646 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}, query length: 500
+2026-03-12 22:57:13,820 - __main__ - WARNING - Rate limited, waiting 1s before retry 1/5
+2026-03-12 22:57:14,789 - __main__ - WARNING - Rate limited, waiting 2s before retry 2/5
+2026-03-12 22:57:14,994 - __main__ - WARNING - Rate limited, waiting 2s before retry 2/5
+2026-03-12 22:57:40,430 - __main__ - WARNING - Rate limited, waiting 1s before retry 1/5
+2026-03-12 22:57:40,442 - __main__ - WARNING - Rate limited, waiting 1s before retry 1/5
+2026-03-12 22:57:41,602 - __main__ - WARNING - Rate limited, waiting 2s before retry 2/5
+2026-03-12 22:57:41,615 - __main__ - WARNING - Rate limited, waiting 2s before retry 2/5
+2026-03-12 22:57:43,777 - __main__ - WARNING - Rate limited, waiting 4s before retry 3/5
+2026-03-12 22:57:43,788 - __main__ - WARNING - Rate limited, waiting 4s before retry 3/5
+2026-03-12 22:57:47,949 - __main__ - WARNING - Rate limited, waiting 8s before retry 4/5
+2026-03-12 22:57:47,962 - __main__ - WARNING - Rate limited, waiting 8s before retry 4/5
+2026-03-12 22:57:56,114 - __main__ - WARNING - Rate limited, waiting 16s before retry 5/5
+2026-03-12 22:57:56,125 - __main__ - WARNING - Rate limited, waiting 16s before retry 5/5
+2026-03-12 22:58:12,114 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}
+2026-03-12 22:58:12,114 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}, query length: 473
+2026-03-12 22:58:12,126 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}
+2026-03-12 22:58:12,126 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}, query length: 106
+2026-03-12 22:58:12,279 - __main__ - WARNING - Rate limited, waiting 1s before retry 1/5
+2026-03-12 22:58:12,290 - __main__ - WARNING - Rate limited, waiting 1s before retry 1/5
+2026-03-12 22:58:13,454 - __main__ - WARNING - Rate limited, waiting 2s before retry 2/5
+2026-03-12 22:58:13,464 - __main__ - WARNING - Rate limited, waiting 2s before retry 2/5
+2026-03-12 22:58:15,662 - __main__ - WARNING - Rate limited, waiting 4s before retry 3/5
+2026-03-12 22:58:15,666 - __main__ - WARNING - Rate limited, waiting 4s before retry 3/5
+2026-03-12 22:58:19,828 - __main__ - WARNING - Rate limited, waiting 8s before retry 4/5
+2026-03-12 22:58:19,831 - __main__ - WARNING - Rate limited, waiting 8s before retry 4/5
+2026-03-12 22:58:28,000 - __main__ - WARNING - Rate limited, waiting 16s before retry 5/5
+2026-03-12 22:58:28,004 - __main__ - WARNING - Rate limited, waiting 16s before retry 5/5
+2026-03-12 22:58:44,000 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}
+2026-03-12 22:58:44,000 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}, query length: 469
+2026-03-12 22:58:44,004 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}
+2026-03-12 22:58:44,004 - __main__ - WARNING - Infini-gram API error: {'message': 'Forbidden'}, query length: 107
+2026-03-12 22:58:44,164 - __main__ - WARNING - Rate limited, waiting 1s before retry 1/5
+2026-03-12 22:58:44,168 - __main__ - WARNING - Rate limited, waiting 1s before retry 1/5
+2026-03-12 22:58:45,327 - __main__ - WARNING - Rate limited, waiting 2s before retry 2/5
+2026-03-12 22:58:45,336 - __main__ - WARNING - Rate limited, waiting 2s before retry 2/5
+2026-03-12 22:58:47,491 - __main__ - WARNING - Rate limited, waiting 4s before retry 3/5
+2026-03-12 22:58:47,501 - __main__ - WARNING - Rate limited, waiting 4s before retry 3/5
+2026-03-12 22:58:51,666 - __main__ - WARNING - Rate limited, waiting 8s before retry 4/5
+2026-03-12 22:58:51,666 - __main__ - WARNING - Rate limited, waiting 8s before retry 4/5
+2026-03-12 22:59:20,426 - __main__ - WARNING - Rate limited, waiting 1s before retry 1/5
+2026-03-12 22:59:20,599 - __main__ - WARNING - Rate limited, waiting 1s before retry 1/5
+2026-03-12 22:59:21,591 - __main__ - WARNING - Rate limited, waiting 2s before retry 2/5
+2026-03-12 22:59:21,773 - __main__ - WARNING - Rate limited, waiting 2s before retry 2/5
+2026-03-12 22:59:23,755 - __main__ - WARNING - Rate limited, waiting 4s before retry 3/5
+2026-03-12 22:59:23,945 - __main__ - WARNING - Rate limited, waiting 4s before retry 3/5
+2026-03-12 22:59:27,919 - __main__ - WARNING - Rate limited, waiting 8s before retry 4/5
+2026-03-12 22:59:28,119 - __main__ - WARNING - Rate limited, waiting 8s before retry 4/5
+2026-03-12 23:02:20,558 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-12 23:02:25,730 - __main__ - WARNING - Rate limited, waiting 10s before retry 2/5
+2026-03-12 23:02:35,895 - __main__ - WARNING - Rate limited, waiting 20s before retry 3/5
+2026-03-12 23:02:56,119 - __main__ - WARNING - Rate limited, waiting 40s before retry 4/5
+2026-03-12 23:04:05,596 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-12 23:04:10,769 - __main__ - WARNING - Rate limited, waiting 10s before retry 2/5
+2026-03-12 23:04:20,935 - __main__ - WARNING - Rate limited, waiting 20s before retry 3/5
+2026-03-12 23:04:41,106 - __main__ - WARNING - Rate limited, waiting 40s before retry 4/5
+2026-03-12 23:05:50,529 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-12 23:05:55,703 - __main__ - WARNING - Rate limited, waiting 10s before retry 2/5
+2026-03-12 23:06:05,868 - __main__ - WARNING - Rate limited, waiting 20s before retry 3/5
+2026-03-12 23:06:26,097 - __main__ - WARNING - Rate limited, waiting 40s before retry 4/5
+2026-03-12 23:07:35,669 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-12 23:07:40,845 - __main__ - WARNING - Rate limited, waiting 10s before retry 2/5
+2026-03-12 23:07:51,008 - __main__ - WARNING - Rate limited, waiting 20s before retry 3/5
+2026-03-12 23:08:11,172 - __main__ - WARNING - Rate limited, waiting 40s before retry 4/5
+2026-03-12 23:09:20,611 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-12 23:09:25,780 - __main__ - WARNING - Rate limited, waiting 10s before retry 2/5
+2026-03-12 23:09:35,948 - __main__ - WARNING - Rate limited, waiting 20s before retry 3/5
+2026-03-12 23:09:56,197 - __main__ - WARNING - Rate limited, waiting 40s before retry 4/5
+2026-03-12 23:11:05,665 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-12 23:11:10,840 - __main__ - WARNING - Rate limited, waiting 10s before retry 2/5
+2026-03-12 23:11:21,006 - __main__ - WARNING - Rate limited, waiting 20s before retry 3/5
+2026-03-12 23:11:41,231 - __main__ - WARNING - Rate limited, waiting 40s before retry 4/5
+2026-03-12 23:12:24,439 - __main__ - INFO - []
+2026-03-12 23:12:24,440 - __main__ - INFO - []
+2026-03-12 23:12:24,440 - __main__ - INFO - --------------------------------------
+2026-03-13 12:20:46,697 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-13 12:21:06,079 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-13 14:08:45,612 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-13 14:08:50,771 - __main__ - WARNING - Rate limited, waiting 10s before retry 2/5
+2026-03-13 14:23:25,766 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-13 14:26:23,406 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-13 14:29:17,306 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 00:55:31,400 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 00:55:43,786 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 01:00:35,626 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 01:05:34,538 - __main__ - INFO - []
+2026-03-23 01:05:34,538 - __main__ - INFO - []
+2026-03-23 01:05:34,538 - __main__ - INFO - --------------------------------------
+2026-03-23 01:08:13,809 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 01:08:22,463 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 01:11:05,028 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 01:11:18,742 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 01:16:01,276 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 01:22:54,419 - __main__ - INFO - []
+2026-03-23 01:22:54,419 - __main__ - INFO - []
+2026-03-23 01:22:54,419 - __main__ - INFO - --------------------------------------
+2026-03-23 01:23:37,541 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 01:23:47,432 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 01:35:59,061 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 01:39:37,016 - __main__ - INFO - []
+2026-03-23 01:39:37,016 - __main__ - INFO - []
+2026-03-23 01:39:37,016 - __main__ - INFO - --------------------------------------
+2026-03-23 01:40:42,502 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 01:43:08,282 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 01:45:38,001 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 01:50:28,901 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 01:50:38,816 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 01:55:22,862 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 01:57:29,103 - __main__ - INFO - []
+2026-03-23 01:57:29,103 - __main__ - INFO - []
+2026-03-23 01:57:29,103 - __main__ - INFO - --------------------------------------
+2026-03-23 02:00:19,531 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:00:28,156 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:03:01,663 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:07:47,839 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:10:16,188 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:12:47,348 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:15:02,643 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:15:11,390 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:15:29,904 - __main__ - INFO - []
+2026-03-23 02:15:29,904 - __main__ - INFO - []
+2026-03-23 02:15:29,904 - __main__ - INFO - --------------------------------------
+2026-03-23 02:17:32,775 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:19:55,601 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:20:05,630 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:22:29,236 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:24:53,338 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:27:39,784 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:29:48,786 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:30:01,072 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:32:25,718 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:32:35,690 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:34:00,488 - __main__ - INFO - []
+2026-03-23 02:34:00,488 - __main__ - INFO - []
+2026-03-23 02:34:00,488 - __main__ - INFO - --------------------------------------
+2026-03-23 02:34:45,865 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:37:19,769 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:41:43,686 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:41:56,096 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:44:12,917 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:46:55,679 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:49:16,057 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:51:37,698 - __main__ - INFO - []
+2026-03-23 02:51:37,698 - __main__ - INFO - []
+2026-03-23 02:51:37,698 - __main__ - INFO - --------------------------------------
+2026-03-23 02:56:02,843 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:56:11,516 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 02:58:56,289 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:03:37,856 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:03:50,440 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:06:44,211 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:09:36,436 - __main__ - INFO - []
+2026-03-23 03:09:36,436 - __main__ - INFO - []
+2026-03-23 03:09:36,436 - __main__ - INFO - --------------------------------------
+2026-03-23 03:11:25,102 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:11:36,238 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:11:43,736 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 03:14:17,386 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:14:29,808 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:19:22,398 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:24:48,924 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:25:00,067 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:26:58,927 - __main__ - INFO - [0.5]
+2026-03-23 03:26:58,928 - __main__ - INFO - ['Question: A contemporary and modern design language is often used in formal speeches because it is \nA) formal. The language']
+2026-03-23 03:26:58,928 - __main__ - INFO - --------------------------------------
+2026-03-23 03:27:16,487 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 03:37:21,277 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:42:11,670 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:44:06,645 - __main__ - INFO - [1]
+2026-03-23 03:44:06,645 - __main__ - INFO - ['import React from "ReactoTnt\nAAAAAAAAAAAAAAA. From the']
+2026-03-23 03:44:06,645 - __main__ - INFO - --------------------------------------
+2026-03-23 03:47:09,202 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:47:16,626 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:52:00,366 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:52:12,710 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:56:53,050 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 03:57:02,963 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:01:12,428 - __main__ - INFO - []
+2026-03-23 04:01:12,428 - __main__ - INFO - []
+2026-03-23 04:01:12,429 - __main__ - INFO - --------------------------------------
+2026-03-23 04:01:46,812 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:01:57,953 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:06:41,952 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:06:51,798 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:09:09,181 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:11:46,655 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:13:23,020 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 04:18:45,101 - __main__ - INFO - [0.5]
+2026-03-23 04:18:45,101 - __main__ - INFO - ['Question:\nSupernatural\n_REFLECTING (Escape) is a 2020 American']
+2026-03-23 04:18:45,101 - __main__ - INFO - --------------------------------------
+2026-03-23 04:19:23,868 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:24:08,572 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:29:00,951 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:30:05,765 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 04:31:28,963 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:33:56,296 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:36:13,025 - __main__ - INFO - [0.5]
+2026-03-23 04:36:13,025 - __main__ - INFO - ['Question:\nThree new cases of theThe Quebec 1994 film is a thriller']
+2026-03-23 04:36:13,025 - __main__ - INFO - --------------------------------------
+2026-03-23 04:36:39,119 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:48:20,860 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:50:28,330 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:50:36,974 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:51:56,441 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 04:53:18,037 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:53:39,006 - __main__ - INFO - [0.5]
+2026-03-23 04:53:39,006 - __main__ - INFO - ['Question:\nLetting Go - A one-act play written by John Logan. Written by']
+2026-03-23 04:53:39,006 - __main__ - INFO - --------------------------------------
+2026-03-23 04:55:23,163 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:58:01,996 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 04:58:11,867 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 05:05:24,381 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 05:07:50,467 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 05:08:02,805 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 05:10:53,930 - __main__ - INFO - []
+2026-03-23 05:10:53,931 - __main__ - INFO - []
+2026-03-23 05:10:53,931 - __main__ - INFO - --------------------------------------
+2026-03-23 05:15:32,735 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 05:28:26,841 - __main__ - INFO - []
+2026-03-23 05:28:26,842 - __main__ - INFO - []
+2026-03-23 05:28:26,842 - __main__ - INFO - --------------------------------------
+2026-03-23 05:32:05,563 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 05:32:15,469 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 05:36:58,801 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 05:37:09,897 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 05:46:19,621 - __main__ - INFO - []
+2026-03-23 05:46:19,621 - __main__ - INFO - []
+2026-03-23 05:46:19,621 - __main__ - INFO - --------------------------------------
+2026-03-23 05:49:38,240 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 05:54:34,128 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 05:59:25,434 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:02:06,509 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:03:57,931 - __main__ - INFO - []
+2026-03-23 06:03:57,931 - __main__ - INFO - []
+2026-03-23 06:03:57,931 - __main__ - INFO - --------------------------------------
+2026-03-23 06:06:21,953 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:11:14,440 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:16:24,255 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:18:49,167 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:21:48,965 - __main__ - INFO - []
+2026-03-23 06:21:48,965 - __main__ - INFO - []
+2026-03-23 06:21:48,965 - __main__ - INFO - --------------------------------------
+2026-03-23 06:23:41,139 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:23:49,932 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:26:18,318 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:28:36,017 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:33:29,545 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:38:21,806 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:38:30,489 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:39:58,474 - __main__ - INFO - []
+2026-03-23 06:39:58,474 - __main__ - INFO - []
+2026-03-23 06:39:58,474 - __main__ - INFO - --------------------------------------
+2026-03-23 06:40:44,530 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:40:55,641 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:43:14,164 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:45:41,653 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:48:20,188 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:50:51,257 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:53:14,915 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:55:37,964 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:55:47,886 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:58:01,692 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:58:11,558 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 06:58:22,746 - __main__ - INFO - []
+2026-03-23 06:58:22,746 - __main__ - INFO - []
+2026-03-23 06:58:22,746 - __main__ - INFO - --------------------------------------
+2026-03-23 07:05:17,171 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:07:50,970 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:08:03,357 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:08:39,308 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 07:10:41,615 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:10:54,018 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:15:49,678 - __main__ - INFO - [0.5]
+2026-03-23 07:15:49,679 - __main__ - INFO - ['Question:\nLet theSafe Harbor (A Rhapsodic poem by John Logan)Rhapsodic poem written by']
+2026-03-23 07:15:49,679 - __main__ - INFO - --------------------------------------
+2026-03-23 07:20:29,898 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:20:39,779 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:25:22,745 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:30:16,977 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:30:25,656 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:33:37,696 - __main__ - INFO - []
+2026-03-23 07:33:37,696 - __main__ - INFO - []
+2026-03-23 07:33:37,696 - __main__ - INFO - --------------------------------------
+2026-03-23 07:35:10,076 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:35:18,680 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:40:02,604 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:40:13,715 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:46:57,303 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:47:08,455 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:51:01,650 - __main__ - INFO - []
+2026-03-23 07:51:01,650 - __main__ - INFO - []
+2026-03-23 07:51:01,650 - __main__ - INFO - --------------------------------------
+2026-03-23 07:51:52,910 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:52:01,515 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:54:26,604 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:56:47,531 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:56:56,170 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 07:59:25,382 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:01:38,583 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:01:48,452 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:06:33,936 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:06:43,912 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:09:12,489 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:09:29,869 - __main__ - INFO - []
+2026-03-23 08:09:29,869 - __main__ - INFO - []
+2026-03-23 08:09:29,869 - __main__ - INFO - --------------------------------------
+2026-03-23 08:11:26,764 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:11:39,197 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:19:05,647 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:19:14,310 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:21:56,557 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:26:38,650 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:26:49,771 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:27:17,200 - __main__ - INFO - []
+2026-03-23 08:27:17,200 - __main__ - INFO - []
+2026-03-23 08:27:17,200 - __main__ - INFO - --------------------------------------
+2026-03-23 08:31:32,202 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:36:25,268 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:41:09,060 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:41:20,220 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:44:01,515 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:44:48,598 - __main__ - INFO - []
+2026-03-23 08:44:48,598 - __main__ - INFO - []
+2026-03-23 08:44:48,598 - __main__ - INFO - --------------------------------------
+2026-03-23 08:48:47,588 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:51:38,004 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:54:29,078 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:54:40,222 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:59:24,648 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 08:59:33,292 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 09:02:16,531 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 09:02:28,956 - __main__ - INFO - []
+2026-03-23 09:02:28,956 - __main__ - INFO - []
+2026-03-23 09:02:28,956 - __main__ - INFO - --------------------------------------
+2026-03-23 09:07:51,811 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 09:08:02,948 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 09:10:43,618 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 09:10:54,765 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 09:15:48,767 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 09:20:25,447 - __main__ - INFO - []
+2026-03-23 09:20:25,447 - __main__ - INFO - []
+2026-03-23 09:20:25,447 - __main__ - INFO - --------------------------------------
+2026-03-23 09:28:17,467 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 09:33:01,730 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 09:37:53,742 - __main__ - INFO - []
+2026-03-23 09:37:53,742 - __main__ - INFO - []
+2026-03-23 09:37:53,742 - __main__ - INFO - --------------------------------------
+2026-03-23 09:42:36,606 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 09:42:47,711 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 09:44:53,630 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 09:52:25,712 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 09:52:36,763 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 09:55:49,268 - __main__ - INFO - []
+2026-03-23 09:55:49,268 - __main__ - INFO - []
+2026-03-23 09:55:49,268 - __main__ - INFO - --------------------------------------
+2026-03-23 09:59:18,226 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 09:59:30,644 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:04:05,548 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:06:26,015 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:08:50,998 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:11:09,898 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:11:21,145 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:13:36,895 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:13:45,608 - __main__ - INFO - []
+2026-03-23 10:13:45,608 - __main__ - INFO - []
+2026-03-23 10:13:45,608 - __main__ - INFO - --------------------------------------
+2026-03-23 10:16:03,933 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:18:22,772 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:23:00,048 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:23:11,119 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:27:55,157 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:28:06,557 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:31:23,635 - __main__ - INFO - []
+2026-03-23 10:31:23,635 - __main__ - INFO - []
+2026-03-23 10:31:23,635 - __main__ - INFO - --------------------------------------
+2026-03-23 10:32:13,962 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 10:33:00,945 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:35:21,553 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:37:57,452 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:47:35,225 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:48:08,944 - __main__ - INFO - [1]
+2026-03-23 10:48:08,944 - __main__ - INFO - ['Question:\nFind the \nimport React from "./React"\n```\nimport React from "./React']
+2026-03-23 10:48:08,944 - __main__ - INFO - --------------------------------------
+2026-03-23 10:50:12,705 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:52:28,468 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:52:38,411 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:54:57,986 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 10:57:32,188 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 11:04:52,920 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 11:06:06,906 - __main__ - INFO - []
+2026-03-23 11:06:06,907 - __main__ - INFO - []
+2026-03-23 11:06:06,908 - __main__ - INFO - --------------------------------------
+2026-03-23 11:14:45,340 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 11:17:26,598 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 11:25:53,624 - __main__ - INFO - []
+2026-03-23 11:25:53,624 - __main__ - INFO - []
+2026-03-23 11:25:53,624 - __main__ - INFO - --------------------------------------
+2026-03-23 11:27:03,334 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 11:36:52,083 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 11:37:04,452 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 11:39:44,322 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 11:43:32,028 - __main__ - INFO - []
+2026-03-23 11:43:32,028 - __main__ - INFO - []
+2026-03-23 11:43:32,028 - __main__ - INFO - --------------------------------------
+2026-03-23 11:46:35,217 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 11:46:37,688 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 11:51:21,117 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 11:51:29,761 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 11:56:13,889 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 11:56:24,963 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 11:59:06,732 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 12:00:33,667 - __main__ - INFO - [0.5]
+2026-03-23 12:00:33,667 - __main__ - INFO - ['Question:\nLet the\naaRochester, PA\naaRochester, PA\n']
+2026-03-23 12:00:33,667 - __main__ - INFO - --------------------------------------
+2026-03-23 12:03:50,217 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 12:03:58,845 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 12:08:44,440 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 12:08:55,531 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 12:13:36,404 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 12:13:46,320 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 12:17:49,095 - __main__ - INFO - []
+2026-03-23 12:17:49,095 - __main__ - INFO - []
+2026-03-23 12:17:49,095 - __main__ - INFO - --------------------------------------
+2026-03-23 12:20:31,406 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 12:20:41,313 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 12:25:34,793 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 12:32:18,746 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 12:35:04,837 - __main__ - INFO - []
+2026-03-23 12:35:04,838 - __main__ - INFO - []
+2026-03-23 12:35:04,838 - __main__ - INFO - --------------------------------------
+2026-03-23 12:37:13,687 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 12:37:23,569 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 12:47:02,566 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 12:47:11,251 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 12:51:55,505 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 12:52:09,131 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 12:52:51,182 - __main__ - INFO - []
+2026-03-23 12:52:51,183 - __main__ - INFO - []
+2026-03-23 12:52:51,183 - __main__ - INFO - --------------------------------------
+2026-03-23 12:56:49,540 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 13:01:32,675 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 13:09:56,998 - __main__ - INFO - []
+2026-03-23 13:09:56,998 - __main__ - INFO - []
+2026-03-23 13:09:56,998 - __main__ - INFO - --------------------------------------
+2026-03-23 13:13:21,461 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 13:18:04,802 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 13:18:18,405 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 13:20:57,089 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 13:25:42,561 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 13:25:49,962 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 13:27:18,563 - __main__ - INFO - []
+2026-03-23 13:27:18,563 - __main__ - INFO - []
+2026-03-23 13:27:18,563 - __main__ - INFO - --------------------------------------
+2026-03-23 13:30:45,918 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 13:38:07,292 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 13:40:20,811 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 13:40:29,445 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 13:43:40,282 - __main__ - INFO - [0.5]
+2026-03-23 13:43:40,282 - __main__ - INFO - ['Question: Leominster, Pennsylvania\nAAAAAAAAAAAA, the AAAAAAAA\n AAAAA']
+2026-03-23 13:43:40,282 - __main__ - INFO - --------------------------------------
+2026-03-23 13:45:15,105 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 13:45:26,163 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 13:49:26,399 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 13:55:37,556 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 13:59:48,625 - __main__ - INFO - [0.5]
+2026-03-23 13:59:48,625 - __main__ - INFO - ['Question: Sine taupe, R. R. R. W. ']
+2026-03-23 13:59:48,625 - __main__ - INFO - --------------------------------------
+2026-03-23 14:01:15,287 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:05:59,862 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:06:08,521 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:08:33,951 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:10:56,009 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:16:30,610 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:16:40,493 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:17:32,704 - __main__ - INFO - []
+2026-03-23 14:17:32,704 - __main__ - INFO - []
+2026-03-23 14:17:32,704 - __main__ - INFO - --------------------------------------
+2026-03-23 14:19:23,919 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:19:31,323 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:24:17,386 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:24:24,827 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:29:50,013 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:29:59,910 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:32:41,712 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:32:51,522 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:35:10,547 - __main__ - INFO - []
+2026-03-23 14:35:10,547 - __main__ - INFO - []
+2026-03-23 14:35:10,547 - __main__ - INFO - --------------------------------------
+2026-03-23 14:35:34,940 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:36:37,775 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 14:37:43,340 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 14:38:48,609 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 14:40:28,229 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:40:39,371 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:43:21,013 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:48:06,450 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:48:16,332 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:51:08,832 - __main__ - INFO - [0.5, 0.5, 0.5]
+2026-03-23 14:51:08,832 - __main__ - INFO - ['Question: _Sri Lanka R K, R. S., 3. 4. ', 'Question: __---+/\n     \n\nHelsinki, Finland\nHelsinki, Finland\nH', 'Question: Create a new text\naaaaaaaaaaaaa\n The Following the ______']
+2026-03-23 14:51:08,832 - __main__ - INFO - --------------------------------------
+2026-03-23 14:53:00,945 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:53:10,816 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:55:51,334 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 14:58:08,279 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 15:00:34,762 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:03:26,262 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:03:36,080 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:08:17,698 - __main__ - INFO - [0.5]
+2026-03-23 15:08:17,698 - __main__ - INFO - ['Question: _Savory, M. M. M. F. G.']
+2026-03-23 15:08:17,698 - __main__ - INFO - --------------------------------------
+2026-03-23 15:09:59,846 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 15:11:12,746 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:14:04,998 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:16:48,779 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:19:39,767 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:22:23,344 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:22:33,204 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:25:08,499 - __main__ - INFO - [0.5]
+2026-03-23 15:25:08,499 - __main__ - INFO - ['Question: Frenzy\nAAAAAAAAAAAA, the AAAAA, CEEEE']
+2026-03-23 15:25:08,499 - __main__ - INFO - --------------------------------------
+2026-03-23 15:28:06,778 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:28:16,608 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:31:01,405 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:31:10,037 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:35:52,927 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:40:46,936 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:42:46,534 - __main__ - INFO - []
+2026-03-23 15:42:46,534 - __main__ - INFO - []
+2026-03-23 15:42:46,534 - __main__ - INFO - --------------------------------------
+2026-03-23 15:45:40,192 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:45:51,446 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:50:44,773 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 15:58:47,757 - __main__ - INFO - []
+2026-03-23 15:58:47,757 - __main__ - INFO - []
+2026-03-23 15:58:47,757 - __main__ - INFO - --------------------------------------
+2026-03-23 16:00:21,245 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:00:31,176 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:05:24,767 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:07:26,622 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 16:10:18,702 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:12:53,716 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 16:13:00,941 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:15:39,642 - __main__ - INFO - [0.5, 0.5]
+2026-03-23 16:15:39,642 - __main__ - INFO - ['Question: JUNE 4 5 6 7, 8 9 10\n A', 'Question: List the\nAAAAAAAAAAAA, the AAAAA in AAAAA, "The" (3 points)\n AAAAA']
+2026-03-23 16:15:39,642 - __main__ - INFO - --------------------------------------
+2026-03-23 16:17:44,925 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:24:41,625 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:24:52,721 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:32:04,938 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:32:48,344 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:32:55,801 - __main__ - INFO - []
+2026-03-23 16:32:55,801 - __main__ - INFO - []
+2026-03-23 16:32:55,801 - __main__ - INFO - --------------------------------------
+2026-03-23 16:34:35,223 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:34:47,515 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:37:01,373 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:41:09,961 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:41:16,125 - __main__ - WARNING - Rate limited, waiting 10s before retry 2/5
+2026-03-23 16:42:06,958 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:46:53,113 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:50:54,466 - __main__ - INFO - []
+2026-03-23 16:50:54,466 - __main__ - INFO - []
+2026-03-23 16:50:54,466 - __main__ - INFO - --------------------------------------
+2026-03-23 16:51:57,351 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:54:30,939 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:56:42,191 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:56:53,293 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 16:59:27,176 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:01:46,666 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:04:25,109 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:08:31,151 - __main__ - INFO - []
+2026-03-23 17:08:31,151 - __main__ - INFO - []
+2026-03-23 17:08:31,151 - __main__ - INFO - --------------------------------------
+2026-03-23 17:11:24,898 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:11:37,213 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:15:10,363 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 17:17:02,081 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:17:14,415 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:22:48,199 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:22:56,839 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:25:13,402 - __main__ - INFO - [0.5]
+2026-03-23 17:25:13,402 - __main__ - INFO - ['Question: Calculating theSavannah, a film 9 is the']
+2026-03-23 17:25:13,402 - __main__ - INFO - --------------------------------------
+2026-03-23 17:32:33,808 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:32:46,259 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:38:11,280 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:41:04,360 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:41:15,475 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:42:36,642 - __main__ - INFO - []
+2026-03-23 17:42:36,642 - __main__ - INFO - []
+2026-03-23 17:42:36,642 - __main__ - INFO - --------------------------------------
+2026-03-23 17:43:56,235 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:44:06,144 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:46:48,788 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:47:01,140 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:49:41,249 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:49:52,370 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:54:45,103 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:59:28,378 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 17:59:40,654 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:00:43,765 - __main__ - INFO - []
+2026-03-23 18:00:43,766 - __main__ - INFO - []
+2026-03-23 18:00:43,766 - __main__ - INFO - --------------------------------------
+2026-03-23 18:02:20,935 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:07:06,832 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:07:15,478 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:14:50,307 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:17:50,657 - __main__ - INFO - []
+2026-03-23 18:17:50,657 - __main__ - INFO - []
+2026-03-23 18:17:50,657 - __main__ - INFO - --------------------------------------
+2026-03-23 18:19:36,013 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:24:29,136 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:27:11,273 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:29:54,784 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:30:05,752 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:32:51,332 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:32:58,732 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:35:13,968 - __main__ - INFO - []
+2026-03-23 18:35:13,968 - __main__ - INFO - []
+2026-03-23 18:35:13,968 - __main__ - INFO - --------------------------------------
+2026-03-23 18:37:45,924 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:42:39,129 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:42:47,746 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:47:39,041 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:52:22,859 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:52:36,455 - __main__ - INFO - []
+2026-03-23 18:52:36,456 - __main__ - INFO - []
+2026-03-23 18:52:36,456 - __main__ - INFO - --------------------------------------
+2026-03-23 18:57:16,650 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 18:57:29,009 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:02:11,538 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:02:21,394 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:04:32,798 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:07:15,359 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:09:59,982 - __main__ - INFO - []
+2026-03-23 19:09:59,982 - __main__ - INFO - []
+2026-03-23 19:09:59,982 - __main__ - INFO - --------------------------------------
+2026-03-23 19:16:53,232 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:17:06,839 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:21:48,830 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:21:58,707 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:24:25,223 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:26:41,714 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:26:54,081 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:28:04,373 - __main__ - INFO - []
+2026-03-23 19:28:04,373 - __main__ - INFO - []
+2026-03-23 19:28:04,374 - __main__ - INFO - --------------------------------------
+2026-03-23 19:29:09,881 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:31:37,841 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:31:47,736 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:32:25,013 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 19:36:43,426 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:38:58,009 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:41:26,852 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:41:37,975 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:45:08,672 - __main__ - INFO - [0.5]
+2026-03-23 19:45:08,672 - __main__ - INFO - ['Question: Lübeck, Northampton, Wiltshire\n Ã\xa0']
+2026-03-23 19:45:08,672 - __main__ - INFO - --------------------------------------
+2026-03-23 19:46:20,848 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:46:33,229 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 19:53:18,441 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:00:13,723 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:00:23,598 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:02:43,527 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:02:57,209 - __main__ - INFO - []
+2026-03-23 20:02:57,209 - __main__ - INFO - []
+2026-03-23 20:02:57,209 - __main__ - INFO - --------------------------------------
+2026-03-23 20:05:08,318 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:07:05,347 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 20:07:32,299 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:10:01,145 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:10:13,427 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:12:27,419 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:14:57,451 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:17:26,263 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:17:37,359 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:20:03,780 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:20:38,482 - __main__ - INFO - [0.5]
+2026-03-23 20:20:38,482 - __main__ - INFO - ['Question. Java-Portage Fourth Quarter Ticket Release Price: The First 1/2 2/3 (2']
+2026-03-23 20:20:38,482 - __main__ - INFO - --------------------------------------
+2026-03-23 20:24:48,740 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:27:06,612 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:32:46,389 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:37:28,984 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:37:38,886 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:38:29,344 - __main__ - INFO - []
+2026-03-23 20:38:29,344 - __main__ - INFO - []
+2026-03-23 20:38:29,344 - __main__ - INFO - --------------------------------------
+2026-03-23 20:42:33,955 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:47:19,125 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:47:28,953 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:54:55,915 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 20:55:02,082 - __main__ - WARNING - Rate limited, waiting 10s before retry 2/5
+2026-03-23 20:56:09,926 - __main__ - INFO - []
+2026-03-23 20:56:09,926 - __main__ - INFO - []
+2026-03-23 20:56:09,927 - __main__ - INFO - --------------------------------------
+2026-03-23 20:59:45,989 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 21:04:40,464 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 21:04:50,314 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 21:13:43,840 - __main__ - INFO - []
+2026-03-23 21:13:43,841 - __main__ - INFO - []
+2026-03-23 21:13:43,841 - __main__ - INFO - --------------------------------------
+2026-03-23 21:21:12,862 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 21:21:22,726 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 21:26:06,396 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 21:26:18,762 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 21:30:55,358 - __main__ - INFO - []
+2026-03-23 21:30:55,358 - __main__ - INFO - []
+2026-03-23 21:30:55,358 - __main__ - INFO - --------------------------------------
+2026-03-23 21:33:52,048 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 21:38:36,325 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 21:43:31,260 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 21:43:43,585 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 21:47:38,483 - __main__ - INFO - []
+2026-03-23 21:47:38,483 - __main__ - INFO - []
+2026-03-23 21:47:38,483 - __main__ - INFO - --------------------------------------
+2026-03-23 21:48:25,014 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 21:48:36,070 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 21:53:31,837 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 21:55:11,430 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 21:55:17,603 - __main__ - WARNING - Rate limited, waiting 10s before retry 2/5
+2026-03-23 21:56:10,552 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 21:58:18,214 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 21:58:25,618 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 22:01:07,566 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 22:05:13,257 - __main__ - INFO - []
+2026-03-23 22:05:13,257 - __main__ - INFO - []
+2026-03-23 22:05:13,257 - __main__ - INFO - --------------------------------------
+2026-03-23 22:05:51,910 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 22:06:01,754 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 22:10:46,903 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 22:13:27,774 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 22:16:12,319 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 22:16:20,982 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 22:19:15,464 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 22:22:48,858 - __main__ - INFO - []
+2026-03-23 22:22:48,858 - __main__ - INFO - []
+2026-03-23 22:22:48,858 - __main__ - INFO - --------------------------------------
+2026-03-23 22:24:08,621 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 22:29:02,521 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 22:38:49,303 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 22:40:12,813 - __main__ - INFO - []
+2026-03-23 22:40:12,814 - __main__ - INFO - []
+2026-03-23 22:40:12,814 - __main__ - INFO - --------------------------------------
+2026-03-23 22:43:36,728 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 22:46:00,585 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 22:48:39,782 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 22:52:59,290 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 22:53:05,458 - __main__ - WARNING - Rate limited, waiting 10s before retry 2/5
+2026-03-23 22:53:21,424 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 22:57:40,681 - __main__ - INFO - []
+2026-03-23 22:57:40,681 - __main__ - INFO - []
+2026-03-23 22:57:40,681 - __main__ - INFO - --------------------------------------
+2026-03-23 22:58:25,668 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:03:07,521 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:07:53,503 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:08:02,099 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:14:57,124 - __main__ - INFO - []
+2026-03-23 23:14:57,124 - __main__ - INFO - []
+2026-03-23 23:14:57,124 - __main__ - INFO - --------------------------------------
+2026-03-23 23:17:41,339 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:22:34,470 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:24:35,927 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:24:42,093 - __main__ - WARNING - Rate limited, waiting 10s before retry 2/5
+2026-03-23 23:27:15,949 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:27:25,820 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:30:08,427 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:30:14,593 - __main__ - WARNING - Rate limited, waiting 10s before retry 2/5
+2026-03-23 23:32:39,142 - __main__ - INFO - []
+2026-03-23 23:32:39,142 - __main__ - INFO - []
+2026-03-23 23:32:39,142 - __main__ - INFO - --------------------------------------
+2026-03-23 23:34:12,342 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:34:49,272 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:34:55,441 - __main__ - WARNING - Rate limited, waiting 10s before retry 2/5
+2026-03-23 23:41:15,309 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:44:18,814 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:44:55,666 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:46:40,986 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:46:52,057 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:48:42,234 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:50:20,258 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:51:03,187 - __main__ - INFO - []
+2026-03-23 23:51:03,188 - __main__ - INFO - []
+2026-03-23 23:51:03,188 - __main__ - INFO - --------------------------------------
+2026-03-23 23:51:48,004 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:52:07,650 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:52:16,268 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:52:43,441 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-23 23:54:01,856 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:54:20,386 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:55:39,919 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-23 23:55:47,313 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 00:01:27,432 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 00:08:27,789 - __main__ - INFO - [0.5]
+2026-03-24 00:08:27,789 - __main__ - INFO - [' improve,222.OOOoOooOOoOoOoOoOoOoOoO']
+2026-03-24 00:08:27,789 - __main__ - INFO - --------------------------------------
+2026-03-24 00:11:53,163 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 00:12:04,457 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 00:16:48,950 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 00:16:56,371 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 00:26:00,794 - __main__ - INFO - []
+2026-03-24 00:26:00,794 - __main__ - INFO - []
+2026-03-24 00:26:00,794 - __main__ - INFO - --------------------------------------
+2026-03-24 00:26:34,978 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 00:26:44,901 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 00:33:38,162 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 00:36:14,490 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 00:43:18,911 - __main__ - INFO - []
+2026-03-24 00:43:18,911 - __main__ - INFO - []
+2026-03-24 00:43:18,911 - __main__ - INFO - --------------------------------------
+2026-03-24 00:54:08,286 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 00:58:59,108 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:00:26,327 - __main__ - INFO - []
+2026-03-24 01:00:26,327 - __main__ - INFO - []
+2026-03-24 01:00:26,327 - __main__ - INFO - --------------------------------------
+2026-03-24 01:03:54,793 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:10:48,294 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:10:58,088 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:15:43,270 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:17:57,268 - __main__ - INFO - []
+2026-03-24 01:17:57,268 - __main__ - INFO - []
+2026-03-24 01:17:57,268 - __main__ - INFO - --------------------------------------
+2026-03-24 01:20:38,584 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:20:48,447 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:23:07,771 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:25:31,009 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:30:37,297 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:33:31,472 - __main__ - INFO - []
+2026-03-24 01:33:31,472 - __main__ - INFO - []
+2026-03-24 01:33:31,472 - __main__ - INFO - --------------------------------------
+2026-03-24 01:34:58,181 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 01:37:24,650 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:41:47,719 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:42:01,180 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:44:31,831 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:46:46,415 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:46:58,615 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:49:14,112 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:49:25,110 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:49:47,159 - __main__ - INFO - [0.5]
+2026-03-24 01:49:47,159 - __main__ - INFO - ['________ undertaken „ theOO_T of egoPlayer ––––––––––––']
+2026-03-24 01:49:47,159 - __main__ - INFO - --------------------------------------
+2026-03-24 01:51:53,422 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:56:39,955 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:56:49,838 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:59:06,171 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 01:59:18,436 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:06:32,010 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:06:50,504 - __main__ - INFO - []
+2026-03-24 02:06:50,505 - __main__ - INFO - []
+2026-03-24 02:06:50,505 - __main__ - INFO - --------------------------------------
+2026-03-24 02:09:08,706 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:11:26,971 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:11:36,844 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:13:51,596 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:16:34,336 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:18:59,899 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:21:17,398 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:23:09,589 - __main__ - INFO - []
+2026-03-24 02:23:09,589 - __main__ - INFO - []
+2026-03-24 02:23:09,589 - __main__ - INFO - --------------------------------------
+2026-03-24 02:23:57,750 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:26:40,373 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:26:47,746 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:26:56,393 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:29:38,874 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:34:22,569 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:34:32,390 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:37:16,475 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:40:10,299 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:40:18,931 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:40:41,100 - __main__ - INFO - []
+2026-03-24 02:40:41,101 - __main__ - INFO - []
+2026-03-24 02:40:41,101 - __main__ - INFO - --------------------------------------
+2026-03-24 02:43:00,829 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:43:10,711 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 02:43:13,093 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:45:55,469 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:46:06,497 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:50:59,294 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:55:43,853 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:55:51,251 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 02:57:03,825 - __main__ - INFO - [0.5]
+2026-03-24 02:57:03,825 - __main__ - INFO - ['Question: …\n\n']
+2026-03-24 02:57:03,825 - __main__ - INFO - --------------------------------------
+2026-03-24 03:00:45,613 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:03:39,212 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:06:22,694 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:06:33,695 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:09:15,228 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:09:25,066 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:12:06,614 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:13:26,054 - __main__ - INFO - []
+2026-03-24 03:13:26,054 - __main__ - INFO - []
+2026-03-24 03:13:26,054 - __main__ - INFO - --------------------------------------
+2026-03-24 03:17:00,033 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:19:47,603 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 03:19:53,659 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:24:11,227 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 03:28:41,515 - __main__ - INFO - [0.5, 0.5]
+2026-03-24 03:28:41,515 - __main__ - INFO - ['Question:\n the\xa0 the\xa0 "I\xa0in\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0', 'Question:\nSupernatural: theWhat region']
+2026-03-24 03:28:41,515 - __main__ - INFO - --------------------------------------
+2026-03-24 03:29:30,503 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:32:14,818 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:36:58,447 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:37:08,297 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:41:50,195 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:44:43,030 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:45:35,861 - __main__ - INFO - []
+2026-03-24 03:45:35,861 - __main__ - INFO - []
+2026-03-24 03:45:35,861 - __main__ - INFO - --------------------------------------
+2026-03-24 03:49:29,307 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:49:37,922 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:52:23,851 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:55:14,163 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 03:58:06,823 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:00:54,927 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 04:01:58,739 - __main__ - INFO - [0.5]
+2026-03-24 04:01:58,739 - __main__ - INFO - ['Twitter […] “ (']
+2026-03-24 04:01:58,739 - __main__ - INFO - --------------------------------------
+2026-03-24 04:02:46,358 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 04:03:13,254 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:05:54,261 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:06:02,879 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:12:51,518 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:12:58,926 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:17:42,783 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:18:25,946 - __main__ - INFO - [0.5]
+2026-03-24 04:18:25,946 - __main__ - INFO - ['third […] ']
+2026-03-24 04:18:25,946 - __main__ - INFO - --------------------------------------
+2026-03-24 04:22:36,255 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:22:47,488 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:27:31,338 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:27:42,455 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:30:09,989 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 04:30:27,058 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:33:58,843 - __main__ - INFO - [0.5]
+2026-03-24 04:33:58,843 - __main__ - INFO - ['James H […] ...\n\xa0\xa0\xa0 […]\n\xa0 […]\xa0\xa0\xa0\xa0\xa0']
+2026-03-24 04:33:58,843 - __main__ - INFO - --------------------------------------
+2026-03-24 04:35:08,038 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:35:17,955 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:40:44,384 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:40:53,019 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:43:45,135 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:46:38,269 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:50:17,919 - __main__ - INFO - []
+2026-03-24 04:50:17,920 - __main__ - INFO - []
+2026-03-24 04:50:17,920 - __main__ - INFO - --------------------------------------
+2026-03-24 04:52:26,729 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:52:44,055 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 04:55:07,838 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:55:16,542 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 04:55:20,175 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 04:59:56,816 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 05:01:01,827 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 05:03:51,427 - __main__ - INFO - [0.5, 0.5, 0.5]
+2026-03-24 05:03:51,427 - __main__ - INFO - [' gew […] \naaaaaaaa … “Draw “ “ “ […]\n … […]\n […] “ […]\n […]\n', 'Α Κines, ’ ’ ’ ’ ’ ’ ’ ’ ’ ’ ’ ’ ’', 'β- […] \xa0\xa0\xa0\xa0 […]\n\xa0 […]\n\xa0\xa0\xa0\xa0\xa0']
+2026-03-24 05:03:51,428 - __main__ - INFO - --------------------------------------
+2026-03-24 05:04:41,135 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 05:05:46,229 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 05:06:45,220 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 05:14:21,417 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 05:17:15,418 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 05:19:24,647 - __main__ - INFO - [0.5, 0.5]
+2026-03-24 05:19:24,647 - __main__ - INFO - [' unmist‐ … …\n\xa0 …\n … … “ ’ ’ ’ ’ … ’', 'Legendary [...: \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0']
+2026-03-24 05:19:24,647 - __main__ - INFO - --------------------------------------
+2026-03-24 05:19:59,948 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 05:20:07,348 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 05:24:50,525 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 05:25:01,614 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 05:31:10,912 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 05:33:34,894 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 05:34:38,998 - __main__ - INFO - [0.5, 0.5]
+2026-03-24 05:34:38,999 - __main__ - INFO - [' chắc', 'Shon […]\nShav']
+2026-03-24 05:34:38,999 - __main__ - INFO - --------------------------------------
+2026-03-24 05:37:32,899 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 05:39:51,768 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 05:45:09,751 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 05:48:38,005 - __main__ - INFO - [0.5]
+2026-03-24 05:48:38,005 - __main__ - INFO - [' juste […] thing']
+2026-03-24 05:48:38,005 - __main__ - INFO - --------------------------------------
+2026-03-24 05:50:01,213 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 05:50:14,729 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 05:52:55,951 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 05:55:37,964 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 05:55:47,828 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 05:58:29,887 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 05:58:39,814 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 06:01:26,205 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:01:34,850 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:04:37,096 - __main__ - INFO - [0.5]
+2026-03-24 06:04:37,096 - __main__ - INFO - ['ان \xa0\xa0 Home\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0']
+2026-03-24 06:04:37,096 - __main__ - INFO - --------------------------------------
+2026-03-24 06:05:26,948 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 06:07:10,976 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:10:01,036 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:10:10,861 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:12:54,272 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:13:06,982 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:15:40,869 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 06:17:47,316 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:19:50,140 - __main__ - INFO - [0.5, 0.5]
+2026-03-24 06:19:50,140 - __main__ - INFO - ['ROAD \xa0 […]\n\xa0\xa0 > \xa0\xa0\xa0\xa0™\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0', ' sais']
+2026-03-24 06:19:50,140 - __main__ - INFO - --------------------------------------
+2026-03-24 06:20:40,163 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 06:20:41,338 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:20:48,799 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 06:25:36,360 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:28:17,707 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:28:31,236 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:31:13,774 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:31:24,815 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:34:07,109 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:34:14,528 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:36:46,047 - __main__ - INFO - [0.5, 0.5]
+2026-03-24 06:36:46,047 - __main__ - INFO - ['Title:\xa0 […] \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0', ' سال  %  % % % % % %\n % % % ( "%25% % % “% “___']
+2026-03-24 06:36:46,047 - __main__ - INFO - --------------------------------------
+2026-03-24 06:37:08,962 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:39:50,563 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:44:33,133 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:47:26,532 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:52:11,386 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:52:21,249 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:53:30,132 - __main__ - INFO - []
+2026-03-24 06:53:30,132 - __main__ - INFO - []
+2026-03-24 06:53:30,132 - __main__ - INFO - --------------------------------------
+2026-03-24 06:55:05,161 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 06:55:12,576 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 07:05:02,807 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 07:09:34,979 - __main__ - INFO - []
+2026-03-24 07:09:34,979 - __main__ - INFO - []
+2026-03-24 07:09:34,979 - __main__ - INFO - --------------------------------------
+2026-03-24 07:10:00,924 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 07:14:41,559 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 07:14:52,654 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 07:19:47,571 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 07:26:53,912 - __main__ - INFO - []
+2026-03-24 07:26:53,912 - __main__ - INFO - []
+2026-03-24 07:26:53,912 - __main__ - INFO - --------------------------------------
+2026-03-24 07:37:09,125 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 07:41:58,080 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 07:43:20,422 - __main__ - INFO - []
+2026-03-24 07:43:20,423 - __main__ - INFO - []
+2026-03-24 07:43:20,423 - __main__ - INFO - --------------------------------------
+2026-03-24 07:44:14,267 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 07:44:26,538 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 07:47:08,054 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 07:58:51,005 - __main__ - INFO - []
+2026-03-24 07:58:51,051 - __main__ - INFO - []
+2026-03-24 07:58:51,051 - __main__ - INFO - --------------------------------------
+2026-03-24 08:01:53,076 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 08:02:26,684 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 08:06:52,735 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 08:09:28,021 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 08:11:49,756 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 08:12:14,523 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 08:14:23,559 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 08:15:00,435 - __main__ - INFO - [0.5, 0.5]
+2026-03-24 08:15:00,436 - __main__ - INFO - ['Question:\nQuestion: Index classification -, longest again!: 2019  (C', 'WRITE –…\n – nuôi']
+2026-03-24 08:15:00,436 - __main__ - INFO - --------------------------------------
+2026-03-24 08:19:07,288 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 08:21:59,796 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 08:24:53,477 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 08:27:46,912 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 08:30:28,350 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 08:32:04,886 - __main__ - INFO - []
+2026-03-24 08:32:04,886 - __main__ - INFO - []
+2026-03-24 08:32:04,886 - __main__ - INFO - --------------------------------------
+2026-03-24 08:35:33,722 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 08:42:59,928 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 08:43:08,624 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 08:48:05,556 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 08:49:20,849 - __main__ - INFO - []
+2026-03-24 08:49:20,849 - __main__ - INFO - []
+2026-03-24 08:49:20,849 - __main__ - INFO - --------------------------------------
+2026-03-24 08:56:08,234 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 08:57:43,555 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 09:02:29,992 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 09:02:38,629 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 09:05:26,025 - __main__ - INFO - [0.5]
+2026-03-24 09:05:26,025 - __main__ - INFO - ["翻索 lí […]\nKEY WEST}>'translation southeast_]() ‘ ’ > ‘ ’"]
+2026-03-24 09:05:26,071 - __main__ - INFO - --------------------------------------
+2026-03-24 09:08:04,212 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 09:14:01,833 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 09:18:56,747 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 09:23:02,933 - __main__ - INFO - []
+2026-03-24 09:23:02,933 - __main__ - INFO - []
+2026-03-24 09:23:02,933 - __main__ - INFO - --------------------------------------
+2026-03-24 09:23:51,275 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 09:26:34,237 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 09:33:29,375 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 09:36:20,966 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 09:36:32,087 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 09:40:06,462 - __main__ - INFO - []
+2026-03-24 09:40:06,462 - __main__ - INFO - []
+2026-03-24 09:40:06,462 - __main__ - INFO - --------------------------------------
+2026-03-24 09:41:16,006 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 09:41:25,930 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 09:44:11,201 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 09:46:08,224 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 09:53:59,663 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 09:54:08,305 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 09:56:50,938 - __main__ - INFO - [0.5]
+2026-03-24 09:56:50,939 - __main__ - INFO - ['biased […]\n← “of‐to']
+2026-03-24 09:56:50,939 - __main__ - INFO - --------------------------------------
+2026-03-24 09:58:52,789 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:01:59,623 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 10:05:01,716 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 10:06:32,641 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:06:41,289 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:09:24,051 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:11:00,228 - __main__ - INFO - [0.5, 0.5]
+2026-03-24 10:11:00,228 - __main__ - INFO - ['Stamped […]\nLas\xad²\r Kent ', ' speak […] expenditure evidently']
+2026-03-24 10:11:00,228 - __main__ - INFO - --------------------------------------
+2026-03-24 10:14:07,018 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 10:14:16,716 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:17:00,826 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:19:50,639 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:22:35,563 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:25:27,292 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:25:39,574 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:26:58,321 - __main__ - INFO - [0.5]
+2026-03-24 10:26:58,329 - __main__ - INFO - ['ilmiştir …of百']
+2026-03-24 10:26:58,329 - __main__ - INFO - --------------------------------------
+2026-03-24 10:27:14,961 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 10:30:34,147 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:35:17,265 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:40:12,285 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:42:52,265 - __main__ - INFO - [0.5]
+2026-03-24 10:42:52,265 - __main__ - INFO - ['USE […]ん […]\n']
+2026-03-24 10:42:52,265 - __main__ - INFO - --------------------------------------
+2026-03-24 10:45:48,686 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:45:59,790 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:48:40,944 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:48:52,108 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:51:34,821 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:56:19,097 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 10:56:30,139 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 11:00:45,068 - __main__ - INFO - []
+2026-03-24 11:00:45,114 - __main__ - INFO - []
+2026-03-24 11:00:45,114 - __main__ - INFO - --------------------------------------
+2026-03-24 11:01:26,438 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 11:06:09,307 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 11:06:20,365 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 11:11:06,106 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 11:11:17,265 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 11:18:30,747 - __main__ - INFO - []
+2026-03-24 11:18:30,747 - __main__ - INFO - []
+2026-03-24 11:18:30,747 - __main__ - INFO - --------------------------------------
+2026-03-24 11:20:52,261 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 11:21:04,644 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 11:25:36,809 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 11:25:57,704 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 11:28:58,628 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 11:30:42,098 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 11:34:24,798 - __main__ - INFO - [0.5, 0.5]
+2026-03-24 11:34:24,798 - __main__ - INFO - [' Gür p', ' Kenn inmate …']
+2026-03-24 11:34:24,798 - __main__ - INFO - --------------------------------------
+2026-03-24 11:38:17,563 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 11:38:28,693 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 11:43:15,445 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 11:48:09,523 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 11:48:20,547 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 11:52:05,946 - __main__ - INFO - []
+2026-03-24 11:52:05,946 - __main__ - INFO - []
+2026-03-24 11:52:05,946 - __main__ - INFO - --------------------------------------
+2026-03-24 11:53:19,165 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 12:08:56,176 - __main__ - INFO - []
+2026-03-24 12:08:56,183 - __main__ - INFO - []
+2026-03-24 12:08:56,183 - __main__ - INFO - --------------------------------------
+2026-03-24 12:12:04,195 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 12:14:22,280 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 12:21:45,785 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 12:24:07,939 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 12:26:17,734 - __main__ - INFO - []
+2026-03-24 12:26:17,734 - __main__ - INFO - []
+2026-03-24 12:26:17,734 - __main__ - INFO - --------------------------------------
+2026-03-24 12:26:42,311 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 12:36:46,137 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 12:41:44,979 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 12:42:44,346 - __main__ - INFO - []
+2026-03-24 12:42:44,346 - __main__ - INFO - []
+2026-03-24 12:42:44,346 - __main__ - INFO - --------------------------------------
+2026-03-24 12:51:37,146 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 12:56:31,133 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 12:58:47,716 - __main__ - INFO - []
+2026-03-24 12:58:47,716 - __main__ - INFO - []
+2026-03-24 12:58:47,716 - __main__ - INFO - --------------------------------------
+2026-03-24 12:59:13,126 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 13:03:58,384 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 13:08:51,717 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 13:08:54,113 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 13:09:05,333 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 13:14:03,318 - __main__ - INFO - [0.5]
+2026-03-24 13:14:03,318 - __main__ - INFO - ['January  […]']
+2026-03-24 13:14:03,318 - __main__ - INFO - --------------------------------------
+2026-03-24 13:18:43,757 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 13:18:54,882 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 13:21:36,436 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 13:30:05,510 - __main__ - INFO - []
+2026-03-24 13:30:05,510 - __main__ - INFO - []
+2026-03-24 13:30:05,510 - __main__ - INFO - --------------------------------------
+2026-03-24 13:31:14,531 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 13:41:05,975 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 13:41:15,862 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 13:46:10,891 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 13:47:23,257 - __main__ - INFO - []
+2026-03-24 13:47:23,257 - __main__ - INFO - []
+2026-03-24 13:47:23,257 - __main__ - INFO - --------------------------------------
+2026-03-24 13:51:05,780 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 13:55:57,394 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 14:03:28,734 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 14:03:39,848 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 14:03:49,817 - __main__ - INFO - []
+2026-03-24 14:03:49,817 - __main__ - INFO - []
+2026-03-24 14:03:49,818 - __main__ - INFO - --------------------------------------
+2026-03-24 14:08:23,224 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 14:08:34,343 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 14:13:19,031 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 14:20:22,637 - __main__ - INFO - []
+2026-03-24 14:20:22,637 - __main__ - INFO - []
+2026-03-24 14:20:22,637 - __main__ - INFO - --------------------------------------
+2026-03-24 14:35:53,746 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 14:36:26,055 - __main__ - INFO - []
+2026-03-24 14:36:26,055 - __main__ - INFO - []
+2026-03-24 14:36:26,056 - __main__ - INFO - --------------------------------------
+2026-03-24 14:40:51,400 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 14:43:07,982 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 14:51:24,679 - __main__ - INFO - []
+2026-03-24 14:51:24,680 - __main__ - INFO - []
+2026-03-24 14:51:24,680 - __main__ - INFO - --------------------------------------
+2026-03-24 14:52:52,787 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 14:55:28,531 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 14:56:06,615 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 15:00:24,783 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 15:05:01,362 - __main__ - INFO - [0.5, 0.5]
+2026-03-24 15:05:01,362 - __main__ - INFO - ['Parenchus ', 'Kay Econ ']
+2026-03-24 15:05:01,362 - __main__ - INFO - --------------------------------------
+2026-03-24 15:05:29,665 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 15:10:25,678 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 15:15:18,946 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 15:17:52,502 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 15:18:02,508 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 15:21:26,704 - __main__ - INFO - [0.5]
+2026-03-24 15:21:26,704 - __main__ - INFO - [' friendsـlow-·—']
+2026-03-24 15:21:26,704 - __main__ - INFO - --------------------------------------
+2026-03-24 15:22:45,846 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 15:35:20,997 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 15:35:30,867 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 15:36:11,472 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 15:38:11,664 - __main__ - INFO - [0.5]
+2026-03-24 15:38:11,664 - __main__ - INFO - [' Nacional ']
+2026-03-24 15:38:11,664 - __main__ - INFO - --------------------------------------
+2026-03-24 15:43:07,950 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 15:45:51,085 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 15:48:53,818 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 15:51:38,859 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 15:51:47,495 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 15:55:32,809 - __main__ - INFO - []
+2026-03-24 15:55:32,810 - __main__ - INFO - []
+2026-03-24 15:55:32,810 - __main__ - INFO - --------------------------------------
+2026-03-24 16:11:14,976 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 16:11:24,805 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 16:12:26,656 - __main__ - INFO - []
+2026-03-24 16:12:26,656 - __main__ - INFO - []
+2026-03-24 16:12:26,656 - __main__ - INFO - --------------------------------------
+2026-03-24 16:14:05,664 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 16:14:19,295 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 16:20:13,907 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 16:26:38,992 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 16:26:48,841 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 16:28:40,834 - __main__ - INFO - [0.5]
+2026-03-24 16:28:40,834 - __main__ - INFO - ['ları']
+2026-03-24 16:28:40,834 - __main__ - INFO - --------------------------------------
+2026-03-24 16:31:44,603 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 16:44:16,714 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 16:45:47,561 - __main__ - INFO - []
+2026-03-24 16:45:47,561 - __main__ - INFO - []
+2026-03-24 16:45:47,561 - __main__ - INFO - --------------------------------------
+2026-03-24 16:51:53,717 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 16:54:45,294 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 16:54:57,619 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 16:59:52,645 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:02:45,992 - __main__ - INFO - []
+2026-03-24 17:02:45,992 - __main__ - INFO - []
+2026-03-24 17:02:45,993 - __main__ - INFO - --------------------------------------
+2026-03-24 17:04:35,284 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:12:23,100 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:12:34,147 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:15:17,799 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:19:12,763 - __main__ - INFO - []
+2026-03-24 17:19:12,763 - __main__ - INFO - []
+2026-03-24 17:19:12,763 - __main__ - INFO - --------------------------------------
+2026-03-24 17:20:02,360 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:20:12,311 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:22:54,168 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:27:11,483 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 17:28:30,493 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:28:40,369 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:31:35,399 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:34:18,994 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:34:28,970 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:36:00,359 - __main__ - INFO - [0.5]
+2026-03-24 17:36:00,359 - __main__ - INFO - ['وینت an']
+2026-03-24 17:36:00,359 - __main__ - INFO - --------------------------------------
+2026-03-24 17:39:14,457 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:39:21,853 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:46:51,585 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:47:01,395 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:52:58,729 - __main__ - INFO - []
+2026-03-24 17:52:58,729 - __main__ - INFO - []
+2026-03-24 17:52:58,729 - __main__ - INFO - --------------------------------------
+2026-03-24 17:54:49,866 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:59:35,907 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 17:59:43,298 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:02:27,825 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:05:10,924 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:05:20,729 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:08:16,600 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:09:28,287 - __main__ - INFO - []
+2026-03-24 18:09:28,287 - __main__ - INFO - []
+2026-03-24 18:09:28,287 - __main__ - INFO - --------------------------------------
+2026-03-24 18:10:58,227 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:11:09,351 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:16:46,857 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:16:56,707 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:21:41,547 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:25:39,829 - __main__ - INFO - []
+2026-03-24 18:25:39,829 - __main__ - INFO - []
+2026-03-24 18:25:39,830 - __main__ - INFO - --------------------------------------
+2026-03-24 18:37:07,039 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:41:47,256 - __main__ - INFO - []
+2026-03-24 18:41:47,256 - __main__ - INFO - []
+2026-03-24 18:41:47,256 - __main__ - INFO - --------------------------------------
+2026-03-24 18:42:00,128 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:44:53,138 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:47:47,566 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:50:29,826 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:50:42,167 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:53:26,839 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:53:36,716 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 18:58:45,729 - __main__ - INFO - []
+2026-03-24 18:58:45,729 - __main__ - INFO - []
+2026-03-24 18:58:45,729 - __main__ - INFO - --------------------------------------
+2026-03-24 19:01:14,740 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 19:04:18,899 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 19:07:02,000 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 19:10:07,739 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 19:12:54,182 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 19:14:00,997 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 19:14:00,997 - __main__ - INFO - [0.5]
+2026-03-24 19:14:00,997 - __main__ - INFO - [' presente']
+2026-03-24 19:14:00,997 - __main__ - INFO - --------------------------------------
+2026-03-24 19:15:47,648 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 19:20:52,673 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 19:25:37,335 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 19:25:48,413 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 19:30:26,739 - __main__ - INFO - []
+2026-03-24 19:30:26,739 - __main__ - INFO - []
+2026-03-24 19:30:26,739 - __main__ - INFO - --------------------------------------
+2026-03-24 19:36:11,603 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 19:39:05,776 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 19:43:53,466 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 19:44:04,583 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 19:47:18,968 - __main__ - INFO - []
+2026-03-24 19:47:18,968 - __main__ - INFO - []
+2026-03-24 19:47:18,968 - __main__ - INFO - --------------------------------------
+2026-03-24 19:57:22,593 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 19:57:34,840 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 20:00:16,825 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 20:02:58,792 - __main__ - INFO - []
+2026-03-24 20:02:58,792 - __main__ - INFO - []
+2026-03-24 20:02:58,792 - __main__ - INFO - --------------------------------------
+2026-03-24 20:03:21,591 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 20:06:04,627 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 20:11:51,321 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 20:12:03,769 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 20:14:55,365 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 20:17:38,931 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 20:17:50,023 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 20:19:22,435 - __main__ - INFO - []
+2026-03-24 20:19:22,436 - __main__ - INFO - []
+2026-03-24 20:19:22,436 - __main__ - INFO - --------------------------------------
+2026-03-24 20:20:45,672 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 20:23:29,378 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 20:23:37,948 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 20:28:35,305 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 20:34:20,084 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 20:34:52,045 - __main__ - INFO - [0.5]
+2026-03-24 20:34:52,045 - __main__ - INFO - [' asoci']
+2026-03-24 20:34:52,045 - __main__ - INFO - --------------------------------------
+2026-03-24 20:38:56,561 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 20:46:49,290 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 20:49:45,308 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 20:51:06,277 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 20:51:06,277 - __main__ - INFO - [0.5]
+2026-03-24 20:51:06,277 - __main__ - INFO - [' üzere ']
+2026-03-24 20:51:06,277 - __main__ - INFO - --------------------------------------
+2026-03-24 20:52:28,305 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 20:55:12,863 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:03:56,508 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:06:27,523 - __main__ - INFO - []
+2026-03-24 21:06:27,523 - __main__ - INFO - []
+2026-03-24 21:06:27,523 - __main__ - INFO - --------------------------------------
+2026-03-24 21:07:05,502 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:08:43,697 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 21:09:51,099 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:10:02,100 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:15:49,940 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:18:42,132 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:18:51,985 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:21:35,393 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:23:30,096 - __main__ - INFO - [0.5]
+2026-03-24 21:23:30,097 - __main__ - INFO - [' své']
+2026-03-24 21:23:30,097 - __main__ - INFO - --------------------------------------
+2026-03-24 21:29:01,019 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:32:25,721 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:35:15,221 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:38:11,332 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:38:22,431 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:40:10,826 - __main__ - INFO - []
+2026-03-24 21:40:10,826 - __main__ - INFO - []
+2026-03-24 21:40:10,826 - __main__ - INFO - --------------------------------------
+2026-03-24 21:41:06,996 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:41:16,874 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:44:11,050 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:46:55,762 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:47:08,231 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:52:52,561 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:53:06,285 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:55:49,551 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 21:57:57,114 - __main__ - INFO - []
+2026-03-24 21:57:57,114 - __main__ - INFO - []
+2026-03-24 21:57:57,114 - __main__ - INFO - --------------------------------------
+2026-03-24 22:01:53,811 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 22:04:50,000 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 22:07:34,777 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 22:07:45,902 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 22:12:32,205 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 22:12:44,625 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 22:14:35,397 - __main__ - INFO - []
+2026-03-24 22:14:35,397 - __main__ - INFO - []
+2026-03-24 22:14:35,397 - __main__ - INFO - --------------------------------------
+2026-03-24 22:21:24,314 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 22:30:12,727 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 22:30:22,591 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 22:31:20,594 - __main__ - INFO - []
+2026-03-24 22:31:20,594 - __main__ - INFO - []
+2026-03-24 22:31:20,594 - __main__ - INFO - --------------------------------------
+2026-03-24 22:33:06,241 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 22:42:00,961 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 22:42:13,308 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 22:44:58,650 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 22:45:09,744 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 22:47:56,877 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 22:49:09,612 - __main__ - INFO - []
+2026-03-24 22:49:09,612 - __main__ - INFO - []
+2026-03-24 22:49:09,612 - __main__ - INFO - --------------------------------------
+2026-03-24 22:51:04,467 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 22:52:42,461 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 22:59:42,254 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 23:05:20,052 - __main__ - INFO - [0.5]
+2026-03-24 23:05:20,052 - __main__ - INFO - [' cevap']
+2026-03-24 23:05:20,052 - __main__ - INFO - --------------------------------------
+2026-03-24 23:21:54,029 - __main__ - INFO - []
+2026-03-24 23:21:54,029 - __main__ - INFO - []
+2026-03-24 23:21:54,029 - __main__ - INFO - --------------------------------------
+2026-03-24 23:22:07,107 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-24 23:23:06,795 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 23:25:52,312 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-24 23:37:57,767 - __main__ - INFO - [0.5]
+2026-03-24 23:37:57,768 - __main__ - INFO - ['950  …\n ']
+2026-03-24 23:37:57,768 - __main__ - INFO - --------------------------------------
+2026-03-24 23:52:30,197 - __main__ - INFO - []
+2026-03-24 23:52:30,197 - __main__ - INFO - []
+2026-03-24 23:52:30,197 - __main__ - INFO - --------------------------------------
+2026-03-25 00:09:06,563 - __main__ - INFO - []
+2026-03-25 00:09:06,563 - __main__ - INFO - []
+2026-03-25 00:09:06,563 - __main__ - INFO - --------------------------------------
+2026-03-25 00:26:00,570 - __main__ - INFO - []
+2026-03-25 00:26:00,570 - __main__ - INFO - []
+2026-03-25 00:26:00,570 - __main__ - INFO - --------------------------------------
+2026-03-25 00:32:19,573 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 00:41:17,478 - __main__ - INFO - [0.5]
+2026-03-25 00:41:17,478 - __main__ - INFO - ['řen']
+2026-03-25 00:41:17,478 - __main__ - INFO - --------------------------------------
+2026-03-25 00:53:26,232 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 00:56:58,809 - __main__ - INFO - [0.5]
+2026-03-25 00:56:58,809 - __main__ - INFO - ['vigılacak']
+2026-03-25 00:56:58,809 - __main__ - INFO - --------------------------------------
+2026-03-25 01:12:44,087 - __main__ - INFO - []
+2026-03-25 01:12:44,087 - __main__ - INFO - []
+2026-03-25 01:12:44,087 - __main__ - INFO - --------------------------------------
+2026-03-25 01:19:08,939 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 01:19:11,350 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-25 01:22:11,219 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-25 01:28:06,517 - __main__ - INFO - [0.5]
+2026-03-25 01:28:06,517 - __main__ - INFO - ['노']
+2026-03-25 01:28:06,525 - __main__ - INFO - --------------------------------------
+2026-03-25 01:43:51,721 - __main__ - INFO - []
+2026-03-25 01:43:51,721 - __main__ - INFO - []
+2026-03-25 01:43:51,721 - __main__ - INFO - --------------------------------------
+2026-03-25 01:57:19,367 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 01:59:58,787 - __main__ - INFO - [0.5]
+2026-03-25 01:59:58,787 - __main__ - INFO - ['ş']
+2026-03-25 01:59:58,788 - __main__ - INFO - --------------------------------------
+2026-03-25 02:15:16,469 - __main__ - INFO - []
+2026-03-25 02:15:16,469 - __main__ - INFO - []
+2026-03-25 02:15:16,469 - __main__ - INFO - --------------------------------------
+2026-03-25 02:31:09,827 - __main__ - INFO - []
+2026-03-25 02:31:09,827 - __main__ - INFO - []
+2026-03-25 02:31:09,827 - __main__ - INFO - --------------------------------------
+2026-03-25 02:46:35,310 - __main__ - INFO - []
+2026-03-25 02:46:35,310 - __main__ - INFO - []
+2026-03-25 02:46:35,310 - __main__ - INFO - --------------------------------------
+2026-03-25 03:00:32,461 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 03:01:36,282 - __main__ - INFO - [0.5]
+2026-03-25 03:01:36,282 - __main__ - INFO - ['Bonjour!.. ']
+2026-03-25 03:01:36,282 - __main__ - INFO - --------------------------------------
+2026-03-25 03:17:37,890 - __main__ - INFO - []
+2026-03-25 03:17:37,890 - __main__ - INFO - []
+2026-03-25 03:17:37,890 - __main__ - INFO - --------------------------------------
+2026-03-25 03:33:53,651 - __main__ - INFO - []
+2026-03-25 03:33:53,652 - __main__ - INFO - []
+2026-03-25 03:33:53,652 - __main__ - INFO - --------------------------------------
+2026-03-25 03:50:07,822 - __main__ - INFO - []
+2026-03-25 03:50:07,822 - __main__ - INFO - []
+2026-03-25 03:50:07,822 - __main__ - INFO - --------------------------------------
+2026-03-25 04:05:47,537 - __main__ - INFO - []
+2026-03-25 04:05:47,537 - __main__ - INFO - []
+2026-03-25 04:05:47,537 - __main__ - INFO - --------------------------------------
+2026-03-25 04:22:24,169 - __main__ - INFO - []
+2026-03-25 04:22:24,169 - __main__ - INFO - []
+2026-03-25 04:22:24,169 - __main__ - INFO - --------------------------------------
+2026-03-25 04:38:52,278 - __main__ - INFO - []
+2026-03-25 04:38:52,278 - __main__ - INFO - []
+2026-03-25 04:38:52,278 - __main__ - INFO - --------------------------------------
+2026-03-25 04:53:08,009 - __main__ - INFO - []
+2026-03-25 04:53:08,009 - __main__ - INFO - []
+2026-03-25 04:53:08,009 - __main__ - INFO - --------------------------------------
+2026-03-25 05:08:40,662 - __main__ - INFO - []
+2026-03-25 05:08:40,662 - __main__ - INFO - []
+2026-03-25 05:08:40,662 - __main__ - INFO - --------------------------------------
+2026-03-25 05:24:52,956 - __main__ - INFO - []
+2026-03-25 05:24:52,957 - __main__ - INFO - []
+2026-03-25 05:24:52,957 - __main__ - INFO - --------------------------------------
+2026-03-25 05:41:10,853 - __main__ - INFO - []
+2026-03-25 05:41:10,853 - __main__ - INFO - []
+2026-03-25 05:41:10,853 - __main__ - INFO - --------------------------------------
+2026-03-25 05:54:46,156 - __main__ - INFO - []
+2026-03-25 05:54:46,156 - __main__ - INFO - []
+2026-03-25 05:54:46,157 - __main__ - INFO - --------------------------------------
+2026-03-25 06:10:11,187 - __main__ - INFO - []
+2026-03-25 06:10:11,187 - __main__ - INFO - []
+2026-03-25 06:10:11,233 - __main__ - INFO - --------------------------------------
+2026-03-25 06:26:20,204 - __main__ - INFO - []
+2026-03-25 06:26:20,204 - __main__ - INFO - []
+2026-03-25 06:26:20,204 - __main__ - INFO - --------------------------------------
+2026-03-25 06:41:19,475 - __main__ - INFO - []
+2026-03-25 06:41:19,475 - __main__ - INFO - []
+2026-03-25 06:41:19,475 - __main__ - INFO - --------------------------------------
+2026-03-25 06:57:14,823 - __main__ - INFO - []
+2026-03-25 06:57:14,823 - __main__ - INFO - []
+2026-03-25 06:57:14,823 - __main__ - INFO - --------------------------------------
+2026-03-25 07:13:36,430 - __main__ - INFO - []
+2026-03-25 07:13:36,430 - __main__ - INFO - []
+2026-03-25 07:13:36,431 - __main__ - INFO - --------------------------------------
+2026-03-25 07:29:28,012 - __main__ - INFO - []
+2026-03-25 07:29:28,012 - __main__ - INFO - []
+2026-03-25 07:29:28,012 - __main__ - INFO - --------------------------------------
+2026-03-25 07:43:02,220 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 07:45:42,086 - __main__ - INFO - [0.5]
+2026-03-25 07:45:42,086 - __main__ - INFO - ['چ']
+2026-03-25 07:45:42,086 - __main__ - INFO - --------------------------------------
+2026-03-25 08:01:38,546 - __main__ - INFO - []
+2026-03-25 08:01:38,546 - __main__ - INFO - []
+2026-03-25 08:01:38,546 - __main__ - INFO - --------------------------------------
+2026-03-25 08:05:19,334 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 08:08:03,545 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 08:16:38,251 - __main__ - INFO - [0.5, 0.5]
+2026-03-25 08:16:38,251 - __main__ - INFO - ['ال', 'xin']
+2026-03-25 08:16:38,251 - __main__ - INFO - --------------------------------------
+2026-03-25 08:30:39,987 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 08:31:57,363 - __main__ - INFO - [0.5]
+2026-03-25 08:31:57,363 - __main__ - INFO - ['\n\t\t\t\t\n']
+2026-03-25 08:31:57,364 - __main__ - INFO - --------------------------------------
+2026-03-25 08:38:56,175 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 08:46:55,275 - __main__ - INFO - [0.5]
+2026-03-25 08:46:55,275 - __main__ - INFO - [' spend”— …:flex']
+2026-03-25 08:46:55,275 - __main__ - INFO - --------------------------------------
+2026-03-25 09:02:52,004 - __main__ - INFO - []
+2026-03-25 09:02:52,005 - __main__ - INFO - []
+2026-03-25 09:02:52,005 - __main__ - INFO - --------------------------------------
+2026-03-25 09:18:34,457 - __main__ - INFO - []
+2026-03-25 09:18:34,457 - __main__ - INFO - []
+2026-03-25 09:18:34,457 - __main__ - INFO - --------------------------------------
+2026-03-25 09:34:15,508 - __main__ - INFO - []
+2026-03-25 09:34:15,508 - __main__ - INFO - []
+2026-03-25 09:34:15,508 - __main__ - INFO - --------------------------------------
+2026-03-25 09:49:57,290 - __main__ - INFO - []
+2026-03-25 09:49:57,291 - __main__ - INFO - []
+2026-03-25 09:49:57,291 - __main__ - INFO - --------------------------------------
+2026-03-25 09:54:26,013 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 10:06:27,655 - __main__ - INFO - [0.5]
+2026-03-25 10:06:27,656 - __main__ - INFO - ['Ba ']
+2026-03-25 10:06:27,656 - __main__ - INFO - --------------------------------------
+2026-03-25 10:22:19,248 - __main__ - INFO - []
+2026-03-25 10:22:19,248 - __main__ - INFO - []
+2026-03-25 10:22:19,248 - __main__ - INFO - --------------------------------------
+2026-03-25 10:35:44,955 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 10:37:52,787 - __main__ - INFO - [0.5]
+2026-03-25 10:37:52,788 - __main__ - INFO - ['xin']
+2026-03-25 10:37:52,788 - __main__ - INFO - --------------------------------------
+2026-03-25 10:52:11,953 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 10:53:33,969 - __main__ - INFO - [0.5]
+2026-03-25 10:53:33,969 - __main__ - INFO - [' own +']
+2026-03-25 10:53:33,969 - __main__ - INFO - --------------------------------------
+2026-03-25 11:08:07,297 - __main__ - INFO - []
+2026-03-25 11:08:07,297 - __main__ - INFO - []
+2026-03-25 11:08:07,297 - __main__ - INFO - --------------------------------------
+2026-03-25 11:20:40,250 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 11:23:06,236 - __main__ - INFO - [0.5]
+2026-03-25 11:23:06,236 - __main__ - INFO - ['메 +']
+2026-03-25 11:23:06,236 - __main__ - INFO - --------------------------------------
+2026-03-25 11:38:21,857 - __main__ - INFO - []
+2026-03-25 11:38:21,857 - __main__ - INFO - []
+2026-03-25 11:38:21,857 - __main__ - INFO - --------------------------------------
+2026-03-25 11:49:50,945 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 11:52:24,257 - __main__ - INFO - [0.5]
+2026-03-25 11:52:24,257 - __main__ - INFO - [' Own +  unsuccessfully']
+2026-03-25 11:52:24,257 - __main__ - INFO - --------------------------------------
+2026-03-25 12:08:41,002 - __main__ - INFO - []
+2026-03-25 12:08:41,002 - __main__ - INFO - []
+2026-03-25 12:08:41,002 - __main__ - INFO - --------------------------------------
+2026-03-25 12:24:31,520 - __main__ - INFO - []
+2026-03-25 12:24:31,520 - __main__ - INFO - []
+2026-03-25 12:24:31,520 - __main__ - INFO - --------------------------------------
+2026-03-25 12:40:31,468 - __main__ - INFO - []
+2026-03-25 12:40:31,468 - __main__ - INFO - []
+2026-03-25 12:40:31,468 - __main__ - INFO - --------------------------------------
+2026-03-25 12:48:06,369 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 12:56:29,102 - __main__ - INFO - [0.5]
+2026-03-25 12:56:29,102 - __main__ - INFO - [' own ؟\n \xa0 ']
+2026-03-25 12:56:29,102 - __main__ - INFO - --------------------------------------
+2026-03-25 13:12:43,960 - __main__ - INFO - []
+2026-03-25 13:12:43,960 - __main__ - INFO - []
+2026-03-25 13:12:43,960 - __main__ - INFO - --------------------------------------
+2026-03-25 13:28:57,841 - __main__ - INFO - []
+2026-03-25 13:28:57,842 - __main__ - INFO - []
+2026-03-25 13:28:57,842 - __main__ - INFO - --------------------------------------
+2026-03-25 13:43:57,442 - __main__ - INFO - []
+2026-03-25 13:43:57,442 - __main__ - INFO - []
+2026-03-25 13:43:57,442 - __main__ - INFO - --------------------------------------
+2026-03-25 13:58:44,459 - __main__ - INFO - []
+2026-03-25 13:58:44,459 - __main__ - INFO - []
+2026-03-25 13:58:44,459 - __main__ - INFO - --------------------------------------
+2026-03-25 14:14:34,361 - __main__ - INFO - []
+2026-03-25 14:14:34,361 - __main__ - INFO - []
+2026-03-25 14:14:34,361 - __main__ - INFO - --------------------------------------
+2026-03-25 14:30:16,435 - __main__ - INFO - []
+2026-03-25 14:30:16,435 - __main__ - INFO - []
+2026-03-25 14:30:16,435 - __main__ - INFO - --------------------------------------
+2026-03-25 14:44:32,165 - __main__ - INFO - []
+2026-03-25 14:44:32,165 - __main__ - INFO - []
+2026-03-25 14:44:32,166 - __main__ - INFO - --------------------------------------
+2026-03-25 14:58:50,162 - __main__ - INFO - []
+2026-03-25 14:58:50,162 - __main__ - INFO - []
+2026-03-25 14:58:50,162 - __main__ - INFO - --------------------------------------
+2026-03-25 15:14:37,666 - __main__ - INFO - []
+2026-03-25 15:14:37,667 - __main__ - INFO - []
+2026-03-25 15:14:37,667 - __main__ - INFO - --------------------------------------
+2026-03-25 15:18:55,422 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 15:29:45,053 - __main__ - INFO - [0.5]
+2026-03-25 15:29:45,053 - __main__ - INFO - ['Ni']
+2026-03-25 15:29:45,053 - __main__ - INFO - --------------------------------------
+2026-03-25 15:31:03,414 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 15:44:17,811 - __main__ - INFO - [0.5]
+2026-03-25 15:44:17,812 - __main__ - INFO - ['แ']
+2026-03-25 15:44:17,812 - __main__ - INFO - --------------------------------------
+2026-03-25 16:00:38,627 - __main__ - INFO - []
+2026-03-25 16:00:38,628 - __main__ - INFO - []
+2026-03-25 16:00:38,628 - __main__ - INFO - --------------------------------------
+2026-03-25 16:14:39,677 - __main__ - INFO - []
+2026-03-25 16:14:39,677 - __main__ - INFO - []
+2026-03-25 16:14:39,677 - __main__ - INFO - --------------------------------------
+2026-03-25 16:29:38,594 - __main__ - INFO - []
+2026-03-25 16:29:38,594 - __main__ - INFO - []
+2026-03-25 16:29:38,594 - __main__ - INFO - --------------------------------------
+2026-03-25 16:45:10,173 - __main__ - INFO - []
+2026-03-25 16:45:10,173 - __main__ - INFO - []
+2026-03-25 16:45:10,173 - __main__ - INFO - --------------------------------------
+2026-03-25 16:46:40,138 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 16:59:59,263 - __main__ - INFO - [0.5]
+2026-03-25 16:59:59,263 - __main__ - INFO - ['อ\n']
+2026-03-25 16:59:59,263 - __main__ - INFO - --------------------------------------
+2026-03-25 17:14:15,512 - __main__ - INFO - []
+2026-03-25 17:14:15,512 - __main__ - INFO - []
+2026-03-25 17:14:15,512 - __main__ - INFO - --------------------------------------
+2026-03-25 17:30:03,700 - __main__ - INFO - []
+2026-03-25 17:30:03,700 - __main__ - INFO - []
+2026-03-25 17:30:03,700 - __main__ - INFO - --------------------------------------
+2026-03-25 17:43:47,542 - __main__ - INFO - []
+2026-03-25 17:43:47,542 - __main__ - INFO - []
+2026-03-25 17:43:47,543 - __main__ - INFO - --------------------------------------
+2026-03-25 17:56:45,831 - __main__ - INFO - []
+2026-03-25 17:56:45,831 - __main__ - INFO - []
+2026-03-25 17:56:45,831 - __main__ - INFO - --------------------------------------
+2026-03-25 18:07:56,262 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 18:12:10,725 - __main__ - INFO - [0.5]
+2026-03-25 18:12:10,725 - __main__ - INFO - [':)\n']
+2026-03-25 18:12:10,725 - __main__ - INFO - --------------------------------------
+2026-03-25 18:26:58,711 - __main__ - INFO - []
+2026-03-25 18:26:58,711 - __main__ - INFO - []
+2026-03-25 18:26:58,711 - __main__ - INFO - --------------------------------------
+2026-03-25 18:42:20,337 - __main__ - INFO - []
+2026-03-25 18:42:20,337 - __main__ - INFO - []
+2026-03-25 18:42:20,337 - __main__ - INFO - --------------------------------------
+2026-03-25 18:47:13,591 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 18:56:58,476 - __main__ - INFO - [0.5]
+2026-03-25 18:56:58,476 - __main__ - INFO - ['kem']
+2026-03-25 18:56:58,476 - __main__ - INFO - --------------------------------------
+2026-03-25 19:12:09,130 - __main__ - INFO - []
+2026-03-25 19:12:09,130 - __main__ - INFO - []
+2026-03-25 19:12:09,130 - __main__ - INFO - --------------------------------------
+2026-03-25 19:28:39,639 - __main__ - INFO - []
+2026-03-25 19:28:39,639 - __main__ - INFO - []
+2026-03-25 19:28:39,639 - __main__ - INFO - --------------------------------------
+2026-03-25 19:37:32,800 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 19:44:12,097 - __main__ - INFO - [0.5]
+2026-03-25 19:44:12,098 - __main__ - INFO - ['pl']
+2026-03-25 19:44:12,098 - __main__ - INFO - --------------------------------------
+2026-03-25 20:00:29,630 - __main__ - INFO - []
+2026-03-25 20:00:29,630 - __main__ - INFO - []
+2026-03-25 20:00:29,630 - __main__ - INFO - --------------------------------------
+2026-03-25 20:16:26,354 - __main__ - INFO - []
+2026-03-25 20:16:26,354 - __main__ - INFO - []
+2026-03-25 20:16:26,355 - __main__ - INFO - --------------------------------------
+2026-03-25 20:29:41,752 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 20:30:43,494 - __main__ - INFO - [0.5]
+2026-03-25 20:30:43,495 - __main__ - INFO - ['환']
+2026-03-25 20:30:43,495 - __main__ - INFO - --------------------------------------
+2026-03-25 20:47:12,576 - __main__ - INFO - []
+2026-03-25 20:47:12,576 - __main__ - INFO - []
+2026-03-25 20:47:12,576 - __main__ - INFO - --------------------------------------
+2026-03-25 21:03:09,568 - __main__ - INFO - []
+2026-03-25 21:03:09,568 - __main__ - INFO - []
+2026-03-25 21:03:09,568 - __main__ - INFO - --------------------------------------
+2026-03-25 21:07:41,551 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 21:16:40,842 - __main__ - INFO - [0.5]
+2026-03-25 21:16:40,842 - __main__ - INFO - ['ubah']
+2026-03-25 21:16:40,842 - __main__ - INFO - --------------------------------------
+2026-03-25 21:23:14,102 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 21:31:23,975 - __main__ - INFO - [0.5]
+2026-03-25 21:31:23,975 - __main__ - INFO - [' малень,...\n\n']
+2026-03-25 21:31:23,975 - __main__ - INFO - --------------------------------------
+2026-03-25 21:46:25,178 - __main__ - INFO - []
+2026-03-25 21:46:25,178 - __main__ - INFO - []
+2026-03-25 21:46:25,178 - __main__ - INFO - --------------------------------------
+2026-03-25 21:47:26,794 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 22:01:16,140 - __main__ - INFO - [0.5]
+2026-03-25 22:01:16,140 - __main__ - INFO - [' را vehicles]).\n']
+2026-03-25 22:01:16,140 - __main__ - INFO - --------------------------------------
+2026-03-25 22:17:28,040 - __main__ - INFO - []
+2026-03-25 22:17:28,040 - __main__ - INFO - []
+2026-03-25 22:17:28,040 - __main__ - INFO - --------------------------------------
+2026-03-25 22:32:22,624 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 22:32:54,609 - __main__ - INFO - [0.5]
+2026-03-25 22:32:54,609 - __main__ - INFO - [' Name!!']
+2026-03-25 22:32:54,609 - __main__ - INFO - --------------------------------------
+2026-03-25 22:46:01,891 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 22:49:13,468 - __main__ - INFO - [0.5]
+2026-03-25 22:49:13,469 - __main__ - INFO - [' parce\n    \n    \n']
+2026-03-25 22:49:13,469 - __main__ - INFO - --------------------------------------
+2026-03-25 23:01:05,919 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-25 23:03:44,917 - __main__ - INFO - [0.5]
+2026-03-25 23:03:44,918 - __main__ - INFO - [' cevap']
+2026-03-25 23:03:44,918 - __main__ - INFO - --------------------------------------
+2026-03-25 23:19:05,764 - __main__ - INFO - []
+2026-03-25 23:19:05,764 - __main__ - INFO - []
+2026-03-25 23:19:05,764 - __main__ - INFO - --------------------------------------
+2026-03-25 23:34:09,001 - __main__ - INFO - []
+2026-03-25 23:34:09,001 - __main__ - INFO - []
+2026-03-25 23:34:09,001 - __main__ - INFO - --------------------------------------
+2026-03-25 23:50:33,212 - __main__ - INFO - []
+2026-03-25 23:50:33,212 - __main__ - INFO - []
+2026-03-25 23:50:33,212 - __main__ - INFO - --------------------------------------
+2026-03-26 00:05:21,245 - __main__ - INFO - []
+2026-03-26 00:05:21,245 - __main__ - INFO - []
+2026-03-26 00:05:21,245 - __main__ - INFO - --------------------------------------
+2026-03-26 00:22:02,501 - __main__ - INFO - []
+2026-03-26 00:22:02,509 - __main__ - INFO - []
+2026-03-26 00:22:02,509 - __main__ - INFO - --------------------------------------
+2026-03-26 00:37:38,511 - __main__ - INFO - []
+2026-03-26 00:37:38,512 - __main__ - INFO - []
+2026-03-26 00:37:38,512 - __main__ - INFO - --------------------------------------
+2026-03-26 00:52:59,591 - __main__ - INFO - []
+2026-03-26 00:52:59,591 - __main__ - INFO - []
+2026-03-26 00:52:59,591 - __main__ - INFO - --------------------------------------
+2026-03-26 01:07:41,611 - __main__ - INFO - []
+2026-03-26 01:07:41,611 - __main__ - INFO - []
+2026-03-26 01:07:41,611 - __main__ - INFO - --------------------------------------
+2026-03-26 01:23:08,742 - __main__ - INFO - []
+2026-03-26 01:23:08,742 - __main__ - INFO - []
+2026-03-26 01:23:08,743 - __main__ - INFO - --------------------------------------
+2026-03-26 01:36:41,071 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-26 01:37:17,975 - __main__ - INFO - [0.5]
+2026-03-26 01:37:17,975 - __main__ - INFO - ['-ब\n\t\t\n']
+2026-03-26 01:37:17,982 - __main__ - INFO - --------------------------------------
+2026-03-26 01:52:41,213 - __main__ - INFO - []
+2026-03-26 01:52:41,214 - __main__ - INFO - []
+2026-03-26 01:52:41,214 - __main__ - INFO - --------------------------------------
+2026-03-26 02:08:22,181 - __main__ - INFO - []
+2026-03-26 02:08:22,181 - __main__ - INFO - []
+2026-03-26 02:08:22,181 - __main__ - INFO - --------------------------------------
+2026-03-26 02:24:28,146 - __main__ - INFO - []
+2026-03-26 02:24:28,147 - __main__ - INFO - []
+2026-03-26 02:24:28,147 - __main__ - INFO - --------------------------------------
+2026-03-26 02:38:49,747 - __main__ - INFO - []
+2026-03-26 02:38:49,747 - __main__ - INFO - []
+2026-03-26 02:38:49,747 - __main__ - INFO - --------------------------------------
+2026-03-26 02:54:01,499 - __main__ - INFO - []
+2026-03-26 02:54:01,499 - __main__ - INFO - []
+2026-03-26 02:54:01,499 - __main__ - INFO - --------------------------------------
+2026-03-26 03:03:26,610 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-26 03:06:39,642 - __main__ - INFO - [0.5]
+2026-03-26 03:06:39,642 - __main__ - INFO - [' İ']
+2026-03-26 03:06:39,642 - __main__ - INFO - --------------------------------------
+2026-03-26 03:22:40,763 - __main__ - INFO - []
+2026-03-26 03:22:40,771 - __main__ - INFO - []
+2026-03-26 03:22:40,771 - __main__ - INFO - --------------------------------------
+2026-03-26 03:36:25,905 - __main__ - INFO - []
+2026-03-26 03:36:25,905 - __main__ - INFO - []
+2026-03-26 03:36:25,905 - __main__ - INFO - --------------------------------------
+2026-03-26 03:47:50,868 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-26 03:51:43,611 - __main__ - INFO - [0.5]
+2026-03-26 03:51:43,611 - __main__ - INFO - ['ederland']
+2026-03-26 03:51:43,611 - __main__ - INFO - --------------------------------------
+2026-03-26 04:07:21,347 - __main__ - INFO - []
+2026-03-26 04:07:21,392 - __main__ - INFO - []
+2026-03-26 04:07:21,393 - __main__ - INFO - --------------------------------------
+2026-03-26 04:22:29,043 - __main__ - INFO - []
+2026-03-26 04:22:29,043 - __main__ - INFO - []
+2026-03-26 04:22:29,043 - __main__ - INFO - --------------------------------------
+2026-03-26 04:38:47,453 - __main__ - INFO - []
+2026-03-26 04:38:47,453 - __main__ - INFO - []
+2026-03-26 04:38:47,453 - __main__ - INFO - --------------------------------------
+2026-03-26 04:55:35,363 - __main__ - INFO - []
+2026-03-26 04:55:35,363 - __main__ - INFO - []
+2026-03-26 04:55:35,363 - __main__ - INFO - --------------------------------------
+2026-03-26 05:12:12,053 - __main__ - INFO - []
+2026-03-26 05:12:12,060 - __main__ - INFO - []
+2026-03-26 05:12:12,060 - __main__ - INFO - --------------------------------------
+2026-03-26 05:27:48,269 - __main__ - INFO - []
+2026-03-26 05:27:48,269 - __main__ - INFO - []
+2026-03-26 05:27:48,269 - __main__ - INFO - --------------------------------------
+2026-03-26 05:43:36,205 - __main__ - INFO - []
+2026-03-26 05:43:36,205 - __main__ - INFO - []
+2026-03-26 05:43:36,205 - __main__ - INFO - --------------------------------------
+2026-03-26 05:59:43,712 - __main__ - INFO - []
+2026-03-26 05:59:43,712 - __main__ - INFO - []
+2026-03-26 05:59:43,712 - __main__ - INFO - --------------------------------------
+2026-03-26 06:14:20,941 - __main__ - INFO - []
+2026-03-26 06:14:20,987 - __main__ - INFO - []
+2026-03-26 06:14:20,987 - __main__ - INFO - --------------------------------------
+2026-03-26 06:30:33,409 - __main__ - INFO - []
+2026-03-26 06:30:33,409 - __main__ - INFO - []
+2026-03-26 06:30:33,409 - __main__ - INFO - --------------------------------------
+2026-03-26 06:47:12,781 - __main__ - INFO - []
+2026-03-26 06:47:12,782 - __main__ - INFO - []
+2026-03-26 06:47:12,782 - __main__ - INFO - --------------------------------------
+2026-03-26 07:03:28,515 - __main__ - INFO - []
+2026-03-26 07:03:28,515 - __main__ - INFO - []
+2026-03-26 07:03:28,516 - __main__ - INFO - --------------------------------------
+2026-03-26 07:19:15,246 - __main__ - INFO - []
+2026-03-26 07:19:15,254 - __main__ - INFO - []
+2026-03-26 07:19:15,254 - __main__ - INFO - --------------------------------------
+2026-03-26 07:34:15,322 - __main__ - INFO - []
+2026-03-26 07:34:15,322 - __main__ - INFO - []
+2026-03-26 07:34:15,322 - __main__ - INFO - --------------------------------------
+2026-03-26 07:50:41,532 - __main__ - INFO - []
+2026-03-26 07:50:41,532 - __main__ - INFO - []
+2026-03-26 07:50:41,532 - __main__ - INFO - --------------------------------------
+2026-03-26 07:51:02,740 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 07:51:11,384 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 07:54:05,843 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 07:55:33,111 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 07:58:50,169 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:00:14,520 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-26 08:03:49,470 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:04:01,843 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:07:18,999 - __main__ - INFO - [0.5]
+2026-03-26 08:07:18,999 - __main__ - INFO - ['-Pro']
+2026-03-26 08:07:18,999 - __main__ - INFO - --------------------------------------
+2026-03-26 08:13:58,642 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:14:12,152 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:14:23,245 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:17:26,393 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:18:45,080 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:23:40,071 - __main__ - INFO - []
+2026-03-26 08:23:40,071 - __main__ - INFO - []
+2026-03-26 08:23:40,071 - __main__ - INFO - --------------------------------------
+2026-03-26 08:24:11,320 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:26:29,861 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:26:42,278 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:39:02,850 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:40:33,998 - __main__ - INFO - []
+2026-03-26 08:40:33,998 - __main__ - INFO - []
+2026-03-26 08:40:33,998 - __main__ - INFO - --------------------------------------
+2026-03-26 08:41:56,831 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:44:40,134 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:46:14,039 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:47:34,017 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:50:26,613 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:50:37,713 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:53:21,489 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:54:50,286 - __main__ - INFO - []
+2026-03-26 08:54:50,287 - __main__ - INFO - []
+2026-03-26 08:54:50,287 - __main__ - INFO - --------------------------------------
+2026-03-26 08:56:16,482 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:56:44,750 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:59:10,214 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:59:22,611 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 08:59:28,787 - __main__ - WARNING - Rate limited, waiting 10s before retry 2/5
+2026-03-26 09:02:05,124 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:02:19,947 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:03:47,125 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:03:58,147 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:05:00,485 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:07:15,020 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:08:07,857 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:10:10,159 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:10:20,053 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:10:49,579 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:11:00,581 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:12:27,834 - __main__ - INFO - []
+2026-03-26 09:12:27,834 - __main__ - INFO - []
+2026-03-26 09:12:27,834 - __main__ - INFO - --------------------------------------
+2026-03-26 09:13:04,732 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:13:14,579 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:16:42,782 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:19:37,674 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:19:46,325 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:22:40,011 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:22:53,607 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:23:06,161 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:25:36,444 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:25:49,990 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:28:29,720 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:28:53,127 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:30:37,056 - __main__ - INFO - []
+2026-03-26 09:30:37,057 - __main__ - INFO - []
+2026-03-26 09:30:37,057 - __main__ - INFO - --------------------------------------
+2026-03-26 09:31:12,349 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:33:48,373 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:34:06,869 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:34:16,761 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:37:03,679 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:38:32,543 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:38:42,469 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:39:57,282 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:41:39,268 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:43:00,688 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:44:20,376 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:45:29,162 - __main__ - INFO - []
+2026-03-26 09:45:29,162 - __main__ - INFO - []
+2026-03-26 09:45:29,162 - __main__ - INFO - --------------------------------------
+2026-03-26 09:45:46,434 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:45:57,526 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:47:15,099 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:47:26,219 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:48:41,577 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:51:45,044 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:54:41,105 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:55:13,292 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:57:24,062 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 09:58:06,150 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:00:20,517 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:00:30,352 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:00:50,083 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:02:46,672 - __main__ - INFO - []
+2026-03-26 10:02:46,672 - __main__ - INFO - []
+2026-03-26 10:02:46,672 - __main__ - INFO - --------------------------------------
+2026-03-26 10:03:26,706 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:03:43,843 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:03:56,141 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:06:38,010 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:06:49,125 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:09:16,836 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:09:36,515 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:12:11,055 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:12:26,965 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:12:38,095 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:15:06,053 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:17:21,293 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:17:50,967 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:18:00,827 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:19:50,793 - __main__ - INFO - []
+2026-03-26 10:19:50,793 - __main__ - INFO - []
+2026-03-26 10:19:50,793 - __main__ - INFO - --------------------------------------
+2026-03-26 10:20:44,550 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:20:55,665 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:23:08,476 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:25:39,528 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:25:51,765 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:26:13,984 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:28:35,872 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:29:06,502 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:31:43,009 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:31:50,503 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:34:23,400 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:34:36,988 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:34:44,377 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:34:54,304 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:37:39,474 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:37:48,086 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:38:10,371 - __main__ - INFO - []
+2026-03-26 10:38:10,371 - __main__ - INFO - []
+2026-03-26 10:38:10,371 - __main__ - INFO - --------------------------------------
+2026-03-26 10:43:25,938 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:46:20,354 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:47:07,256 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:49:25,047 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:50:01,938 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:55:13,101 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:55:41,492 - __main__ - INFO - []
+2026-03-26 10:55:41,492 - __main__ - INFO - []
+2026-03-26 10:55:41,492 - __main__ - INFO - --------------------------------------
+2026-03-26 10:56:01,574 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:57:55,865 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 10:58:05,809 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:01:00,270 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:01:39,745 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:01:50,761 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:03:56,793 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:04:34,878 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:04:44,795 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:06:40,817 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:06:49,440 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:09:30,521 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:09:40,403 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:12:23,509 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:13:40,008 - __main__ - INFO - []
+2026-03-26 11:13:40,008 - __main__ - INFO - []
+2026-03-26 11:13:40,008 - __main__ - INFO - --------------------------------------
+2026-03-26 11:15:16,851 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:15:25,531 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:15:41,497 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-26 11:18:08,868 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:18:20,042 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:21:01,090 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:21:11,063 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:24:03,351 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:26:44,481 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:30:22,447 - __main__ - INFO - [0.5]
+2026-03-26 11:30:22,448 - __main__ - INFO - [' Porn\ta péče']
+2026-03-26 11:30:22,448 - __main__ - INFO - --------------------------------------
+2026-03-26 11:31:46,900 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:31:59,208 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:36:41,703 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:37:14,913 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:42:10,061 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:42:22,400 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:44:19,923 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:44:30,967 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:45:16,785 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:47:14,738 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:47:56,769 - __main__ - INFO - []
+2026-03-26 11:47:56,769 - __main__ - INFO - []
+2026-03-26 11:47:56,769 - __main__ - INFO - --------------------------------------
+2026-03-26 11:48:10,830 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:50:09,518 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:50:54,963 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:52:59,545 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-26 11:53:48,590 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:55:44,308 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:56:54,671 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 11:59:49,208 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:01:31,337 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:01:43,595 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:02:42,997 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:04:28,776 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-26 12:04:28,777 - __main__ - INFO - [0.5, 0.5]
+2026-03-26 12:04:28,777 - __main__ - INFO - ['사', '환 �']
+2026-03-26 12:04:28,777 - __main__ - INFO - --------------------------------------
+2026-03-26 12:05:25,123 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:08:31,554 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:10:07,485 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:10:47,906 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-26 12:11:26,146 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:18:07,213 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:20:36,291 - __main__ - INFO - [0.5]
+2026-03-26 12:20:36,291 - __main__ - INFO - ['아']
+2026-03-26 12:20:36,291 - __main__ - INFO - --------------------------------------
+2026-03-26 12:20:50,468 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:28:47,390 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:31:21,049 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:34:15,411 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:37:22,461 - __main__ - INFO - []
+2026-03-26 12:37:22,461 - __main__ - INFO - []
+2026-03-26 12:37:22,461 - __main__ - INFO - --------------------------------------
+2026-03-26 12:39:10,865 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:40:27,012 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:43:20,821 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:43:31,896 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:53:22,382 - __main__ - INFO - []
+2026-03-26 12:53:22,428 - __main__ - INFO - []
+2026-03-26 12:53:22,428 - __main__ - INFO - --------------------------------------
+2026-03-26 12:54:06,449 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:56:43,921 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:57:02,443 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 12:57:13,526 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:03:03,264 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:06:39,775 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:06:52,122 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:08:57,526 - __main__ - INFO - []
+2026-03-26 13:08:57,526 - __main__ - INFO - []
+2026-03-26 13:08:57,526 - __main__ - INFO - --------------------------------------
+2026-03-26 13:13:43,324 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:19:32,131 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:21:22,764 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:24:47,879 - __main__ - INFO - []
+2026-03-26 13:24:47,879 - __main__ - INFO - []
+2026-03-26 13:24:47,879 - __main__ - INFO - --------------------------------------
+2026-03-26 13:27:29,005 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:32:36,757 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:36:15,713 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:40:50,899 - __main__ - INFO - []
+2026-03-26 13:40:50,899 - __main__ - INFO - []
+2026-03-26 13:40:50,899 - __main__ - INFO - --------------------------------------
+2026-03-26 13:41:12,903 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:41:25,166 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:41:42,280 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:41:53,276 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:44:36,180 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:44:48,495 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:47:43,396 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:50:25,831 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:53:20,181 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:56:10,358 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 13:57:07,402 - __main__ - INFO - []
+2026-03-26 13:57:07,402 - __main__ - INFO - []
+2026-03-26 13:57:07,402 - __main__ - INFO - --------------------------------------
+2026-03-26 14:01:23,305 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:02:03,914 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:04:06,359 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:04:51,839 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:10:56,373 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:13:02,249 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:13:26,868 - __main__ - INFO - []
+2026-03-26 14:13:26,868 - __main__ - INFO - []
+2026-03-26 14:13:26,868 - __main__ - INFO - --------------------------------------
+2026-03-26 14:13:53,986 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:15:48,361 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:18:43,646 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:21:38,081 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:22:32,266 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:22:43,387 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:27:27,762 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:28:27,697 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:30:05,095 - __main__ - INFO - []
+2026-03-26 14:30:05,095 - __main__ - INFO - []
+2026-03-26 14:30:05,095 - __main__ - INFO - --------------------------------------
+2026-03-26 14:30:23,499 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:31:22,666 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:34:21,001 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:36:07,482 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:37:20,051 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:39:04,485 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:39:16,806 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:42:03,206 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 14:47:05,337 - __main__ - INFO - []
+2026-03-26 14:47:05,337 - __main__ - INFO - []
+2026-03-26 14:47:05,337 - __main__ - INFO - --------------------------------------
+2026-03-26 14:56:19,805 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-26 15:03:16,450 - __main__ - INFO - [0.5]
+2026-03-26 15:03:16,450 - __main__ - INFO - [' Skill stavu']
+2026-03-26 15:03:16,450 - __main__ - INFO - --------------------------------------
+2026-03-26 15:19:50,634 - __main__ - INFO - []
+2026-03-26 15:19:50,634 - __main__ - INFO - []
+2026-03-26 15:19:50,634 - __main__ - INFO - --------------------------------------
+2026-03-26 15:35:04,578 - __main__ - INFO - []
+2026-03-26 15:35:04,578 - __main__ - INFO - []
+2026-03-26 15:35:04,578 - __main__ - INFO - --------------------------------------
+2026-03-26 15:49:57,090 - __main__ - INFO - []
+2026-03-26 15:49:57,090 - __main__ - INFO - []
+2026-03-26 15:49:57,090 - __main__ - INFO - --------------------------------------
+2026-03-26 16:04:41,275 - __main__ - INFO - []
+2026-03-26 16:04:41,275 - __main__ - INFO - []
+2026-03-26 16:04:41,276 - __main__ - INFO - --------------------------------------
+2026-03-26 16:19:59,884 - __main__ - INFO - []
+2026-03-26 16:19:59,884 - __main__ - INFO - []
+2026-03-26 16:19:59,884 - __main__ - INFO - --------------------------------------
+2026-03-26 16:35:25,354 - __main__ - INFO - []
+2026-03-26 16:35:25,354 - __main__ - INFO - []
+2026-03-26 16:35:25,354 - __main__ - INFO - --------------------------------------
+2026-03-26 16:50:56,469 - __main__ - INFO - []
+2026-03-26 16:50:56,469 - __main__ - INFO - []
+2026-03-26 16:50:56,469 - __main__ - INFO - --------------------------------------
+2026-03-26 17:06:44,393 - __main__ - INFO - []
+2026-03-26 17:06:44,394 - __main__ - INFO - []
+2026-03-26 17:06:44,394 - __main__ - INFO - --------------------------------------
+2026-03-26 17:22:40,449 - __main__ - INFO - []
+2026-03-26 17:22:40,450 - __main__ - INFO - []
+2026-03-26 17:22:40,450 - __main__ - INFO - --------------------------------------
+2026-03-26 17:37:34,441 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-26 17:38:46,712 - __main__ - INFO - [0.5]
+2026-03-26 17:38:46,712 - __main__ - INFO - ['Carthy']
+2026-03-26 17:38:46,712 - __main__ - INFO - --------------------------------------
+2026-03-26 17:54:18,147 - __main__ - INFO - []
+2026-03-26 17:54:18,147 - __main__ - INFO - []
+2026-03-26 17:54:18,147 - __main__ - INFO - --------------------------------------
+2026-03-26 18:08:52,446 - __main__ - INFO - []
+2026-03-26 18:08:52,446 - __main__ - INFO - []
+2026-03-26 18:08:52,446 - __main__ - INFO - --------------------------------------
+2026-03-26 18:23:33,134 - __main__ - INFO - []
+2026-03-26 18:23:33,134 - __main__ - INFO - []
+2026-03-26 18:23:33,134 - __main__ - INFO - --------------------------------------
+2026-03-26 18:27:59,947 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-26 18:38:37,272 - __main__ - INFO - [0.5]
+2026-03-26 18:38:37,272 - __main__ - INFO - [' یک']
+2026-03-26 18:38:37,273 - __main__ - INFO - --------------------------------------
+2026-03-26 18:53:34,536 - __main__ - INFO - []
+2026-03-26 18:53:34,536 - __main__ - INFO - []
+2026-03-26 18:53:34,536 - __main__ - INFO - --------------------------------------
+2026-03-26 19:07:58,652 - __main__ - INFO - []
+2026-03-26 19:07:58,652 - __main__ - INFO - []
+2026-03-26 19:07:58,652 - __main__ - INFO - --------------------------------------
+2026-03-26 19:23:28,827 - __main__ - INFO - []
+2026-03-26 19:23:28,828 - __main__ - INFO - []
+2026-03-26 19:23:28,828 - __main__ - INFO - --------------------------------------
+2026-03-26 19:36:48,451 - __main__ - INFO - []
+2026-03-26 19:36:48,452 - __main__ - INFO - []
+2026-03-26 19:36:48,452 - __main__ - INFO - --------------------------------------
+2026-03-26 19:48:09,417 - __main__ - INFO - []
+2026-03-26 19:48:09,418 - __main__ - INFO - []
+2026-03-26 19:48:09,418 - __main__ - INFO - --------------------------------------
+2026-03-26 20:01:21,316 - __main__ - INFO - []
+2026-03-26 20:01:21,316 - __main__ - INFO - []
+2026-03-26 20:01:21,316 - __main__ - INFO - --------------------------------------
+2026-03-26 20:15:19,033 - __main__ - INFO - []
+2026-03-26 20:15:19,033 - __main__ - INFO - []
+2026-03-26 20:15:19,033 - __main__ - INFO - --------------------------------------
+2026-03-26 20:30:39,933 - __main__ - INFO - []
+2026-03-26 20:30:39,933 - __main__ - INFO - []
+2026-03-26 20:30:39,933 - __main__ - INFO - --------------------------------------
+2026-03-26 20:44:55,564 - __main__ - INFO - []
+2026-03-26 20:44:55,564 - __main__ - INFO - []
+2026-03-26 20:44:55,564 - __main__ - INFO - --------------------------------------
+2026-03-26 20:59:51,834 - __main__ - INFO - []
+2026-03-26 20:59:51,834 - __main__ - INFO - []
+2026-03-26 20:59:51,835 - __main__ - INFO - --------------------------------------
+2026-03-26 21:14:16,821 - __main__ - INFO - []
+2026-03-26 21:14:16,821 - __main__ - INFO - []
+2026-03-26 21:14:16,821 - __main__ - INFO - --------------------------------------
+2026-03-26 21:28:03,156 - __main__ - INFO - []
+2026-03-26 21:28:03,157 - __main__ - INFO - []
+2026-03-26 21:28:03,157 - __main__ - INFO - --------------------------------------
+2026-03-26 21:28:15,586 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-26 21:42:31,199 - __main__ - INFO - [0.5]
+2026-03-26 21:42:31,199 - __main__ - INFO - [' memiliki']
+2026-03-26 21:42:31,199 - __main__ - INFO - --------------------------------------
+2026-03-26 21:58:15,096 - __main__ - INFO - []
+2026-03-26 21:58:15,096 - __main__ - INFO - []
+2026-03-26 21:58:15,096 - __main__ - INFO - --------------------------------------
+2026-03-26 22:11:17,069 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 22:11:28,156 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 22:13:59,646 - __main__ - INFO - []
+2026-03-26 22:13:59,647 - __main__ - INFO - []
+2026-03-26 22:13:59,647 - __main__ - INFO - --------------------------------------
+2026-03-26 22:14:20,916 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 22:19:59,863 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 22:23:06,046 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 22:25:48,661 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 22:28:45,089 - __main__ - INFO - []
+2026-03-26 22:28:45,089 - __main__ - INFO - []
+2026-03-26 22:28:45,090 - __main__ - INFO - --------------------------------------
+2026-03-26 22:31:39,202 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 22:34:32,720 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 22:37:28,587 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 22:37:38,461 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 22:40:22,823 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 22:43:22,219 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-26 22:43:29,535 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 22:44:00,483 - __main__ - INFO - [0.5]
+2026-03-26 22:44:00,483 - __main__ - INFO - ['Bonjour']
+2026-03-26 22:44:00,484 - __main__ - INFO - --------------------------------------
+2026-03-26 22:48:25,351 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 22:51:08,837 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 22:56:07,429 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 22:56:18,473 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 22:58:10,599 - __main__ - INFO - []
+2026-03-26 22:58:10,599 - __main__ - INFO - []
+2026-03-26 22:58:10,599 - __main__ - INFO - --------------------------------------
+2026-03-26 22:59:08,549 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-26 23:03:49,318 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 23:11:10,056 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 23:12:11,889 - __main__ - INFO - [0.5]
+2026-03-26 23:12:11,889 - __main__ - INFO - ['서']
+2026-03-26 23:12:11,889 - __main__ - INFO - --------------------------------------
+2026-03-26 23:15:48,937 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 23:16:01,287 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 23:21:39,217 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 23:24:34,039 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 23:24:46,385 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 23:27:34,966 - __main__ - INFO - []
+2026-03-26 23:27:34,966 - __main__ - INFO - []
+2026-03-26 23:27:34,966 - __main__ - INFO - --------------------------------------
+2026-03-26 23:30:25,019 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 23:30:36,121 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 23:36:26,118 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 23:42:24,101 - __main__ - INFO - []
+2026-03-26 23:42:24,101 - __main__ - INFO - []
+2026-03-26 23:42:24,101 - __main__ - INFO - --------------------------------------
+2026-03-26 23:44:05,165 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 23:46:48,554 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 23:49:43,959 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 23:49:56,234 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 23:52:41,953 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 23:57:48,314 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-26 23:59:07,434 - __main__ - INFO - []
+2026-03-26 23:59:07,434 - __main__ - INFO - []
+2026-03-26 23:59:07,434 - __main__ - INFO - --------------------------------------
+2026-03-27 00:07:44,944 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 00:14:44,889 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 00:15:46,310 - __main__ - INFO - []
+2026-03-27 00:15:46,310 - __main__ - INFO - []
+2026-03-27 00:15:46,310 - __main__ - INFO - --------------------------------------
+2026-03-27 00:16:35,461 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-27 00:17:28,370 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 00:22:22,457 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 00:28:02,862 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 00:30:56,441 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 00:31:24,561 - __main__ - INFO - [0.5]
+2026-03-27 00:31:24,561 - __main__ - INFO - ['Hey']
+2026-03-27 00:31:24,561 - __main__ - INFO - --------------------------------------
+2026-03-27 00:33:54,503 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 00:36:48,637 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 00:36:59,716 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 00:41:56,972 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 00:46:30,238 - __main__ - INFO - []
+2026-03-27 00:46:30,238 - __main__ - INFO - []
+2026-03-27 00:46:30,238 - __main__ - INFO - --------------------------------------
+2026-03-27 00:52:21,212 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 00:58:03,899 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 01:02:56,856 - __main__ - INFO - []
+2026-03-27 01:02:56,856 - __main__ - INFO - []
+2026-03-27 01:02:56,856 - __main__ - INFO - --------------------------------------
+2026-03-27 01:08:56,058 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 01:09:07,167 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 01:11:07,754 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-27 01:17:35,557 - __main__ - INFO - [0.5]
+2026-03-27 01:17:35,565 - __main__ - INFO - ['γ),\n\n']
+2026-03-27 01:17:35,565 - __main__ - INFO - --------------------------------------
+2026-03-27 01:20:56,339 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 01:30:02,708 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 01:32:53,822 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 01:33:02,525 - __main__ - INFO - []
+2026-03-27 01:33:02,525 - __main__ - INFO - []
+2026-03-27 01:33:02,525 - __main__ - INFO - --------------------------------------
+2026-03-27 01:36:02,045 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 01:44:53,054 - __main__ - WARNING - Rate limited, waiting 5s before retry 1/5
+2026-03-27 01:49:54,764 - __main__ - INFO - []
+2026-03-27 01:49:54,764 - __main__ - INFO - []
+2026-03-27 01:49:54,764 - __main__ - INFO - --------------------------------------
+2026-03-27 01:58:44,426 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-27 02:05:20,234 - __main__ - INFO - [0.5]
+2026-03-27 02:05:20,235 - __main__ - INFO - ['Granted']
+2026-03-27 02:05:20,235 - __main__ - INFO - --------------------------------------
+2026-03-27 02:20:54,081 - __main__ - INFO - []
+2026-03-27 02:20:54,081 - __main__ - INFO - []
+2026-03-27 02:20:54,081 - __main__ - INFO - --------------------------------------
+2026-03-27 02:31:50,211 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-27 02:34:56,809 - __main__ - INFO - [0.5]
+2026-03-27 02:34:56,809 - __main__ - INFO - ['É']
+2026-03-27 02:34:56,809 - __main__ - INFO - --------------------------------------
+2026-03-27 02:50:07,556 - __main__ - INFO - []
+2026-03-27 02:50:07,556 - __main__ - INFO - []
+2026-03-27 02:50:07,556 - __main__ - INFO - --------------------------------------
+2026-03-27 03:06:17,501 - __main__ - INFO - []
+2026-03-27 03:06:17,501 - __main__ - INFO - []
+2026-03-27 03:06:17,501 - __main__ - INFO - --------------------------------------
+2026-03-27 03:20:08,696 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-27 03:20:39,516 - __main__ - INFO - [0.5]
+2026-03-27 03:20:39,516 - __main__ - INFO - ["PU.''\xa0 _trial\t\n_personal"]
+2026-03-27 03:20:39,516 - __main__ - INFO - --------------------------------------
+2026-03-27 03:37:19,661 - __main__ - INFO - []
+2026-03-27 03:37:19,661 - __main__ - INFO - []
+2026-03-27 03:37:19,661 - __main__ - INFO - --------------------------------------
+2026-03-27 03:52:21,142 - __main__ - INFO - []
+2026-03-27 03:52:21,142 - __main__ - INFO - []
+2026-03-27 03:52:21,142 - __main__ - INFO - --------------------------------------
+2026-03-27 04:07:27,001 - __main__ - INFO - []
+2026-03-27 04:07:27,001 - __main__ - INFO - []
+2026-03-27 04:07:27,001 - __main__ - INFO - --------------------------------------
+2026-03-27 04:20:49,581 - __main__ - INFO - []
+2026-03-27 04:20:49,582 - __main__ - INFO - []
+2026-03-27 04:20:49,582 - __main__ - INFO - --------------------------------------
+2026-03-27 04:34:28,405 - __main__ - INFO - []
+2026-03-27 04:34:28,413 - __main__ - INFO - []
+2026-03-27 04:34:28,413 - __main__ - INFO - --------------------------------------
+2026-03-27 04:48:36,748 - __main__ - INFO - []
+2026-03-27 04:48:36,748 - __main__ - INFO - []
+2026-03-27 04:48:36,748 - __main__ - INFO - --------------------------------------
+2026-03-27 05:03:38,496 - __main__ - INFO - []
+2026-03-27 05:03:38,496 - __main__ - INFO - []
+2026-03-27 05:03:38,496 - __main__ - INFO - --------------------------------------
+2026-03-27 05:18:40,007 - __main__ - INFO - []
+2026-03-27 05:18:40,007 - __main__ - INFO - []
+2026-03-27 05:18:40,007 - __main__ - INFO - --------------------------------------
+2026-03-27 05:32:14,162 - __main__ - INFO - []
+2026-03-27 05:32:14,162 - __main__ - INFO - []
+2026-03-27 05:32:14,208 - __main__ - INFO - --------------------------------------
+2026-03-27 05:48:22,221 - __main__ - INFO - []
+2026-03-27 05:48:22,221 - __main__ - INFO - []
+2026-03-27 05:48:22,221 - __main__ - INFO - --------------------------------------
+2026-03-27 06:04:18,847 - __main__ - INFO - []
+2026-03-27 06:04:18,893 - __main__ - INFO - []
+2026-03-27 06:04:18,893 - __main__ - INFO - --------------------------------------
+2026-03-27 06:11:55,783 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-27 06:19:05,525 - __main__ - INFO - [0.5]
+2026-03-27 06:19:05,525 - __main__ - INFO - ['URRE']
+2026-03-27 06:19:05,525 - __main__ - INFO - --------------------------------------
+2026-03-27 06:34:10,849 - __main__ - INFO - []
+2026-03-27 06:34:10,849 - __main__ - INFO - []
+2026-03-27 06:34:10,849 - __main__ - INFO - --------------------------------------
+2026-03-27 06:49:37,946 - __main__ - INFO - []
+2026-03-27 06:49:37,946 - __main__ - INFO - []
+2026-03-27 06:49:37,946 - __main__ - INFO - --------------------------------------
+2026-03-27 07:04:48,332 - __main__ - INFO - []
+2026-03-27 07:04:48,332 - __main__ - INFO - []
+2026-03-27 07:04:48,378 - __main__ - INFO - --------------------------------------
+2026-03-27 07:21:08,241 - __main__ - INFO - []
+2026-03-27 07:21:08,241 - __main__ - INFO - []
+2026-03-27 07:21:08,241 - __main__ - INFO - --------------------------------------
+2026-03-27 07:36:07,901 - __main__ - INFO - []
+2026-03-27 07:36:07,901 - __main__ - INFO - []
+2026-03-27 07:36:07,901 - __main__ - INFO - --------------------------------------
+2026-03-27 07:36:20,376 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-27 07:50:02,395 - __main__ - INFO - [0.5]
+2026-03-27 07:50:02,395 - __main__ - INFO - ['งค']
+2026-03-27 07:50:02,395 - __main__ - INFO - --------------------------------------
+2026-03-27 08:03:04,815 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-27 08:04:54,848 - __main__ - INFO - [0.5]
+2026-03-27 08:04:54,848 - __main__ - INFO - ['Title']
+2026-03-27 08:04:54,848 - __main__ - INFO - --------------------------------------
+2026-03-27 08:19:53,625 - __main__ - INFO - []
+2026-03-27 08:19:53,625 - __main__ - INFO - []
+2026-03-27 08:19:53,625 - __main__ - INFO - --------------------------------------
+2026-03-27 08:35:20,325 - __main__ - INFO - []
+2026-03-27 08:35:20,325 - __main__ - INFO - []
+2026-03-27 08:35:20,325 - __main__ - INFO - --------------------------------------
+2026-03-27 08:50:20,424 - __main__ - INFO - []
+2026-03-27 08:50:20,424 - __main__ - INFO - []
+2026-03-27 08:50:20,425 - __main__ - INFO - --------------------------------------
+2026-03-27 08:52:42,515 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-27 09:05:47,488 - __main__ - INFO - [0.5]
+2026-03-27 09:05:47,534 - __main__ - INFO - ['овід']
+2026-03-27 09:05:47,534 - __main__ - INFO - --------------------------------------
+2026-03-27 09:19:54,551 - __main__ - INFO - []
+2026-03-27 09:19:54,551 - __main__ - INFO - []
+2026-03-27 09:19:54,551 - __main__ - INFO - --------------------------------------
+2026-03-27 09:35:19,015 - __main__ - INFO - []
+2026-03-27 09:35:19,015 - __main__ - INFO - []
+2026-03-27 09:35:19,015 - __main__ - INFO - --------------------------------------
+2026-03-27 09:50:36,375 - __main__ - INFO - []
+2026-03-27 09:50:36,375 - __main__ - INFO - []
+2026-03-27 09:50:36,375 - __main__ - INFO - --------------------------------------
+2026-03-27 10:06:12,756 - __main__ - INFO - []
+2026-03-27 10:06:12,756 - __main__ - INFO - []
+2026-03-27 10:06:12,756 - __main__ - INFO - --------------------------------------
+2026-03-27 10:21:32,033 - __main__ - INFO - []
+2026-03-27 10:21:32,033 - __main__ - INFO - []
+2026-03-27 10:21:32,033 - __main__ - INFO - --------------------------------------
+2026-03-27 10:37:34,194 - __main__ - INFO - []
+2026-03-27 10:37:34,240 - __main__ - INFO - []
+2026-03-27 10:37:34,240 - __main__ - INFO - --------------------------------------
+2026-03-27 10:49:14,117 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-27 10:51:56,952 - __main__ - INFO - [0.5]
+2026-03-27 10:51:56,952 - __main__ - INFO - [' 오']
+2026-03-27 10:51:56,998 - __main__ - INFO - --------------------------------------
+2026-03-27 10:58:24,736 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-27 11:06:19,783 - __main__ - INFO - [0.5]
+2026-03-27 11:06:19,784 - __main__ - INFO - [' ف']
+2026-03-27 11:06:19,784 - __main__ - INFO - --------------------------------------
+2026-03-27 11:08:40,530 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-27 11:21:00,828 - __main__ - INFO - [0.5]
+2026-03-27 11:21:00,829 - __main__ - INFO - [' speak_dynamic同意']
+2026-03-27 11:21:00,829 - __main__ - INFO - --------------------------------------
+2026-03-27 11:25:28,959 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-27 11:36:12,150 - __main__ - INFO - [0.5]
+2026-03-27 11:36:12,151 - __main__ - INFO - ['ْم']
+2026-03-27 11:36:12,151 - __main__ - INFO - --------------------------------------
+2026-03-27 11:51:53,409 - __main__ - INFO - []
+2026-03-27 11:51:53,455 - __main__ - INFO - []
+2026-03-27 11:51:53,455 - __main__ - INFO - --------------------------------------
+2026-03-27 12:07:06,860 - __main__ - INFO - []
+2026-03-27 12:07:06,860 - __main__ - INFO - []
+2026-03-27 12:07:06,860 - __main__ - INFO - --------------------------------------
+2026-03-27 12:22:23,145 - __main__ - INFO - []
+2026-03-27 12:22:23,146 - __main__ - INFO - []
+2026-03-27 12:22:23,146 - __main__ - INFO - --------------------------------------
+2026-03-27 12:37:53,091 - __main__ - INFO - []
+2026-03-27 12:37:53,092 - __main__ - INFO - []
+2026-03-27 12:37:53,092 - __main__ - INFO - --------------------------------------
+2026-03-27 12:47:26,557 - __main__ - INFO - Oh shit It worked!!!!!!!!!
+
+2026-03-27 12:53:13,265 - __main__ - INFO - [0.5]
+2026-03-27 12:53:13,265 - __main__ - INFO - ['های']
+2026-03-27 12:53:13,265 - __main__ - INFO - --------------------------------------
+2026-03-27 13:08:15,465 - __main__ - INFO - []
+2026-03-27 13:08:15,465 - __main__ - INFO - []
+2026-03-27 13:08:15,465 - __main__ - INFO - --------------------------------------
+2026-03-27 13:24:21,052 - __main__ - INFO - []
+2026-03-27 13:24:21,053 - __main__ - INFO - []
+2026-03-27 13:24:21,053 - __main__ - INFO - --------------------------------------

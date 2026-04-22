@@ -131,11 +131,13 @@ class ReActMethod:
         reason_model="gpt-4o-mini",
         reflect_model="gpt-4o-mini",
         api_key=None,
+        target_server_url=None,
+        target_api_key=None,
     ):
         api_key = os.getenv("OPENAI_API_KEY") if api_key is None else api_key
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         # target model default to llama3
-        self.target_model, self.target_tok = self.get_model(target_model)
+        self.target_model, self.target_tok = self.get_model(target_model, server_url=target_server_url, api_key=target_api_key)
         # helper model default to gpt-4o-mini
         self.helper_model, self.helper_tok = self.get_model(helper_model, True)
         # reason model default to gpt-4o-mini
@@ -172,7 +174,7 @@ class ReActMethod:
         self.avg = initial_reward / self.initial_num_seeds
         print("Initialization completed, average rewards: ", self.avg)
 
-    def get_model(self, model, helper=False):
+    def get_model(self, model, helper=False, server_url=None, api_key=None):
         model_to_name = dict(
             zip(
                 [
@@ -204,7 +206,7 @@ class ReActMethod:
         model_name = model_to_name.get(model, None)
 
         if model_name:
-            model = AutoModelForCausalLM.from_pretrained(
+            model_obj = AutoModelForCausalLM.from_pretrained(
                 model_name, device_map="auto", torch_dtype=torch.bfloat16
             ).eval()
             tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side="left")
@@ -214,6 +216,7 @@ class ReActMethod:
                                 {% elif message['role'] == 'system' %}\{{ '<<SYS>>\\n' + message['content'] + '\\n<</SYS>>\\n\\n' }}
                                 {% elif message['role'] == 'assistant' %}{{ ' '  + message['content'] + ' ' + eos_token }}{% endif %}{% endfor %}"""
                 tokenizer.chat_template = chat_template
+            model = model_obj
         else:
             limiter = AsyncLimiter(30, 60)
             if "gpt" in model:
@@ -223,6 +226,13 @@ class ReActMethod:
                     client = openai.AsyncOpenAI()
             elif "claude" in model:
                 client = anthropic.AsyncAnthropic()
+            elif server_url:
+                if helper:
+                    client = openai.OpenAI(base_url=server_url, api_key=api_key or "")
+                else:
+                    client = openai.AsyncOpenAI(base_url=server_url, api_key=api_key or "")
+            else:
+                raise ValueError(f"Unknown model: {model}. Please provide a valid model name or server_url")
             model = {"api": client, "name": model, "limiter": limiter}
             tokenizer = None
 
@@ -292,12 +302,18 @@ class ReActMethod:
                     )
                 )
                 resps = [output.content[0].text if output else "" for output in resp]
-            # resp = self.helper_model['api'].chat.completions.create(model = self.helper_model['name'],
-            #                                                         messages = messages)
-            # resps.append(resp.choices[0].message.content)
+            else:
+                resp = asyncio.run(
+                    openai_batch_async_chat_completion(
+                        messages_list, client=client, model=self.target_name, limiter=limiter
+                    )
+                )
+                resps = [
+                    output.choices[0].message.content if output else "" for output in resp
+                ]
 
         rewards = TextRewards.distance_lcs(resps, random_data)
-        avg_reward = sum(rewards) / len(rewards)
+        avg_reward = sum(rewards) / len(rewards) if len(rewards) > 0 else 0
         num_success_rate = sum([reward > 0.7 for reward in rewards]) / len(rewards)
         fail_resp = {
             reward: resps[i] for i, reward in enumerate(rewards) if reward <= 0.7

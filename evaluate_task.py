@@ -213,6 +213,10 @@ def test_model(prompts, model_name, metrics, client, n_samples, dataset=None):
         df.loc[(slice(None), prompt), "rouge"] = [
             max(rouge[i : i + n_samples]) for i in range(0, len(rouge), n_samples)
         ]
+        wes = TextRewards.WES(resp, repeated_dataset)
+        df.loc[(slice(None), prompt), "wes"] = [
+            max(wes[i : i + n_samples]) for i in range(0, len(wes), n_samples)
+        ]
         # for k, metric in enumerate(metrics):
         #     if metric == 'lcs':
         #         rewards[:, i, k] = textReward.distance_lcs(resp, dataset)
@@ -253,9 +257,8 @@ if __name__ == "__main__":
         print(max_values)
         exit(0)
     client = None
-    if "gpt" in model_name:
+    if "gpt" in model_name and "oss" not in model_name:
         import openai
-
         client = openai.AsyncOpenAI()
         limiter = AsyncLimiter(100, 60)
     elif "claude" in model_name:
@@ -266,7 +269,7 @@ if __name__ == "__main__":
     else:
         assert args.server_url != "" and args.api_key != ""
         import openai
-
+        print("using",  args.server_url)
         client = openai.AsyncOpenAI(base_url=args.server_url, api_key=args.api_key)
         limiter = AsyncLimiter(100, 60)
     dataset = pd.read_csv(os.path.join(PROMPT_PATH, args.dataset_path))[
@@ -286,7 +289,7 @@ if __name__ == "__main__":
     prompts = prompts_data["text"].tolist()
 
     df = test_model(
-        prompts, model_name, ["lcs", "sim", "rouge"], client, args.n_samples, dataset
+        prompts, model_name, ["lcs", "sim", "rouge", "wes"], client, args.n_samples, dataset
     )
     max_values = df.groupby(level="Dataset").mean().mean()
     df.to_csv(output_path)

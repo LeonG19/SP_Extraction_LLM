@@ -154,11 +154,13 @@ class FuzzingMethod:
         const=0.2,
         target_model="gpt-4o-mini",
         helper_model="gpt-4o-mini",
+        target_server_url=None,
+        target_api_key=None,
     ):
         assert method in ["random", "ucb", "mcts"], "Invalid method!"
 
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        self.target_model, self.target_tok = self.get_model(target_model)
+        self.target_model, self.target_tok = self.get_model(target_model, server_url=target_server_url, api_key=target_api_key)
         self.helper_model, self.helper_tok = self.get_model(helper_model, True)
         (
             self.prob,
@@ -189,7 +191,7 @@ class FuzzingMethod:
         self.avg = initial_reward / len(seeds)
         print("Initialization completed, average rewards: ", self.avg)
 
-    def get_model(self, model, helper=False):
+    def get_model(self, model, helper=False, server_url=None, api_key=None):
         model_to_name = dict(
             zip(
                 [
@@ -227,7 +229,7 @@ class FuzzingMethod:
                 bnb_4bit_quant_type = "nf4",
                 bnb_4bit_use_double_quant = True,
             )
-            model = AutoModelForCausalLM.from_pretrained(
+            model_obj = AutoModelForCausalLM.from_pretrained(
                 model_name, device_map="auto", quantization_config=quant_config,
             ).eval()
             tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side="left")
@@ -237,6 +239,7 @@ class FuzzingMethod:
                                 {% elif message['role'] == 'assistant' %}{{ ' '  + message['content'] + ' ' + eos_token }}{% endif %}{% endfor %}"""
                 tokenizer.chat_template = chat_template
             tokenizer.pad_token_id = tokenizer.eos_token_id
+            model = model_obj
 
         else:
             limiter = AsyncLimiter(30, 60)
@@ -247,6 +250,13 @@ class FuzzingMethod:
                     client = openai.AsyncOpenAI()
             elif "claude" in model:
                 client = anthropic.AsyncAnthropic()
+            elif server_url:
+                if helper:
+                    client = openai.OpenAI(base_url=server_url, api_key=api_key or "")
+                else:
+                    client = openai.AsyncOpenAI(base_url=server_url, api_key=api_key or "")
+            else:
+                raise ValueError(f"Unknown model: {model}. Please provide a valid model name or server_url")
             model = {"api": client, "name": model, "limiter": limiter}
             tokenizer = None
 
@@ -350,8 +360,17 @@ class FuzzingMethod:
                     )
                 )
                 resps = [output.content[0].text if output else "" for output in resp]
+            else:
+                resp = asyncio.run(
+                    openai_batch_async_chat_completion(
+                        messages, client=client, model=self.target_name, limiter=limiter
+                    )
+                )
+                resps = [
+                    output.choices[0].message.content if output else "" for output in resp
+                ]
         rewards = TextRewards.distance_lcs(resps, random_data)
-        return sum(rewards) / len(rewards)
+        return sum(rewards) / len(rewards) if len(rewards) > 0 else 0
 
     def train(self):
         total_reward = 0
