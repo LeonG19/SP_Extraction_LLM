@@ -345,10 +345,19 @@ class ReActMethod:
                 return_dict=True,
                 return_tensors="pt",
             ).to(self.reason_model.device)
-            len_input = inputs["input_ids"].shape[1]
+
+            # Handle both 1D and 2D tensor cases
+            input_ids = inputs["input_ids"]
+            if len(input_ids.shape) == 1:
+                input_ids = input_ids.unsqueeze(0)
+                attention_mask = inputs["attention_mask"].unsqueeze(0) if "attention_mask" in inputs else None
+            else:
+                attention_mask = inputs.get("attention_mask", None)
+
+            len_input = input_ids.shape[1]
             output = self.reason_model.generate(
-                input_ids=inputs["input_ids"],
-                attention_mask=inputs["attention_mask"],
+                input_ids=input_ids,
+                attention_mask=attention_mask,
                 max_new_tokens=256,
                 eos_token_id=self.terminator,
                 pad_token_id=self.reason_tok.pad_token_id,
@@ -417,14 +426,25 @@ class ReActMethod:
             inputs = self.reflect_tok.apply_chat_template(
                 messages,
                 add_generation_prompt=True,
-                return_pt=True,
+                return_dict=True,
                 padding=True,
                 return_tensors="pt",
             ).to(self.reflect_model.device)
-            len_input = inputs["input_ids"].shape[1]
+
+            # Handle both 1D and 2D tensor cases
+            input_ids = inputs["input_ids"]
+            if len(input_ids.shape) == 1:
+                input_ids = input_ids.unsqueeze(0)
+                attention_mask = inputs.get("attention_mask")
+                if attention_mask is not None and len(attention_mask.shape) == 1:
+                    attention_mask = attention_mask.unsqueeze(0)
+            else:
+                attention_mask = inputs.get("attention_mask", None)
+
+            len_input = input_ids.shape[1]
             output = self.reflect_model.generate(
-                input_ids=inputs["input_ids"],
-                attention_mask=inputs["attention_mask"],
+                input_ids=input_ids,
+                attention_mask=attention_mask,
                 max_new_tokens=256,
                 eos_token_id=self.terminator,
                 pad_token_id=self.reflect_tok.pad_token_id,
