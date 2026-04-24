@@ -9,7 +9,7 @@ import openai
 import anthropic
 from aiolimiter import AsyncLimiter
 from tqdm.asyncio import tqdm_asyncio
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from attacks.sentence_level.action_mutator.different_mutators import MutationHelper
 from rewards.text_rewards import TextRewards
 
@@ -139,12 +139,12 @@ class ReActMethod:
         # target model default to llama3
         self.target_model, self.target_tok = self.get_model(target_model, server_url=target_server_url, api_key=target_api_key)
         # helper model default to gpt-4o-mini
-        self.helper_model, self.helper_tok = self.get_model(helper_model, True)
+        self.helper_model, self.helper_tok = self.get_model(helper_model, True, quantize=True)
         # reason model default to gpt-4o-mini
-        self.reason_model, self.reason_tok = self.get_model(reason_model, True)
+        self.reason_model, self.reason_tok = self.get_model(reason_model, True, quantize=True)
         # reflect model default to gpt-4o-mini
         if reflect:
-            self.reflect_model, self.reflect_tok = self.get_model(reflect_model, True)
+            self.reflect_model, self.reflect_tok = self.get_model(reflect_model, True, quantize=True)
         (
             self.const,
             self.dataset,
@@ -174,7 +174,7 @@ class ReActMethod:
         self.avg = initial_reward / self.initial_num_seeds
         print("Initialization completed, average rewards: ", self.avg)
 
-    def get_model(self, model, helper=False, server_url=None, api_key=None):
+    def get_model(self, model, helper=False, server_url=None, api_key=None, quantize=False):
         model_to_name = dict(
             zip(
                 [
@@ -206,9 +206,22 @@ class ReActMethod:
         model_name = model_to_name.get(model, None)
 
         if model_name:
-            model_obj = AutoModelForCausalLM.from_pretrained(
-                model_name, device_map="auto", torch_dtype=torch.bfloat16
-            ).eval()
+            # Use quantization if requested (for reason/reflect models)
+            if quantize:
+                quant_config = BitsAndBytesConfig(
+                    load_in_4bit=True,
+                    bnb_4bit_compute_dtype=torch.float16,
+                    bnb_4bit_quant_type="nf4",
+                    bnb_4bit_use_double_quant=True,
+                )
+                model_obj = AutoModelForCausalLM.from_pretrained(
+                    model_name, device_map="auto", quantization_config=quant_config
+                ).eval()
+            else:
+                model_obj = AutoModelForCausalLM.from_pretrained(
+                    model_name, device_map="auto", torch_dtype=torch.bfloat16
+                ).eval()
+
             tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side="left")
             tokenizer.pad_token_id = tokenizer.eos_token_id
             if model == "llama":

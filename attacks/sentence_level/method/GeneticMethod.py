@@ -161,7 +161,7 @@ class FuzzingMethod:
 
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.target_model, self.target_tok = self.get_model(target_model, server_url=target_server_url, api_key=target_api_key)
-        self.helper_model, self.helper_tok = self.get_model(helper_model, True)
+        self.helper_model, self.helper_tok = self.get_model(helper_model, True, quantize=True)
         (
             self.prob,
             self.const,
@@ -191,7 +191,7 @@ class FuzzingMethod:
         self.avg = initial_reward / len(seeds)
         print("Initialization completed, average rewards: ", self.avg)
 
-    def get_model(self, model, helper=False, server_url=None, api_key=None):
+    def get_model(self, model, helper=False, server_url=None, api_key=None, quantize=False):
         model_to_name = dict(
             zip(
                 [
@@ -223,11 +223,12 @@ class FuzzingMethod:
         model_name = model_to_name.get(model, None)
 
         if model_name:
+            # Always use quantization for local models to save memory
             quant_config = BitsAndBytesConfig(
-                load_in_4bit = True,
-                bnb_4bit_compute_dtype = torch.float16,
-                bnb_4bit_quant_type = "nf4",
-                bnb_4bit_use_double_quant = True,
+                load_in_4bit=True,
+                bnb_4bit_compute_dtype=torch.float16,
+                bnb_4bit_quant_type="nf4",
+                bnb_4bit_use_double_quant=True,
             )
             model_obj = AutoModelForCausalLM.from_pretrained(
                 model_name, device_map="auto", quantization_config=quant_config,

@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 from attacks.sentence_level.method.GeneticMethod import FuzzingMethod
 from attacks.sentence_level.method.ReactMethod import ReActMethod
+from attacks.token_level.whitebox.PLeak import PLeakAttack
 from project_env import PROMPT_PATH
 
 
@@ -31,6 +32,16 @@ def extract_react_results(method):
     return prompts
 
 
+def extract_pleak_results(method):
+    """Extract prompts from PLeakAttack"""
+    prompts = []
+    for result in method.generated_triggers:
+        # Convert loss to reward: lower loss = higher reward
+        reward = 1.0 / (1.0 + result["loss"])
+        prompts.append({"text": result["trigger"], "reward": reward})
+    return prompts
+
+
 def save_results(method_obj, method_name, output_dir):
     """Save baseline results to CSV in LeakAgent format"""
     os.makedirs(output_dir, exist_ok=True)
@@ -39,6 +50,8 @@ def save_results(method_obj, method_name, output_dir):
         prompts = extract_fuzz_results(method_obj)
     elif method_name == "re":
         prompts = extract_react_results(method_obj)
+    elif method_name == "pleak":
+        prompts = extract_pleak_results(method_obj)
     else:
         raise ValueError(f"Unknown method: {method_name}")
 
@@ -68,13 +81,17 @@ if __name__ == "__main__":
     argument.add_argument("--helper_model", type=str, default="llama3")
     argument.add_argument("--target_model", type=str, default="meta-llama/Llama-3.1-8B-Instruct")
     argument.add_argument("--prompts_data_path", type=str, default="train_data_pleak.csv")
-    argument.add_argument("--method", type=str, choices=["fuzz", "re"], required=True)
+    argument.add_argument("--method", type=str, choices=["fuzz", "re", "pleak"], required=True)
     argument.add_argument("--target_server_url", type=str, default=None)
     argument.add_argument("--target_api_key", type=str, default=None)
     argument.add_argument("--output_dir", type=str, default=None)
     argument.add_argument("--env_num", type=int, default=2)
     argument.add_argument("--reason_model", type=str, default="llama3")
     argument.add_argument("--reflect_model", type=str, default="llama3")
+    argument.add_argument("--pleak_model", type=str, default="llama3",
+                        help="Model for PLeak (llama3, llama, mixtral, falcon, etc.)")
+    argument.add_argument("--optim_token_length", type=int, default=20, help="Token length for PLeak")
+    argument.add_argument("--num_iterations", type=int, default=100, help="Iterations for PLeak")
 
     args = argument.parse_args()
 
@@ -106,6 +123,17 @@ if __name__ == "__main__":
             reason_model=args.reason_model, reflect_model=args.reflect_model,
             target_server_url=args.target_server_url, target_api_key=args.target_api_key
         )
+    elif args.method == "pleak":
+        method = PLeakAttack(
+            model=args.pleak_model,
+            optim_token_length=args.optim_token_length,
+            num_trigger=5,
+            num_iterations=args.num_iterations,
+        )
 
-    method.train()
+    if args.method == "pleak":
+        method.train(train_set)
+    else:
+        method.train()
+
     save_results(method, args.method, args.output_dir)
