@@ -44,11 +44,11 @@ import torch
 # ── Make sure sibling packages are importable ────────────────────────────────
 sys.path.insert(0, os.path.dirname(__file__))
 
-from sysvec.model import SysVec
-from sysvec.trainer import SysVecTrainer, PreferenceDataset, build_preference_samples
-from attacks.attacks import apply_attack, ATTACK_REGISTRY
-from attacks.defenses import apply_defense, DEFENSE_REGISTRY
-from evaluation.metrics import compute_pls, compute_ss, compute_rus
+from model import SysVec
+from trainer import SysVecTrainer, PreferenceDataset, build_preference_samples
+from attacks import apply_attack, ATTACK_REGISTRY
+from defenses import apply_defense, DEFENSE_REGISTRY
+from metrics import compute_pls, compute_ss, compute_rus
 
 
 # ─────────────────────────────────────────────────────────────────────────────
