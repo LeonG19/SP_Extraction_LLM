@@ -1,0 +1,18 @@
+# Core
+torch>=2.1.0
+transformers>=4.40.0
+accelerate>=0.27.0
+sentencepiece>=0.1.99
+protobuf>=3.20.0
+
+# Training
+datasets>=2.18.0
+peft>=0.10.0          # optional, for LoRA baseline comparisons
+
+# Evaluation
+openai>=1.14.0
+sentence-transformers>=2.6.1
+
+# Utilities
+tqdm>=4.66.0
+numpy>=1.24.0
