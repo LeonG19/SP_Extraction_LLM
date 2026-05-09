@@ -1,0 +1,104 @@
+(APIServer pid=614559) INFO 04-23 23:36:26 [utils.py:299] 
+(APIServer pid=614559) INFO 04-23 23:36:26 [utils.py:299]        █     █     █▄   ▄█
+(APIServer pid=614559) INFO 04-23 23:36:26 [utils.py:299]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.19.1
+(APIServer pid=614559) INFO 04-23 23:36:26 [utils.py:299]   █▄█▀ █     █     █     █  model   meta-llama/Llama-3.1-8B-Instruct
+(APIServer pid=614559) INFO 04-23 23:36:26 [utils.py:299]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=614559) INFO 04-23 23:36:26 [utils.py:299] 
+(APIServer pid=614559) INFO 04-23 23:36:26 [utils.py:233] non-default args: {'host': '127.0.0.1', 'model': 'meta-llama/Llama-3.1-8B-Instruct', 'trust_remote_code': True, 'dtype': 'bfloat16', 'max_model_len': 8192}
+(APIServer pid=614559) Traceback (most recent call last):
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 761, in hf_raise_for_status
+(APIServer pid=614559)     response.raise_for_status()
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/httpx/_models.py", line 761, in raise_for_status
+(APIServer pid=614559)     raise HTTPStatusError(message, request=request, response=self)
+(APIServer pid=614559) httpx.HTTPStatusError: Client error '403 Forbidden' for url 'https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/config.json'
+(APIServer pid=614559) For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+(APIServer pid=614559) 
+(APIServer pid=614559) The above exception was the direct cause of the following exception:
+(APIServer pid=614559) 
+(APIServer pid=614559) Traceback (most recent call last):
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1669, in _get_metadata_or_catch_error
+(APIServer pid=614559)     metadata = get_hf_file_metadata(
+(APIServer pid=614559)                ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+(APIServer pid=614559)     return fn(*args, **kwargs)
+(APIServer pid=614559)            ^^^^^^^^^^^^^^^^^^^
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1591, in get_hf_file_metadata
+(APIServer pid=614559)     response = _httpx_follow_relative_redirects_with_backoff(
+(APIServer pid=614559)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 692, in _httpx_follow_relative_redirects_with_backoff
+(APIServer pid=614559)     hf_raise_for_status(response)
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 849, in hf_raise_for_status
+(APIServer pid=614559)     raise _format(HfHubHTTPError, message, response) from e
+(APIServer pid=614559) huggingface_hub.errors.HfHubHTTPError: (Request ID: Root=1-69eb015a-25f5c4ab31ffcdc73c1832a1;e87ad00f-ece7-4cc8-af54-440ee7b95eef)
+(APIServer pid=614559) 
+(APIServer pid=614559) 403 Forbidden: Please enable access to public gated repositories in your fine-grained token settings to view this repository..
+(APIServer pid=614559) Cannot access content at: https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/config.json.
+(APIServer pid=614559) Make sure your token has the correct permissions.
+(APIServer pid=614559) 
+(APIServer pid=614559) The above exception was the direct cause of the following exception:
+(APIServer pid=614559) 
+(APIServer pid=614559) Traceback (most recent call last):
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/transformers/utils/hub.py", line 422, in cached_files
+(APIServer pid=614559)     hf_hub_download(
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+(APIServer pid=614559)     return fn(*args, **kwargs)
+(APIServer pid=614559)            ^^^^^^^^^^^^^^^^^^^
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 997, in hf_hub_download
+(APIServer pid=614559)     return _hf_hub_download_to_cache_dir(
+(APIServer pid=614559)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1148, in _hf_hub_download_to_cache_dir
+(APIServer pid=614559)     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1785, in _raise_on_head_call_error
+(APIServer pid=614559)     raise LocalEntryNotFoundError(
+(APIServer pid=614559) huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+(APIServer pid=614559) 
+(APIServer pid=614559) The above exception was the direct cause of the following exception:
+(APIServer pid=614559) 
+(APIServer pid=614559) Traceback (most recent call last):
+(APIServer pid=614559)   File "<frozen runpy>", line 198, in _run_module_as_main
+(APIServer pid=614559)   File "<frozen runpy>", line 88, in _run_code
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 712, in <module>
+(APIServer pid=614559)     uvloop.run(run_server(args))
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/uvloop/__init__.py", line 105, in run
+(APIServer pid=614559)     return runner.run(wrapper())
+(APIServer pid=614559)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/asyncio/runners.py", line 118, in run
+(APIServer pid=614559)     return self._loop.run_until_complete(task)
+(APIServer pid=614559)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=614559)   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/uvloop/__init__.py", line 61, in wrapper
+(APIServer pid=614559)     return await main
+(APIServer pid=614559)            ^^^^^^^^^^
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 672, in run_server
+(APIServer pid=614559)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 686, in run_server_worker
+(APIServer pid=614559)     async with build_async_engine_client(
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/contextlib.py", line 210, in __aenter__
+(APIServer pid=614559)     return await anext(self.gen)
+(APIServer pid=614559)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 100, in build_async_engine_client
+(APIServer pid=614559)     async with build_async_engine_client_from_engine_args(
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/contextlib.py", line 210, in __aenter__
+(APIServer pid=614559)     return await anext(self.gen)
+(APIServer pid=614559)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 124, in build_async_engine_client_from_engine_args
+(APIServer pid=614559)     vllm_config = engine_args.create_engine_config(usage_context=usage_context)
+(APIServer pid=614559)                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/engine/arg_utils.py", line 1539, in create_engine_config
+(APIServer pid=614559)     maybe_override_with_speculators(
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/transformers_utils/config.py", line 583, in maybe_override_with_speculators
+(APIServer pid=614559)     config_dict, _ = PretrainedConfig.get_config_dict(
+(APIServer pid=614559)                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/transformers/configuration_utils.py", line 673, in get_config_dict
+(APIServer pid=614559)     config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+(APIServer pid=614559)                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/transformers/configuration_utils.py", line 728, in _get_config_dict
+(APIServer pid=614559)     resolved_config_file = cached_file(
+(APIServer pid=614559)                            ^^^^^^^^^^^^
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/transformers/utils/hub.py", line 278, in cached_file
+(APIServer pid=614559)     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+(APIServer pid=614559)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=614559)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/transformers/utils/hub.py", line 498, in cached_files
+(APIServer pid=614559)     raise OSError(
+(APIServer pid=614559) OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+(APIServer pid=614559) Check your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.

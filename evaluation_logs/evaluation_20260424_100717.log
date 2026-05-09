@@ -1,0 +1,24 @@
+2026-04-24 10:07:17,846 - INFO - Included models (allowlist): ['llama3.1-70b']
+2026-04-24 10:07:17,846 - INFO - ================================================================================
+2026-04-24 10:07:17,846 - INFO - COMPREHENSIVE METHOD EVALUATION
+2026-04-24 10:07:17,846 - INFO - ================================================================================
+2026-04-24 10:07:17,846 - INFO - Timestamp: 20260424_100717
+2026-04-24 10:07:17,846 - INFO - Log dir:   evaluation_logs
+2026-04-24 10:07:17,846 - INFO - Results:   evaluation_results
+2026-04-24 10:07:17,846 - INFO - Server:    http://127.0.0.1:8000/v1
+2026-04-24 10:07:17,846 - INFO - 
+2026-04-24 10:07:17,846 - INFO - Models (outer loop, each loaded once):
+2026-04-24 10:07:17,846 - INFO -   - llama3.1-70b    (meta-llama/Llama-3.1-70B-Instruct)
+2026-04-24 10:07:17,846 - INFO - Methods (inner loop, reusing the hot model):
+2026-04-24 10:07:17,846 - INFO -   - FUZZ       (llama3_fuzz_finetune)
+2026-04-24 10:07:17,846 - INFO -   - RE         (llama3_re_finetune)
+2026-04-24 10:07:17,846 - INFO -   - LEAKAGENT  (llama3_rl_finetune)
+2026-04-24 10:07:17,846 - INFO - 
+2026-04-24 10:07:17,846 - INFO - ================================================================================
+2026-04-24 10:07:17,846 - INFO - MODEL: llama3.1-70b (meta-llama/Llama-3.1-70B-Instruct)
+2026-04-24 10:07:17,846 - INFO - ================================================================================
+2026-04-24 10:07:17,846 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-70B-Instruct --host 127.0.0.1 --port 8000 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.50 --max-model-len 8192 --enforce-eager --disable-log-stats
+2026-04-24 10:07:17,846 - INFO - vLLM server log: evaluation_logs/vllm_llama3.1-70b_20260424_100717.log
+2026-04-24 10:07:17,846 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_llama3.1-70b_20260424_100717.log )
+2026-04-24 10:07:17,849 - INFO - Waiting up to 900s for server to be ready...
+2026-04-24 10:07:17,849 - INFO - Startup in progress. Progress updates every 20s below.

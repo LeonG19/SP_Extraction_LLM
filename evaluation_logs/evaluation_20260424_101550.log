@@ -1,0 +1,418 @@
+2026-04-24 10:15:50,805 - INFO - Included models (allowlist): ['llama3.1-70b']
+2026-04-24 10:15:50,805 - INFO - ================================================================================
+2026-04-24 10:15:50,805 - INFO - COMPREHENSIVE METHOD EVALUATION
+2026-04-24 10:15:50,805 - INFO - ================================================================================
+2026-04-24 10:15:50,805 - INFO - Timestamp: 20260424_101550
+2026-04-24 10:15:50,805 - INFO - Log dir:   evaluation_logs
+2026-04-24 10:15:50,805 - INFO - Results:   evaluation_results
+2026-04-24 10:15:50,805 - INFO - Server:    http://127.0.0.1:8000/v1
+2026-04-24 10:15:50,805 - INFO - 
+2026-04-24 10:15:50,806 - INFO - Models (outer loop, each loaded once):
+2026-04-24 10:15:50,806 - INFO -   - llama3.1-70b    (meta-llama/Llama-3.1-70B-Instruct)
+2026-04-24 10:15:50,806 - INFO - Methods (inner loop, reusing the hot model):
+2026-04-24 10:15:50,806 - INFO -   - FUZZ       (llama3_fuzz_finetune)
+2026-04-24 10:15:50,806 - INFO -   - RE         (llama3_re_finetune)
+2026-04-24 10:15:50,806 - INFO -   - LEAKAGENT  (llama3_rl_finetune)
+2026-04-24 10:15:50,806 - INFO - 
+2026-04-24 10:15:50,806 - INFO - ================================================================================
+2026-04-24 10:15:50,806 - INFO - MODEL: llama3.1-70b (meta-llama/Llama-3.1-70B-Instruct)
+2026-04-24 10:15:50,806 - INFO - ================================================================================
+2026-04-24 10:15:50,806 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-70B-Instruct --host 127.0.0.1 --port 8000 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.8 --max-model-len 8192 --enforce-eager --disable-log-stats
+2026-04-24 10:15:50,806 - INFO - vLLM server log: evaluation_logs/vllm_llama3.1-70b_20260424_101550.log
+2026-04-24 10:15:50,806 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_llama3.1-70b_20260424_101550.log )
+2026-04-24 10:15:50,809 - INFO - Waiting up to 900s for server to be ready...
+2026-04-24 10:15:50,809 - INFO - Startup in progress. Progress updates every 20s below.
+2026-04-24 10:16:04,817 - INFO - [14s] Stage: starting model load
+2026-04-24 10:16:10,820 - INFO - --- Status at 20s / 900s ---
+2026-04-24 10:16:10,820 - INFO -   Stage: starting model load
+2026-04-24 10:16:10,844 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:16:10,844 - INFO -   Last lines of vLLM log:
+2026-04-24 10:16:10,844 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:16:10,844 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:16:10,844 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:16:10,844 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:16:10,844 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:16:10,845 - INFO -   ---
+2026-04-24 10:16:30,854 - INFO - --- Status at 40s / 900s ---
+2026-04-24 10:16:30,855 - INFO -   Stage: starting model load
+2026-04-24 10:16:30,877 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:16:30,877 - INFO -   Last lines of vLLM log:
+2026-04-24 10:16:30,878 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:16:30,878 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:16:30,878 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:16:30,878 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:16:30,878 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:16:30,878 - INFO -   ---
+2026-04-24 10:16:50,887 - INFO - --- Status at 60s / 900s ---
+2026-04-24 10:16:50,887 - INFO -   Stage: starting model load
+2026-04-24 10:16:50,910 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:16:50,910 - INFO -   Last lines of vLLM log:
+2026-04-24 10:16:50,910 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:16:50,910 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:16:50,910 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:16:50,910 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:16:50,911 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:16:50,911 - INFO -   ---
+2026-04-24 10:17:10,920 - INFO - --- Status at 80s / 900s ---
+2026-04-24 10:17:10,920 - INFO -   Stage: starting model load
+2026-04-24 10:17:10,942 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:17:10,942 - INFO -   Last lines of vLLM log:
+2026-04-24 10:17:10,942 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:17:10,942 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:17:10,942 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:17:10,942 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:17:10,943 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:17:10,943 - INFO -   ---
+2026-04-24 10:17:30,952 - INFO - --- Status at 100s / 900s ---
+2026-04-24 10:17:30,953 - INFO -   Stage: starting model load
+2026-04-24 10:17:30,974 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:17:30,975 - INFO -   Last lines of vLLM log:
+2026-04-24 10:17:30,975 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:17:30,975 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:17:30,975 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:17:30,975 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:17:30,975 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:17:30,975 - INFO -   ---
+2026-04-24 10:17:50,984 - INFO - --- Status at 120s / 900s ---
+2026-04-24 10:17:50,984 - INFO -   Stage: starting model load
+2026-04-24 10:17:51,006 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:17:51,007 - INFO -   Last lines of vLLM log:
+2026-04-24 10:17:51,007 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:17:51,007 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:17:51,007 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:17:51,007 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:17:51,007 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:17:51,007 - INFO -   ---
+2026-04-24 10:18:11,017 - INFO - --- Status at 140s / 900s ---
+2026-04-24 10:18:11,017 - INFO -   Stage: starting model load
+2026-04-24 10:18:11,039 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:18:11,040 - INFO -   Last lines of vLLM log:
+2026-04-24 10:18:11,040 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:18:11,040 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:18:11,040 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:18:11,040 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:18:11,040 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:18:11,040 - INFO -   ---
+2026-04-24 10:18:31,050 - INFO - --- Status at 160s / 900s ---
+2026-04-24 10:18:31,050 - INFO -   Stage: starting model load
+2026-04-24 10:18:31,072 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:18:31,072 - INFO -   Last lines of vLLM log:
+2026-04-24 10:18:31,072 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:18:31,072 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:18:31,072 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:18:31,073 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:18:31,073 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:18:31,073 - INFO -   ---
+2026-04-24 10:18:51,082 - INFO - --- Status at 180s / 900s ---
+2026-04-24 10:18:51,082 - INFO -   Stage: starting model load
+2026-04-24 10:18:51,104 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:18:51,104 - INFO -   Last lines of vLLM log:
+2026-04-24 10:18:51,104 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:18:51,104 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:18:51,104 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:18:51,104 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:18:51,104 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:18:51,104 - INFO -   ---
+2026-04-24 10:19:11,113 - INFO - --- Status at 200s / 900s ---
+2026-04-24 10:19:11,114 - INFO -   Stage: starting model load
+2026-04-24 10:19:11,136 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:19:11,136 - INFO -   Last lines of vLLM log:
+2026-04-24 10:19:11,136 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:19:11,136 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:19:11,136 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:19:11,136 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:19:11,136 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:19:11,136 - INFO -   ---
+2026-04-24 10:19:31,146 - INFO - --- Status at 220s / 900s ---
+2026-04-24 10:19:31,146 - INFO -   Stage: starting model load
+2026-04-24 10:19:31,168 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:19:31,169 - INFO -   Last lines of vLLM log:
+2026-04-24 10:19:31,169 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:19:31,169 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:19:31,169 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:19:31,169 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:19:31,169 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:19:31,169 - INFO -   ---
+2026-04-24 10:19:51,179 - INFO - --- Status at 240s / 900s ---
+2026-04-24 10:19:51,179 - INFO -   Stage: starting model load
+2026-04-24 10:19:51,201 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:19:51,202 - INFO -   Last lines of vLLM log:
+2026-04-24 10:19:51,202 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:19:51,202 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:19:51,202 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:19:51,202 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:19:51,202 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:19:51,202 - INFO -   ---
+2026-04-24 10:20:11,212 - INFO - --- Status at 260s / 900s ---
+2026-04-24 10:20:11,212 - INFO -   Stage: starting model load
+2026-04-24 10:20:11,233 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:20:11,234 - INFO -   Last lines of vLLM log:
+2026-04-24 10:20:11,234 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:20:11,234 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:20:11,234 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:20:11,234 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:20:11,234 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:20:11,234 - INFO -   ---
+2026-04-24 10:20:31,243 - INFO - --- Status at 280s / 900s ---
+2026-04-24 10:20:31,244 - INFO -   Stage: starting model load
+2026-04-24 10:20:31,266 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:20:31,266 - INFO -   Last lines of vLLM log:
+2026-04-24 10:20:31,266 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:20:31,266 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:20:31,266 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:20:31,266 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:20:31,266 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:20:31,266 - INFO -   ---
+2026-04-24 10:20:51,275 - INFO - --- Status at 300s / 900s ---
+2026-04-24 10:20:51,276 - INFO -   Stage: starting model load
+2026-04-24 10:20:51,297 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:20:51,298 - INFO -   Last lines of vLLM log:
+2026-04-24 10:20:51,298 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:20:51,298 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:20:51,298 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:20:51,298 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:20:51,298 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:20:51,298 - INFO -   ---
+2026-04-24 10:21:11,308 - INFO - --- Status at 320s / 900s ---
+2026-04-24 10:21:11,308 - INFO -   Stage: starting model load
+2026-04-24 10:21:11,330 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:21:11,330 - INFO -   Last lines of vLLM log:
+2026-04-24 10:21:11,330 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:21:11,330 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:21:11,330 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:21:11,330 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:21:11,330 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:21:11,331 - INFO -   ---
+2026-04-24 10:21:31,340 - INFO - --- Status at 340s / 900s ---
+2026-04-24 10:21:31,340 - INFO -   Stage: starting model load
+2026-04-24 10:21:31,362 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:21:31,363 - INFO -   Last lines of vLLM log:
+2026-04-24 10:21:31,363 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:21:31,363 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:21:31,363 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:21:31,363 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:21:31,363 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:21:31,363 - INFO -   ---
+2026-04-24 10:21:51,373 - INFO - --- Status at 360s / 900s ---
+2026-04-24 10:21:51,373 - INFO -   Stage: starting model load
+2026-04-24 10:21:51,396 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:21:51,397 - INFO -   Last lines of vLLM log:
+2026-04-24 10:21:51,397 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:21:51,397 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:21:51,397 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:21:51,397 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:21:51,397 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:21:51,397 - INFO -   ---
+2026-04-24 10:22:11,406 - INFO - --- Status at 380s / 900s ---
+2026-04-24 10:22:11,406 - INFO -   Stage: starting model load
+2026-04-24 10:22:11,428 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:22:11,428 - INFO -   Last lines of vLLM log:
+2026-04-24 10:22:11,428 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:22:11,428 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:22:11,428 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:22:11,428 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:22:11,428 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:22:11,428 - INFO -   ---
+2026-04-24 10:22:31,438 - INFO - --- Status at 400s / 900s ---
+2026-04-24 10:22:31,438 - INFO -   Stage: starting model load
+2026-04-24 10:22:31,459 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:22:31,460 - INFO -   Last lines of vLLM log:
+2026-04-24 10:22:31,460 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:22:31,460 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:22:31,460 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:22:31,460 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:22:31,460 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:22:31,460 - INFO -   ---
+2026-04-24 10:22:51,469 - INFO - --- Status at 420s / 900s ---
+2026-04-24 10:22:51,470 - INFO -   Stage: starting model load
+2026-04-24 10:22:51,492 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:22:51,492 - INFO -   Last lines of vLLM log:
+2026-04-24 10:22:51,492 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:22:51,492 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:22:51,492 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:22:51,492 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:22:51,492 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:22:51,492 - INFO -   ---
+2026-04-24 10:23:11,501 - INFO - --- Status at 440s / 900s ---
+2026-04-24 10:23:11,502 - INFO -   Stage: starting model load
+2026-04-24 10:23:11,523 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:23:11,523 - INFO -   Last lines of vLLM log:
+2026-04-24 10:23:11,523 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:23:11,523 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:23:11,523 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:23:11,523 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:23:11,524 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:23:11,524 - INFO -   ---
+2026-04-24 10:23:31,533 - INFO - --- Status at 460s / 900s ---
+2026-04-24 10:23:31,533 - INFO -   Stage: starting model load
+2026-04-24 10:23:31,556 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:23:31,556 - INFO -   Last lines of vLLM log:
+2026-04-24 10:23:31,556 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:23:31,556 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:23:31,556 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:23:31,556 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:23:31,557 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:23:31,557 - INFO -   ---
+2026-04-24 10:23:51,566 - INFO - --- Status at 480s / 900s ---
+2026-04-24 10:23:51,566 - INFO -   Stage: starting model load
+2026-04-24 10:23:51,588 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:23:51,588 - INFO -   Last lines of vLLM log:
+2026-04-24 10:23:51,589 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:23:51,589 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:23:51,589 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:23:51,589 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:23:51,589 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:23:51,589 - INFO -   ---
+2026-04-24 10:24:11,598 - INFO - --- Status at 500s / 900s ---
+2026-04-24 10:24:11,598 - INFO -   Stage: starting model load
+2026-04-24 10:24:11,620 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:24:11,621 - INFO -   Last lines of vLLM log:
+2026-04-24 10:24:11,621 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:24:11,621 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:24:11,621 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:24:11,621 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:24:11,621 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:24:11,621 - INFO -   ---
+2026-04-24 10:24:31,630 - INFO - --- Status at 520s / 900s ---
+2026-04-24 10:24:31,631 - INFO -   Stage: starting model load
+2026-04-24 10:24:31,652 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:24:31,653 - INFO -   Last lines of vLLM log:
+2026-04-24 10:24:31,653 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:24:31,653 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:24:31,653 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:24:31,653 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:24:31,653 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:24:31,653 - INFO -   ---
+2026-04-24 10:24:51,662 - INFO - --- Status at 540s / 900s ---
+2026-04-24 10:24:51,663 - INFO -   Stage: starting model load
+2026-04-24 10:24:51,684 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:24:51,684 - INFO -   Last lines of vLLM log:
+2026-04-24 10:24:51,684 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:24:51,684 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:24:51,684 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:24:51,685 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:24:51,685 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:24:51,685 - INFO -   ---
+2026-04-24 10:25:11,694 - INFO - --- Status at 560s / 900s ---
+2026-04-24 10:25:11,695 - INFO -   Stage: starting model load
+2026-04-24 10:25:11,717 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:25:11,717 - INFO -   Last lines of vLLM log:
+2026-04-24 10:25:11,717 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:25:11,717 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:25:11,717 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:25:11,717 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:25:11,717 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:25:11,717 - INFO -   ---
+2026-04-24 10:25:31,727 - INFO - --- Status at 580s / 900s ---
+2026-04-24 10:25:31,727 - INFO -   Stage: starting model load
+2026-04-24 10:25:31,750 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:25:31,751 - INFO -   Last lines of vLLM log:
+2026-04-24 10:25:31,751 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:25:31,751 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:25:31,751 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:25:31,751 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:25:31,751 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:25:31,751 - INFO -   ---
+2026-04-24 10:25:51,761 - INFO - --- Status at 600s / 900s ---
+2026-04-24 10:25:51,761 - INFO -   Stage: starting model load
+2026-04-24 10:25:51,783 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:25:51,784 - INFO -   Last lines of vLLM log:
+2026-04-24 10:25:51,784 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:25:51,784 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:25:51,784 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:25:51,784 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:25:51,784 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:25:51,784 - INFO -   ---
+2026-04-24 10:26:11,793 - INFO - --- Status at 620s / 900s ---
+2026-04-24 10:26:11,794 - INFO -   Stage: starting model load
+2026-04-24 10:26:11,816 - INFO -   GPU0: 135583/143771 MiB, 0% util
+2026-04-24 10:26:11,817 - INFO -   Last lines of vLLM log:
+2026-04-24 10:26:11,817 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:55659 backend=nccl
+2026-04-24 10:26:11,817 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:26:11,817 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:04 [gpu_model_runner.py:4735] Starting to load model meta-llama/Llama-3.1-70B-Instruct...
+2026-04-24 10:26:11,817 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:26:11,817 - INFO -     | (EngineCore pid=2152508) INFO 04-24 10:16:05 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:26:11,817 - INFO -   ---
+2026-04-24 10:26:21,822 - INFO - [631s] Stage: loading weights into memory
+2026-04-24 10:26:31,827 - INFO - --- Status at 641s / 900s ---
+2026-04-24 10:26:31,828 - INFO -   Stage: loading weights into memory
+2026-04-24 10:26:31,852 - INFO -   GPU0: 135583/143771 MiB, 20% util
+2026-04-24 10:26:31,852 - INFO -   Last lines of vLLM log:
+2026-04-24 10:26:31,852 - INFO -     | Loading safetensors checkpoint shards:  53% Completed | 16/30 [00:09<00:08,  1.58it/s]
+2026-04-24 10:26:31,852 - INFO -     | (EngineCore pid=2152508)
+2026-04-24 10:26:31,852 - INFO -     | Loading safetensors checkpoint shards:  57% Completed | 17/30 [00:10<00:08,  1.59it/s]
+2026-04-24 10:26:31,853 - INFO -     | (EngineCore pid=2152508)
+2026-04-24 10:26:31,853 - INFO -     | Loading safetensors checkpoint shards:  60% Completed | 18/30 [00:11<00:07,  1.56it/s]
+2026-04-24 10:26:31,853 - INFO -   ---
+2026-04-24 10:26:39,857 - INFO - [649s] Stage: weights loaded - initializing engine
+2026-04-24 10:26:43,859 - INFO - [653s] Stage: allocating KV cache
+2026-04-24 10:26:45,859 - ERROR - vLLM process exited after 655.0s with code 1 (see log tail below)
+2026-04-24 10:26:47,860 - ERROR - vLLM server failed to start: Python exception (see log tail)
+2026-04-24 10:26:47,861 - ERROR - --- vLLM server log tail ---
+2026-04-24 10:26:47,861 - ERROR - (APIServer pid=2151939)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+2026-04-24 10:26:47,861 - ERROR - (APIServer pid=2151939)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 686, in run_server_worker
+2026-04-24 10:26:47,861 - ERROR - (APIServer pid=2151939)     async with build_async_engine_client(
+2026-04-24 10:26:47,861 - ERROR - (APIServer pid=2151939)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/contextlib.py", line 210, in __aenter__
+2026-04-24 10:26:47,861 - ERROR - (APIServer pid=2151939)     return await anext(self.gen)
+2026-04-24 10:26:47,861 - ERROR - (APIServer pid=2151939)            ^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 10:26:47,861 - ERROR - (APIServer pid=2151939)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 100, in build_async_engine_client
+2026-04-24 10:26:47,861 - ERROR - (APIServer pid=2151939)     async with build_async_engine_client_from_engine_args(
+2026-04-24 10:26:47,861 - ERROR - (APIServer pid=2151939)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/contextlib.py", line 210, in __aenter__
+2026-04-24 10:26:47,861 - ERROR - (APIServer pid=2151939)     return await anext(self.gen)
+2026-04-24 10:26:47,861 - ERROR - (APIServer pid=2151939)            ^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 10:26:47,861 - ERROR - (APIServer pid=2151939)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 136, in build_async_engine_client_from_engine_args
+2026-04-24 10:26:47,861 - ERROR - (APIServer pid=2151939)     async_llm = AsyncLLM.from_vllm_config(
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/v1/engine/async_llm.py", line 225, in from_vllm_config
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)     return cls(
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)            ^^^^
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/v1/engine/async_llm.py", line 154, in __init__
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)     self.engine_core = EngineCoreClient.make_async_mp_client(
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)     return func(*args, **kwargs)
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)            ^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 130, in make_async_mp_client
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)     return AsyncMPClient(*client_args)
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)     return func(*args, **kwargs)
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)            ^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 887, in __init__
+2026-04-24 10:26:47,862 - ERROR - (APIServer pid=2151939)     super().__init__(
+2026-04-24 10:26:47,863 - ERROR - (APIServer pid=2151939)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 535, in __init__
+2026-04-24 10:26:47,863 - ERROR - (APIServer pid=2151939)     with launch_core_engines(
+2026-04-24 10:26:47,863 - ERROR - (APIServer pid=2151939)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/contextlib.py", line 144, in __exit__
+2026-04-24 10:26:47,863 - ERROR - (APIServer pid=2151939)     next(self.gen)
+2026-04-24 10:26:47,863 - ERROR - (APIServer pid=2151939)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/v1/engine/utils.py", line 998, in launch_core_engines
+2026-04-24 10:26:47,863 - ERROR - (APIServer pid=2151939)     wait_for_engine_startup(
+2026-04-24 10:26:47,863 - ERROR - (APIServer pid=2151939)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/v1/engine/utils.py", line 1057, in wait_for_engine_startup
+2026-04-24 10:26:47,863 - ERROR - (APIServer pid=2151939)     raise RuntimeError(
+2026-04-24 10:26:47,863 - ERROR - (APIServer pid=2151939) RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+2026-04-24 10:26:47,863 - ERROR - --- end of log tail ---
+2026-04-24 10:26:47,863 - ERROR - (full log: evaluation_logs/vllm_llama3.1-70b_20260424_101550.log)
+2026-04-24 10:26:47,863 - INFO - Stopping vLLM server...
+2026-04-24 10:26:52,863 - INFO - vLLM server stopped
+2026-04-24 10:26:52,864 - ERROR - Could not start server for llama3.1-70b: Python exception (see log tail). Marking all methods failed.
+2026-04-24 10:26:52,864 - INFO - [1/3]
+2026-04-24 10:26:52,865 - INFO - [2/3]
+2026-04-24 10:26:52,865 - INFO - [3/3]
+2026-04-24 10:26:52,865 - INFO - 
+2026-04-24 10:26:52,865 - INFO - ================================================================================
+2026-04-24 10:26:52,865 - INFO - EVALUATION SUMMARY
+2026-04-24 10:26:52,865 - INFO - ================================================================================
+2026-04-24 10:26:52,865 - INFO - Total experiments: 3
+2026-04-24 10:26:52,865 - INFO - Successful: 0 ✓
+2026-04-24 10:26:52,865 - INFO - Failed:     3 ✗
+2026-04-24 10:26:52,865 - INFO - Skipped:    0 ⊘
+2026-04-24 10:26:52,865 - INFO - Success rate: 0.0%
+2026-04-24 10:26:52,865 - INFO - ================================================================================
+2026-04-24 10:26:52,865 - INFO - 
+Detailed Results:
+2026-04-24 10:26:52,865 - INFO - --------------------------------------------------------------------------------
+2026-04-24 10:26:52,865 - INFO - fuzz         | llama3.1-70b    | ✗ FAILED        | Server: Python exception (see log tail)
+2026-04-24 10:26:52,865 - INFO - re           | llama3.1-70b    | ✗ FAILED        | Server: Python exception (see log tail)
+2026-04-24 10:26:52,866 - INFO - leakagent    | llama3.1-70b    | ✗ FAILED        | Server: Python exception (see log tail)
+2026-04-24 10:26:52,866 - INFO - --------------------------------------------------------------------------------
+2026-04-24 10:26:52,866 - INFO - 
+Full log: evaluation_logs/evaluation_20260424_101550.log

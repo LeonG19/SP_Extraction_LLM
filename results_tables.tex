@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{caption}
+
+\begin{document}
+
+% ============================================================
+% Table 1: ROUGE
+% ============================================================
+\begin{table}[htbp]
+\centering
+\caption{ROUGE scores across attack types and LLMs.}
+\label{tab:rouge}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Attack Type} & \textbf{LLama3.1-8B} & \textbf{LLama3.1-70B} & \textbf{Mistral-7B} & \textbf{GPT-OSS 20B} & \textbf{Qwen3.5-27B} \\
+                      & \textbf{Instruct}     & \textbf{Instruct}      & \textbf{v03/v02}    &                       & \textbf{Reasoning-Distilled} \\
+\midrule
+PLeak (White-box)     & --     & --     & --              & -- & -- \\
+Leak Agent (Black-box)& 0.7848 & 0.7174 & 0.4810/0.5653   & -- & 0.4890 \\
+ReAct-Leak (Black-box)& 0.8657 & 0.8583 & 0.5655          & -- & 0.4970 \\
+PromptFuzz (Black-box)& 0.8057 & 0.7210 & 0.6252          & -- & 0.4318 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+% ============================================================
+% Table 2: LCS
+% ============================================================
+\begin{table}[htbp]
+\centering
+\caption{LCS scores across attack types and LLMs.}
+\label{tab:lcs}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Attack Type} & \textbf{LLama3.1-8B} & \textbf{LLama3.1-70B} & \textbf{Mistral-7B} & \textbf{GPT-OSS 20B} & \textbf{Qwen3.5-27B} \\
+                      & \textbf{Instruct}     & \textbf{Instruct}      & \textbf{v03/v02}    &                       & \textbf{Reasoning-Distilled} \\
+\midrule
+PLeak (White-box)     & --     & --     & --              & -- & -- \\
+Leak Agent (Black-box)& 0.9040 & 0.7504 & 0.3821/0.5188   & -- & 0.2776 \\
+ReAct-Leak (Black-box)& 0.9462 & 0.9221 & 0.5440          & -- & 0.4165 \\
+PromptFuzz (Black-box)& 0.8996 & 0.8038 & 0.7102          & -- & 0.3702 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+% ============================================================
+% Table 3: SIM
+% ============================================================
+\begin{table}[htbp]
+\centering
+\caption{SIM scores across attack types and LLMs.}
+\label{tab:sim}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Attack Type} & \textbf{LLama3.1-8B} & \textbf{LLama3.1-70B} & \textbf{Mistral-7B} & \textbf{GPT-OSS 20B} & \textbf{Qwen3.5-27B} \\
+                      & \textbf{Instruct}     & \textbf{Instruct}      & \textbf{v03/v02}    &                       & \textbf{Reasoning-Distilled} \\
+\midrule
+PLeak (White-box)     & --     & --     & --              & -- & -- \\
+Leak Agent (Black-box)& 0.9136 & 0.8996 & 0.8102/0.8614   & -- & 0.8394 \\
+ReAct-Leak (Black-box)& 0.9408 & 0.9449 & 0.8350          & -- & 0.8287 \\
+PromptFuzz (Black-box)& 0.9235 & 0.8938 & 0.8675          & -- & 0.7419 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+% ============================================================
+% Table 4: WES
+% ============================================================
+\begin{table}[htbp]
+\centering
+\caption{WES scores across attack types and LLMs.}
+\label{tab:wes}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Attack Type} & \textbf{LLama3.1-8B} & \textbf{LLama3.1-70B} & \textbf{Mistral-7B} & \textbf{GPT-OSS 20B} & \textbf{Qwen3.5-27B} \\
+                      & \textbf{Instruct}     & \textbf{Instruct}      & \textbf{v03/v02}    &                       & \textbf{Reasoning-Distilled} \\
+\midrule
+PLeak (White-box)     & --     & --     & --              & -- & -- \\
+Leak Agent (Black-box)& 0.8041 & 0.6559 & 0.3165          & -- & 0.2555 \\
+ReAct-Leak (Black-box)& 0.8607 & 0.8395 & 0.4991          & -- & 0.3787 \\
+PromptFuzz (Black-box)& 0.8176 & 0.7321 & 0.6466          & -- & 0.3401 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\end{document}

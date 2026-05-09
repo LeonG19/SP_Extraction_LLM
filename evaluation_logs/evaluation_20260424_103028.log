@@ -1,0 +1,246 @@
+2026-04-24 10:30:28,685 - INFO - Included models (allowlist): ['llama3.1-70b']
+2026-04-24 10:30:28,685 - INFO - ================================================================================
+2026-04-24 10:30:28,685 - INFO - COMPREHENSIVE METHOD EVALUATION
+2026-04-24 10:30:28,685 - INFO - ================================================================================
+2026-04-24 10:30:28,685 - INFO - Timestamp: 20260424_103028
+2026-04-24 10:30:28,685 - INFO - Log dir:   evaluation_logs
+2026-04-24 10:30:28,685 - INFO - Results:   evaluation_results
+2026-04-24 10:30:28,685 - INFO - Server:    http://127.0.0.1:8000/v1
+2026-04-24 10:30:28,685 - INFO - 
+2026-04-24 10:30:28,685 - INFO - Models (outer loop, each loaded once):
+2026-04-24 10:30:28,685 - INFO -   - llama3.1-70b    (hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4)
+2026-04-24 10:30:28,685 - INFO - Methods (inner loop, reusing the hot model):
+2026-04-24 10:30:28,685 - INFO -   - FUZZ       (llama3_fuzz_finetune)
+2026-04-24 10:30:28,685 - INFO -   - FUZZ-FT    (llama3_fuzz_finetune)
+2026-04-24 10:30:28,685 - INFO -   - RE         (llama3_re_finetune)
+2026-04-24 10:30:28,685 - INFO -   - LEAKAGENT  (llama3_rl_finetune)
+2026-04-24 10:30:28,685 - INFO - 
+2026-04-24 10:30:28,685 - INFO - ================================================================================
+2026-04-24 10:30:28,685 - INFO - MODEL: llama3.1-70b (hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4)
+2026-04-24 10:30:28,685 - INFO - ================================================================================
+2026-04-24 10:30:28,686 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4 --host 127.0.0.1 --port 8000 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.8 --max-model-len 8192 --enforce-eager --disable-log-stats
+2026-04-24 10:30:28,686 - INFO - vLLM server log: evaluation_logs/vllm_llama3.1-70b_20260424_103028.log
+2026-04-24 10:30:28,686 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_llama3.1-70b_20260424_103028.log )
+2026-04-24 10:30:28,689 - INFO - Waiting up to 900s for server to be ready...
+2026-04-24 10:30:28,689 - INFO - Startup in progress. Progress updates every 20s below.
+2026-04-24 10:30:44,697 - INFO - [16s] Stage: initializing vLLM engine
+2026-04-24 10:30:46,698 - INFO - [18s] Stage: starting model load
+2026-04-24 10:30:48,700 - INFO - --- Status at 20s / 900s ---
+2026-04-24 10:30:48,700 - INFO -   Stage: starting model load
+2026-04-24 10:30:48,722 - INFO -   GPU0: 38821/143771 MiB, 0% util
+2026-04-24 10:30:48,722 - INFO -   Last lines of vLLM log:
+2026-04-24 10:30:48,722 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:30:48,722 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [gpu_model_runner.py:4735] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+2026-04-24 10:30:48,722 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [awq_marlin.py:408] Using MacheteLinearKernel for AWQMarlinLinearMethod
+2026-04-24 10:30:48,722 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:30:48,722 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:30:48,723 - INFO -   ---
+2026-04-24 10:31:08,733 - INFO - --- Status at 40s / 900s ---
+2026-04-24 10:31:08,733 - INFO -   Stage: starting model load
+2026-04-24 10:31:08,755 - INFO -   GPU0: 38821/143771 MiB, 0% util
+2026-04-24 10:31:08,756 - INFO -   Last lines of vLLM log:
+2026-04-24 10:31:08,756 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:31:08,756 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [gpu_model_runner.py:4735] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+2026-04-24 10:31:08,756 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [awq_marlin.py:408] Using MacheteLinearKernel for AWQMarlinLinearMethod
+2026-04-24 10:31:08,756 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:31:08,756 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:31:08,756 - INFO -   ---
+2026-04-24 10:31:28,765 - INFO - --- Status at 60s / 900s ---
+2026-04-24 10:31:28,766 - INFO -   Stage: starting model load
+2026-04-24 10:31:28,788 - INFO -   GPU0: 38821/143771 MiB, 0% util
+2026-04-24 10:31:28,788 - INFO -   Last lines of vLLM log:
+2026-04-24 10:31:28,788 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:31:28,788 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [gpu_model_runner.py:4735] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+2026-04-24 10:31:28,788 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [awq_marlin.py:408] Using MacheteLinearKernel for AWQMarlinLinearMethod
+2026-04-24 10:31:28,788 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:31:28,788 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:31:28,788 - INFO -   ---
+2026-04-24 10:31:48,798 - INFO - --- Status at 80s / 900s ---
+2026-04-24 10:31:48,798 - INFO -   Stage: starting model load
+2026-04-24 10:31:48,819 - INFO -   GPU0: 38821/143771 MiB, 0% util
+2026-04-24 10:31:48,819 - INFO -   Last lines of vLLM log:
+2026-04-24 10:31:48,820 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:31:48,820 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [gpu_model_runner.py:4735] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+2026-04-24 10:31:48,820 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [awq_marlin.py:408] Using MacheteLinearKernel for AWQMarlinLinearMethod
+2026-04-24 10:31:48,820 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:31:48,820 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:31:48,820 - INFO -   ---
+2026-04-24 10:32:08,830 - INFO - --- Status at 100s / 900s ---
+2026-04-24 10:32:08,830 - INFO -   Stage: starting model load
+2026-04-24 10:32:08,852 - INFO -   GPU0: 38821/143771 MiB, 0% util
+2026-04-24 10:32:08,852 - INFO -   Last lines of vLLM log:
+2026-04-24 10:32:08,852 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:32:08,853 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [gpu_model_runner.py:4735] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+2026-04-24 10:32:08,853 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [awq_marlin.py:408] Using MacheteLinearKernel for AWQMarlinLinearMethod
+2026-04-24 10:32:08,853 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:32:08,853 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:32:08,853 - INFO -   ---
+2026-04-24 10:32:28,863 - INFO - --- Status at 120s / 900s ---
+2026-04-24 10:32:28,863 - INFO -   Stage: starting model load
+2026-04-24 10:32:28,885 - INFO -   GPU0: 38821/143771 MiB, 0% util
+2026-04-24 10:32:28,885 - INFO -   Last lines of vLLM log:
+2026-04-24 10:32:28,885 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:32:28,885 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [gpu_model_runner.py:4735] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+2026-04-24 10:32:28,886 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [awq_marlin.py:408] Using MacheteLinearKernel for AWQMarlinLinearMethod
+2026-04-24 10:32:28,886 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:32:28,886 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:32:28,886 - INFO -   ---
+2026-04-24 10:32:48,896 - INFO - --- Status at 140s / 900s ---
+2026-04-24 10:32:48,896 - INFO -   Stage: starting model load
+2026-04-24 10:32:48,919 - INFO -   GPU0: 38821/143771 MiB, 0% util
+2026-04-24 10:32:48,919 - INFO -   Last lines of vLLM log:
+2026-04-24 10:32:48,919 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:32:48,919 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [gpu_model_runner.py:4735] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+2026-04-24 10:32:48,920 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [awq_marlin.py:408] Using MacheteLinearKernel for AWQMarlinLinearMethod
+2026-04-24 10:32:48,920 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:32:48,920 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:32:48,920 - INFO -   ---
+2026-04-24 10:33:08,929 - INFO - --- Status at 160s / 900s ---
+2026-04-24 10:33:08,929 - INFO -   Stage: starting model load
+2026-04-24 10:33:08,952 - INFO -   GPU0: 38821/143771 MiB, 0% util
+2026-04-24 10:33:08,952 - INFO -   Last lines of vLLM log:
+2026-04-24 10:33:08,952 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:33:08,953 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [gpu_model_runner.py:4735] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+2026-04-24 10:33:08,953 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [awq_marlin.py:408] Using MacheteLinearKernel for AWQMarlinLinearMethod
+2026-04-24 10:33:08,953 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:33:08,953 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:33:08,953 - INFO -   ---
+2026-04-24 10:33:28,963 - INFO - --- Status at 180s / 900s ---
+2026-04-24 10:33:28,963 - INFO -   Stage: starting model load
+2026-04-24 10:33:28,985 - INFO -   GPU0: 38821/143771 MiB, 0% util
+2026-04-24 10:33:28,985 - INFO -   Last lines of vLLM log:
+2026-04-24 10:33:28,985 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:33:28,985 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [gpu_model_runner.py:4735] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+2026-04-24 10:33:28,985 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [awq_marlin.py:408] Using MacheteLinearKernel for AWQMarlinLinearMethod
+2026-04-24 10:33:28,985 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:33:28,985 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:33:28,985 - INFO -   ---
+2026-04-24 10:33:48,995 - INFO - --- Status at 200s / 900s ---
+2026-04-24 10:33:48,996 - INFO -   Stage: starting model load
+2026-04-24 10:33:49,018 - INFO -   GPU0: 38821/143771 MiB, 0% util
+2026-04-24 10:33:49,018 - INFO -   Last lines of vLLM log:
+2026-04-24 10:33:49,018 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:33:49,018 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [gpu_model_runner.py:4735] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+2026-04-24 10:33:49,018 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [awq_marlin.py:408] Using MacheteLinearKernel for AWQMarlinLinearMethod
+2026-04-24 10:33:49,019 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:33:49,019 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:33:49,019 - INFO -   ---
+2026-04-24 10:34:09,029 - INFO - --- Status at 220s / 900s ---
+2026-04-24 10:34:09,029 - INFO -   Stage: starting model load
+2026-04-24 10:34:09,051 - INFO -   GPU0: 38821/143771 MiB, 0% util
+2026-04-24 10:34:09,051 - INFO -   Last lines of vLLM log:
+2026-04-24 10:34:09,051 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:34:09,051 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [gpu_model_runner.py:4735] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+2026-04-24 10:34:09,051 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [awq_marlin.py:408] Using MacheteLinearKernel for AWQMarlinLinearMethod
+2026-04-24 10:34:09,052 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:34:09,052 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:34:09,052 - INFO -   ---
+2026-04-24 10:34:29,061 - INFO - --- Status at 240s / 900s ---
+2026-04-24 10:34:29,061 - INFO -   Stage: starting model load
+2026-04-24 10:34:29,084 - INFO -   GPU0: 38821/143771 MiB, 0% util
+2026-04-24 10:34:29,085 - INFO -   Last lines of vLLM log:
+2026-04-24 10:34:29,085 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:34:29,085 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [gpu_model_runner.py:4735] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+2026-04-24 10:34:29,085 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [awq_marlin.py:408] Using MacheteLinearKernel for AWQMarlinLinearMethod
+2026-04-24 10:34:29,085 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:34:29,085 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:34:29,085 - INFO -   ---
+2026-04-24 10:34:49,095 - INFO - --- Status at 260s / 900s ---
+2026-04-24 10:34:49,095 - INFO -   Stage: starting model load
+2026-04-24 10:34:49,118 - INFO -   GPU0: 38821/143771 MiB, 0% util
+2026-04-24 10:34:49,118 - INFO -   Last lines of vLLM log:
+2026-04-24 10:34:49,118 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:34:49,118 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [gpu_model_runner.py:4735] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+2026-04-24 10:34:49,119 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [awq_marlin.py:408] Using MacheteLinearKernel for AWQMarlinLinearMethod
+2026-04-24 10:34:49,119 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:34:49,119 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:34:49,119 - INFO -   ---
+2026-04-24 10:35:09,128 - INFO - --- Status at 280s / 900s ---
+2026-04-24 10:35:09,129 - INFO -   Stage: starting model load
+2026-04-24 10:35:09,151 - INFO -   GPU0: 38821/143771 MiB, 0% util
+2026-04-24 10:35:09,151 - INFO -   Last lines of vLLM log:
+2026-04-24 10:35:09,151 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:35:09,151 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [gpu_model_runner.py:4735] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+2026-04-24 10:35:09,151 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [awq_marlin.py:408] Using MacheteLinearKernel for AWQMarlinLinearMethod
+2026-04-24 10:35:09,151 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:35:09,152 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:35:09,152 - INFO -   ---
+2026-04-24 10:35:29,161 - INFO - --- Status at 300s / 900s ---
+2026-04-24 10:35:29,162 - INFO -   Stage: starting model load
+2026-04-24 10:35:29,184 - INFO -   GPU0: 38821/143771 MiB, 0% util
+2026-04-24 10:35:29,184 - INFO -   Last lines of vLLM log:
+2026-04-24 10:35:29,184 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:35:29,184 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [gpu_model_runner.py:4735] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+2026-04-24 10:35:29,184 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [awq_marlin.py:408] Using MacheteLinearKernel for AWQMarlinLinearMethod
+2026-04-24 10:35:29,184 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:35:29,184 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:35:29,184 - INFO -   ---
+2026-04-24 10:35:49,194 - INFO - --- Status at 320s / 900s ---
+2026-04-24 10:35:49,195 - INFO -   Stage: starting model load
+2026-04-24 10:35:49,215 - INFO -   GPU0: 38821/143771 MiB, 0% util
+2026-04-24 10:35:49,216 - INFO -   Last lines of vLLM log:
+2026-04-24 10:35:49,216 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:35:49,216 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [gpu_model_runner.py:4735] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+2026-04-24 10:35:49,216 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [awq_marlin.py:408] Using MacheteLinearKernel for AWQMarlinLinearMethod
+2026-04-24 10:35:49,216 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:35:49,216 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:35:49,216 - INFO -   ---
+2026-04-24 10:36:09,226 - INFO - --- Status at 340s / 900s ---
+2026-04-24 10:36:09,227 - INFO -   Stage: starting model load
+2026-04-24 10:36:09,249 - INFO -   GPU0: 38821/143771 MiB, 0% util
+2026-04-24 10:36:09,249 - INFO -   Last lines of vLLM log:
+2026-04-24 10:36:09,249 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 10:36:09,250 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [gpu_model_runner.py:4735] Starting to load model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4...
+2026-04-24 10:36:09,250 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [awq_marlin.py:408] Using MacheteLinearKernel for AWQMarlinLinearMethod
+2026-04-24 10:36:09,250 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 10:36:09,250 - INFO -     | (EngineCore pid=2189543) INFO 04-24 10:30:45 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 10:36:09,250 - INFO -   ---
+2026-04-24 10:36:27,258 - INFO - [358s] Stage: loading weights into memory
+2026-04-24 10:36:29,259 - INFO - --- Status at 360s / 900s ---
+2026-04-24 10:36:29,260 - INFO -   Stage: loading weights into memory
+2026-04-24 10:36:29,282 - INFO -   GPU0: 38935/143771 MiB, 19% util
+2026-04-24 10:36:29,282 - INFO -   Last lines of vLLM log:
+2026-04-24 10:36:29,282 - INFO -     | Loading safetensors checkpoint shards:  11% Completed | 1/9 [00:00<00:04,  1.64it/s]
+2026-04-24 10:36:29,282 - INFO -     | (EngineCore pid=2189543)
+2026-04-24 10:36:29,282 - INFO -     | Loading safetensors checkpoint shards:  22% Completed | 2/9 [00:01<00:04,  1.54it/s]
+2026-04-24 10:36:29,282 - INFO -     | (EngineCore pid=2189543)
+2026-04-24 10:36:29,282 - INFO -     | Loading safetensors checkpoint shards:  33% Completed | 3/9 [00:01<00:03,  1.52it/s]
+2026-04-24 10:36:29,282 - INFO -   ---
+2026-04-24 10:36:35,285 - INFO - [366s] Stage: weights loaded - initializing engine
+2026-04-24 10:36:37,286 - INFO - [368s] Stage: allocating KV cache
+2026-04-24 10:36:43,292 - INFO - [OK] Server answered /v1/models after 374.6s
+2026-04-24 10:36:43,292 - INFO - vLLM server ready at http://127.0.0.1:8000/v1
+2026-04-24 10:36:43,292 - INFO - [1/4]
+2026-04-24 10:36:43,292 - INFO -   → FUZZ vs llama3.1-70b
+2026-04-24 10:50:18,349 - INFO -   ✓ fuzz vs llama3.1-70b
+2026-04-24 10:50:18,349 - INFO - [2/4]
+2026-04-24 10:50:18,349 - INFO -   → FUZZ-FT vs llama3.1-70b
+2026-04-24 11:03:33,920 - INFO -   ✓ fuzz-ft vs llama3.1-70b
+2026-04-24 11:03:33,920 - INFO - [3/4]
+2026-04-24 11:03:33,920 - INFO -   → RE vs llama3.1-70b
+2026-04-24 11:13:51,566 - INFO -   ✓ re vs llama3.1-70b
+2026-04-24 11:13:51,566 - INFO - [4/4]
+2026-04-24 11:13:51,566 - INFO -   → LEAKAGENT vs llama3.1-70b
+2026-04-24 11:25:15,175 - INFO -   ✓ leakagent vs llama3.1-70b
+2026-04-24 11:25:15,175 - INFO - Stopping vLLM server...
+2026-04-24 11:25:20,841 - INFO - vLLM server stopped
+2026-04-24 11:25:20,841 - INFO - 
+2026-04-24 11:25:20,841 - INFO - ================================================================================
+2026-04-24 11:25:20,841 - INFO - EVALUATION SUMMARY
+2026-04-24 11:25:20,841 - INFO - ================================================================================
+2026-04-24 11:25:20,841 - INFO - Total experiments: 4
+2026-04-24 11:25:20,841 - INFO - Successful: 4 ✓
+2026-04-24 11:25:20,841 - INFO - Failed:     0 ✗
+2026-04-24 11:25:20,841 - INFO - Skipped:    0 ⊘
+2026-04-24 11:25:20,841 - INFO - Success rate: 100.0%
+2026-04-24 11:25:20,841 - INFO - ================================================================================
+2026-04-24 11:25:20,841 - INFO - 
+Detailed Results:
+2026-04-24 11:25:20,842 - INFO - --------------------------------------------------------------------------------
+2026-04-24 11:25:20,842 - INFO - fuzz         | llama3.1-70b    | ✓ SUCCESS       | 
+2026-04-24 11:25:20,842 - INFO - fuzz-ft      | llama3.1-70b    | ✓ SUCCESS       | 
+2026-04-24 11:25:20,842 - INFO - re           | llama3.1-70b    | ✓ SUCCESS       | 
+2026-04-24 11:25:20,842 - INFO - leakagent    | llama3.1-70b    | ✓ SUCCESS       | 
+2026-04-24 11:25:20,842 - INFO - --------------------------------------------------------------------------------
+2026-04-24 11:25:20,842 - INFO - 
+Full log: evaluation_logs/evaluation_20260424_103028.log

@@ -1,0 +1,96 @@
+2026-04-24 10:08:53,911 - INFO - Included models (allowlist): ['llama3.1-70b']
+2026-04-24 10:08:53,911 - INFO - ================================================================================
+2026-04-24 10:08:53,911 - INFO - COMPREHENSIVE METHOD EVALUATION
+2026-04-24 10:08:53,911 - INFO - ================================================================================
+2026-04-24 10:08:53,911 - INFO - Timestamp: 20260424_100853
+2026-04-24 10:08:53,911 - INFO - Log dir:   evaluation_logs
+2026-04-24 10:08:53,911 - INFO - Results:   evaluation_results
+2026-04-24 10:08:53,911 - INFO - Server:    http://127.0.0.1:8000/v1
+2026-04-24 10:08:53,911 - INFO - 
+2026-04-24 10:08:53,911 - INFO - Models (outer loop, each loaded once):
+2026-04-24 10:08:53,911 - INFO -   - llama3.1-70b    (meta-llama/Llama-3.1-70B-Instruct)
+2026-04-24 10:08:53,911 - INFO - Methods (inner loop, reusing the hot model):
+2026-04-24 10:08:53,911 - INFO -   - FUZZ       (llama3_fuzz_finetune)
+2026-04-24 10:08:53,911 - INFO -   - RE         (llama3_re_finetune)
+2026-04-24 10:08:53,911 - INFO -   - LEAKAGENT  (llama3_rl_finetune)
+2026-04-24 10:08:53,911 - INFO - 
+2026-04-24 10:08:53,911 - INFO - ================================================================================
+2026-04-24 10:08:53,911 - INFO - MODEL: llama3.1-70b (meta-llama/Llama-3.1-70B-Instruct)
+2026-04-24 10:08:53,912 - INFO - ================================================================================
+2026-04-24 10:08:53,912 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-70B-Instruct --host 127.0.0.1 --port 8000 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.8 --max-model-len 8192 --enforce-eager --disable-log-stats
+2026-04-24 10:08:53,912 - INFO - vLLM server log: evaluation_logs/vllm_llama3.1-70b_20260424_100853.log
+2026-04-24 10:08:53,912 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_llama3.1-70b_20260424_100853.log )
+2026-04-24 10:08:53,916 - INFO - Waiting up to 900s for server to be ready...
+2026-04-24 10:08:53,916 - INFO - Startup in progress. Progress updates every 20s below.
+2026-04-24 10:09:05,923 - INFO - [12s] Stage: initializing vLLM engine
+2026-04-24 10:09:07,924 - INFO - [14s] Stage: starting model load
+2026-04-24 10:09:13,928 - ERROR - vLLM process exited after 20.0s with code 1 (see log tail below)
+2026-04-24 10:09:15,929 - ERROR - vLLM server failed to start: HF auth error (gated model? login required)
+2026-04-24 10:09:15,929 - ERROR - --- vLLM server log tail ---
+2026-04-24 10:09:15,930 - ERROR - (APIServer pid=2134607)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+2026-04-24 10:09:15,930 - ERROR - (APIServer pid=2134607)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 686, in run_server_worker
+2026-04-24 10:09:15,930 - ERROR - (APIServer pid=2134607)     async with build_async_engine_client(
+2026-04-24 10:09:15,930 - ERROR - (APIServer pid=2134607)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/contextlib.py", line 210, in __aenter__
+2026-04-24 10:09:15,930 - ERROR - (APIServer pid=2134607)     return await anext(self.gen)
+2026-04-24 10:09:15,930 - ERROR - (APIServer pid=2134607)            ^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 10:09:15,930 - ERROR - (APIServer pid=2134607)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 100, in build_async_engine_client
+2026-04-24 10:09:15,930 - ERROR - (APIServer pid=2134607)     async with build_async_engine_client_from_engine_args(
+2026-04-24 10:09:15,930 - ERROR - (APIServer pid=2134607)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/contextlib.py", line 210, in __aenter__
+2026-04-24 10:09:15,930 - ERROR - (APIServer pid=2134607)     return await anext(self.gen)
+2026-04-24 10:09:15,930 - ERROR - (APIServer pid=2134607)            ^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 10:09:15,931 - ERROR - (APIServer pid=2134607)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 136, in build_async_engine_client_from_engine_args
+2026-04-24 10:09:15,931 - ERROR - (APIServer pid=2134607)     async_llm = AsyncLLM.from_vllm_config(
+2026-04-24 10:09:15,931 - ERROR - (APIServer pid=2134607)                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 10:09:15,931 - ERROR - (APIServer pid=2134607)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/v1/engine/async_llm.py", line 225, in from_vllm_config
+2026-04-24 10:09:15,931 - ERROR - (APIServer pid=2134607)     return cls(
+2026-04-24 10:09:15,931 - ERROR - (APIServer pid=2134607)            ^^^^
+2026-04-24 10:09:15,931 - ERROR - (APIServer pid=2134607)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/v1/engine/async_llm.py", line 154, in __init__
+2026-04-24 10:09:15,931 - ERROR - (APIServer pid=2134607)     self.engine_core = EngineCoreClient.make_async_mp_client(
+2026-04-24 10:09:15,931 - ERROR - (APIServer pid=2134607)                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 10:09:15,931 - ERROR - (APIServer pid=2134607)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+2026-04-24 10:09:15,931 - ERROR - (APIServer pid=2134607)     return func(*args, **kwargs)
+2026-04-24 10:09:15,931 - ERROR - (APIServer pid=2134607)            ^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 10:09:15,932 - ERROR - (APIServer pid=2134607)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 130, in make_async_mp_client
+2026-04-24 10:09:15,932 - ERROR - (APIServer pid=2134607)     return AsyncMPClient(*client_args)
+2026-04-24 10:09:15,932 - ERROR - (APIServer pid=2134607)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 10:09:15,932 - ERROR - (APIServer pid=2134607)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+2026-04-24 10:09:15,932 - ERROR - (APIServer pid=2134607)     return func(*args, **kwargs)
+2026-04-24 10:09:15,932 - ERROR - (APIServer pid=2134607)            ^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 10:09:15,932 - ERROR - (APIServer pid=2134607)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 887, in __init__
+2026-04-24 10:09:15,932 - ERROR - (APIServer pid=2134607)     super().__init__(
+2026-04-24 10:09:15,932 - ERROR - (APIServer pid=2134607)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 535, in __init__
+2026-04-24 10:09:15,932 - ERROR - (APIServer pid=2134607)     with launch_core_engines(
+2026-04-24 10:09:15,932 - ERROR - (APIServer pid=2134607)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/contextlib.py", line 144, in __exit__
+2026-04-24 10:09:15,932 - ERROR - (APIServer pid=2134607)     next(self.gen)
+2026-04-24 10:09:15,932 - ERROR - (APIServer pid=2134607)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/v1/engine/utils.py", line 998, in launch_core_engines
+2026-04-24 10:09:15,932 - ERROR - (APIServer pid=2134607)     wait_for_engine_startup(
+2026-04-24 10:09:15,932 - ERROR - (APIServer pid=2134607)   File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/vllm/v1/engine/utils.py", line 1057, in wait_for_engine_startup
+2026-04-24 10:09:15,932 - ERROR - (APIServer pid=2134607)     raise RuntimeError(
+2026-04-24 10:09:15,932 - ERROR - (APIServer pid=2134607) RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+2026-04-24 10:09:15,933 - ERROR - --- end of log tail ---
+2026-04-24 10:09:15,933 - ERROR - (full log: evaluation_logs/vllm_llama3.1-70b_20260424_100853.log)
+2026-04-24 10:09:15,933 - INFO - Stopping vLLM server...
+2026-04-24 10:09:20,933 - INFO - vLLM server stopped
+2026-04-24 10:09:20,934 - ERROR - Could not start server for llama3.1-70b: HF auth error (gated model? login required). Marking all methods failed.
+2026-04-24 10:09:20,934 - INFO - [1/3]
+2026-04-24 10:09:20,934 - INFO - [2/3]
+2026-04-24 10:09:20,934 - INFO - [3/3]
+2026-04-24 10:09:20,935 - INFO - 
+2026-04-24 10:09:20,935 - INFO - ================================================================================
+2026-04-24 10:09:20,935 - INFO - EVALUATION SUMMARY
+2026-04-24 10:09:20,935 - INFO - ================================================================================
+2026-04-24 10:09:20,935 - INFO - Total experiments: 3
+2026-04-24 10:09:20,935 - INFO - Successful: 0 ✓
+2026-04-24 10:09:20,935 - INFO - Failed:     3 ✗
+2026-04-24 10:09:20,935 - INFO - Skipped:    0 ⊘
+2026-04-24 10:09:20,935 - INFO - Success rate: 0.0%
+2026-04-24 10:09:20,935 - INFO - ================================================================================
+2026-04-24 10:09:20,935 - INFO - 
+Detailed Results:
+2026-04-24 10:09:20,935 - INFO - --------------------------------------------------------------------------------
+2026-04-24 10:09:20,935 - INFO - fuzz         | llama3.1-70b    | ✗ FAILED        | Server: HF auth error (gated model? login required)
+2026-04-24 10:09:20,935 - INFO - re           | llama3.1-70b    | ✗ FAILED        | Server: HF auth error (gated model? login required)
+2026-04-24 10:09:20,935 - INFO - leakagent    | llama3.1-70b    | ✗ FAILED        | Server: HF auth error (gated model? login required)
+2026-04-24 10:09:20,935 - INFO - --------------------------------------------------------------------------------
+2026-04-24 10:09:20,935 - INFO - 
+Full log: evaluation_logs/evaluation_20260424_100853.log

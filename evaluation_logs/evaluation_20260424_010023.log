@@ -1,0 +1,634 @@
+2026-04-24 01:00:23,612 - INFO - Excluded models: ['llama3.1-70b']
+2026-04-24 01:00:23,612 - INFO - ================================================================================
+2026-04-24 01:00:23,612 - INFO - COMPREHENSIVE METHOD EVALUATION
+2026-04-24 01:00:23,612 - INFO - ================================================================================
+2026-04-24 01:00:23,612 - INFO - Timestamp: 20260424_010023
+2026-04-24 01:00:23,612 - INFO - Log dir:   evaluation_logs
+2026-04-24 01:00:23,612 - INFO - Results:   evaluation_results
+2026-04-24 01:00:23,612 - INFO - Server:    http://127.0.0.1:8000/v1
+2026-04-24 01:00:23,612 - INFO - 
+2026-04-24 01:00:23,612 - INFO - Models (outer loop, each loaded once):
+2026-04-24 01:00:23,612 - INFO -   - llama3.1-8b     (meta-llama/Llama-3.1-8B-Instruct)
+2026-04-24 01:00:23,612 - INFO -   - mistral-7b      (mistralai/Mistral-7B-Instruct-v0.3)
+2026-04-24 01:00:23,612 - INFO -   - gpt-oss-20b     (openai/gpt-oss-20b)
+2026-04-24 01:00:23,612 - INFO -   - qwen3.5-27b     (Qwen/Qwen3.5-27B)
+2026-04-24 01:00:23,612 - INFO - Methods (inner loop, reusing the hot model):
+2026-04-24 01:00:23,612 - INFO -   - FUZZ       (llama3_fuzz_finetune)
+2026-04-24 01:00:23,612 - INFO -   - RE         (llama3_re_finetune)
+2026-04-24 01:00:23,612 - INFO -   - LEAKAGENT  (llama3_rl_finetune)
+2026-04-24 01:00:23,612 - INFO - 
+2026-04-24 01:00:23,612 - INFO - ================================================================================
+2026-04-24 01:00:23,612 - INFO - MODEL: llama3.1-8b (meta-llama/Llama-3.1-8B-Instruct)
+2026-04-24 01:00:23,612 - INFO - ================================================================================
+2026-04-24 01:00:23,613 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --host 127.0.0.1 --port 8000 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.50 --max-model-len 8192 --enforce-eager --disable-log-stats
+2026-04-24 01:00:23,613 - INFO - vLLM server log: evaluation_logs/vllm_llama3.1-8b_20260424_010023.log
+2026-04-24 01:00:23,613 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_llama3.1-8b_20260424_010023.log )
+2026-04-24 01:00:23,615 - INFO - Waiting up to 900s for server to be ready...
+2026-04-24 01:00:23,615 - INFO - Startup in progress. Progress updates every 20s below.
+2026-04-24 01:00:35,622 - INFO - [12s] Stage: initializing vLLM engine
+2026-04-24 01:00:37,623 - INFO - [14s] Stage: starting model load
+2026-04-24 01:00:39,624 - INFO - [16s] Stage: loading weights into memory
+2026-04-24 01:00:41,626 - INFO - [18s] Stage: weights loaded - initializing engine
+2026-04-24 01:00:43,627 - INFO - [20s] Stage: allocating KV cache
+2026-04-24 01:00:43,627 - INFO - --- Status at 20s / 900s ---
+2026-04-24 01:00:43,627 - INFO -   Stage: allocating KV cache
+2026-04-24 01:00:43,649 - INFO -   GPU0: 72959/143771 MiB, 0% util
+2026-04-24 01:00:43,650 - INFO -   Last lines of vLLM log:
+2026-04-24 01:00:43,650 - INFO -     | (EngineCore pid=823889) INFO 04-24 01:00:42 [kv_cache_utils.py:1319] GPU KV cache size: 432,528 tokens
+2026-04-24 01:00:43,650 - INFO -     | (EngineCore pid=823889) INFO 04-24 01:00:42 [kv_cache_utils.py:1324] Maximum concurrency for 8,192 tokens per request: 52.80x
+2026-04-24 01:00:43,650 - INFO -     | (EngineCore pid=823889) 2026-04-24 01:00:42,283 - INFO - autotuner.py:262 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+2026-04-24 01:00:43,650 - INFO -     | (EngineCore pid=823889) 2026-04-24 01:00:42,302 - INFO - autotuner.py:268 - flashinfer.jit: [Autotuner]: Autotuning process ends
+2026-04-24 01:00:43,650 - INFO -     | (EngineCore pid=823889) INFO 04-24 01:00:42 [core.py:283] init engine (profile, create kv cache, warmup model) took 1.47 seconds
+2026-04-24 01:00:43,650 - INFO -   ---
+2026-04-24 01:00:47,655 - INFO - [OK] Server answered /v1/models after 24.0s
+2026-04-24 01:00:47,655 - INFO - vLLM server ready at http://127.0.0.1:8000/v1
+2026-04-24 01:00:47,656 - INFO - [1/12]
+2026-04-24 01:00:47,656 - INFO -   → FUZZ vs llama3.1-8b
+2026-04-24 01:13:08,506 - INFO -   ✓ fuzz vs llama3.1-8b
+2026-04-24 01:13:08,506 - INFO - [2/12]
+2026-04-24 01:13:08,506 - INFO -   → RE vs llama3.1-8b
+2026-04-24 01:21:48,173 - INFO -   ✓ re vs llama3.1-8b
+2026-04-24 01:21:48,173 - INFO - [3/12]
+2026-04-24 01:21:48,173 - INFO -   → LEAKAGENT vs llama3.1-8b
+2026-04-24 01:35:32,741 - INFO -   ✓ leakagent vs llama3.1-8b
+2026-04-24 01:35:32,741 - INFO - Stopping vLLM server...
+2026-04-24 01:35:38,306 - INFO - vLLM server stopped
+2026-04-24 01:35:38,306 - INFO - ================================================================================
+2026-04-24 01:35:38,307 - INFO - MODEL: mistral-7b (mistralai/Mistral-7B-Instruct-v0.3)
+2026-04-24 01:35:38,307 - INFO - ================================================================================
+2026-04-24 01:35:38,307 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model mistralai/Mistral-7B-Instruct-v0.3 --host 127.0.0.1 --port 8000 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.50 --max-model-len 8192 --enforce-eager --disable-log-stats
+2026-04-24 01:35:38,307 - INFO - vLLM server log: evaluation_logs/vllm_mistral-7b_20260424_010023.log
+2026-04-24 01:35:38,307 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_mistral-7b_20260424_010023.log )
+2026-04-24 01:35:38,311 - INFO - Waiting up to 900s for server to be ready...
+2026-04-24 01:35:38,311 - INFO - Startup in progress. Progress updates every 20s below.
+2026-04-24 01:35:50,317 - INFO - [12s] Stage: initializing vLLM engine
+2026-04-24 01:35:52,318 - INFO - [14s] Stage: starting model load
+2026-04-24 01:35:58,321 - INFO - --- Status at 20s / 900s ---
+2026-04-24 01:35:58,322 - INFO -   Stage: starting model load
+2026-04-24 01:35:58,345 - INFO -   GPU0: 14649/143771 MiB, 0% util
+2026-04-24 01:35:58,345 - INFO -   Last lines of vLLM log:
+2026-04-24 01:35:58,345 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:51 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 01:35:58,345 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:51 [gpu_model_runner.py:4735] Starting to load model mistralai/Mistral-7B-Instruct-v0.3...
+2026-04-24 01:35:58,345 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:52 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 01:35:58,345 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:52 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 01:35:58,345 - INFO -     | (EngineCore pid=912969) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-24 01:35:58,345 - INFO -   ---
+2026-04-24 01:36:18,355 - INFO - --- Status at 40s / 900s ---
+2026-04-24 01:36:18,355 - INFO -   Stage: starting model load
+2026-04-24 01:36:18,377 - INFO -   GPU0: 14649/143771 MiB, 0% util
+2026-04-24 01:36:18,378 - INFO -   Last lines of vLLM log:
+2026-04-24 01:36:18,378 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:51 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 01:36:18,378 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:51 [gpu_model_runner.py:4735] Starting to load model mistralai/Mistral-7B-Instruct-v0.3...
+2026-04-24 01:36:18,378 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:52 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 01:36:18,378 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:52 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 01:36:18,378 - INFO -     | (EngineCore pid=912969) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-24 01:36:18,378 - INFO -   ---
+2026-04-24 01:36:38,388 - INFO - --- Status at 60s / 900s ---
+2026-04-24 01:36:38,388 - INFO -   Stage: starting model load
+2026-04-24 01:36:38,411 - INFO -   GPU0: 14649/143771 MiB, 0% util
+2026-04-24 01:36:38,411 - INFO -   Last lines of vLLM log:
+2026-04-24 01:36:38,411 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:51 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 01:36:38,411 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:51 [gpu_model_runner.py:4735] Starting to load model mistralai/Mistral-7B-Instruct-v0.3...
+2026-04-24 01:36:38,412 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:52 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 01:36:38,412 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:52 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 01:36:38,412 - INFO -     | (EngineCore pid=912969) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-24 01:36:38,412 - INFO -   ---
+2026-04-24 01:36:58,422 - INFO - --- Status at 80s / 900s ---
+2026-04-24 01:36:58,422 - INFO -   Stage: starting model load
+2026-04-24 01:36:58,444 - INFO -   GPU0: 14649/143771 MiB, 0% util
+2026-04-24 01:36:58,445 - INFO -   Last lines of vLLM log:
+2026-04-24 01:36:58,445 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:51 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 01:36:58,445 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:51 [gpu_model_runner.py:4735] Starting to load model mistralai/Mistral-7B-Instruct-v0.3...
+2026-04-24 01:36:58,445 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:52 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 01:36:58,445 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:52 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 01:36:58,445 - INFO -     | (EngineCore pid=912969) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-24 01:36:58,445 - INFO -   ---
+2026-04-24 01:37:18,454 - INFO - --- Status at 100s / 900s ---
+2026-04-24 01:37:18,455 - INFO -   Stage: starting model load
+2026-04-24 01:37:18,477 - INFO -   GPU0: 14649/143771 MiB, 0% util
+2026-04-24 01:37:18,477 - INFO -   Last lines of vLLM log:
+2026-04-24 01:37:18,477 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:51 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 01:37:18,477 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:51 [gpu_model_runner.py:4735] Starting to load model mistralai/Mistral-7B-Instruct-v0.3...
+2026-04-24 01:37:18,478 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:52 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 01:37:18,478 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:52 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 01:37:18,478 - INFO -     | (EngineCore pid=912969) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-24 01:37:18,478 - INFO -   ---
+2026-04-24 01:37:38,487 - INFO - --- Status at 120s / 900s ---
+2026-04-24 01:37:38,487 - INFO -   Stage: starting model load
+2026-04-24 01:37:38,510 - INFO -   GPU0: 14649/143771 MiB, 0% util
+2026-04-24 01:37:38,510 - INFO -   Last lines of vLLM log:
+2026-04-24 01:37:38,510 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:51 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 01:37:38,510 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:51 [gpu_model_runner.py:4735] Starting to load model mistralai/Mistral-7B-Instruct-v0.3...
+2026-04-24 01:37:38,510 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:52 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 01:37:38,510 - INFO -     | (EngineCore pid=912969) INFO 04-24 01:35:52 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 01:37:38,510 - INFO -     | (EngineCore pid=912969) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-24 01:37:38,511 - INFO -   ---
+2026-04-24 01:37:44,513 - INFO - [126s] Stage: loading weights into memory
+2026-04-24 01:37:46,514 - INFO - [128s] Stage: weights loaded - initializing engine
+2026-04-24 01:37:52,517 - INFO - [134s] Stage: allocating KV cache
+2026-04-24 01:37:54,520 - INFO - [OK] Server answered /v1/models after 136.2s
+2026-04-24 01:37:54,520 - INFO - vLLM server ready at http://127.0.0.1:8000/v1
+2026-04-24 01:37:54,520 - INFO - [4/12]
+2026-04-24 01:37:54,520 - INFO -   → FUZZ vs mistral-7b
+2026-04-24 01:49:19,387 - INFO -   ✓ fuzz vs mistral-7b
+2026-04-24 01:49:19,387 - INFO - [5/12]
+2026-04-24 01:49:19,387 - INFO -   → RE vs mistral-7b
+2026-04-24 02:01:30,184 - INFO -   ✓ re vs mistral-7b
+2026-04-24 02:01:30,184 - INFO - [6/12]
+2026-04-24 02:01:30,184 - INFO -   → LEAKAGENT vs mistral-7b
+2026-04-24 02:09:07,868 - INFO -   ✓ leakagent vs mistral-7b
+2026-04-24 02:09:07,869 - INFO - Stopping vLLM server...
+2026-04-24 02:09:13,384 - INFO - vLLM server stopped
+2026-04-24 02:09:13,384 - INFO - ================================================================================
+2026-04-24 02:09:13,385 - INFO - MODEL: gpt-oss-20b (openai/gpt-oss-20b)
+2026-04-24 02:09:13,385 - INFO - ================================================================================
+2026-04-24 02:09:13,385 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model openai/gpt-oss-20b --host 127.0.0.1 --port 8000 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.50 --max-model-len 8192 --enforce-eager --disable-log-stats
+2026-04-24 02:09:13,385 - INFO - vLLM server log: evaluation_logs/vllm_gpt-oss-20b_20260424_010023.log
+2026-04-24 02:09:13,385 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_gpt-oss-20b_20260424_010023.log )
+2026-04-24 02:09:13,391 - INFO - Waiting up to 900s for server to be ready...
+2026-04-24 02:09:13,391 - INFO - Startup in progress. Progress updates every 20s below.
+2026-04-24 02:09:33,401 - INFO - --- Status at 20s / 900s ---
+2026-04-24 02:09:33,401 - INFO -   Stage: (no recognizable stage yet)
+2026-04-24 02:09:33,424 - INFO -   GPU0: 14/143771 MiB, 0% util
+2026-04-24 02:09:33,425 - INFO -   Last lines of vLLM log:
+2026-04-24 02:09:33,425 - INFO -     | (APIServer pid=997231) INFO 04-24 02:09:25 [vllm.py:790] Asynchronous scheduling is enabled.
+2026-04-24 02:09:33,425 - INFO -     | (APIServer pid=997231) WARNING 04-24 02:09:25 [vllm.py:848] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+2026-04-24 02:09:33,425 - INFO -     | (APIServer pid=997231) WARNING 04-24 02:09:25 [vllm.py:859] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+2026-04-24 02:09:33,425 - INFO -     | (APIServer pid=997231) INFO 04-24 02:09:25 [vllm.py:1025] Cudagraph is disabled under eager mode
+2026-04-24 02:09:33,425 - INFO -     | (APIServer pid=997231) INFO 04-24 02:09:25 [compilation.py:292] Enabled custom fusions: norm_quant, act_quant
+2026-04-24 02:09:33,425 - INFO -   ---
+2026-04-24 02:09:35,426 - INFO - [22s] Stage: starting model load
+2026-04-24 02:09:53,435 - INFO - --- Status at 40s / 900s ---
+2026-04-24 02:09:53,436 - INFO -   Stage: starting model load
+2026-04-24 02:09:53,458 - INFO -   GPU0: 14101/143771 MiB, 0% util
+2026-04-24 02:09:53,458 - INFO -   Last lines of vLLM log:
+2026-04-24 02:09:53,459 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [gpu_model_runner.py:4735] Starting to load model openai/gpt-oss-20b...
+2026-04-24 02:09:53,459 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'TRITON_ATTN'].
+2026-04-24 02:09:53,459 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:09:53,459 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [mxfp4.py:352] Using 'TRITON' Mxfp4 MoE backend.
+2026-04-24 02:09:53,459 - INFO -     | (EngineCore pid=998433) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-24 02:09:53,459 - INFO -   ---
+2026-04-24 02:10:13,469 - INFO - --- Status at 60s / 900s ---
+2026-04-24 02:10:13,469 - INFO -   Stage: starting model load
+2026-04-24 02:10:13,491 - INFO -   GPU0: 14101/143771 MiB, 0% util
+2026-04-24 02:10:13,492 - INFO -   Last lines of vLLM log:
+2026-04-24 02:10:13,492 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [gpu_model_runner.py:4735] Starting to load model openai/gpt-oss-20b...
+2026-04-24 02:10:13,492 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'TRITON_ATTN'].
+2026-04-24 02:10:13,492 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:10:13,492 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [mxfp4.py:352] Using 'TRITON' Mxfp4 MoE backend.
+2026-04-24 02:10:13,492 - INFO -     | (EngineCore pid=998433) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-24 02:10:13,492 - INFO -   ---
+2026-04-24 02:10:33,502 - INFO - --- Status at 80s / 900s ---
+2026-04-24 02:10:33,502 - INFO -   Stage: starting model load
+2026-04-24 02:10:33,524 - INFO -   GPU0: 14101/143771 MiB, 0% util
+2026-04-24 02:10:33,524 - INFO -   Last lines of vLLM log:
+2026-04-24 02:10:33,524 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [gpu_model_runner.py:4735] Starting to load model openai/gpt-oss-20b...
+2026-04-24 02:10:33,524 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'TRITON_ATTN'].
+2026-04-24 02:10:33,525 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:10:33,525 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [mxfp4.py:352] Using 'TRITON' Mxfp4 MoE backend.
+2026-04-24 02:10:33,525 - INFO -     | (EngineCore pid=998433) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-24 02:10:33,525 - INFO -   ---
+2026-04-24 02:10:53,535 - INFO - --- Status at 100s / 900s ---
+2026-04-24 02:10:53,535 - INFO -   Stage: starting model load
+2026-04-24 02:10:53,557 - INFO -   GPU0: 14101/143771 MiB, 0% util
+2026-04-24 02:10:53,557 - INFO -   Last lines of vLLM log:
+2026-04-24 02:10:53,558 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [gpu_model_runner.py:4735] Starting to load model openai/gpt-oss-20b...
+2026-04-24 02:10:53,558 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'TRITON_ATTN'].
+2026-04-24 02:10:53,558 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:10:53,558 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [mxfp4.py:352] Using 'TRITON' Mxfp4 MoE backend.
+2026-04-24 02:10:53,558 - INFO -     | (EngineCore pid=998433) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-24 02:10:53,558 - INFO -   ---
+2026-04-24 02:11:13,568 - INFO - --- Status at 120s / 900s ---
+2026-04-24 02:11:13,568 - INFO -   Stage: starting model load
+2026-04-24 02:11:13,590 - INFO -   GPU0: 14101/143771 MiB, 0% util
+2026-04-24 02:11:13,591 - INFO -   Last lines of vLLM log:
+2026-04-24 02:11:13,591 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [gpu_model_runner.py:4735] Starting to load model openai/gpt-oss-20b...
+2026-04-24 02:11:13,591 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'TRITON_ATTN'].
+2026-04-24 02:11:13,591 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:11:13,591 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:09:35 [mxfp4.py:352] Using 'TRITON' Mxfp4 MoE backend.
+2026-04-24 02:11:13,591 - INFO -     | (EngineCore pid=998433) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-24 02:11:13,591 - INFO -   ---
+2026-04-24 02:11:33,601 - INFO - [140s] Stage: loading weights into memory
+2026-04-24 02:11:33,601 - INFO - --- Status at 140s / 900s ---
+2026-04-24 02:11:33,602 - INFO -   Stage: loading weights into memory
+2026-04-24 02:11:33,626 - INFO -   GPU0: 20873/143771 MiB, 10% util
+2026-04-24 02:11:33,626 - INFO -   Last lines of vLLM log:
+2026-04-24 02:11:33,626 - INFO -     | (EngineCore pid=998433)
+2026-04-24 02:11:33,626 - INFO -     | Loading safetensors checkpoint shards: 100% Completed | 3/3 [00:01<00:00,  1.72it/s]
+2026-04-24 02:11:33,626 - INFO -     | (EngineCore pid=998433)
+2026-04-24 02:11:33,627 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:11:33 [default_loader.py:384] Loading weights took 1.86 seconds
+2026-04-24 02:11:33,627 - INFO -     | (EngineCore pid=998433) INFO 04-24 02:11:33 [mxfp4.py:836] Using MoEPrepareAndFinalizeNoDPEPMonolithic
+2026-04-24 02:11:33,627 - INFO -   ---
+2026-04-24 02:11:35,628 - INFO - [142s] Stage: weights loaded - initializing engine
+2026-04-24 02:11:45,633 - INFO - [152s] Stage: allocating KV cache
+2026-04-24 02:11:53,640 - INFO - [OK] Server answered /v1/models after 160.2s
+2026-04-24 02:11:53,640 - INFO - vLLM server ready at http://127.0.0.1:8000/v1
+2026-04-24 02:11:53,641 - INFO - [7/12]
+2026-04-24 02:11:53,641 - INFO -   → FUZZ vs gpt-oss-20b
+2026-04-24 02:12:16,898 - ERROR -   ✗ fuzz vs gpt-oss-20b (exit code 1)
+2026-04-24 02:12:16,898 - ERROR -   --- evaluate_task.py stderr tail ---
+2026-04-24 02:12:16,898 - ERROR -       return [text[s:e] for s, e in self.span_tokenize(text, realign_boundaries)]
+2026-04-24 02:12:16,898 - ERROR -              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 02:12:16,898 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1328, in span_tokenize
+2026-04-24 02:12:16,898 - ERROR -       for sentence in slices:
+2026-04-24 02:12:16,898 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1457, in _realign_boundaries
+2026-04-24 02:12:16,898 - ERROR -       for sentence1, sentence2 in _pair_iter(slices):
+2026-04-24 02:12:16,898 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 321, in _pair_iter
+2026-04-24 02:12:16,898 - ERROR -       prev = next(iterator)
+2026-04-24 02:12:16,898 - ERROR -              ^^^^^^^^^^^^^^
+2026-04-24 02:12:16,898 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1429, in _slices_from_text
+2026-04-24 02:12:16,898 - ERROR -       for match, context in self._match_potential_end_contexts(text):
+2026-04-24 02:12:16,898 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1394, in _match_potential_end_contexts
+2026-04-24 02:12:16,898 - ERROR -       for match in self._lang_vars.period_context_re().finditer(text):
+2026-04-24 02:12:16,898 - ERROR -                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 02:12:16,898 - ERROR -   TypeError: expected string or bytes-like object, got 'NoneType'
+2026-04-24 02:12:16,898 - ERROR -   --- evaluate_task.py stdout tail ---
+2026-04-24 02:12:16,898 - ERROR -   using http://127.0.0.1:8000/v1
+2026-04-24 02:12:16,898 - INFO - [8/12]
+2026-04-24 02:12:16,898 - INFO -   → RE vs gpt-oss-20b
+2026-04-24 02:12:27,312 - ERROR -   ✗ re vs gpt-oss-20b (exit code 1)
+2026-04-24 02:12:27,312 - ERROR -   --- evaluate_task.py stderr tail ---
+2026-04-24 02:12:27,312 - ERROR -       return [text[s:e] for s, e in self.span_tokenize(text, realign_boundaries)]
+2026-04-24 02:12:27,312 - ERROR -              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 02:12:27,312 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1328, in span_tokenize
+2026-04-24 02:12:27,312 - ERROR -       for sentence in slices:
+2026-04-24 02:12:27,312 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1457, in _realign_boundaries
+2026-04-24 02:12:27,312 - ERROR -       for sentence1, sentence2 in _pair_iter(slices):
+2026-04-24 02:12:27,313 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 321, in _pair_iter
+2026-04-24 02:12:27,313 - ERROR -       prev = next(iterator)
+2026-04-24 02:12:27,313 - ERROR -              ^^^^^^^^^^^^^^
+2026-04-24 02:12:27,313 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1429, in _slices_from_text
+2026-04-24 02:12:27,313 - ERROR -       for match, context in self._match_potential_end_contexts(text):
+2026-04-24 02:12:27,313 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1394, in _match_potential_end_contexts
+2026-04-24 02:12:27,313 - ERROR -       for match in self._lang_vars.period_context_re().finditer(text):
+2026-04-24 02:12:27,313 - ERROR -                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 02:12:27,313 - ERROR -   TypeError: expected string or bytes-like object, got 'NoneType'
+2026-04-24 02:12:27,313 - ERROR -   --- evaluate_task.py stdout tail ---
+2026-04-24 02:12:27,313 - ERROR -   using http://127.0.0.1:8000/v1
+2026-04-24 02:12:27,313 - INFO - [9/12]
+2026-04-24 02:12:27,313 - INFO -   → LEAKAGENT vs gpt-oss-20b
+2026-04-24 02:12:39,411 - ERROR -   ✗ leakagent vs gpt-oss-20b (exit code 1)
+2026-04-24 02:12:39,411 - ERROR -   --- evaluate_task.py stderr tail ---
+2026-04-24 02:12:39,411 - ERROR -       return [text[s:e] for s, e in self.span_tokenize(text, realign_boundaries)]
+2026-04-24 02:12:39,411 - ERROR -              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 02:12:39,411 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1328, in span_tokenize
+2026-04-24 02:12:39,411 - ERROR -       for sentence in slices:
+2026-04-24 02:12:39,411 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1457, in _realign_boundaries
+2026-04-24 02:12:39,411 - ERROR -       for sentence1, sentence2 in _pair_iter(slices):
+2026-04-24 02:12:39,411 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 321, in _pair_iter
+2026-04-24 02:12:39,411 - ERROR -       prev = next(iterator)
+2026-04-24 02:12:39,411 - ERROR -              ^^^^^^^^^^^^^^
+2026-04-24 02:12:39,411 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1429, in _slices_from_text
+2026-04-24 02:12:39,411 - ERROR -       for match, context in self._match_potential_end_contexts(text):
+2026-04-24 02:12:39,411 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1394, in _match_potential_end_contexts
+2026-04-24 02:12:39,411 - ERROR -       for match in self._lang_vars.period_context_re().finditer(text):
+2026-04-24 02:12:39,411 - ERROR -                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 02:12:39,411 - ERROR -   TypeError: expected string or bytes-like object, got 'NoneType'
+2026-04-24 02:12:39,411 - ERROR -   --- evaluate_task.py stdout tail ---
+2026-04-24 02:12:39,411 - ERROR -   using http://127.0.0.1:8000/v1
+2026-04-24 02:12:39,411 - INFO - Stopping vLLM server...
+2026-04-24 02:12:45,128 - INFO - vLLM server stopped
+2026-04-24 02:12:45,128 - INFO - ================================================================================
+2026-04-24 02:12:45,128 - INFO - MODEL: qwen3.5-27b (Qwen/Qwen3.5-27B)
+2026-04-24 02:12:45,128 - INFO - ================================================================================
+2026-04-24 02:12:45,128 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen3.5-27B --host 127.0.0.1 --port 8000 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.50 --max-model-len 8192 --enforce-eager --disable-log-stats
+2026-04-24 02:12:45,128 - INFO - vLLM server log: evaluation_logs/vllm_qwen3.5-27b_20260424_010023.log
+2026-04-24 02:12:45,128 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_qwen3.5-27b_20260424_010023.log )
+2026-04-24 02:12:45,131 - INFO - Waiting up to 900s for server to be ready...
+2026-04-24 02:12:45,132 - INFO - Startup in progress. Progress updates every 20s below.
+2026-04-24 02:13:05,140 - INFO - --- Status at 20s / 900s ---
+2026-04-24 02:13:05,140 - INFO -   Stage: (no recognizable stage yet)
+2026-04-24 02:13:05,164 - INFO -   GPU0: 17/143771 MiB, 0% util
+2026-04-24 02:13:05,165 - INFO -   Last lines of vLLM log:
+2026-04-24 02:13:05,165 - INFO -     | (APIServer pid=1007848) INFO 04-24 02:12:57 [vllm.py:790] Asynchronous scheduling is enabled.
+2026-04-24 02:13:05,165 - INFO -     | (APIServer pid=1007848) WARNING 04-24 02:12:57 [vllm.py:848] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+2026-04-24 02:13:05,165 - INFO -     | (APIServer pid=1007848) WARNING 04-24 02:12:57 [vllm.py:859] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored
+2026-04-24 02:13:05,165 - INFO -     | (APIServer pid=1007848) INFO 04-24 02:12:57 [vllm.py:1025] Cudagraph is disabled under eager mode
+2026-04-24 02:13:05,165 - INFO -     | (APIServer pid=1007848) INFO 04-24 02:12:57 [compilation.py:292] Enabled custom fusions: norm_quant, act_quant
+2026-04-24 02:13:05,165 - INFO -   ---
+2026-04-24 02:13:15,169 - INFO - [30s] Stage: initializing vLLM engine
+2026-04-24 02:13:25,174 - INFO - [40s] Stage: starting model load
+2026-04-24 02:13:25,174 - INFO - --- Status at 40s / 900s ---
+2026-04-24 02:13:25,174 - INFO -   Stage: starting model load
+2026-04-24 02:13:25,196 - INFO -   GPU0: 27025/143771 MiB, 0% util
+2026-04-24 02:13:25,197 - INFO -   Last lines of vLLM log:
+2026-04-24 02:13:25,197 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:13:25,197 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:13:25,197 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:13:25,197 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:13:25,197 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:13:25,197 - INFO -   ---
+2026-04-24 02:13:45,207 - INFO - --- Status at 60s / 900s ---
+2026-04-24 02:13:45,208 - INFO -   Stage: starting model load
+2026-04-24 02:13:45,230 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:13:45,231 - INFO -   Last lines of vLLM log:
+2026-04-24 02:13:45,231 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:13:45,231 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:13:45,231 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:13:45,231 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:13:45,231 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:13:45,231 - INFO -   ---
+2026-04-24 02:14:05,242 - INFO - --- Status at 80s / 900s ---
+2026-04-24 02:14:05,242 - INFO -   Stage: starting model load
+2026-04-24 02:14:05,264 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:14:05,264 - INFO -   Last lines of vLLM log:
+2026-04-24 02:14:05,264 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:14:05,264 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:14:05,264 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:14:05,264 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:14:05,265 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:14:05,265 - INFO -   ---
+2026-04-24 02:14:25,275 - INFO - --- Status at 100s / 900s ---
+2026-04-24 02:14:25,276 - INFO -   Stage: starting model load
+2026-04-24 02:14:25,297 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:14:25,298 - INFO -   Last lines of vLLM log:
+2026-04-24 02:14:25,298 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:14:25,298 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:14:25,298 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:14:25,298 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:14:25,298 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:14:25,298 - INFO -   ---
+2026-04-24 02:14:45,308 - INFO - --- Status at 120s / 900s ---
+2026-04-24 02:14:45,309 - INFO -   Stage: starting model load
+2026-04-24 02:14:45,330 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:14:45,331 - INFO -   Last lines of vLLM log:
+2026-04-24 02:14:45,331 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:14:45,331 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:14:45,331 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:14:45,331 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:14:45,331 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:14:45,331 - INFO -   ---
+2026-04-24 02:15:05,341 - INFO - --- Status at 140s / 900s ---
+2026-04-24 02:15:05,342 - INFO -   Stage: starting model load
+2026-04-24 02:15:05,364 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:15:05,365 - INFO -   Last lines of vLLM log:
+2026-04-24 02:15:05,365 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:15:05,365 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:15:05,365 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:15:05,365 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:15:05,365 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:15:05,365 - INFO -   ---
+2026-04-24 02:15:25,376 - INFO - --- Status at 160s / 900s ---
+2026-04-24 02:15:25,376 - INFO -   Stage: starting model load
+2026-04-24 02:15:25,399 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:15:25,399 - INFO -   Last lines of vLLM log:
+2026-04-24 02:15:25,399 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:15:25,399 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:15:25,400 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:15:25,400 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:15:25,400 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:15:25,400 - INFO -   ---
+2026-04-24 02:15:45,410 - INFO - --- Status at 180s / 900s ---
+2026-04-24 02:15:45,410 - INFO -   Stage: starting model load
+2026-04-24 02:15:45,433 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:15:45,433 - INFO -   Last lines of vLLM log:
+2026-04-24 02:15:45,433 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:15:45,433 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:15:45,433 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:15:45,433 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:15:45,433 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:15:45,433 - INFO -   ---
+2026-04-24 02:16:05,444 - INFO - --- Status at 200s / 900s ---
+2026-04-24 02:16:05,444 - INFO -   Stage: starting model load
+2026-04-24 02:16:05,466 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:16:05,467 - INFO -   Last lines of vLLM log:
+2026-04-24 02:16:05,467 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:16:05,467 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:16:05,467 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:16:05,467 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:16:05,467 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:16:05,467 - INFO -   ---
+2026-04-24 02:16:25,477 - INFO - --- Status at 220s / 900s ---
+2026-04-24 02:16:25,477 - INFO -   Stage: starting model load
+2026-04-24 02:16:25,499 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:16:25,499 - INFO -   Last lines of vLLM log:
+2026-04-24 02:16:25,499 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:16:25,499 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:16:25,499 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:16:25,499 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:16:25,500 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:16:25,500 - INFO -   ---
+2026-04-24 02:16:45,510 - INFO - --- Status at 240s / 900s ---
+2026-04-24 02:16:45,510 - INFO -   Stage: starting model load
+2026-04-24 02:16:45,532 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:16:45,532 - INFO -   Last lines of vLLM log:
+2026-04-24 02:16:45,532 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:16:45,532 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:16:45,533 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:16:45,533 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:16:45,533 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:16:45,533 - INFO -   ---
+2026-04-24 02:17:05,543 - INFO - --- Status at 260s / 900s ---
+2026-04-24 02:17:05,543 - INFO -   Stage: starting model load
+2026-04-24 02:17:05,564 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:17:05,565 - INFO -   Last lines of vLLM log:
+2026-04-24 02:17:05,565 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:17:05,565 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:17:05,565 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:17:05,565 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:17:05,565 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:17:05,565 - INFO -   ---
+2026-04-24 02:17:25,575 - INFO - --- Status at 280s / 900s ---
+2026-04-24 02:17:25,576 - INFO -   Stage: starting model load
+2026-04-24 02:17:25,598 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:17:25,598 - INFO -   Last lines of vLLM log:
+2026-04-24 02:17:25,598 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:17:25,598 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:17:25,598 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:17:25,598 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:17:25,598 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:17:25,598 - INFO -   ---
+2026-04-24 02:17:45,609 - INFO - --- Status at 300s / 900s ---
+2026-04-24 02:17:45,609 - INFO -   Stage: starting model load
+2026-04-24 02:17:45,632 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:17:45,632 - INFO -   Last lines of vLLM log:
+2026-04-24 02:17:45,632 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:17:45,633 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:17:45,633 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:17:45,633 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:17:45,633 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:17:45,633 - INFO -   ---
+2026-04-24 02:18:05,643 - INFO - --- Status at 320s / 900s ---
+2026-04-24 02:18:05,644 - INFO -   Stage: starting model load
+2026-04-24 02:18:05,665 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:18:05,665 - INFO -   Last lines of vLLM log:
+2026-04-24 02:18:05,665 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:18:05,665 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:18:05,665 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:18:05,665 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:18:05,665 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:18:05,665 - INFO -   ---
+2026-04-24 02:18:25,676 - INFO - --- Status at 340s / 900s ---
+2026-04-24 02:18:25,676 - INFO -   Stage: starting model load
+2026-04-24 02:18:25,698 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:18:25,698 - INFO -   Last lines of vLLM log:
+2026-04-24 02:18:25,698 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:18:25,698 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:18:25,698 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:18:25,698 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:18:25,699 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:18:25,699 - INFO -   ---
+2026-04-24 02:18:45,709 - INFO - --- Status at 360s / 900s ---
+2026-04-24 02:18:45,709 - INFO -   Stage: starting model load
+2026-04-24 02:18:45,732 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:18:45,733 - INFO -   Last lines of vLLM log:
+2026-04-24 02:18:45,733 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:18:45,733 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:18:45,733 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:18:45,733 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:18:45,733 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:18:45,733 - INFO -   ---
+2026-04-24 02:19:05,743 - INFO - --- Status at 380s / 900s ---
+2026-04-24 02:19:05,744 - INFO -   Stage: starting model load
+2026-04-24 02:19:05,765 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:19:05,765 - INFO -   Last lines of vLLM log:
+2026-04-24 02:19:05,765 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:19:05,765 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:19:05,765 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:19:05,766 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:19:05,766 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:19:05,766 - INFO -   ---
+2026-04-24 02:19:25,776 - INFO - --- Status at 400s / 900s ---
+2026-04-24 02:19:25,777 - INFO -   Stage: starting model load
+2026-04-24 02:19:25,799 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:19:25,799 - INFO -   Last lines of vLLM log:
+2026-04-24 02:19:25,800 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:19:25,800 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:19:25,800 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:19:25,800 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:19:25,800 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:19:25,800 - INFO -   ---
+2026-04-24 02:19:45,810 - INFO - --- Status at 420s / 900s ---
+2026-04-24 02:19:45,811 - INFO -   Stage: starting model load
+2026-04-24 02:19:45,834 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:19:45,834 - INFO -   Last lines of vLLM log:
+2026-04-24 02:19:45,834 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:19:45,834 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:19:45,834 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:19:45,834 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:19:45,834 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:19:45,834 - INFO -   ---
+2026-04-24 02:20:05,845 - INFO - --- Status at 440s / 900s ---
+2026-04-24 02:20:05,845 - INFO -   Stage: starting model load
+2026-04-24 02:20:05,867 - INFO -   GPU0: 53187/143771 MiB, 0% util
+2026-04-24 02:20:05,868 - INFO -   Last lines of vLLM log:
+2026-04-24 02:20:05,868 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+2026-04-24 02:20:05,868 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:139] Using FlashInfer GDN prefill kernel
+2026-04-24 02:20:05,868 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:24 [gdn_linear_attn.py:140] FlashInfer GDN prefill kernel is JIT-compiled; first run may take a while to compile. Set `--gdn-prefill-backend triton` to avoid 
+2026-04-24 02:20:05,868 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 02:20:05,868 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:13:25 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 02:20:05,868 - INFO -   ---
+2026-04-24 02:20:15,873 - INFO - [450s] Stage: loading weights into memory
+2026-04-24 02:20:23,877 - INFO - [458s] Stage: weights loaded - initializing engine
+2026-04-24 02:20:25,878 - INFO - --- Status at 460s / 900s ---
+2026-04-24 02:20:25,879 - INFO -   Stage: weights loaded - initializing engine
+2026-04-24 02:20:25,900 - INFO -   GPU0: 55729/143771 MiB, 100% util
+2026-04-24 02:20:25,901 - INFO -   Last lines of vLLM log:
+2026-04-24 02:20:25,901 - INFO -     | Loading safetensors checkpoint shards: 100% Completed | 11/11 [00:07<00:00,  1.53it/s]
+2026-04-24 02:20:25,901 - INFO -     | (EngineCore pid=1009308)
+2026-04-24 02:20:25,901 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:22 [default_loader.py:384] Loading weights took 7.27 seconds
+2026-04-24 02:20:25,901 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:23 [gpu_model_runner.py:4820] Model loading took 51.1 GiB memory and 417.936235 seconds
+2026-04-24 02:20:25,901 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:23 [gpu_model_runner.py:5753] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+2026-04-24 02:20:25,901 - INFO -   ---
+2026-04-24 02:20:45,910 - INFO - --- Status at 480s / 900s ---
+2026-04-24 02:20:45,911 - INFO -   Stage: weights loaded - initializing engine
+2026-04-24 02:20:45,933 - INFO -   GPU0: 55729/143771 MiB, 0% util
+2026-04-24 02:20:45,934 - INFO -   Last lines of vLLM log:
+2026-04-24 02:20:45,934 - INFO -     | Loading safetensors checkpoint shards: 100% Completed | 11/11 [00:07<00:00,  1.53it/s]
+2026-04-24 02:20:45,934 - INFO -     | (EngineCore pid=1009308)
+2026-04-24 02:20:45,934 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:22 [default_loader.py:384] Loading weights took 7.27 seconds
+2026-04-24 02:20:45,934 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:23 [gpu_model_runner.py:4820] Model loading took 51.1 GiB memory and 417.936235 seconds
+2026-04-24 02:20:45,934 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:23 [gpu_model_runner.py:5753] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+2026-04-24 02:20:45,934 - INFO -   ---
+2026-04-24 02:21:05,944 - INFO - --- Status at 500s / 900s ---
+2026-04-24 02:21:05,945 - INFO -   Stage: weights loaded - initializing engine
+2026-04-24 02:21:05,967 - INFO -   GPU0: 55729/143771 MiB, 0% util
+2026-04-24 02:21:05,968 - INFO -   Last lines of vLLM log:
+2026-04-24 02:21:05,968 - INFO -     | Loading safetensors checkpoint shards: 100% Completed | 11/11 [00:07<00:00,  1.53it/s]
+2026-04-24 02:21:05,968 - INFO -     | (EngineCore pid=1009308)
+2026-04-24 02:21:05,968 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:22 [default_loader.py:384] Loading weights took 7.27 seconds
+2026-04-24 02:21:05,968 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:23 [gpu_model_runner.py:4820] Model loading took 51.1 GiB memory and 417.936235 seconds
+2026-04-24 02:21:05,968 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:23 [gpu_model_runner.py:5753] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+2026-04-24 02:21:05,968 - INFO -   ---
+2026-04-24 02:21:25,979 - INFO - --- Status at 520s / 900s ---
+2026-04-24 02:21:25,980 - INFO -   Stage: weights loaded - initializing engine
+2026-04-24 02:21:26,002 - INFO -   GPU0: 55729/143771 MiB, 0% util
+2026-04-24 02:21:26,002 - INFO -   Last lines of vLLM log:
+2026-04-24 02:21:26,003 - INFO -     | Loading safetensors checkpoint shards: 100% Completed | 11/11 [00:07<00:00,  1.53it/s]
+2026-04-24 02:21:26,003 - INFO -     | (EngineCore pid=1009308)
+2026-04-24 02:21:26,003 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:22 [default_loader.py:384] Loading weights took 7.27 seconds
+2026-04-24 02:21:26,003 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:23 [gpu_model_runner.py:4820] Model loading took 51.1 GiB memory and 417.936235 seconds
+2026-04-24 02:21:26,003 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:23 [gpu_model_runner.py:5753] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+2026-04-24 02:21:26,003 - INFO -   ---
+2026-04-24 02:21:46,013 - INFO - --- Status at 540s / 900s ---
+2026-04-24 02:21:46,013 - INFO -   Stage: weights loaded - initializing engine
+2026-04-24 02:21:46,038 - INFO -   GPU0: 55729/143771 MiB, 0% util
+2026-04-24 02:21:46,038 - INFO -   Last lines of vLLM log:
+2026-04-24 02:21:46,038 - INFO -     | Loading safetensors checkpoint shards: 100% Completed | 11/11 [00:07<00:00,  1.53it/s]
+2026-04-24 02:21:46,038 - INFO -     | (EngineCore pid=1009308)
+2026-04-24 02:21:46,038 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:22 [default_loader.py:384] Loading weights took 7.27 seconds
+2026-04-24 02:21:46,038 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:23 [gpu_model_runner.py:4820] Model loading took 51.1 GiB memory and 417.936235 seconds
+2026-04-24 02:21:46,038 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:23 [gpu_model_runner.py:5753] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+2026-04-24 02:21:46,039 - INFO -   ---
+2026-04-24 02:22:06,049 - INFO - --- Status at 560s / 900s ---
+2026-04-24 02:22:06,049 - INFO -   Stage: weights loaded - initializing engine
+2026-04-24 02:22:06,071 - INFO -   GPU0: 55729/143771 MiB, 0% util
+2026-04-24 02:22:06,071 - INFO -   Last lines of vLLM log:
+2026-04-24 02:22:06,071 - INFO -     | Loading safetensors checkpoint shards: 100% Completed | 11/11 [00:07<00:00,  1.53it/s]
+2026-04-24 02:22:06,071 - INFO -     | (EngineCore pid=1009308)
+2026-04-24 02:22:06,071 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:22 [default_loader.py:384] Loading weights took 7.27 seconds
+2026-04-24 02:22:06,071 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:23 [gpu_model_runner.py:4820] Model loading took 51.1 GiB memory and 417.936235 seconds
+2026-04-24 02:22:06,071 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:20:23 [gpu_model_runner.py:5753] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+2026-04-24 02:22:06,071 - INFO -   ---
+2026-04-24 02:22:16,077 - INFO - [570s] Stage: allocating KV cache
+2026-04-24 02:22:26,083 - INFO - --- Status at 580s / 900s ---
+2026-04-24 02:22:26,083 - INFO -   Stage: allocating KV cache
+2026-04-24 02:22:26,112 - INFO -   GPU0: 72851/143771 MiB, 0% util
+2026-04-24 02:22:26,112 - INFO -   Last lines of vLLM log:
+2026-04-24 02:22:26,112 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:22:17 [vllm.py:1025] Cudagraph is disabled under eager mode
+2026-04-24 02:22:26,112 - INFO -     | (EngineCore pid=1009308) INFO 04-24 02:22:17 [compilation.py:292] Enabled custom fusions: norm_quant, act_quant
+2026-04-24 02:22:26,112 - INFO -     | (APIServer pid=1007848) INFO 04-24 02:22:17 [api_server.py:592] Supported tasks: ['generate']
+2026-04-24 02:22:26,112 - INFO -     | (APIServer pid=1007848) WARNING 04-24 02:22:17 [model.py:1435] Default vLLM sampling parameters have been overridden by the model's `generation_config.json`: `{'temperature': 0.6, 'top_k': 20, 'top_p'
+2026-04-24 02:22:26,112 - INFO -     | (APIServer pid=1007848) INFO 04-24 02:22:20 [hf.py:314] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+2026-04-24 02:22:26,112 - INFO -   ---
+2026-04-24 02:22:28,116 - INFO - [OK] Server answered /v1/models after 583.0s
+2026-04-24 02:22:28,116 - INFO - vLLM server ready at http://127.0.0.1:8000/v1
+2026-04-24 02:22:28,117 - INFO - [10/12]
+2026-04-24 02:22:28,117 - INFO -   → FUZZ vs qwen3.5-27b
+2026-04-24 02:41:43,758 - INFO -   ✓ fuzz vs qwen3.5-27b
+2026-04-24 02:41:43,758 - INFO - [11/12]
+2026-04-24 02:41:43,758 - INFO -   → RE vs qwen3.5-27b
+2026-04-24 03:02:00,077 - INFO -   ✓ re vs qwen3.5-27b
+2026-04-24 03:02:00,078 - INFO - [12/12]
+2026-04-24 03:02:00,078 - INFO -   → LEAKAGENT vs qwen3.5-27b
+2026-04-24 03:20:51,503 - INFO -   ✓ leakagent vs qwen3.5-27b
+2026-04-24 03:20:51,503 - INFO - Stopping vLLM server...
+2026-04-24 03:20:57,372 - INFO - vLLM server stopped
+2026-04-24 03:20:57,372 - INFO - 
+2026-04-24 03:20:57,372 - INFO - ================================================================================
+2026-04-24 03:20:57,372 - INFO - EVALUATION SUMMARY
+2026-04-24 03:20:57,373 - INFO - ================================================================================
+2026-04-24 03:20:57,373 - INFO - Total experiments: 12
+2026-04-24 03:20:57,373 - INFO - Successful: 9 ✓
+2026-04-24 03:20:57,373 - INFO - Failed:     3 ✗
+2026-04-24 03:20:57,373 - INFO - Skipped:    0 ⊘
+2026-04-24 03:20:57,373 - INFO - Success rate: 75.0%
+2026-04-24 03:20:57,373 - INFO - ================================================================================
+2026-04-24 03:20:57,373 - INFO - 
+Detailed Results:
+2026-04-24 03:20:57,373 - INFO - --------------------------------------------------------------------------------
+2026-04-24 03:20:57,373 - INFO - fuzz         | llama3.1-8b     | ✓ SUCCESS       | 
+2026-04-24 03:20:57,373 - INFO - re           | llama3.1-8b     | ✓ SUCCESS       | 
+2026-04-24 03:20:57,373 - INFO - leakagent    | llama3.1-8b     | ✓ SUCCESS       | 
+2026-04-24 03:20:57,373 - INFO - fuzz         | mistral-7b      | ✓ SUCCESS       | 
+2026-04-24 03:20:57,373 - INFO - re           | mistral-7b      | ✓ SUCCESS       | 
+2026-04-24 03:20:57,373 - INFO - leakagent    | mistral-7b      | ✓ SUCCESS       | 
+2026-04-24 03:20:57,373 - INFO - fuzz         | gpt-oss-20b     | ✗ FAILED        | TypeError: expected string or bytes-like object, got 'NoneType'
+2026-04-24 03:20:57,373 - INFO - re           | gpt-oss-20b     | ✗ FAILED        | TypeError: expected string or bytes-like object, got 'NoneType'
+2026-04-24 03:20:57,374 - INFO - leakagent    | gpt-oss-20b     | ✗ FAILED        | TypeError: expected string or bytes-like object, got 'NoneType'
+2026-04-24 03:20:57,374 - INFO - fuzz         | qwen3.5-27b     | ✓ SUCCESS       | 
+2026-04-24 03:20:57,374 - INFO - re           | qwen3.5-27b     | ✓ SUCCESS       | 
+2026-04-24 03:20:57,374 - INFO - leakagent    | qwen3.5-27b     | ✓ SUCCESS       | 
+2026-04-24 03:20:57,374 - INFO - --------------------------------------------------------------------------------
+2026-04-24 03:20:57,374 - INFO - 
+Full log: evaluation_logs/evaluation_20260424_010023.log

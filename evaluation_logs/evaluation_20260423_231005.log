@@ -1,0 +1,28 @@
+2026-04-23 23:10:05,661 - INFO - ================================================================================
+2026-04-23 23:10:05,661 - INFO - COMPREHENSIVE METHOD EVALUATION
+2026-04-23 23:10:05,661 - INFO - ================================================================================
+2026-04-23 23:10:05,661 - INFO - Timestamp: 20260423_231005
+2026-04-23 23:10:05,662 - INFO - Log dir:   evaluation_logs
+2026-04-23 23:10:05,662 - INFO - Results:   evaluation_results
+2026-04-23 23:10:05,662 - INFO - Server:    http://127.0.0.1:8000/v1
+2026-04-23 23:10:05,662 - INFO - 
+2026-04-23 23:10:05,662 - INFO - Models (outer loop, each loaded once):
+2026-04-23 23:10:05,662 - INFO -   - llama3.1-8b     (meta-llama/Llama-3.1-8B-Instruct)
+2026-04-23 23:10:05,662 - INFO -   - llama3.1-70b    (meta-llama/Llama-3.1-70B-Instruct)
+2026-04-23 23:10:05,662 - INFO -   - mistral-7b      (mistralai/Mistral-7B-Instruct-v0.3)
+2026-04-23 23:10:05,662 - INFO -   - gpt-oss-20b     (openai/gpt-oss-20b)
+2026-04-23 23:10:05,662 - INFO -   - qwen3.5-27b     (Qwen/Qwen3.5-27B)
+2026-04-23 23:10:05,662 - INFO - Methods (inner loop, reusing the hot model):
+2026-04-23 23:10:05,662 - INFO -   - FUZZ       (fuzz_results)
+2026-04-23 23:10:05,662 - INFO -   - RE         (re_results)
+2026-04-23 23:10:05,662 - INFO -   - PLEAK      (pleak_results)
+2026-04-23 23:10:05,662 - INFO -   - LEAKAGENT  (leakagent_results)
+2026-04-23 23:10:05,662 - INFO - 
+2026-04-23 23:10:05,662 - INFO - ================================================================================
+2026-04-23 23:10:05,662 - INFO - MODEL: llama3.1-8b (meta-llama/Llama-3.1-8B-Instruct)
+2026-04-23 23:10:05,662 - INFO - ================================================================================
+2026-04-23 23:10:05,662 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --host 127.0.0.1 --port 8000 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.90 --max-model-len 8192
+2026-04-23 23:10:05,662 - INFO - Server log: evaluation_logs/vllm_llama3.1-8b_20260423_231005.log
+2026-04-23 23:10:05,665 - INFO - Waiting up to 900s for server to be ready...
+2026-04-23 23:10:18,684 - WARNING - 
+Interrupted by user

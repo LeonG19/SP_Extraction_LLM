@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{caption}
+
+\begin{document}
+
+% ============================================================
+% WES scores (top-5 prompts per dataset, n=290)
+% GPT-OSS 20B omitted: evaluation failed (NLTK NoneType error)
+% Mistral v0.2 omitted for fuzz/re/leakagent: no top-5 eval file
+% ============================================================
+\begin{table}[htbp]
+\centering
+\caption{WES scores across attack types and LLMs.}
+\label{tab:wes}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Attack Type} & \textbf{LLama3.1-8B} & \textbf{LLama3.1-70B} & \textbf{Mistral-7B} & \textbf{GPT-OSS 20B} & \textbf{Qwen3.5-27B} \\
+                      & \textbf{Instruct}     & \textbf{Instruct}      & \textbf{v03/v02}    &                       & \textbf{Reasoning-Distilled} \\
+\midrule
+PLeak (White-box)     & --     & --     & --     & -- & -- \\
+Leak Agent (Black-box)& 0.8041 & 0.6559 & 0.3165 & -- & 0.2555 \\
+ReAct-Leak (Black-box)& 0.8607 & 0.8395 & 0.4991 & -- & 0.3787 \\
+PromptFuzz (Black-box)& 0.8176 & 0.7321 & 0.6466 & -- & 0.3401 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\end{document}

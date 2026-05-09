@@ -1,0 +1,132 @@
+2026-04-23 23:58:55,025 - INFO - Excluded models: ['llama3.1-70b']
+2026-04-23 23:58:55,025 - INFO - ================================================================================
+2026-04-23 23:58:55,025 - INFO - COMPREHENSIVE METHOD EVALUATION
+2026-04-23 23:58:55,025 - INFO - ================================================================================
+2026-04-23 23:58:55,025 - INFO - Timestamp: 20260423_235855
+2026-04-23 23:58:55,025 - INFO - Log dir:   evaluation_logs
+2026-04-23 23:58:55,025 - INFO - Results:   evaluation_results
+2026-04-23 23:58:55,025 - INFO - Server:    http://127.0.0.1:8000/v1
+2026-04-23 23:58:55,025 - INFO - 
+2026-04-23 23:58:55,025 - INFO - Models (outer loop, each loaded once):
+2026-04-23 23:58:55,025 - INFO -   - llama3.1-8b     (meta-llama/Llama-3.1-8B-Instruct)
+2026-04-23 23:58:55,025 - INFO -   - mistral-7b      (mistralai/Mistral-7B-Instruct-v0.3)
+2026-04-23 23:58:55,025 - INFO -   - gpt-oss-20b     (openai/gpt-oss-20b)
+2026-04-23 23:58:55,025 - INFO -   - qwen3.5-27b     (Qwen/Qwen3.5-27B)
+2026-04-23 23:58:55,025 - INFO - Methods (inner loop, reusing the hot model):
+2026-04-23 23:58:55,025 - INFO -   - FUZZ       (llama3_fuzz_finetune)
+2026-04-23 23:58:55,025 - INFO -   - RE         (llama3_re_finetune)
+2026-04-23 23:58:55,025 - INFO -   - LEAKAGENT  (llama3_rl_finetune)
+2026-04-23 23:58:55,025 - INFO - 
+2026-04-23 23:58:55,025 - INFO - ================================================================================
+2026-04-23 23:58:55,026 - INFO - MODEL: llama3.1-8b (meta-llama/Llama-3.1-8B-Instruct)
+2026-04-23 23:58:55,026 - INFO - ================================================================================
+2026-04-23 23:58:55,026 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --host 127.0.0.1 --port 8000 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.50 --max-model-len 8192 --enforce-eager --disable-log-stats --guided-decoding-backend xgrammar
+2026-04-23 23:58:55,026 - INFO - vLLM server log: evaluation_logs/vllm_llama3.1-8b_20260423_235855.log
+2026-04-23 23:58:55,026 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_llama3.1-8b_20260423_235855.log )
+2026-04-23 23:58:55,030 - INFO - Waiting up to 900s for server to be ready...
+2026-04-23 23:58:55,030 - INFO - Startup in progress. Progress updates every 20s below.
+2026-04-23 23:59:01,033 - ERROR - vLLM process exited after 6.0s with code 2 (see log tail below)
+2026-04-23 23:59:03,034 - ERROR - vLLM server failed to start: Startup failed (see log)
+2026-04-23 23:59:03,035 - ERROR - --- vLLM server log tail ---
+2026-04-23 23:59:03,035 - ERROR -                      [--enable-mfu-metrics | --no-enable-mfu-metrics]
+2026-04-23 23:59:03,035 - ERROR -                      [--enable-logging-iteration-details | --no-enable-logging-iteration-details]
+2026-04-23 23:59:03,035 - ERROR -                      [--max-num-batched-tokens MAX_NUM_BATCHED_TOKENS]
+2026-04-23 23:59:03,035 - ERROR -                      [--max-num-seqs MAX_NUM_SEQS]
+2026-04-23 23:59:03,035 - ERROR -                      [--max-num-partial-prefills MAX_NUM_PARTIAL_PREFILLS]
+2026-04-23 23:59:03,035 - ERROR -                      [--max-long-partial-prefills MAX_LONG_PARTIAL_PREFILLS]
+2026-04-23 23:59:03,035 - ERROR -                      [--long-prefill-token-threshold LONG_PREFILL_TOKEN_THRESHOLD]
+2026-04-23 23:59:03,035 - ERROR -                      [--scheduling-policy {fcfs,priority}]
+2026-04-23 23:59:03,035 - ERROR -                      [--enable-chunked-prefill | --no-enable-chunked-prefill]
+2026-04-23 23:59:03,035 - ERROR -                      [--disable-chunked-mm-input | --no-disable-chunked-mm-input]
+2026-04-23 23:59:03,035 - ERROR -                      [--scheduler-cls SCHEDULER_CLS]
+2026-04-23 23:59:03,035 - ERROR -                      [--scheduler-reserve-full-isl | --no-scheduler-reserve-full-isl]
+2026-04-23 23:59:03,035 - ERROR -                      [--disable-hybrid-kv-cache-manager | --no-disable-hybrid-kv-cache-manager]
+2026-04-23 23:59:03,035 - ERROR -                      [--async-scheduling | --no-async-scheduling]
+2026-04-23 23:59:03,035 - ERROR -                      [--stream-interval STREAM_INTERVAL]
+2026-04-23 23:59:03,035 - ERROR -                      [--cudagraph-capture-sizes CUDAGRAPH_CAPTURE_SIZES [CUDAGRAPH_CAPTURE_SIZES ...]]
+2026-04-23 23:59:03,035 - ERROR -                      [--max-cudagraph-capture-size MAX_CUDAGRAPH_CAPTURE_SIZE]
+2026-04-23 23:59:03,035 - ERROR -                      [--enable-flashinfer-autotune | --no-enable-flashinfer-autotune]
+2026-04-23 23:59:03,036 - ERROR -                      [--moe-backend {aiter,auto,cutlass,deep_gemm,flashinfer_cutedsl,flashinfer_cutlass,flashinfer_trtllm,marlin,triton}]
+2026-04-23 23:59:03,036 - ERROR -                      [--speculative-config SPECULATIVE_CONFIG]
+2026-04-23 23:59:03,036 - ERROR -                      [--kv-transfer-config KV_TRANSFER_CONFIG]
+2026-04-23 23:59:03,036 - ERROR -                      [--kv-events-config KV_EVENTS_CONFIG]
+2026-04-23 23:59:03,036 - ERROR -                      [--ec-transfer-config EC_TRANSFER_CONFIG]
+2026-04-23 23:59:03,036 - ERROR -                      [--compilation-config COMPILATION_CONFIG]
+2026-04-23 23:59:03,036 - ERROR -                      [--attention-config ATTENTION_CONFIG]
+2026-04-23 23:59:03,036 - ERROR -                      [--reasoning-config REASONING_CONFIG]
+2026-04-23 23:59:03,036 - ERROR -                      [--kernel-config KERNEL_CONFIG]
+2026-04-23 23:59:03,036 - ERROR -                      [--additional-config ADDITIONAL_CONFIG]
+2026-04-23 23:59:03,036 - ERROR -                      [--structured-outputs-config STRUCTURED_OUTPUTS_CONFIG]
+2026-04-23 23:59:03,036 - ERROR -                      [--profiler-config PROFILER_CONFIG]
+2026-04-23 23:59:03,036 - ERROR -                      [--optimization-level OPTIMIZATION_LEVEL]
+2026-04-23 23:59:03,036 - ERROR -                      [--performance-mode {balanced,interactivity,throughput}]
+2026-04-23 23:59:03,036 - ERROR -                      [--weight-transfer-config WEIGHT_TRANSFER_CONFIG]
+2026-04-23 23:59:03,036 - ERROR -                      [--disable-log-stats] [--aggregate-engine-logging]
+2026-04-23 23:59:03,036 - ERROR -                      [--fail-on-environ-validation | --no-fail-on-environ-validation]
+2026-04-23 23:59:03,036 - ERROR -                      [--shutdown-timeout SHUTDOWN_TIMEOUT]
+2026-04-23 23:59:03,036 - ERROR -                      [--gdn-prefill-backend {flashinfer,triton}]
+2026-04-23 23:59:03,036 - ERROR -                      [--enable-log-requests | --no-enable-log-requests]
+2026-04-23 23:59:03,036 - ERROR -                      [model_tag]
+2026-04-23 23:59:03,036 - ERROR - api_server.py: error: unrecognized arguments: --guided-decoding-backend
+2026-04-23 23:59:03,036 - ERROR - --- end of log tail ---
+2026-04-23 23:59:03,036 - ERROR - (full log: evaluation_logs/vllm_llama3.1-8b_20260423_235855.log)
+2026-04-23 23:59:03,036 - INFO - Stopping vLLM server...
+2026-04-23 23:59:08,037 - INFO - vLLM server stopped
+2026-04-23 23:59:08,037 - ERROR - Could not start server for llama3.1-8b: Startup failed (see log). Marking all methods failed.
+2026-04-23 23:59:08,038 - INFO - [1/12]
+2026-04-23 23:59:08,038 - INFO - [2/12]
+2026-04-23 23:59:08,038 - INFO - [3/12]
+2026-04-23 23:59:08,038 - INFO - ================================================================================
+2026-04-23 23:59:08,038 - INFO - MODEL: mistral-7b (mistralai/Mistral-7B-Instruct-v0.3)
+2026-04-23 23:59:08,038 - INFO - ================================================================================
+2026-04-23 23:59:08,038 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model mistralai/Mistral-7B-Instruct-v0.3 --host 127.0.0.1 --port 8000 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.50 --max-model-len 8192 --enforce-eager --disable-log-stats --guided-decoding-backend xgrammar
+2026-04-23 23:59:08,038 - INFO - vLLM server log: evaluation_logs/vllm_mistral-7b_20260423_235855.log
+2026-04-23 23:59:08,038 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_mistral-7b_20260423_235855.log )
+2026-04-23 23:59:08,044 - INFO - Waiting up to 900s for server to be ready...
+2026-04-23 23:59:08,044 - INFO - Startup in progress. Progress updates every 20s below.
+2026-04-23 23:59:14,047 - ERROR - vLLM process exited after 6.0s with code 2 (see log tail below)
+2026-04-23 23:59:16,048 - ERROR - vLLM server failed to start: Startup failed (see log)
+2026-04-23 23:59:16,048 - ERROR - --- vLLM server log tail ---
+2026-04-23 23:59:16,049 - ERROR -                      [--enable-mfu-metrics | --no-enable-mfu-metrics]
+2026-04-23 23:59:16,049 - ERROR -                      [--enable-logging-iteration-details | --no-enable-logging-iteration-details]
+2026-04-23 23:59:16,049 - ERROR -                      [--max-num-batched-tokens MAX_NUM_BATCHED_TOKENS]
+2026-04-23 23:59:16,049 - ERROR -                      [--max-num-seqs MAX_NUM_SEQS]
+2026-04-23 23:59:16,049 - ERROR -                      [--max-num-partial-prefills MAX_NUM_PARTIAL_PREFILLS]
+2026-04-23 23:59:16,049 - ERROR -                      [--max-long-partial-prefills MAX_LONG_PARTIAL_PREFILLS]
+2026-04-23 23:59:16,049 - ERROR -                      [--long-prefill-token-threshold LONG_PREFILL_TOKEN_THRESHOLD]
+2026-04-23 23:59:16,049 - ERROR -                      [--scheduling-policy {fcfs,priority}]
+2026-04-23 23:59:16,049 - ERROR -                      [--enable-chunked-prefill | --no-enable-chunked-prefill]
+2026-04-23 23:59:16,049 - ERROR -                      [--disable-chunked-mm-input | --no-disable-chunked-mm-input]
+2026-04-23 23:59:16,049 - ERROR -                      [--scheduler-cls SCHEDULER_CLS]
+2026-04-23 23:59:16,049 - ERROR -                      [--scheduler-reserve-full-isl | --no-scheduler-reserve-full-isl]
+2026-04-23 23:59:16,049 - ERROR -                      [--disable-hybrid-kv-cache-manager | --no-disable-hybrid-kv-cache-manager]
+2026-04-23 23:59:16,049 - ERROR -                      [--async-scheduling | --no-async-scheduling]
+2026-04-23 23:59:16,049 - ERROR -                      [--stream-interval STREAM_INTERVAL]
+2026-04-23 23:59:16,049 - ERROR -                      [--cudagraph-capture-sizes CUDAGRAPH_CAPTURE_SIZES [CUDAGRAPH_CAPTURE_SIZES ...]]
+2026-04-23 23:59:16,049 - ERROR -                      [--max-cudagraph-capture-size MAX_CUDAGRAPH_CAPTURE_SIZE]
+2026-04-23 23:59:16,049 - ERROR -                      [--enable-flashinfer-autotune | --no-enable-flashinfer-autotune]
+2026-04-23 23:59:16,050 - ERROR -                      [--moe-backend {aiter,auto,cutlass,deep_gemm,flashinfer_cutedsl,flashinfer_cutlass,flashinfer_trtllm,marlin,triton}]
+2026-04-23 23:59:16,050 - ERROR -                      [--speculative-config SPECULATIVE_CONFIG]
+2026-04-23 23:59:16,050 - ERROR -                      [--kv-transfer-config KV_TRANSFER_CONFIG]
+2026-04-23 23:59:16,050 - ERROR -                      [--kv-events-config KV_EVENTS_CONFIG]
+2026-04-23 23:59:16,050 - ERROR -                      [--ec-transfer-config EC_TRANSFER_CONFIG]
+2026-04-23 23:59:16,050 - ERROR -                      [--compilation-config COMPILATION_CONFIG]
+2026-04-23 23:59:16,050 - ERROR -                      [--attention-config ATTENTION_CONFIG]
+2026-04-23 23:59:16,050 - ERROR -                      [--reasoning-config REASONING_CONFIG]
+2026-04-23 23:59:16,050 - ERROR -                      [--kernel-config KERNEL_CONFIG]
+2026-04-23 23:59:16,050 - ERROR -                      [--additional-config ADDITIONAL_CONFIG]
+2026-04-23 23:59:16,050 - ERROR -                      [--structured-outputs-config STRUCTURED_OUTPUTS_CONFIG]
+2026-04-23 23:59:16,050 - ERROR -                      [--profiler-config PROFILER_CONFIG]
+2026-04-23 23:59:16,050 - ERROR -                      [--optimization-level OPTIMIZATION_LEVEL]
+2026-04-23 23:59:16,050 - ERROR -                      [--performance-mode {balanced,interactivity,throughput}]
+2026-04-23 23:59:16,050 - ERROR -                      [--weight-transfer-config WEIGHT_TRANSFER_CONFIG]
+2026-04-23 23:59:16,050 - ERROR -                      [--disable-log-stats] [--aggregate-engine-logging]
+2026-04-23 23:59:16,050 - ERROR -                      [--fail-on-environ-validation | --no-fail-on-environ-validation]
+2026-04-23 23:59:16,051 - ERROR -                      [--shutdown-timeout SHUTDOWN_TIMEOUT]
+2026-04-23 23:59:16,051 - ERROR -                      [--gdn-prefill-backend {flashinfer,triton}]
+2026-04-23 23:59:16,051 - ERROR -                      [--enable-log-requests | --no-enable-log-requests]
+2026-04-23 23:59:16,051 - ERROR -                      [model_tag]
+2026-04-23 23:59:16,051 - ERROR - api_server.py: error: unrecognized arguments: --guided-decoding-backend
+2026-04-23 23:59:16,051 - ERROR - --- end of log tail ---
+2026-04-23 23:59:16,051 - ERROR - (full log: evaluation_logs/vllm_mistral-7b_20260423_235855.log)
+2026-04-23 23:59:16,051 - INFO - Stopping vLLM server...

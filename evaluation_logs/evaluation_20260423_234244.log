@@ -1,0 +1,45 @@
+2026-04-23 23:42:44,884 - INFO - ================================================================================
+2026-04-23 23:42:44,885 - INFO - COMPREHENSIVE METHOD EVALUATION
+2026-04-23 23:42:44,885 - INFO - ================================================================================
+2026-04-23 23:42:44,885 - INFO - Timestamp: 20260423_234244
+2026-04-23 23:42:44,885 - INFO - Log dir:   evaluation_logs
+2026-04-23 23:42:44,885 - INFO - Results:   evaluation_results
+2026-04-23 23:42:44,885 - INFO - Server:    http://127.0.0.1:8000/v1
+2026-04-23 23:42:44,885 - INFO - 
+2026-04-23 23:42:44,885 - INFO - Models (outer loop, each loaded once):
+2026-04-23 23:42:44,885 - INFO -   - llama3.1-8b     (meta-llama/Llama-3.1-8B-Instruct)
+2026-04-23 23:42:44,885 - INFO -   - llama3.1-70b    (meta-llama/Llama-3.1-70B-Instruct)
+2026-04-23 23:42:44,885 - INFO -   - mistral-7b      (mistralai/Mistral-7B-Instruct-v0.3)
+2026-04-23 23:42:44,885 - INFO -   - gpt-oss-20b     (openai/gpt-oss-20b)
+2026-04-23 23:42:44,885 - INFO -   - qwen3.5-27b     (Qwen/Qwen3.5-27B)
+2026-04-23 23:42:44,885 - INFO - Methods (inner loop, reusing the hot model):
+2026-04-23 23:42:44,885 - INFO -   - FUZZ       (fuzz_results)
+2026-04-23 23:42:44,885 - INFO -   - RE         (re_results)
+2026-04-23 23:42:44,885 - INFO -   - PLEAK      (pleak_results)
+2026-04-23 23:42:44,885 - INFO -   - LEAKAGENT  (leakagent_results)
+2026-04-23 23:42:44,885 - INFO - 
+2026-04-23 23:42:44,885 - INFO - ================================================================================
+2026-04-23 23:42:44,885 - INFO - MODEL: llama3.1-8b (meta-llama/Llama-3.1-8B-Instruct)
+2026-04-23 23:42:44,885 - INFO - ================================================================================
+2026-04-23 23:42:44,885 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --host 127.0.0.1 --port 8000 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.90 --max-model-len 8192
+2026-04-23 23:42:44,885 - INFO - Server log: evaluation_logs/vllm_llama3.1-8b_20260423_234244.log
+2026-04-23 23:42:44,888 - INFO - Waiting up to 900s for server to be ready...
+2026-04-23 23:45:39,914 - INFO - vLLM server ready at http://127.0.0.1:8000/v1
+2026-04-23 23:45:39,915 - INFO - [1/20]
+2026-04-23 23:45:39,915 - WARNING - Prompts file not found: fuzz_results/good_prompts.csv
+2026-04-23 23:45:39,915 - INFO - [2/20]
+2026-04-23 23:45:39,915 - WARNING - Prompts file not found: re_results/good_prompts.csv
+2026-04-23 23:45:39,915 - INFO - [3/20]
+2026-04-23 23:45:39,915 - WARNING - Prompts file not found: pleak_results/good_prompts.csv
+2026-04-23 23:45:39,915 - INFO - [4/20]
+2026-04-23 23:45:39,915 - WARNING - Prompts file not found: leakagent_results/good_prompts.csv
+2026-04-23 23:45:39,915 - INFO - Stopping vLLM server...
+2026-04-23 23:45:45,531 - INFO - vLLM server stopped
+2026-04-23 23:45:45,531 - INFO - ================================================================================
+2026-04-23 23:45:45,531 - INFO - MODEL: llama3.1-70b (meta-llama/Llama-3.1-70B-Instruct)
+2026-04-23 23:45:45,531 - INFO - ================================================================================
+2026-04-23 23:45:45,532 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-70B-Instruct --host 127.0.0.1 --port 8000 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.90 --max-model-len 8192
+2026-04-23 23:45:45,532 - INFO - Server log: evaluation_logs/vllm_llama3.1-70b_20260423_234244.log
+2026-04-23 23:45:45,536 - INFO - Waiting up to 900s for server to be ready...
+2026-04-23 23:46:21,892 - WARNING - 
+Interrupted by user

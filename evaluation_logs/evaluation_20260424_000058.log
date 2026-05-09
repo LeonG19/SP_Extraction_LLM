@@ -1,0 +1,129 @@
+2026-04-24 00:00:58,048 - INFO - Excluded models: ['llama3.1-70b']
+2026-04-24 00:00:58,048 - INFO - ================================================================================
+2026-04-24 00:00:58,048 - INFO - COMPREHENSIVE METHOD EVALUATION
+2026-04-24 00:00:58,048 - INFO - ================================================================================
+2026-04-24 00:00:58,048 - INFO - Timestamp: 20260424_000058
+2026-04-24 00:00:58,048 - INFO - Log dir:   evaluation_logs
+2026-04-24 00:00:58,048 - INFO - Results:   evaluation_results
+2026-04-24 00:00:58,048 - INFO - Server:    http://127.0.0.1:8000/v1
+2026-04-24 00:00:58,048 - INFO - 
+2026-04-24 00:00:58,048 - INFO - Models (outer loop, each loaded once):
+2026-04-24 00:00:58,048 - INFO -   - llama3.1-8b     (meta-llama/Llama-3.1-8B-Instruct)
+2026-04-24 00:00:58,048 - INFO -   - mistral-7b      (mistralai/Mistral-7B-Instruct-v0.3)
+2026-04-24 00:00:58,048 - INFO -   - gpt-oss-20b     (openai/gpt-oss-20b)
+2026-04-24 00:00:58,048 - INFO -   - qwen3.5-27b     (Qwen/Qwen3.5-27B)
+2026-04-24 00:00:58,048 - INFO - Methods (inner loop, reusing the hot model):
+2026-04-24 00:00:58,048 - INFO -   - FUZZ       (llama3_fuzz_finetune)
+2026-04-24 00:00:58,048 - INFO -   - RE         (llama3_re_finetune)
+2026-04-24 00:00:58,048 - INFO -   - LEAKAGENT  (llama3_rl_finetune)
+2026-04-24 00:00:58,048 - INFO - 
+2026-04-24 00:00:58,048 - INFO - ================================================================================
+2026-04-24 00:00:58,048 - INFO - MODEL: llama3.1-8b (meta-llama/Llama-3.1-8B-Instruct)
+2026-04-24 00:00:58,048 - INFO - ================================================================================
+2026-04-24 00:00:58,049 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --host 127.0.0.1 --port 8000 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.50 --max-model-len 8192 --enforce-eager --disable-log-stats
+2026-04-24 00:00:58,049 - INFO - vLLM server log: evaluation_logs/vllm_llama3.1-8b_20260424_000058.log
+2026-04-24 00:00:58,049 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_llama3.1-8b_20260424_000058.log )
+2026-04-24 00:00:58,051 - INFO - Waiting up to 900s for server to be ready...
+2026-04-24 00:00:58,051 - INFO - Startup in progress. Progress updates every 20s below.
+2026-04-24 00:01:10,058 - INFO - [12s] Stage: initializing vLLM engine
+2026-04-24 00:01:12,059 - INFO - [14s] Stage: starting model load
+2026-04-24 00:01:14,060 - INFO - [16s] Stage: loading weights into memory
+2026-04-24 00:01:16,062 - INFO - [18s] Stage: weights loaded - initializing engine
+2026-04-24 00:01:18,063 - INFO - --- Status at 20s / 900s ---
+2026-04-24 00:01:18,063 - INFO -   Stage: weights loaded - initializing engine
+2026-04-24 00:01:18,085 - INFO -   GPU0: 17779/143771 MiB, 0% util
+2026-04-24 00:01:18,085 - INFO -   Last lines of vLLM log:
+2026-04-24 00:01:18,085 - INFO -     | (EngineCore pid=678515)
+2026-04-24 00:01:18,085 - INFO -     | Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:02<00:00,  1.93it/s]
+2026-04-24 00:01:18,086 - INFO -     | (EngineCore pid=678515)
+2026-04-24 00:01:18,086 - INFO -     | (EngineCore pid=678515) INFO 04-24 00:01:14 [default_loader.py:384] Loading weights took 2.11 seconds
+2026-04-24 00:01:18,086 - INFO -     | (EngineCore pid=678515) INFO 04-24 00:01:15 [gpu_model_runner.py:4820] Model loading took 14.99 GiB memory and 2.971062 seconds
+2026-04-24 00:01:18,086 - INFO -   ---
+2026-04-24 00:01:22,088 - INFO - [24s] Stage: allocating KV cache
+2026-04-24 00:01:26,092 - INFO - [OK] Server answered /v1/models after 28.0s
+2026-04-24 00:01:26,092 - INFO - vLLM server ready at http://127.0.0.1:8000/v1
+2026-04-24 00:01:26,092 - INFO - [1/12]
+2026-04-24 00:01:26,093 - INFO -   → FUZZ vs llama3.1-8b
+2026-04-24 00:01:38,132 - ERROR -   ✗ fuzz vs llama3.1-8b (exit code 1)
+2026-04-24 00:01:38,132 - ERROR -   --- evaluate_task.py stderr tail ---
+2026-04-24 00:01:38,132 - ERROR -     [0m
+2026-04-24 00:01:38,132 - ERROR -     For more information see: https://www.nltk.org/data.html
+2026-04-24 00:01:38,132 - ERROR -   
+2026-04-24 00:01:38,132 - ERROR -     Attempted to load [93mtokenizers/punkt_tab/english/[0m
+2026-04-24 00:01:38,132 - ERROR -   
+2026-04-24 00:01:38,132 - ERROR -     Searched in:
+2026-04-24 00:01:38,132 - ERROR -       - '/home/lgarza3/nltk_data'
+2026-04-24 00:01:38,132 - ERROR -       - '/home/lgarza3/.conda/envs/se_leak/nltk_data'
+2026-04-24 00:01:38,132 - ERROR -       - '/home/lgarza3/.conda/envs/se_leak/share/nltk_data'
+2026-04-24 00:01:38,132 - ERROR -       - '/home/lgarza3/.conda/envs/se_leak/lib/nltk_data'
+2026-04-24 00:01:38,133 - ERROR -       - '/usr/share/nltk_data'
+2026-04-24 00:01:38,133 - ERROR -       - '/usr/local/share/nltk_data'
+2026-04-24 00:01:38,133 - ERROR -       - '/usr/lib/nltk_data'
+2026-04-24 00:01:38,133 - ERROR -       - '/usr/local/lib/nltk_data'
+2026-04-24 00:01:38,133 - ERROR -   **********************************************************************
+2026-04-24 00:01:38,133 - ERROR -   --- evaluate_task.py stdout tail ---
+2026-04-24 00:01:38,133 - ERROR -   using http://127.0.0.1:8000/v1
+2026-04-24 00:01:38,133 - INFO - [2/12]
+2026-04-24 00:01:38,133 - INFO -   → RE vs llama3.1-8b
+2026-04-24 00:01:45,258 - ERROR -   ✗ re vs llama3.1-8b (exit code 1)
+2026-04-24 00:01:45,258 - ERROR -   --- evaluate_task.py stderr tail ---
+2026-04-24 00:01:45,258 - ERROR -     [0m
+2026-04-24 00:01:45,258 - ERROR -     For more information see: https://www.nltk.org/data.html
+2026-04-24 00:01:45,258 - ERROR -   
+2026-04-24 00:01:45,258 - ERROR -     Attempted to load [93mtokenizers/punkt_tab/english/[0m
+2026-04-24 00:01:45,259 - ERROR -   
+2026-04-24 00:01:45,259 - ERROR -     Searched in:
+2026-04-24 00:01:45,259 - ERROR -       - '/home/lgarza3/nltk_data'
+2026-04-24 00:01:45,259 - ERROR -       - '/home/lgarza3/.conda/envs/se_leak/nltk_data'
+2026-04-24 00:01:45,259 - ERROR -       - '/home/lgarza3/.conda/envs/se_leak/share/nltk_data'
+2026-04-24 00:01:45,259 - ERROR -       - '/home/lgarza3/.conda/envs/se_leak/lib/nltk_data'
+2026-04-24 00:01:45,259 - ERROR -       - '/usr/share/nltk_data'
+2026-04-24 00:01:45,259 - ERROR -       - '/usr/local/share/nltk_data'
+2026-04-24 00:01:45,259 - ERROR -       - '/usr/lib/nltk_data'
+2026-04-24 00:01:45,259 - ERROR -       - '/usr/local/lib/nltk_data'
+2026-04-24 00:01:45,259 - ERROR -   **********************************************************************
+2026-04-24 00:01:45,259 - ERROR -   --- evaluate_task.py stdout tail ---
+2026-04-24 00:01:45,259 - ERROR -   using http://127.0.0.1:8000/v1
+2026-04-24 00:01:45,259 - INFO - [3/12]
+2026-04-24 00:01:45,259 - INFO -   → LEAKAGENT vs llama3.1-8b
+2026-04-24 00:01:52,287 - ERROR -   ✗ leakagent vs llama3.1-8b (exit code 1)
+2026-04-24 00:01:52,287 - ERROR -   --- evaluate_task.py stderr tail ---
+2026-04-24 00:01:52,287 - ERROR -     [0m
+2026-04-24 00:01:52,287 - ERROR -     For more information see: https://www.nltk.org/data.html
+2026-04-24 00:01:52,287 - ERROR -   
+2026-04-24 00:01:52,287 - ERROR -     Attempted to load [93mtokenizers/punkt_tab/english/[0m
+2026-04-24 00:01:52,287 - ERROR -   
+2026-04-24 00:01:52,287 - ERROR -     Searched in:
+2026-04-24 00:01:52,287 - ERROR -       - '/home/lgarza3/nltk_data'
+2026-04-24 00:01:52,287 - ERROR -       - '/home/lgarza3/.conda/envs/se_leak/nltk_data'
+2026-04-24 00:01:52,287 - ERROR -       - '/home/lgarza3/.conda/envs/se_leak/share/nltk_data'
+2026-04-24 00:01:52,287 - ERROR -       - '/home/lgarza3/.conda/envs/se_leak/lib/nltk_data'
+2026-04-24 00:01:52,287 - ERROR -       - '/usr/share/nltk_data'
+2026-04-24 00:01:52,287 - ERROR -       - '/usr/local/share/nltk_data'
+2026-04-24 00:01:52,287 - ERROR -       - '/usr/lib/nltk_data'
+2026-04-24 00:01:52,287 - ERROR -       - '/usr/local/lib/nltk_data'
+2026-04-24 00:01:52,287 - ERROR -   **********************************************************************
+2026-04-24 00:01:52,287 - ERROR -   --- evaluate_task.py stdout tail ---
+2026-04-24 00:01:52,287 - ERROR -   using http://127.0.0.1:8000/v1
+2026-04-24 00:01:52,287 - INFO - Stopping vLLM server...
+2026-04-24 00:01:57,854 - INFO - vLLM server stopped
+2026-04-24 00:01:57,854 - INFO - ================================================================================
+2026-04-24 00:01:57,854 - INFO - MODEL: mistral-7b (mistralai/Mistral-7B-Instruct-v0.3)
+2026-04-24 00:01:57,855 - INFO - ================================================================================
+2026-04-24 00:01:57,855 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model mistralai/Mistral-7B-Instruct-v0.3 --host 127.0.0.1 --port 8000 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.50 --max-model-len 8192 --enforce-eager --disable-log-stats
+2026-04-24 00:01:57,855 - INFO - vLLM server log: evaluation_logs/vllm_mistral-7b_20260424_000058.log
+2026-04-24 00:01:57,855 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_mistral-7b_20260424_000058.log )
+2026-04-24 00:01:57,860 - INFO - Waiting up to 900s for server to be ready...
+2026-04-24 00:01:57,860 - INFO - Startup in progress. Progress updates every 20s below.
+2026-04-24 00:02:15,869 - INFO - [18s] Stage: initializing vLLM engine
+2026-04-24 00:02:17,870 - INFO - [20s] Stage: starting model load
+2026-04-24 00:02:17,870 - INFO - --- Status at 20s / 900s ---
+2026-04-24 00:02:17,870 - INFO -   Stage: starting model load
+2026-04-24 00:02:17,892 - INFO -   GPU0: 14649/143771 MiB, 0% util
+2026-04-24 00:02:17,892 - INFO -   Last lines of vLLM log:
+2026-04-24 00:02:17,893 - INFO -     | (EngineCore pid=682688) INFO 04-24 00:02:16 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://129.108.156.67:51719 backend=nccl
+2026-04-24 00:02:17,893 - INFO -     | (EngineCore pid=682688) INFO 04-24 00:02:16 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+2026-04-24 00:02:17,893 - INFO -     | (EngineCore pid=682688) INFO 04-24 00:02:17 [gpu_model_runner.py:4735] Starting to load model mistralai/Mistral-7B-Instruct-v0.3...
+2026-04-24 00:02:17,893 - INFO -     | (EngineCore pid=682688) INFO 04-24 00:02:17 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+2026-04-24 00:02:17,893 - INFO -     | (EngineCore pid=682688) INFO 04-24 00:02:17 [flash_attn.py:596] Using FlashAttention version 3
+2026-04-24 00:02:17,893 - INFO -   ---

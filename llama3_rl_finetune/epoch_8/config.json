@@ -10,8 +10,8 @@
   "exp_name": "FineTuneLLM",
   "forward_batch_size": null,
   "gamma": 1,
-  "global_backward_batch_size": 8,
-  "global_batch_size": 64,
+  "global_backward_batch_size": 4,
+  "global_batch_size": 32,
   "gradient_accumulation_steps": 2,
   "gradient_checkpointing": false,
   "horizon": 10000,
@@ -35,7 +35,7 @@
   "remove_unused_columns": true,
   "reward_model": "sentiment-analysis:lvwerra/distilbert-imdb",
   "score_clip": null,
-  "seed": 2,
+  "seed": 1,
   "steps": 40000,
   "target": 6,
   "target_kl": 0.1,
@@ -51,5 +51,5 @@
   "use_score_scaling": true,
   "vf_coef": 0.1,
   "whiten_rewards": false,
-  "world_size": 2
+  "world_size": 1
 }

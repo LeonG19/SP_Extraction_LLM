@@ -1,0 +1,68 @@
+2026-04-24 00:55:47,436 - INFO - Excluded models: ['llama3.1-70b']
+2026-04-24 00:55:47,436 - INFO - ================================================================================
+2026-04-24 00:55:47,436 - INFO - COMPREHENSIVE METHOD EVALUATION
+2026-04-24 00:55:47,436 - INFO - ================================================================================
+2026-04-24 00:55:47,436 - INFO - Timestamp: 20260424_005547
+2026-04-24 00:55:47,436 - INFO - Log dir:   evaluation_logs
+2026-04-24 00:55:47,436 - INFO - Results:   evaluation_results
+2026-04-24 00:55:47,436 - INFO - Server:    http://127.0.0.1:8000/v1
+2026-04-24 00:55:47,436 - INFO - 
+2026-04-24 00:55:47,436 - INFO - Models (outer loop, each loaded once):
+2026-04-24 00:55:47,436 - INFO -   - llama3.1-8b     (meta-llama/Llama-3.1-8B-Instruct)
+2026-04-24 00:55:47,436 - INFO -   - mistral-7b      (mistralai/Mistral-7B-Instruct-v0.3)
+2026-04-24 00:55:47,436 - INFO -   - gpt-oss-20b     (openai/gpt-oss-20b)
+2026-04-24 00:55:47,436 - INFO -   - qwen3.5-27b     (Qwen/Qwen3.5-27B)
+2026-04-24 00:55:47,436 - INFO - Methods (inner loop, reusing the hot model):
+2026-04-24 00:55:47,436 - INFO -   - FUZZ       (llama3_fuzz_finetune)
+2026-04-24 00:55:47,436 - INFO -   - RE         (llama3_re_finetune)
+2026-04-24 00:55:47,436 - INFO -   - LEAKAGENT  (llama3_rl_finetune)
+2026-04-24 00:55:47,436 - INFO - 
+2026-04-24 00:55:47,436 - INFO - ================================================================================
+2026-04-24 00:55:47,436 - INFO - MODEL: llama3.1-8b (meta-llama/Llama-3.1-8B-Instruct)
+2026-04-24 00:55:47,436 - INFO - ================================================================================
+2026-04-24 00:55:47,436 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --host 127.0.0.1 --port 8000 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.50 --max-model-len 8192 --enforce-eager --disable-log-stats
+2026-04-24 00:55:47,437 - INFO - vLLM server log: evaluation_logs/vllm_llama3.1-8b_20260424_005547.log
+2026-04-24 00:55:47,437 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_llama3.1-8b_20260424_005547.log )
+2026-04-24 00:55:47,439 - INFO - Waiting up to 900s for server to be ready...
+2026-04-24 00:55:47,439 - INFO - Startup in progress. Progress updates every 20s below.
+2026-04-24 00:55:59,446 - INFO - [12s] Stage: initializing vLLM engine
+2026-04-24 00:56:01,447 - INFO - [14s] Stage: starting model load
+2026-04-24 00:56:03,448 - INFO - [16s] Stage: loading weights into memory
+2026-04-24 00:56:05,450 - INFO - [18s] Stage: weights loaded - initializing engine
+2026-04-24 00:56:07,451 - INFO - [20s] Stage: allocating KV cache
+2026-04-24 00:56:07,451 - INFO - --- Status at 20s / 900s ---
+2026-04-24 00:56:07,451 - INFO -   Stage: allocating KV cache
+2026-04-24 00:56:07,473 - INFO -   GPU0: 72959/143771 MiB, 0% util
+2026-04-24 00:56:07,473 - INFO -   Last lines of vLLM log:
+2026-04-24 00:56:07,473 - INFO -     | (EngineCore pid=811234) INFO 04-24 00:56:06 [kv_cache_utils.py:1319] GPU KV cache size: 432,528 tokens
+2026-04-24 00:56:07,473 - INFO -     | (EngineCore pid=811234) INFO 04-24 00:56:06 [kv_cache_utils.py:1324] Maximum concurrency for 8,192 tokens per request: 52.80x
+2026-04-24 00:56:07,473 - INFO -     | (EngineCore pid=811234) 2026-04-24 00:56:06,065 - INFO - autotuner.py:262 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+2026-04-24 00:56:07,473 - INFO -     | (EngineCore pid=811234) 2026-04-24 00:56:06,084 - INFO - autotuner.py:268 - flashinfer.jit: [Autotuner]: Autotuning process ends
+2026-04-24 00:56:07,473 - INFO -     | (EngineCore pid=811234) INFO 04-24 00:56:06 [core.py:283] init engine (profile, create kv cache, warmup model) took 1.49 seconds
+2026-04-24 00:56:07,473 - INFO -   ---
+2026-04-24 00:56:11,478 - INFO - [OK] Server answered /v1/models after 24.0s
+2026-04-24 00:56:11,478 - INFO - vLLM server ready at http://127.0.0.1:8000/v1
+2026-04-24 00:56:11,478 - INFO - [1/12]
+2026-04-24 00:56:11,479 - INFO -   → FUZZ vs llama3.1-8b
+2026-04-24 00:58:14,810 - ERROR -   ✗ fuzz vs llama3.1-8b (exit code 1)
+2026-04-24 00:58:14,811 - ERROR -   --- evaluate_task.py stderr tail ---
+2026-04-24 00:58:14,811 - ERROR -               ^^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 00:58:14,811 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/evaluate/loading.py", line 748, in load
+2026-04-24 00:58:14,811 - ERROR -       evaluation_module = evaluation_module_factory(
+2026-04-24 00:58:14,811 - ERROR -                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 00:58:14,811 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/evaluate/loading.py", line 680, in evaluation_module_factory
+2026-04-24 00:58:14,811 - ERROR -       raise e1 from None
+2026-04-24 00:58:14,811 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/evaluate/loading.py", line 639, in evaluation_module_factory
+2026-04-24 00:58:14,811 - ERROR -       ).get_module()
+2026-04-24 00:58:14,811 - ERROR -         ^^^^^^^^^^^^
+2026-04-24 00:58:14,811 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/evaluate/loading.py", line 489, in get_module
+2026-04-24 00:58:14,811 - ERROR -       local_imports = _download_additional_modules(
+2026-04-24 00:58:14,811 - ERROR -                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-24 00:58:14,811 - ERROR -     File "/home/lgarza3/.conda/envs/se_leak/lib/python3.11/site-packages/evaluate/loading.py", line 265, in _download_additional_modules
+2026-04-24 00:58:14,812 - ERROR -       raise ImportError(
+2026-04-24 00:58:14,812 - ERROR -   ImportError: To be able to use evaluate-metric/rouge, you need to install the following dependencies['rouge_score', 'absl'] using 'pip install rouge_score absl' for instance'
+2026-04-24 00:58:14,812 - ERROR -   --- evaluate_task.py stdout tail ---
+2026-04-24 00:58:14,812 - ERROR -   using http://127.0.0.1:8000/v1
+2026-04-24 00:58:14,812 - INFO - [2/12]
+2026-04-24 00:58:14,812 - INFO -   → RE vs llama3.1-8b
+2026-04-24 00:59:01,601 - INFO - Stopping vLLM server...

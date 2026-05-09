@@ -36,7 +36,7 @@ declare -A METHODS=(
 # Define models with their HuggingFace names
 declare -A MODELS=(
     ["llama3.1-8b"]="meta-llama/Llama-3.1-8B-Instruct"
-    ["llama3.1-70b"]="meta-llama/Llama-3.1-70B-Instruct"
+    ["llama3.1-70b"]="hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4"
     ["mistral-7b"]="mistralai/Mistral-7B-Instruct-v0.3"
     ["gpt-oss-20b"]="openai/gpt-oss-20b"
     ["qwen3.5-27b"]="Qwen/Qwen3.5-27B"
