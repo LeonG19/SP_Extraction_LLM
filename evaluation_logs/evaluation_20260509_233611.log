@@ -1,0 +1,211 @@
+2026-05-09 23:36:11,825 - INFO - Excluded models: ['gpt-oss-20b']
+2026-05-09 23:36:11,825 - INFO - Included methods (allowlist): ['fuzz', 'leakagent', 'pleak', 're']
+2026-05-09 23:36:11,825 - INFO - ================================================================================
+2026-05-09 23:36:11,825 - INFO - COMPREHENSIVE METHOD EVALUATION
+2026-05-09 23:36:11,825 - INFO - ================================================================================
+2026-05-09 23:36:11,825 - INFO - Timestamp: 20260509_233611
+2026-05-09 23:36:11,825 - INFO - Log dir:   evaluation_logs
+2026-05-09 23:36:11,825 - INFO - Results:   evaluation_results
+2026-05-09 23:36:11,825 - INFO - Server:    http://127.0.0.1:8001/v1
+2026-05-09 23:36:11,825 - INFO - Eval mode: MULTI_TURN
+2026-05-09 23:36:11,825 - INFO - 
+2026-05-09 23:36:11,825 - INFO - Models (outer loop, each loaded once):
+2026-05-09 23:36:11,825 - INFO -   - llama3.1-8b     (meta-llama/Llama-3.1-8B-Instruct)
+2026-05-09 23:36:11,825 - INFO -   - llama3.1-70b    (hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4s)
+2026-05-09 23:36:11,825 - INFO -   - mistral-7b      (mistralai/Mistral-7B-Instruct-v0.3)
+2026-05-09 23:36:11,825 - INFO -   - qwen3.5-27b     (Qwen/Qwen3.5-27B)
+2026-05-09 23:36:11,825 - INFO - Methods (inner loop, reusing the hot model):
+2026-05-09 23:36:11,825 - INFO -   - FUZZ       (llama3_fuzz_finetune)
+2026-05-09 23:36:11,825 - INFO -   - RE         (llama3_re_finetune)
+2026-05-09 23:36:11,825 - INFO -   - LEAKAGENT  (llama3_rl_finetune)
+2026-05-09 23:36:11,825 - INFO -   - PLEAK      (pleak_results)
+2026-05-09 23:36:11,825 - INFO - 
+2026-05-09 23:36:11,825 - INFO - ================================================================================
+2026-05-09 23:36:11,825 - INFO - MODEL: llama3.1-8b (meta-llama/Llama-3.1-8B-Instruct)
+2026-05-09 23:36:11,826 - INFO - ================================================================================
+2026-05-09 23:36:11,826 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --host 127.0.0.1 --port 8001 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.7 --max-model-len 8192 --enforce-eager --disable-log-stats
+2026-05-09 23:36:11,826 - INFO - vLLM server log: evaluation_logs/vllm_llama3.1-8b_20260509_233611.log
+2026-05-09 23:36:11,826 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_llama3.1-8b_20260509_233611.log )
+2026-05-09 23:36:11,829 - INFO - Waiting up to 900s for server to be ready...
+2026-05-09 23:36:11,829 - INFO - Startup in progress. Progress updates every 20s below.
+2026-05-09 23:36:23,843 - INFO - [12s] Stage: initializing vLLM engine
+2026-05-09 23:36:25,844 - INFO - [14s] Stage: loading weights into memory
+2026-05-09 23:36:31,846 - INFO - --- Status at 20s / 900s ---
+2026-05-09 23:36:31,847 - INFO -   Stage: loading weights into memory
+2026-05-09 23:36:31,942 - INFO -   GPU0: 15926/49140 MiB, 5% util | GPU1: 27/49140 MiB, 0% util | GPU2: 159/49140 MiB, 0% util
+2026-05-09 23:36:31,942 - INFO -   Last lines of vLLM log:
+2026-05-09 23:36:31,942 - INFO -     | (EngineCore_DP0 pid=894509) INFO 05-09 23:36:24 [flash_attn.py:587] Using FlashAttention version 2
+2026-05-09 23:36:31,942 - INFO -     | (EngineCore_DP0 pid=894509)
+2026-05-09 23:36:31,942 - INFO -     | Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+2026-05-09 23:36:31,942 - INFO -     | (EngineCore_DP0 pid=894509)
+2026-05-09 23:36:31,942 - INFO -     | Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:03<00:11,  3.95s/it]
+2026-05-09 23:36:31,942 - INFO -   ---
+2026-05-09 23:36:39,945 - INFO - [28s] Stage: weights loaded - initializing engine
+2026-05-09 23:36:41,946 - INFO - [30s] Stage: allocating KV cache
+2026-05-09 23:36:43,956 - INFO - [OK] Server answered /v1/models after 32.1s
+2026-05-09 23:36:43,956 - INFO - vLLM server ready at http://127.0.0.1:8001/v1
+2026-05-09 23:36:43,956 - INFO - [1/16]
+2026-05-09 23:36:43,957 - INFO -   → FUZZ vs llama3.1-8b (mode: multi_turn)
+2026-05-09 23:36:46,694 - INFO - PyTorch version 2.10.0 available.
+2026-05-09 23:36:47,057 - ERROR -   ✗ fuzz vs llama3.1-8b: [Errno 2] No such file or directory: 'test_data_pleak.csv'
+2026-05-09 23:36:47,058 - ERROR - Traceback (most recent call last):
+  File "/home/lgarza3/projects/rlagent/evaluate_all_methods.py", line 666, in _run_evaluation_extension_async
+    asyncio.run(
+  File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/lgarza3/projects/rlagent/extensions/multi_turn.py", line 55, in run_multi_turn
+    dataset = load_dataset(dataset_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/projects/rlagent/extensions/utils.py", line 43, in load_dataset
+    df = pd.read_csv(dataset_path)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'test_data_pleak.csv'
+
+2026-05-09 23:36:47,058 - INFO - [2/16]
+2026-05-09 23:36:47,058 - INFO -   → RE vs llama3.1-8b (mode: multi_turn)
+2026-05-09 23:36:47,063 - ERROR -   ✗ re vs llama3.1-8b: [Errno 2] No such file or directory: 'test_data_pleak.csv'
+2026-05-09 23:36:47,063 - ERROR - Traceback (most recent call last):
+  File "/home/lgarza3/projects/rlagent/evaluate_all_methods.py", line 666, in _run_evaluation_extension_async
+    asyncio.run(
+  File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/lgarza3/projects/rlagent/extensions/multi_turn.py", line 55, in run_multi_turn
+    dataset = load_dataset(dataset_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/projects/rlagent/extensions/utils.py", line 43, in load_dataset
+    df = pd.read_csv(dataset_path)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'test_data_pleak.csv'
+
+2026-05-09 23:36:47,063 - INFO - [3/16]
+2026-05-09 23:36:47,063 - INFO -   → LEAKAGENT vs llama3.1-8b (mode: multi_turn)
+2026-05-09 23:36:47,069 - ERROR -   ✗ leakagent vs llama3.1-8b: [Errno 2] No such file or directory: 'test_data_pleak.csv'
+2026-05-09 23:36:47,069 - ERROR - Traceback (most recent call last):
+  File "/home/lgarza3/projects/rlagent/evaluate_all_methods.py", line 666, in _run_evaluation_extension_async
+    asyncio.run(
+  File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/lgarza3/projects/rlagent/extensions/multi_turn.py", line 55, in run_multi_turn
+    dataset = load_dataset(dataset_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/projects/rlagent/extensions/utils.py", line 43, in load_dataset
+    df = pd.read_csv(dataset_path)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'test_data_pleak.csv'
+
+2026-05-09 23:36:47,069 - INFO - [4/16]
+2026-05-09 23:36:47,069 - INFO -   → PLEAK vs llama3.1-8b (mode: multi_turn)
+2026-05-09 23:36:47,074 - ERROR -   ✗ pleak vs llama3.1-8b: [Errno 2] No such file or directory: 'test_data_pleak.csv'
+2026-05-09 23:36:47,074 - ERROR - Traceback (most recent call last):
+  File "/home/lgarza3/projects/rlagent/evaluate_all_methods.py", line 666, in _run_evaluation_extension_async
+    asyncio.run(
+  File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/lgarza3/projects/rlagent/extensions/multi_turn.py", line 55, in run_multi_turn
+    dataset = load_dataset(dataset_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/projects/rlagent/extensions/utils.py", line 43, in load_dataset
+    df = pd.read_csv(dataset_path)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/lgarza3/.local/lib/python3.11/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'test_data_pleak.csv'
+
+2026-05-09 23:36:47,074 - INFO - Stopping vLLM server...
+2026-05-09 23:36:52,990 - INFO - vLLM server stopped
+2026-05-09 23:36:52,990 - INFO - ================================================================================
+2026-05-09 23:36:52,990 - INFO - MODEL: llama3.1-70b (hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4s)
+2026-05-09 23:36:52,990 - INFO - ================================================================================
+2026-05-09 23:36:52,991 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4s --host 127.0.0.1 --port 8001 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 1 --gpu-memory-utilization 0.7 --max-model-len 8192 --enforce-eager --disable-log-stats
+2026-05-09 23:36:52,991 - INFO - vLLM server log: evaluation_logs/vllm_llama3.1-70b_20260509_233611.log
+2026-05-09 23:36:52,991 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_llama3.1-70b_20260509_233611.log )
+2026-05-09 23:36:53,011 - INFO - Waiting up to 900s for server to be ready...
+2026-05-09 23:36:53,011 - INFO - Startup in progress. Progress updates every 20s below.
+2026-05-09 23:36:57,013 - INFO - [4s] Stage: downloading weights from HuggingFace
+2026-05-09 23:36:59,013 - ERROR - vLLM process exited after 6.0s with code 1 (see log tail below)

@@ -1,0 +1,177 @@
+2026-05-10 15:13:53,386 - INFO - Excluded models: ['gpt-oss-20b']
+2026-05-10 15:13:53,386 - INFO - Included methods (allowlist): ['fuzz', 'leakagent', 'pleak', 're']
+2026-05-10 15:13:53,386 - INFO - ================================================================================
+2026-05-10 15:13:53,386 - INFO - COMPREHENSIVE METHOD EVALUATION
+2026-05-10 15:13:53,386 - INFO - ================================================================================
+2026-05-10 15:13:53,386 - INFO - Timestamp: 20260510_151353
+2026-05-10 15:13:53,386 - INFO - Log dir:   evaluation_logs
+2026-05-10 15:13:53,386 - INFO - Results:   evaluation_results
+2026-05-10 15:13:53,386 - INFO - Server:    http://127.0.0.1:8001/v1
+2026-05-10 15:13:53,386 - INFO - Eval mode: REPEATED_PROMPT
+2026-05-10 15:13:53,386 - INFO - 
+2026-05-10 15:13:53,386 - INFO - Models (outer loop, each loaded once):
+2026-05-10 15:13:53,386 - INFO -   - llama3.1-8b     (meta-llama/Llama-3.1-8B-Instruct)
+2026-05-10 15:13:53,386 - INFO -   - llama3.1-70b    (hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4)
+2026-05-10 15:13:53,386 - INFO -   - mistral-7b      (mistralai/Mistral-7B-Instruct-v0.3)
+2026-05-10 15:13:53,386 - INFO -   - qwen3.5-27b     (Qwen/Qwen3.5-27B)
+2026-05-10 15:13:53,386 - INFO - Methods (inner loop, reusing the hot model):
+2026-05-10 15:13:53,386 - INFO -   - FUZZ       (llama3_fuzz_finetune)
+2026-05-10 15:13:53,386 - INFO -   - RE         (llama3_re_finetune)
+2026-05-10 15:13:53,387 - INFO -   - LEAKAGENT  (llama3_rl_finetune)
+2026-05-10 15:13:53,387 - INFO -   - PLEAK      (pleak_results)
+2026-05-10 15:13:53,387 - INFO - 
+2026-05-10 15:13:53,387 - INFO - ================================================================================
+2026-05-10 15:13:53,387 - INFO - MODEL: llama3.1-8b (meta-llama/Llama-3.1-8B-Instruct)
+2026-05-10 15:13:53,387 - INFO - ================================================================================
+2026-05-10 15:13:53,387 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --host 127.0.0.1 --port 8001 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 2 --gpu-memory-utilization 0.9 --max-model-len 8192 --enforce-eager --disable-log-stats
+2026-05-10 15:13:53,387 - INFO - vLLM server log: evaluation_logs/vllm_llama3.1-8b_20260510_151353.log
+2026-05-10 15:13:53,387 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_llama3.1-8b_20260510_151353.log )
+2026-05-10 15:13:53,389 - INFO - Waiting up to 900s for server to be ready...
+2026-05-10 15:13:53,389 - INFO - Startup in progress. Progress updates every 20s below.
+2026-05-10 15:14:03,394 - INFO - [10s] Stage: initializing vLLM engine
+2026-05-10 15:14:09,396 - INFO - [16s] Stage: loading weights into memory
+2026-05-10 15:14:11,397 - INFO - [18s] Stage: weights loaded - initializing engine
+2026-05-10 15:14:13,398 - INFO - --- Status at 20s / 900s ---
+2026-05-10 15:14:13,398 - INFO -   Stage: weights loaded - initializing engine
+2026-05-10 15:14:13,473 - INFO -   GPU0: 9132/49140 MiB, 0% util | GPU1: 9132/49140 MiB, 0% util | GPU2: 159/49140 MiB, 0% util
+2026-05-10 15:14:13,473 - INFO -   Last lines of vLLM log:
+2026-05-10 15:14:13,474 - INFO -     | (Worker pid=942586) (Worker_TP0 pid=942586)
+2026-05-10 15:14:13,474 - INFO -     | Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:01<00:00,  2.12it/s]
+2026-05-10 15:14:13,474 - INFO -     | (Worker pid=942586) (Worker_TP0 pid=942586)
+2026-05-10 15:14:13,474 - INFO -     | (Worker pid=942586) (Worker_TP0 pid=942586) INFO 05-10 15:14:10 [default_loader.py:293] Loading weights took 1.90 seconds
+2026-05-10 15:14:13,474 - INFO -     | (Worker pid=942586) (Worker_TP0 pid=942586) INFO 05-10 15:14:11 [gpu_model_runner.py:4364] Model loading took 7.51 GiB memory and 2.643635 seconds
+2026-05-10 15:14:13,474 - INFO -   ---
+2026-05-10 15:14:17,476 - INFO - [24s] Stage: allocating KV cache
+2026-05-10 15:14:21,480 - INFO - [OK] Server answered /v1/models after 28.1s
+2026-05-10 15:14:21,480 - INFO - vLLM server ready at http://127.0.0.1:8001/v1
+2026-05-10 15:14:21,480 - INFO - [1/16]
+2026-05-10 15:14:21,480 - INFO -   → FUZZ vs llama3.1-8b (mode: repeated_prompt)
+2026-05-10 15:14:23,960 - INFO - PyTorch version 2.10.0 available.
+2026-05-10 15:14:24,272 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2026-05-10 15:14:25,748 - INFO - Starting Repeated Prompt: attack=fuzz, target=llama3.1-8b, max_n=2
+2026-05-10 15:14:25,749 - INFO - Dataset: 58 system prompts, 5 attack prompts
+2026-05-10 15:14:26,948 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:14:26,952 - INFO - Using default tokenizer.
+2026-05-10 15:14:27,549 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:14:27,549 - INFO - Using default tokenizer.
+2026-05-10 15:14:28,190 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:14:28,191 - INFO - Using default tokenizer.
+2026-05-10 15:14:29,159 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:14:29,160 - INFO - Using default tokenizer.
+2026-05-10 15:14:31,815 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:14:31,816 - INFO - Using default tokenizer.
+2026-05-10 15:14:34,678 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:14:34,679 - INFO - Using default tokenizer.
+2026-05-10 15:14:35,476 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:14:35,477 - INFO - Using default tokenizer.
+2026-05-10 15:14:36,264 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:14:36,265 - INFO - Using default tokenizer.
+2026-05-10 15:14:36,881 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:14:36,882 - INFO - Using default tokenizer.
+2026-05-10 15:14:37,530 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:14:37,531 - INFO - Using default tokenizer.
+2026-05-10 15:14:37,950 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:14:37,951 - INFO - Using default tokenizer.
+2026-05-10 15:14:38,867 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:14:38,868 - INFO - Using default tokenizer.
+2026-05-10 15:14:44,165 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:14:44,166 - INFO - Using default tokenizer.
+2026-05-10 15:14:50,568 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:14:50,569 - INFO - Using default tokenizer.
+2026-05-10 15:14:56,222 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:14:56,222 - INFO - Using default tokenizer.
+2026-05-10 15:15:02,193 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:15:02,193 - INFO - Using default tokenizer.
+2026-05-10 15:15:10,415 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:15:10,416 - INFO - Using default tokenizer.
+2026-05-10 15:15:17,452 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:15:17,453 - INFO - Using default tokenizer.
+2026-05-10 15:15:20,611 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:15:20,612 - INFO - Using default tokenizer.
+2026-05-10 15:15:26,391 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:15:26,392 - INFO - Using default tokenizer.
+2026-05-10 15:15:32,154 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:15:32,155 - INFO - Using default tokenizer.
+2026-05-10 15:15:38,202 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:15:38,203 - INFO - Using default tokenizer.
+2026-05-10 15:15:45,301 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:15:45,302 - INFO - Using default tokenizer.
+2026-05-10 15:15:50,723 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:15:50,723 - INFO - Using default tokenizer.
+2026-05-10 15:15:56,310 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:15:56,311 - INFO - Using default tokenizer.
+2026-05-10 15:16:02,117 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:16:02,118 - INFO - Using default tokenizer.
+2026-05-10 15:16:08,401 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:16:08,402 - INFO - Using default tokenizer.
+2026-05-10 15:16:13,952 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:16:13,953 - INFO - Using default tokenizer.
+2026-05-10 15:16:20,355 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:16:20,356 - INFO - Using default tokenizer.
+2026-05-10 15:16:26,527 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:16:26,528 - INFO - Using default tokenizer.
+2026-05-10 15:16:33,047 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:16:33,048 - INFO - Using default tokenizer.
+2026-05-10 15:16:38,739 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:16:38,740 - INFO - Using default tokenizer.
+2026-05-10 15:16:44,958 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:16:44,959 - INFO - Using default tokenizer.
+2026-05-10 15:16:50,587 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:16:50,588 - INFO - Using default tokenizer.
+2026-05-10 15:16:57,133 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:16:57,134 - INFO - Using default tokenizer.
+2026-05-10 15:17:05,670 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:17:05,671 - INFO - Using default tokenizer.
+2026-05-10 15:17:09,132 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:17:09,133 - INFO - Using default tokenizer.
+2026-05-10 15:17:18,187 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:17:18,187 - INFO - Using default tokenizer.
+2026-05-10 15:17:21,365 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:17:21,366 - INFO - Using default tokenizer.
+2026-05-10 15:17:27,419 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:17:27,420 - INFO - Using default tokenizer.
+2026-05-10 15:17:32,409 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:17:32,410 - INFO - Using default tokenizer.
+2026-05-10 15:17:42,799 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:17:42,800 - INFO - Using default tokenizer.
+2026-05-10 15:17:44,405 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:17:44,406 - INFO - Using default tokenizer.
+2026-05-10 15:17:54,807 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:17:54,808 - INFO - Using default tokenizer.
+2026-05-10 15:17:56,432 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:17:56,433 - INFO - Using default tokenizer.
+2026-05-10 15:18:02,432 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:18:02,433 - INFO - Using default tokenizer.
+2026-05-10 15:18:08,423 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:18:08,423 - INFO - Using default tokenizer.
+2026-05-10 15:18:14,425 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:18:14,426 - INFO - Using default tokenizer.
+2026-05-10 15:18:20,408 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:18:20,409 - INFO - Using default tokenizer.
+2026-05-10 15:18:26,409 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:18:26,409 - INFO - Using default tokenizer.
+2026-05-10 15:18:26,426 - INFO - Progress: 5/58 (8%) ETA=2551s mean_rougeL=0.7659
+2026-05-10 15:18:32,352 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:18:32,353 - INFO - Using default tokenizer.
+2026-05-10 15:18:38,359 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:18:38,359 - INFO - Using default tokenizer.
+2026-05-10 15:18:44,352 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:18:44,353 - INFO - Using default tokenizer.
+2026-05-10 15:18:54,674 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:18:54,675 - INFO - Using default tokenizer.
+2026-05-10 15:18:56,362 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:18:56,363 - INFO - Using default tokenizer.
+2026-05-10 15:19:02,639 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:19:02,639 - INFO - Using default tokenizer.
+2026-05-10 15:19:08,707 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:19:08,707 - INFO - Using default tokenizer.
+2026-05-10 15:19:16,680 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:19:16,680 - INFO - Using default tokenizer.
+2026-05-10 15:19:20,360 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:19:20,361 - INFO - Using default tokenizer.
+2026-05-10 15:19:27,707 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:19:27,708 - INFO - Using default tokenizer.
+2026-05-10 15:19:36,799 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:19:36,800 - INFO - Using default tokenizer.
+2026-05-10 15:19:42,804 - INFO - HTTP Request: POST http://127.0.0.1:8001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 15:19:42,805 - INFO - Using default tokenizer.

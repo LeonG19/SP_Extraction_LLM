@@ -1,0 +1,197 @@
+2026-05-10 15:08:59,853 - INFO - Excluded models: ['gpt-oss-20b']
+2026-05-10 15:08:59,853 - INFO - Included methods (allowlist): ['fuzz', 'leakagent', 'pleak', 're']
+2026-05-10 15:08:59,853 - INFO - ================================================================================
+2026-05-10 15:08:59,853 - INFO - COMPREHENSIVE METHOD EVALUATION
+2026-05-10 15:08:59,853 - INFO - ================================================================================
+2026-05-10 15:08:59,853 - INFO - Timestamp: 20260510_150859
+2026-05-10 15:08:59,853 - INFO - Log dir:   evaluation_logs
+2026-05-10 15:08:59,853 - INFO - Results:   evaluation_results
+2026-05-10 15:08:59,853 - INFO - Server:    http://127.0.0.1:8001/v1
+2026-05-10 15:08:59,853 - INFO - Eval mode: REPEATED_PROMPT
+2026-05-10 15:08:59,853 - INFO - 
+2026-05-10 15:08:59,853 - INFO - Models (outer loop, each loaded once):
+2026-05-10 15:08:59,853 - INFO -   - llama3.1-8b     (meta-llama/Llama-3.1-8B-Instruct)
+2026-05-10 15:08:59,853 - INFO -   - llama3.1-70b    (hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4s)
+2026-05-10 15:08:59,853 - INFO -   - mistral-7b      (mistralai/Mistral-7B-Instruct-v0.3)
+2026-05-10 15:08:59,853 - INFO -   - qwen3.5-27b     (Qwen/Qwen3.5-27B)
+2026-05-10 15:08:59,853 - INFO - Methods (inner loop, reusing the hot model):
+2026-05-10 15:08:59,853 - INFO -   - FUZZ       (llama3_fuzz_finetune)
+2026-05-10 15:08:59,853 - INFO -   - RE         (llama3_re_finetune)
+2026-05-10 15:08:59,853 - INFO -   - LEAKAGENT  (llama3_rl_finetune)
+2026-05-10 15:08:59,854 - INFO -   - PLEAK      (pleak_results)
+2026-05-10 15:08:59,854 - INFO - 
+2026-05-10 15:08:59,854 - INFO - ================================================================================
+2026-05-10 15:08:59,854 - INFO - MODEL: llama3.1-8b (meta-llama/Llama-3.1-8B-Instruct)
+2026-05-10 15:08:59,854 - INFO - ================================================================================
+2026-05-10 15:08:59,854 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --host 127.0.0.1 --port 8001 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 3 --gpu-memory-utilization 0.7 --max-model-len 8192 --enforce-eager --disable-log-stats
+2026-05-10 15:08:59,854 - INFO - vLLM server log: evaluation_logs/vllm_llama3.1-8b_20260510_150859.log
+2026-05-10 15:08:59,854 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_llama3.1-8b_20260510_150859.log )
+2026-05-10 15:08:59,857 - INFO - Waiting up to 900s for server to be ready...
+2026-05-10 15:08:59,857 - INFO - Startup in progress. Progress updates every 20s below.
+2026-05-10 15:09:05,860 - ERROR - vLLM process exited after 6.0s with code 1 (see log tail below)
+2026-05-10 15:09:07,861 - ERROR - vLLM server failed to start: Python exception (see log tail)
+2026-05-10 15:09:07,861 - ERROR - --- vLLM server log tail ---
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831) INFO 05-10 15:09:03 [model.py:1554] Using max model len 8192
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831) INFO 05-10 15:09:03 [scheduler.py:231] Chunked prefill is enabled with max_num_batched_tokens=2048.
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831) Traceback (most recent call last):
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)   File "<frozen runpy>", line 198, in _run_module_as_main
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)   File "<frozen runpy>", line 88, in _run_code
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 545, in <module>
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)     uvloop.run(run_server(args))
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)   File "/home/lgarza3/.local/lib/python3.11/site-packages/uvloop/__init__.py", line 105, in run
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)     return runner.run(wrapper())
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)            ^^^^^^^^^^^^^^^^^^^^^
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/asyncio/runners.py", line 118, in run
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)     return self._loop.run_until_complete(task)
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)   File "/home/lgarza3/.local/lib/python3.11/site-packages/uvloop/__init__.py", line 61, in wrapper
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)     return await main
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)            ^^^^^^^^^^
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 471, in run_server
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 490, in run_server_worker
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)     async with build_async_engine_client(
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/contextlib.py", line 210, in __aenter__
+2026-05-10 15:09:07,861 - ERROR - (APIServer pid=940831)     return await anext(self.gen)
+2026-05-10 15:09:07,862 - ERROR - (APIServer pid=940831)            ^^^^^^^^^^^^^^^^^^^^^
+2026-05-10 15:09:07,862 - ERROR - (APIServer pid=940831)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 96, in build_async_engine_client
+2026-05-10 15:09:07,862 - ERROR - (APIServer pid=940831)     async with build_async_engine_client_from_engine_args(
+2026-05-10 15:09:07,862 - ERROR - (APIServer pid=940831)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/contextlib.py", line 210, in __aenter__
+2026-05-10 15:09:07,862 - ERROR - (APIServer pid=940831)     return await anext(self.gen)
+2026-05-10 15:09:07,862 - ERROR - (APIServer pid=940831)            ^^^^^^^^^^^^^^^^^^^^^
+2026-05-10 15:09:07,862 - ERROR - (APIServer pid=940831)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 122, in build_async_engine_client_from_engine_args
+2026-05-10 15:09:07,862 - ERROR - (APIServer pid=940831)     vllm_config = engine_args.create_engine_config(usage_context=usage_context)
+2026-05-10 15:09:07,862 - ERROR - (APIServer pid=940831)                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-05-10 15:09:07,862 - ERROR - (APIServer pid=940831)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/engine/arg_utils.py", line 1890, in create_engine_config
+2026-05-10 15:09:07,862 - ERROR - (APIServer pid=940831)     config = VllmConfig(
+2026-05-10 15:09:07,862 - ERROR - (APIServer pid=940831)              ^^^^^^^^^^^
+2026-05-10 15:09:07,862 - ERROR - (APIServer pid=940831)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/pydantic/_internal/_dataclasses.py", line 121, in __init__
+2026-05-10 15:09:07,862 - ERROR - (APIServer pid=940831)     s.__pydantic_validator__.validate_python(ArgsKwargs(args, kwargs), self_instance=s)
+2026-05-10 15:09:07,862 - ERROR - (APIServer pid=940831) pydantic_core._pydantic_core.ValidationError: 1 validation error for VllmConfig
+2026-05-10 15:09:07,862 - ERROR - (APIServer pid=940831)   Value error, Total number of attention heads (32) must be divisible by tensor parallel size (3). [type=value_error, input_value=ArgsKwargs((), {'model_co...transfer_config': None}), input_type=ArgsKwargs]
+2026-05-10 15:09:07,862 - ERROR - (APIServer pid=940831)     For further information visit https://errors.pydantic.dev/2.12/v/value_error
+2026-05-10 15:09:07,862 - ERROR - --- end of log tail ---
+2026-05-10 15:09:07,862 - ERROR - (full log: evaluation_logs/vllm_llama3.1-8b_20260510_150859.log)
+2026-05-10 15:09:07,862 - INFO - Stopping vLLM server...
+2026-05-10 15:09:12,862 - INFO - vLLM server stopped
+2026-05-10 15:09:12,862 - ERROR - Could not start server for llama3.1-8b: Python exception (see log tail). Marking all methods failed.
+2026-05-10 15:09:12,863 - INFO - [1/16]
+2026-05-10 15:09:12,863 - INFO - [2/16]
+2026-05-10 15:09:12,863 - INFO - [3/16]
+2026-05-10 15:09:12,863 - INFO - [4/16]
+2026-05-10 15:09:12,863 - INFO - ================================================================================
+2026-05-10 15:09:12,863 - INFO - MODEL: llama3.1-70b (hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4s)
+2026-05-10 15:09:12,863 - INFO - ================================================================================
+2026-05-10 15:09:12,863 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4s --host 127.0.0.1 --port 8001 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 3 --gpu-memory-utilization 0.7 --max-model-len 8192 --enforce-eager --disable-log-stats
+2026-05-10 15:09:12,863 - INFO - vLLM server log: evaluation_logs/vllm_llama3.1-70b_20260510_150859.log
+2026-05-10 15:09:12,863 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_llama3.1-70b_20260510_150859.log )
+2026-05-10 15:09:12,867 - INFO - Waiting up to 900s for server to be ready...
+2026-05-10 15:09:12,867 - INFO - Startup in progress. Progress updates every 20s below.
+2026-05-10 15:09:16,869 - INFO - [4s] Stage: downloading weights from HuggingFace
+2026-05-10 15:09:18,870 - ERROR - vLLM process exited after 6.0s with code 1 (see log tail below)
+2026-05-10 15:09:20,870 - ERROR - vLLM server failed to start: Model id not found on HF
+2026-05-10 15:09:20,870 - ERROR - --- vLLM server log tail ---
+2026-05-10 15:09:20,870 - ERROR - (APIServer pid=941048)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/asyncio/runners.py", line 118, in run
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)     return self._loop.run_until_complete(task)
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)   File "/home/lgarza3/.local/lib/python3.11/site-packages/uvloop/__init__.py", line 61, in wrapper
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)     return await main
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)            ^^^^^^^^^^
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 471, in run_server
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 490, in run_server_worker
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)     async with build_async_engine_client(
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/contextlib.py", line 210, in __aenter__
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)     return await anext(self.gen)
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)            ^^^^^^^^^^^^^^^^^^^^^
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 96, in build_async_engine_client
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)     async with build_async_engine_client_from_engine_args(
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/contextlib.py", line 210, in __aenter__
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)     return await anext(self.gen)
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)            ^^^^^^^^^^^^^^^^^^^^^
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 122, in build_async_engine_client_from_engine_args
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)     vllm_config = engine_args.create_engine_config(usage_context=usage_context)
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/engine/arg_utils.py", line 1468, in create_engine_config
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)     maybe_override_with_speculators(
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/transformers_utils/config.py", line 520, in maybe_override_with_speculators
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)     config_dict, _ = PretrainedConfig.get_config_dict(
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-05-10 15:09:20,871 - ERROR - (APIServer pid=941048)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/transformers/configuration_utils.py", line 662, in get_config_dict
+2026-05-10 15:09:20,872 - ERROR - (APIServer pid=941048)     config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+2026-05-10 15:09:20,872 - ERROR - (APIServer pid=941048)                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-05-10 15:09:20,872 - ERROR - (APIServer pid=941048)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/transformers/configuration_utils.py", line 721, in _get_config_dict
+2026-05-10 15:09:20,872 - ERROR - (APIServer pid=941048)     resolved_config_file = cached_file(
+2026-05-10 15:09:20,872 - ERROR - (APIServer pid=941048)                            ^^^^^^^^^^^^
+2026-05-10 15:09:20,872 - ERROR - (APIServer pid=941048)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/transformers/utils/hub.py", line 322, in cached_file
+2026-05-10 15:09:20,872 - ERROR - (APIServer pid=941048)     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+2026-05-10 15:09:20,872 - ERROR - (APIServer pid=941048)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-05-10 15:09:20,872 - ERROR - (APIServer pid=941048)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/transformers/utils/hub.py", line 511, in cached_files
+2026-05-10 15:09:20,872 - ERROR - (APIServer pid=941048)     raise OSError(
+2026-05-10 15:09:20,872 - ERROR - (APIServer pid=941048) OSError: hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4s is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+2026-05-10 15:09:20,872 - ERROR - (APIServer pid=941048) If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`
+2026-05-10 15:09:20,872 - ERROR - --- end of log tail ---
+2026-05-10 15:09:20,872 - ERROR - (full log: evaluation_logs/vllm_llama3.1-70b_20260510_150859.log)
+2026-05-10 15:09:20,872 - INFO - Stopping vLLM server...
+2026-05-10 15:09:25,872 - INFO - vLLM server stopped
+2026-05-10 15:09:25,873 - ERROR - Could not start server for llama3.1-70b: Model id not found on HF. Marking all methods failed.
+2026-05-10 15:09:25,873 - INFO - [5/16]
+2026-05-10 15:09:25,873 - INFO - [6/16]
+2026-05-10 15:09:25,873 - INFO - [7/16]
+2026-05-10 15:09:25,873 - INFO - [8/16]
+2026-05-10 15:09:25,873 - INFO - ================================================================================
+2026-05-10 15:09:25,873 - INFO - MODEL: mistral-7b (mistralai/Mistral-7B-Instruct-v0.3)
+2026-05-10 15:09:25,873 - INFO - ================================================================================
+2026-05-10 15:09:25,873 - INFO - Launching vLLM server: python -m vllm.entrypoints.openai.api_server --model mistralai/Mistral-7B-Instruct-v0.3 --host 127.0.0.1 --port 8001 --dtype bfloat16 --trust-remote-code --tensor-parallel-size 3 --gpu-memory-utilization 0.7 --max-model-len 8192 --enforce-eager --disable-log-stats
+2026-05-10 15:09:25,873 - INFO - vLLM server log: evaluation_logs/vllm_mistral-7b_20260510_150859.log
+2026-05-10 15:09:25,873 - INFO - (You can also watch it live in another terminal with:  tail -f evaluation_logs/vllm_mistral-7b_20260510_150859.log )
+2026-05-10 15:09:25,877 - INFO - Waiting up to 900s for server to be ready...
+2026-05-10 15:09:25,878 - INFO - Startup in progress. Progress updates every 20s below.
+2026-05-10 15:09:31,880 - ERROR - vLLM process exited after 6.0s with code 1 (see log tail below)
+2026-05-10 15:09:33,880 - ERROR - vLLM server failed to start: Python exception (see log tail)
+2026-05-10 15:09:33,881 - ERROR - --- vLLM server log tail ---
+2026-05-10 15:09:33,881 - ERROR - (APIServer pid=941267) INFO 05-10 15:09:30 [model.py:1554] Using max model len 8192
+2026-05-10 15:09:33,881 - ERROR - (APIServer pid=941267) INFO 05-10 15:09:30 [scheduler.py:231] Chunked prefill is enabled with max_num_batched_tokens=2048.
+2026-05-10 15:09:33,881 - ERROR - (APIServer pid=941267) Traceback (most recent call last):
+2026-05-10 15:09:33,881 - ERROR - (APIServer pid=941267)   File "<frozen runpy>", line 198, in _run_module_as_main
+2026-05-10 15:09:33,881 - ERROR - (APIServer pid=941267)   File "<frozen runpy>", line 88, in _run_code
+2026-05-10 15:09:33,881 - ERROR - (APIServer pid=941267)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 545, in <module>
+2026-05-10 15:09:33,881 - ERROR - (APIServer pid=941267)     uvloop.run(run_server(args))
+2026-05-10 15:09:33,881 - ERROR - (APIServer pid=941267)   File "/home/lgarza3/.local/lib/python3.11/site-packages/uvloop/__init__.py", line 105, in run
+2026-05-10 15:09:33,881 - ERROR - (APIServer pid=941267)     return runner.run(wrapper())
+2026-05-10 15:09:33,881 - ERROR - (APIServer pid=941267)            ^^^^^^^^^^^^^^^^^^^^^
+2026-05-10 15:09:33,881 - ERROR - (APIServer pid=941267)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/asyncio/runners.py", line 118, in run
+2026-05-10 15:09:33,881 - ERROR - (APIServer pid=941267)     return self._loop.run_until_complete(task)
+2026-05-10 15:09:33,881 - ERROR - (APIServer pid=941267)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-05-10 15:09:33,881 - ERROR - (APIServer pid=941267)   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2026-05-10 15:09:33,881 - ERROR - (APIServer pid=941267)   File "/home/lgarza3/.local/lib/python3.11/site-packages/uvloop/__init__.py", line 61, in wrapper
+2026-05-10 15:09:33,881 - ERROR - (APIServer pid=941267)     return await main
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)            ^^^^^^^^^^
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 471, in run_server
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 490, in run_server_worker
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)     async with build_async_engine_client(
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/contextlib.py", line 210, in __aenter__
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)     return await anext(self.gen)
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)            ^^^^^^^^^^^^^^^^^^^^^
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 96, in build_async_engine_client
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)     async with build_async_engine_client_from_engine_args(
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/contextlib.py", line 210, in __aenter__
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)     return await anext(self.gen)
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)            ^^^^^^^^^^^^^^^^^^^^^
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 122, in build_async_engine_client_from_engine_args
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)     vllm_config = engine_args.create_engine_config(usage_context=usage_context)
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/engine/arg_utils.py", line 1890, in create_engine_config
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)     config = VllmConfig(
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)              ^^^^^^^^^^^
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/pydantic/_internal/_dataclasses.py", line 121, in __init__
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)     s.__pydantic_validator__.validate_python(ArgsKwargs(args, kwargs), self_instance=s)
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267) pydantic_core._pydantic_core.ValidationError: 1 validation error for VllmConfig
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)   Value error, Total number of attention heads (32) must be divisible by tensor parallel size (3). [type=value_error, input_value=ArgsKwargs((), {'model_co...transfer_config': None}), input_type=ArgsKwargs]
+2026-05-10 15:09:33,882 - ERROR - (APIServer pid=941267)     For further information visit https://errors.pydantic.dev/2.12/v/value_error
+2026-05-10 15:09:33,882 - ERROR - --- end of log tail ---
+2026-05-10 15:09:33,882 - ERROR - (full log: evaluation_logs/vllm_mistral-7b_20260510_150859.log)
+2026-05-10 15:09:33,882 - INFO - Stopping vLLM server...

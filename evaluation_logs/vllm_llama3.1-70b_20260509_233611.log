@@ -1,0 +1,102 @@
+(APIServer pid=895034) INFO 05-09 23:36:56 [utils.py:302] 
+(APIServer pid=895034) INFO 05-09 23:36:56 [utils.py:302]        █     █     █▄   ▄█
+(APIServer pid=895034) INFO 05-09 23:36:56 [utils.py:302]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.17.1
+(APIServer pid=895034) INFO 05-09 23:36:56 [utils.py:302]   █▄█▀ █     █     █     █  model   hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4s
+(APIServer pid=895034) INFO 05-09 23:36:56 [utils.py:302]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=895034) INFO 05-09 23:36:56 [utils.py:302] 
+(APIServer pid=895034) INFO 05-09 23:36:56 [utils.py:238] non-default args: {'host': '127.0.0.1', 'port': 8001, 'model': 'hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4s', 'trust_remote_code': True, 'dtype': 'bfloat16', 'max_model_len': 8192, 'enforce_eager': True, 'gpu_memory_utilization': 0.7, 'disable_log_stats': True}
+(APIServer pid=895034) The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+(APIServer pid=895034) Traceback (most recent call last):
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+(APIServer pid=895034)     response.raise_for_status()
+(APIServer pid=895034)   File "/home/lgarza3/.local/lib/python3.11/site-packages/requests/models.py", line 1024, in raise_for_status
+(APIServer pid=895034)     raise HTTPError(http_error_msg, response=self)
+(APIServer pid=895034) requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4s/resolve/main/config.json
+(APIServer pid=895034) 
+(APIServer pid=895034) The above exception was the direct cause of the following exception:
+(APIServer pid=895034) 
+(APIServer pid=895034) Traceback (most recent call last):
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/transformers/utils/hub.py", line 479, in cached_files
+(APIServer pid=895034)     hf_hub_download(
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+(APIServer pid=895034)     return fn(*args, **kwargs)
+(APIServer pid=895034)            ^^^^^^^^^^^^^^^^^^^
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+(APIServer pid=895034)     return _hf_hub_download_to_cache_dir(
+(APIServer pid=895034)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+(APIServer pid=895034)     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1662, in _raise_on_head_call_error
+(APIServer pid=895034)     raise head_call_error
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+(APIServer pid=895034)     metadata = get_hf_file_metadata(
+(APIServer pid=895034)                ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+(APIServer pid=895034)     return fn(*args, **kwargs)
+(APIServer pid=895034)            ^^^^^^^^^^^^^^^^^^^
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+(APIServer pid=895034)     r = _request_wrapper(
+(APIServer pid=895034)         ^^^^^^^^^^^^^^^^^
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+(APIServer pid=895034)     response = _request_wrapper(
+(APIServer pid=895034)                ^^^^^^^^^^^^^^^^^
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+(APIServer pid=895034)     hf_raise_for_status(response)
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 453, in hf_raise_for_status
+(APIServer pid=895034)     raise _format(RepositoryNotFoundError, message, response) from e
+(APIServer pid=895034) huggingface_hub.errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-6a001978-4af18a9971d9d0f6182f92f3;cf2a1344-6a82-4925-b9e3-750d72b41937)
+(APIServer pid=895034) 
+(APIServer pid=895034) Repository Not Found for url: https://huggingface.co/hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4s/resolve/main/config.json.
+(APIServer pid=895034) Please make sure you specified the correct `repo_id` and `repo_type`.
+(APIServer pid=895034) If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+(APIServer pid=895034) 
+(APIServer pid=895034) The above exception was the direct cause of the following exception:
+(APIServer pid=895034) 
+(APIServer pid=895034) Traceback (most recent call last):
+(APIServer pid=895034)   File "<frozen runpy>", line 198, in _run_module_as_main
+(APIServer pid=895034)   File "<frozen runpy>", line 88, in _run_code
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 545, in <module>
+(APIServer pid=895034)     uvloop.run(run_server(args))
+(APIServer pid=895034)   File "/home/lgarza3/.local/lib/python3.11/site-packages/uvloop/__init__.py", line 105, in run
+(APIServer pid=895034)     return runner.run(wrapper())
+(APIServer pid=895034)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/asyncio/runners.py", line 118, in run
+(APIServer pid=895034)     return self._loop.run_until_complete(task)
+(APIServer pid=895034)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=895034)   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+(APIServer pid=895034)   File "/home/lgarza3/.local/lib/python3.11/site-packages/uvloop/__init__.py", line 61, in wrapper
+(APIServer pid=895034)     return await main
+(APIServer pid=895034)            ^^^^^^^^^^
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 471, in run_server
+(APIServer pid=895034)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 490, in run_server_worker
+(APIServer pid=895034)     async with build_async_engine_client(
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/contextlib.py", line 210, in __aenter__
+(APIServer pid=895034)     return await anext(self.gen)
+(APIServer pid=895034)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 96, in build_async_engine_client
+(APIServer pid=895034)     async with build_async_engine_client_from_engine_args(
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/contextlib.py", line 210, in __aenter__
+(APIServer pid=895034)     return await anext(self.gen)
+(APIServer pid=895034)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 122, in build_async_engine_client_from_engine_args
+(APIServer pid=895034)     vllm_config = engine_args.create_engine_config(usage_context=usage_context)
+(APIServer pid=895034)                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/engine/arg_utils.py", line 1468, in create_engine_config
+(APIServer pid=895034)     maybe_override_with_speculators(
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/transformers_utils/config.py", line 520, in maybe_override_with_speculators
+(APIServer pid=895034)     config_dict, _ = PretrainedConfig.get_config_dict(
+(APIServer pid=895034)                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/transformers/configuration_utils.py", line 662, in get_config_dict
+(APIServer pid=895034)     config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+(APIServer pid=895034)                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/transformers/configuration_utils.py", line 721, in _get_config_dict
+(APIServer pid=895034)     resolved_config_file = cached_file(
+(APIServer pid=895034)                            ^^^^^^^^^^^^
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/transformers/utils/hub.py", line 322, in cached_file
+(APIServer pid=895034)     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+(APIServer pid=895034)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=895034)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/transformers/utils/hub.py", line 511, in cached_files
+(APIServer pid=895034)     raise OSError(
+(APIServer pid=895034) OSError: hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4s is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+(APIServer pid=895034) If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`

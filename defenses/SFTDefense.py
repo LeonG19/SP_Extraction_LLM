@@ -1,9 +1,11 @@
 import os
+import sys
+from pathlib import Path
 from dataclasses import dataclass, field
 from typing import Optional
 
 import pandas as pd
-import wandb
+
 from accelerate import Accelerator
 from datasets import Dataset
 
@@ -20,6 +22,7 @@ from transformers import (
 from trl import set_seed, SFTConfig, SFTTrainer
 from transformers import BitsAndBytesConfig
 
+sys.path.insert(0, str(Path(__file__).parent.parent))
 from project_env import PROMPT_PATH
 
 tqdm.pandas()
@@ -166,7 +169,21 @@ if __name__ == "__main__":
     training_targets = pd.read_csv(os.path.join(PROMPT_PATH, "train_data_pleak.csv"))[
         "text"
     ].tolist()
-    for prompt in attack_prompts:
+
+    # Load good attack prompts from RL fine-tune
+    good_attack_prompts = pd.read_csv("/home/lgarza3/projects/rlagent/llama3_rl_finetune/good_prompts.csv")[
+        "text"
+    ].tolist()
+
+    # Combine all attack prompts
+    all_attack_prompts = attack_prompts + good_attack_prompts
+
+    print(f"Loaded {len(attack_prompts)} attack prompts")
+    print(f"Loaded {len(good_attack_prompts)} good attack prompts")
+    print(f"Total attack prompts: {len(all_attack_prompts)}")
+
+    # Add negative examples (refusal to all attack prompts)
+    for prompt in all_attack_prompts:
         for text in training_targets:
             messages_lst.append([
                 {"role": "system", "content": text},

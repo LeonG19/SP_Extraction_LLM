@@ -1,0 +1,50 @@
+(APIServer pid=941693) INFO 05-10 15:12:00 [utils.py:302] 
+(APIServer pid=941693) INFO 05-10 15:12:00 [utils.py:302]        █     █     █▄   ▄█
+(APIServer pid=941693) INFO 05-10 15:12:00 [utils.py:302]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.17.1
+(APIServer pid=941693) INFO 05-10 15:12:00 [utils.py:302]   █▄█▀ █     █     █     █  model   meta-llama/Llama-3.1-8B-Instruct
+(APIServer pid=941693) INFO 05-10 15:12:00 [utils.py:302]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=941693) INFO 05-10 15:12:00 [utils.py:302] 
+(APIServer pid=941693) INFO 05-10 15:12:00 [utils.py:238] non-default args: {'host': '127.0.0.1', 'port': 8001, 'model': 'meta-llama/Llama-3.1-8B-Instruct', 'trust_remote_code': True, 'dtype': 'bfloat16', 'max_model_len': 8192, 'enforce_eager': True, 'tensor_parallel_size': 3, 'gpu_memory_utilization': 0.7, 'disable_log_stats': True}
+(APIServer pid=941693) The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+(APIServer pid=941693) The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+(APIServer pid=941693) INFO 05-10 15:12:01 [model.py:531] Resolved architecture: LlamaForCausalLM
+(APIServer pid=941693) INFO 05-10 15:12:01 [model.py:1554] Using max model len 8192
+(APIServer pid=941693) INFO 05-10 15:12:01 [scheduler.py:231] Chunked prefill is enabled with max_num_batched_tokens=2048.
+(APIServer pid=941693) Traceback (most recent call last):
+(APIServer pid=941693)   File "<frozen runpy>", line 198, in _run_module_as_main
+(APIServer pid=941693)   File "<frozen runpy>", line 88, in _run_code
+(APIServer pid=941693)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 545, in <module>
+(APIServer pid=941693)     uvloop.run(run_server(args))
+(APIServer pid=941693)   File "/home/lgarza3/.local/lib/python3.11/site-packages/uvloop/__init__.py", line 105, in run
+(APIServer pid=941693)     return runner.run(wrapper())
+(APIServer pid=941693)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=941693)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/asyncio/runners.py", line 118, in run
+(APIServer pid=941693)     return self._loop.run_until_complete(task)
+(APIServer pid=941693)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=941693)   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+(APIServer pid=941693)   File "/home/lgarza3/.local/lib/python3.11/site-packages/uvloop/__init__.py", line 61, in wrapper
+(APIServer pid=941693)     return await main
+(APIServer pid=941693)            ^^^^^^^^^^
+(APIServer pid=941693)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 471, in run_server
+(APIServer pid=941693)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+(APIServer pid=941693)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 490, in run_server_worker
+(APIServer pid=941693)     async with build_async_engine_client(
+(APIServer pid=941693)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/contextlib.py", line 210, in __aenter__
+(APIServer pid=941693)     return await anext(self.gen)
+(APIServer pid=941693)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=941693)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 96, in build_async_engine_client
+(APIServer pid=941693)     async with build_async_engine_client_from_engine_args(
+(APIServer pid=941693)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/contextlib.py", line 210, in __aenter__
+(APIServer pid=941693)     return await anext(self.gen)
+(APIServer pid=941693)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=941693)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/entrypoints/openai/api_server.py", line 122, in build_async_engine_client_from_engine_args
+(APIServer pid=941693)     vllm_config = engine_args.create_engine_config(usage_context=usage_context)
+(APIServer pid=941693)                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=941693)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/vllm/engine/arg_utils.py", line 1890, in create_engine_config
+(APIServer pid=941693)     config = VllmConfig(
+(APIServer pid=941693)              ^^^^^^^^^^^
+(APIServer pid=941693)   File "/home/lgarza3/anaconda3/envs/leak/lib/python3.11/site-packages/pydantic/_internal/_dataclasses.py", line 121, in __init__
+(APIServer pid=941693)     s.__pydantic_validator__.validate_python(ArgsKwargs(args, kwargs), self_instance=s)
+(APIServer pid=941693) pydantic_core._pydantic_core.ValidationError: 1 validation error for VllmConfig
+(APIServer pid=941693)   Value error, Total number of attention heads (32) must be divisible by tensor parallel size (3). [type=value_error, input_value=ArgsKwargs((), {'model_co...transfer_config': None}), input_type=ArgsKwargs]
+(APIServer pid=941693)     For further information visit https://errors.pydantic.dev/2.12/v/value_error

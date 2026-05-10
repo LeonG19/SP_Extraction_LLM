@@ -1,0 +1,64 @@
+{
+  "best_global_step": 950,
+  "best_metric": 0.7346327900886536,
+  "best_model_checkpoint": "runs/sft/leakagent-d/checkpoint-950",
+  "epoch": 2.0,
+  "eval_steps": 500,
+  "global_step": 950,
+  "is_hyper_param_search": false,
+  "is_local_process_zero": true,
+  "is_world_process_zero": true,
+  "log_history": [
+    {
+      "epoch": 1.0,
+      "grad_norm": 25.507251739501953,
+      "learning_rate": 1.058242105263158e-05,
+      "loss": 2.3184,
+      "step": 475
+    },
+    {
+      "epoch": 1.0,
+      "eval_loss": 1.0175963640213013,
+      "eval_runtime": 229.3697,
+      "eval_samples_per_second": 16.541,
+      "eval_steps_per_second": 2.071,
+      "step": 475
+    },
+    {
+      "epoch": 2.0,
+      "grad_norm": 29.34480094909668,
+      "learning_rate": 7.057421052631579e-06,
+      "loss": 0.8599,
+      "step": 950
+    },
+    {
+      "epoch": 2.0,
+      "eval_loss": 0.7346327900886536,
+      "eval_runtime": 229.3289,
+      "eval_samples_per_second": 16.544,
+      "eval_steps_per_second": 2.071,
+      "step": 950
+    }
+  ],
+  "logging_steps": 500,
+  "max_steps": 1900,
+  "num_input_tokens_seen": 0,
+  "num_train_epochs": 4,
+  "save_steps": 500,
+  "stateful_callbacks": {
+    "TrainerControl": {
+      "args": {
+        "should_epoch_stop": false,
+        "should_evaluate": false,
+        "should_log": false,
+        "should_save": true,
+        "should_training_stop": false
+      },
+      "attributes": {}
+    }
+  },
+  "total_flos": 2.85431292608938e+17,
+  "train_batch_size": 8,
+  "trial_name": null,
+  "trial_params": null
+}

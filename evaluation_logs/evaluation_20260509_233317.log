@@ -1,0 +1,94 @@
+2026-05-09 23:33:17,263 - INFO - Excluded models: ['gpt-oss-20b']
+2026-05-09 23:33:17,263 - INFO - Included methods (allowlist): ['fuzz', 'leakagent', 'pleak', 're']
+2026-05-09 23:33:17,263 - INFO - ================================================================================
+2026-05-09 23:33:17,264 - INFO - COMPREHENSIVE METHOD EVALUATION
+2026-05-09 23:33:17,264 - INFO - ================================================================================
+2026-05-09 23:33:17,264 - INFO - Timestamp: 20260509_233317
+2026-05-09 23:33:17,264 - INFO - Log dir:   evaluation_logs
+2026-05-09 23:33:17,264 - INFO - Results:   evaluation_results
+2026-05-09 23:33:17,264 - INFO - Server:    http://127.0.0.1:8000/v1
+2026-05-09 23:33:17,264 - INFO - Eval mode: REPEATED_PROMPT
+2026-05-09 23:33:17,264 - INFO - 
+2026-05-09 23:33:17,264 - INFO - Models (outer loop, each loaded once):
+2026-05-09 23:33:17,264 - INFO -   - llama3.1-8b     (meta-llama/Llama-3.1-8B-Instruct)
+2026-05-09 23:33:17,264 - INFO -   - llama3.1-70b    (hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4s)
+2026-05-09 23:33:17,264 - INFO -   - mistral-7b      (mistralai/Mistral-7B-Instruct-v0.3)
+2026-05-09 23:33:17,264 - INFO -   - qwen3.5-27b     (Qwen/Qwen3.5-27B)
+2026-05-09 23:33:17,264 - INFO - Methods (inner loop, reusing the hot model):
+2026-05-09 23:33:17,264 - INFO -   - FUZZ       (llama3_fuzz_finetune)
+2026-05-09 23:33:17,264 - INFO -   - RE         (llama3_re_finetune)
+2026-05-09 23:33:17,264 - INFO -   - LEAKAGENT  (llama3_rl_finetune)
+2026-05-09 23:33:17,264 - INFO -   - PLEAK      (pleak_results)
+2026-05-09 23:33:17,264 - INFO - 
+2026-05-09 23:33:17,264 - INFO - ================================================================================
+2026-05-09 23:33:17,264 - INFO - MODEL: llama3.1-8b (meta-llama/Llama-3.1-8B-Instruct)
+2026-05-09 23:33:17,264 - INFO - ================================================================================
+2026-05-09 23:33:17,264 - ERROR - Port 8000 is already in use - aborting
+2026-05-09 23:33:17,264 - ERROR - Something else is listening on this port. Find and kill it with:  lsof -i :8000  (or)  fuser -k 8000/tcp
+2026-05-09 23:33:17,264 - ERROR - Could not start server for llama3.1-8b: Process did not start (log missing). Marking all methods failed.
+2026-05-09 23:33:17,264 - INFO - [1/16]
+2026-05-09 23:33:17,264 - INFO - [2/16]
+2026-05-09 23:33:17,264 - INFO - [3/16]
+2026-05-09 23:33:17,264 - INFO - [4/16]
+2026-05-09 23:33:17,264 - INFO - ================================================================================
+2026-05-09 23:33:17,264 - INFO - MODEL: llama3.1-70b (hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4s)
+2026-05-09 23:33:17,264 - INFO - ================================================================================
+2026-05-09 23:33:17,264 - ERROR - Port 8000 is already in use - aborting
+2026-05-09 23:33:17,264 - ERROR - Something else is listening on this port. Find and kill it with:  lsof -i :8000  (or)  fuser -k 8000/tcp
+2026-05-09 23:33:17,264 - ERROR - Could not start server for llama3.1-70b: Process did not start (log missing). Marking all methods failed.
+2026-05-09 23:33:17,264 - INFO - [5/16]
+2026-05-09 23:33:17,264 - INFO - [6/16]
+2026-05-09 23:33:17,264 - INFO - [7/16]
+2026-05-09 23:33:17,264 - INFO - [8/16]
+2026-05-09 23:33:17,264 - INFO - ================================================================================
+2026-05-09 23:33:17,264 - INFO - MODEL: mistral-7b (mistralai/Mistral-7B-Instruct-v0.3)
+2026-05-09 23:33:17,264 - INFO - ================================================================================
+2026-05-09 23:33:17,265 - ERROR - Port 8000 is already in use - aborting
+2026-05-09 23:33:17,265 - ERROR - Something else is listening on this port. Find and kill it with:  lsof -i :8000  (or)  fuser -k 8000/tcp
+2026-05-09 23:33:17,265 - ERROR - Could not start server for mistral-7b: Process did not start (log missing). Marking all methods failed.
+2026-05-09 23:33:17,265 - INFO - [9/16]
+2026-05-09 23:33:17,265 - INFO - [10/16]
+2026-05-09 23:33:17,265 - INFO - [11/16]
+2026-05-09 23:33:17,265 - INFO - [12/16]
+2026-05-09 23:33:17,265 - INFO - ================================================================================
+2026-05-09 23:33:17,265 - INFO - MODEL: qwen3.5-27b (Qwen/Qwen3.5-27B)
+2026-05-09 23:33:17,265 - INFO - ================================================================================
+2026-05-09 23:33:17,265 - ERROR - Port 8000 is already in use - aborting
+2026-05-09 23:33:17,265 - ERROR - Something else is listening on this port. Find and kill it with:  lsof -i :8000  (or)  fuser -k 8000/tcp
+2026-05-09 23:33:17,265 - ERROR - Could not start server for qwen3.5-27b: Process did not start (log missing). Marking all methods failed.
+2026-05-09 23:33:17,265 - INFO - [13/16]
+2026-05-09 23:33:17,265 - INFO - [14/16]
+2026-05-09 23:33:17,265 - INFO - [15/16]
+2026-05-09 23:33:17,265 - INFO - [16/16]
+2026-05-09 23:33:17,265 - INFO - 
+2026-05-09 23:33:17,265 - INFO - ================================================================================
+2026-05-09 23:33:17,265 - INFO - EVALUATION SUMMARY
+2026-05-09 23:33:17,265 - INFO - ================================================================================
+2026-05-09 23:33:17,265 - INFO - Total experiments: 16
+2026-05-09 23:33:17,265 - INFO - Successful: 0 ✓
+2026-05-09 23:33:17,265 - INFO - Failed:     16 ✗
+2026-05-09 23:33:17,265 - INFO - Skipped:    0 ⊘
+2026-05-09 23:33:17,265 - INFO - Success rate: 0.0%
+2026-05-09 23:33:17,265 - INFO - ================================================================================
+2026-05-09 23:33:17,265 - INFO - 
+Detailed Results:
+2026-05-09 23:33:17,265 - INFO - --------------------------------------------------------------------------------
+2026-05-09 23:33:17,265 - INFO - fuzz         | llama3.1-8b     | ✗ FAILED        | Server: Process did not start (log missing)
+2026-05-09 23:33:17,265 - INFO - re           | llama3.1-8b     | ✗ FAILED        | Server: Process did not start (log missing)
+2026-05-09 23:33:17,265 - INFO - leakagent    | llama3.1-8b     | ✗ FAILED        | Server: Process did not start (log missing)
+2026-05-09 23:33:17,265 - INFO - pleak        | llama3.1-8b     | ✗ FAILED        | Server: Process did not start (log missing)
+2026-05-09 23:33:17,265 - INFO - fuzz         | llama3.1-70b    | ✗ FAILED        | Server: Process did not start (log missing)
+2026-05-09 23:33:17,265 - INFO - re           | llama3.1-70b    | ✗ FAILED        | Server: Process did not start (log missing)
+2026-05-09 23:33:17,265 - INFO - leakagent    | llama3.1-70b    | ✗ FAILED        | Server: Process did not start (log missing)
+2026-05-09 23:33:17,265 - INFO - pleak        | llama3.1-70b    | ✗ FAILED        | Server: Process did not start (log missing)
+2026-05-09 23:33:17,265 - INFO - fuzz         | mistral-7b      | ✗ FAILED        | Server: Process did not start (log missing)
+2026-05-09 23:33:17,265 - INFO - re           | mistral-7b      | ✗ FAILED        | Server: Process did not start (log missing)
+2026-05-09 23:33:17,265 - INFO - leakagent    | mistral-7b      | ✗ FAILED        | Server: Process did not start (log missing)
+2026-05-09 23:33:17,265 - INFO - pleak        | mistral-7b      | ✗ FAILED        | Server: Process did not start (log missing)
+2026-05-09 23:33:17,265 - INFO - fuzz         | qwen3.5-27b     | ✗ FAILED        | Server: Process did not start (log missing)
+2026-05-09 23:33:17,265 - INFO - re           | qwen3.5-27b     | ✗ FAILED        | Server: Process did not start (log missing)
+2026-05-09 23:33:17,265 - INFO - leakagent    | qwen3.5-27b     | ✗ FAILED        | Server: Process did not start (log missing)
+2026-05-09 23:33:17,265 - INFO - pleak        | qwen3.5-27b     | ✗ FAILED        | Server: Process did not start (log missing)
+2026-05-09 23:33:17,265 - INFO - --------------------------------------------------------------------------------
+2026-05-09 23:33:17,265 - INFO - 
+Full log: evaluation_logs/evaluation_20260509_233317.log

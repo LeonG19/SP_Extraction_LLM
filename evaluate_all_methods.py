@@ -23,6 +23,7 @@ import socket
 import signal
 import logging
 import argparse
+import asyncio
 import subprocess
 import threading
 from datetime import datetime
@@ -139,7 +140,7 @@ METHODS: Dict[str, str] = {
     "fuzz-ft":   "llama3_fuzz_finetune",
     "re":        "llama3_re_finetune",
     "leakagent": "llama3_rl_finetune",
-    # "pleak":   <path>,   # uncomment and fill in if you have a prompts folder for PLeak
+    "pleak":   "pleak_results"
 }
 
 # Short name -> HF model id
@@ -153,12 +154,13 @@ MODELS: Dict[str, str] = {
 
 # vLLM server settings
 SERVER_HOST = "127.0.0.1"
-SERVER_PORT = 8000
+SERVER_PORT = 8001
 SERVER_URL = f"http://{SERVER_HOST}:{SERVER_PORT}/v1"
 API_KEY = "EMPTY"                 # vLLM accepts any non-empty key
 SERVER_STARTUP_TIMEOUT = 900      # 15 min - big models take a while to load
-DATASET_PATH = "test_data_pleak.csv"
+DATASET_PATH = "dataset/test_data_pleak.csv"
 N_SAMPLES = 5
+TENSOR_PARALLEL_SIZE = 1  # Number of GPUs to use in parallel
 
 
 # ---------------------------------------------------------------------------
@@ -433,7 +435,7 @@ def _classify_startup_error(log_path: Path) -> str:
     return "Startup failed (see log)"
 
 
-def start_vllm_server(model_hf: str, log_path: Path, gpu_memory_utilization: float = 0.50) -> Optional[subprocess.Popen]:
+def start_vllm_server(model_hf: str, log_path: Path, gpu_memory_utilization: float = 0.50, tensor_parallel_size: int = 1) -> Optional[subprocess.Popen]:
     """
     Launch a vLLM OpenAI-compatible server hosting `model_hf`.
     Returns the Popen handle, or None on failure. On failure, prints the
@@ -454,8 +456,7 @@ def start_vllm_server(model_hf: str, log_path: Path, gpu_memory_utilization: flo
         "--port", str(SERVER_PORT),
         "--dtype", "bfloat16",
         "--trust-remote-code",
-        # Single-H200 defaults. Adjust if you add more GPUs.
-        "--tensor-parallel-size", "1",
+        "--tensor-parallel-size", str(tensor_parallel_size),
         # GPU memory cap. This is a *fraction* of total GPU memory (144GB on
         # this server), not absolute. 0.50 -> ~72GB, which covers our largest
         # model (Qwen 27B in bf16: ~54GB weights + KV cache + overhead ~= 65GB).
@@ -529,55 +530,190 @@ def run_evaluation(
     model_hf: str,
     prompts_file: str,
     tracker: EvaluationTracker,
+    mode: str = "standard",
+    repeated_prompt_max_n: int = 64,
+    multi_turn_samples: Optional[int] = None,
 ) -> bool:
     if not Path(prompts_file).exists():
         logger.warning(f"Prompts file not found: {prompts_file}")
         tracker.add_result(method, model_name, "skipped", "Results file not found")
         return False
 
-    logger.info(f"  \u2192 {method.upper()} vs {model_name}")
-    cmd = [
-        "python", "evaluate_task.py",
-        "--prompts_data_path", prompts_file,
-        "--model_name",        model_hf,
-        "--n_samples",         str(N_SAMPLES),
-        "--dataset_path",      DATASET_PATH,
-        "--server_url",        SERVER_URL,
-        "--api_key",           API_KEY,
-        "--disable_tqdm",
-    ]
+    logger.info(f"  \u2192 {method.upper()} vs {model_name} (mode: {mode})")
 
-    try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=3600)
-        if result.returncode == 0:
-            logger.info(f"  \u2713 {method} vs {model_name}")
-            tracker.add_result(method, model_name, "success")
-            return True
-        # Grab the tail of whatever output we got - Python scripts often print
-        # tracebacks to stderr but some go to stdout.
-        stderr_tail = (result.stderr or "").strip().splitlines()[-15:]
-        stdout_tail = (result.stdout or "").strip().splitlines()[-5:]
-        logger.error(f"  \u2717 {method} vs {model_name} (exit code {result.returncode})")
-        if stderr_tail:
-            logger.error("  --- evaluate_task.py stderr tail ---")
-            for line in stderr_tail:
-                logger.error(f"  {line}")
-        if stdout_tail:
-            logger.error("  --- evaluate_task.py stdout tail ---")
-            for line in stdout_tail:
-                logger.error(f"  {line}")
-        # Short summary for the tracker table
-        err_summary = (stderr_tail[-1] if stderr_tail else
-                       stdout_tail[-1] if stdout_tail else
-                       f"exit {result.returncode}")
-        tracker.add_result(method, model_name, "failed", err_summary[:200])
+    if mode == "standard":
+        # Standard evaluation via evaluate_task.py
+        cmd = [
+            "python", "evaluate_task.py",
+            "--prompts_data_path", prompts_file,
+            "--model_name",        model_hf,
+            "--n_samples",         str(N_SAMPLES),
+            "--dataset_path",      DATASET_PATH,
+            "--server_url",        SERVER_URL,
+            "--api_key",           API_KEY,
+            "--disable_tqdm",
+        ]
+
+        try:
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=3600)
+            if result.returncode == 0:
+                logger.info(f"  \u2713 {method} vs {model_name}")
+                tracker.add_result(method, model_name, "success")
+                return True
+            # Grab the tail of whatever output we got - Python scripts often print
+            # tracebacks to stderr but some go to stdout.
+            stderr_tail = (result.stderr or "").strip().splitlines()[-15:]
+            stdout_tail = (result.stdout or "").strip().splitlines()[-5:]
+            logger.error(f"  \u2717 {method} vs {model_name} (exit code {result.returncode})")
+            if stderr_tail:
+                logger.error("  --- evaluate_task.py stderr tail ---")
+                for line in stderr_tail:
+                    logger.error(f"  {line}")
+            if stdout_tail:
+                logger.error("  --- evaluate_task.py stdout tail ---")
+                for line in stdout_tail:
+                    logger.error(f"  {line}")
+            # Short summary for the tracker table
+            err_summary = (stderr_tail[-1] if stderr_tail else
+                           stdout_tail[-1] if stdout_tail else
+                           f"exit {result.returncode}")
+            tracker.add_result(method, model_name, "failed", err_summary[:200])
+            return False
+        except subprocess.TimeoutExpired:
+            logger.error(f"  \u2717 {method} vs {model_name}: timeout")
+            tracker.add_result(method, model_name, "failed", "Timeout (>1 hour)")
+            return False
+        except Exception as e:
+            logger.error(f"  \u2717 {method} vs {model_name}: {e}")
+            tracker.add_result(method, model_name, "failed", str(e)[:200])
+            return False
+
+    elif mode == "multi_turn":
+        # Multi-turn evaluation via extensions
+        n_samples = multi_turn_samples if multi_turn_samples is not None else N_SAMPLES
+        return _run_evaluation_extension_async(
+            "multi_turn", method, model_name, prompts_file, tracker, n_samples
+        )
+
+    elif mode == "repeated_prompt":
+        # Repeated-prompt evaluation via extensions
+        return _run_evaluation_extension_async(
+            "repeated_prompt", method, model_name, prompts_file, tracker, repeated_prompt_max_n
+        )
+
+    else:
+        logger.error(f"Unknown evaluation mode: {mode}")
+        tracker.add_result(method, model_name, "failed", f"Unknown mode: {mode}")
         return False
-    except subprocess.TimeoutExpired:
+
+
+def _run_evaluation_extension_async(
+    extension_mode: str,
+    method: str,
+    model_name: str,
+    prompts_file: str,
+    tracker: EvaluationTracker,
+    samples_or_max_n: int = 64,
+) -> bool:
+    """Run evaluation using extension functions (multi-turn or repeated-prompt)."""
+    try:
+        from extensions.utils import make_client, load_attack_prompts, load_dataset
+        from extensions.multi_turn import run_multi_turn
+        from extensions.repeated_prompt import run_repeated_prompt
+
+        # Extract attack type from method name
+        attack_map = {
+            "fuzz": "fuzz",
+            "fuzz-ft": "fuzz",
+            "re": "re",
+            "leakagent": "leakagent",
+            "pleak": "pleak",
+        }
+        if method not in attack_map:
+            logger.error(f"Unknown attack method: {method}")
+            tracker.add_result(method, model_name, "failed", f"Unknown method: {method}")
+            return False
+
+        attack = attack_map[method]
+
+        # Create client
+        client = make_client(SERVER_URL, API_KEY)
+
+        # Load attack prompts to get count
+        try:
+            attack_prompts = load_attack_prompts(attack, n=5)
+        except FileNotFoundError:
+            logger.warning(f"Attack prompts not found for {method}")
+            tracker.add_result(method, model_name, "skipped", "Attack prompts not found")
+            return False
+
+        # Determine output directory
+        output_base = RESULTS_DIR / extension_mode
+        output_base.mkdir(parents=True, exist_ok=True)
+
+        # Get the model's HuggingFace ID from MODELS dict
+        model_hf = None
+        for short_name, hf_id in MODELS.items():
+            if short_name == model_name:
+                model_hf = hf_id
+                break
+
+        if not model_hf:
+            logger.error(f"Could not find model {model_name} in MODELS dict")
+            tracker.add_result(method, model_name, "failed", "Model not found")
+            return False
+
+        # Run the appropriate extension
+        if extension_mode == "multi_turn":
+            asyncio.run(
+                run_multi_turn(
+                    client=client,
+                    model=model_hf,
+                    attack=attack,
+                    target=model_name,
+                    temperature=0.8,
+                    dataset_path=DATASET_PATH,
+                    n_attack_prompts=5,
+                    n_samples=samples_or_max_n,
+                    output_dir=str(output_base),
+                    resume=False,
+                    logger=logger,
+                )
+            )
+        elif extension_mode == "repeated_prompt":
+            n_values = [n for n in [1, 2, 4, 8, 16, 32, 64] if n <= samples_or_max_n]
+            asyncio.run(
+                run_repeated_prompt(
+                    client=client,
+                    model=model_hf,
+                    attack=attack,
+                    target=model_name,
+                    n_values=n_values,
+                    temperature=0.8,
+                    dataset_path=DATASET_PATH,
+                    n_attack_prompts=5,
+                    output_dir=str(output_base),
+                    resume=False,
+                    logger=logger,
+                )
+            )
+
+        logger.info(f"  \u2713 {method} vs {model_name}")
+        tracker.add_result(method, model_name, "success")
+        return True
+
+    except ImportError as e:
+        logger.error(f"Could not import extensions: {e}")
+        tracker.add_result(method, model_name, "failed", f"Import error: {e}")
+        return False
+    except asyncio.TimeoutError:
         logger.error(f"  \u2717 {method} vs {model_name}: timeout")
-        tracker.add_result(method, model_name, "failed", "Timeout (>1 hour)")
+        tracker.add_result(method, model_name, "failed", "Timeout")
         return False
     except Exception as e:
         logger.error(f"  \u2717 {method} vs {model_name}: {e}")
+        import traceback
+        logger.error(traceback.format_exc())
         tracker.add_result(method, model_name, "failed", str(e)[:200])
         return False
 
@@ -698,6 +834,37 @@ Note: --models / --methods are applied before --exclude-models / --exclude-metho
         help="Fraction of GPU memory vLLM may use (0.0–1.0). Default: 0.50.",
     )
     p.add_argument(
+        "--multi-turn",
+        action="store_true",
+        help="Run multi-turn evaluation (2-turn sycophancy attack) instead of standard evaluation.",
+    )
+    p.add_argument(
+        "--repeated-prompt",
+        action="store_true",
+        help="Run repeated-prompt evaluation (prompt repeated N times) instead of standard evaluation.",
+    )
+    p.add_argument(
+        "--repeated-prompt-max-n",
+        type=int,
+        default=64,
+        metavar="N",
+        help="Maximum N for repeated-prompt evaluation. Default: 64.",
+    )
+    p.add_argument(
+        "--multi-turn-samples",
+        type=int,
+        default=None,
+        metavar="N",
+        help="Number of samples for multi-turn evaluation. If not specified, uses N_SAMPLES (default 5).",
+    )
+    p.add_argument(
+        "--tensor-parallel-size",
+        type=int,
+        default=1,
+        metavar="N",
+        help="Number of GPUs to use in parallel for vLLM inference. Default: 1.",
+    )
+    p.add_argument(
         "--list",
         action="store_true",
         help="Print the resolved model/method plan and exit without running.",
@@ -726,6 +893,19 @@ def main():
         logger.error("No methods remaining after exclusions - nothing to do.")
         sys.exit(1)
 
+    # Determine evaluation mode
+    num_modes = sum([args.multi_turn, args.repeated_prompt])
+    if num_modes > 1:
+        logger.error("Cannot specify both --multi-turn and --repeated-prompt")
+        sys.exit(1)
+
+    if args.multi_turn:
+        eval_mode = "multi_turn"
+    elif args.repeated_prompt:
+        eval_mode = "repeated_prompt"
+    else:
+        eval_mode = "standard"
+
     tracker = EvaluationTracker()
 
     logger.info("=" * 80)
@@ -735,6 +915,7 @@ def main():
     logger.info(f"Log dir:   {LOG_DIR}")
     logger.info(f"Results:   {RESULTS_DIR}")
     logger.info(f"Server:    {SERVER_URL}")
+    logger.info(f"Eval mode: {eval_mode.upper()}")
     logger.info("")
     logger.info("Models (outer loop, each loaded once):")
     for n, hf in models.items():
@@ -757,7 +938,7 @@ def main():
         logger.info("=" * 80)
 
         server_log = LOG_DIR / f"vllm_{model_name}_{TIMESTAMP}.log"
-        server = start_vllm_server(model_hf, server_log, args.gpu_memory_utilization)
+        server = start_vllm_server(model_hf, server_log, args.gpu_memory_utilization, args.tensor_parallel_size)
 
         if server is None:
             reason = _classify_startup_error(server_log)
@@ -777,7 +958,12 @@ def main():
                 logger.info(f"[{exp}/{total}]")
                 prompts_file = str(Path(result_dir) / "good_prompts.csv")
                 try:
-                    run_evaluation(method, model_name, model_hf, prompts_file, tracker)
+                    run_evaluation(
+                        method, model_name, model_hf, prompts_file, tracker,
+                        mode=eval_mode,
+                        repeated_prompt_max_n=args.repeated_prompt_max_n,
+                        multi_turn_samples=args.multi_turn_samples,
+                    )
                 except KeyboardInterrupt:
                     logger.warning("Interrupted by user")
                     stop_vllm_server(server)
