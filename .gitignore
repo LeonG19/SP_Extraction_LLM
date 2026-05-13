@@ -1,11 +1,71 @@
-.idea
-**/.env
-/tmp
-.python-version
+# ── Editor / OS ───────────────────────────────────────────────────
+.idea/
 .vscode/
+.DS_Store
+.python-version
+
+# ── Python ────────────────────────────────────────────────────────
 __pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# ── Environment ───────────────────────────────────────────────────
+**/.env
+.env
+
+# ── Experiment tracking ───────────────────────────────────────────
 wandb/
 **/*.ipynb
 **/rmit*
-pictures
-train_log
+
+# ── Logs ──────────────────────────────────────────────────────────
+*.log
+logs/
+train_log/
+evaluation_logs/
+
+# ── Generated evaluation outputs ──────────────────────────────────
+evaluation_results/
+pleak_results/
+runs/
+results/
+
+# ── Temporary / scratch files in root ─────────────────────────────
+/tmp
+pictures/
+PATHS_READY.txt
+CORRECTIONS_SUMMARY.txt
+
+# ── Generated documentation (auto-created, not hand-written) ──────
+EVALUATION_ARCHITECTURE.md
+EVALUATION_GUIDE.md
+EVALUATION_OUTPUT_EXAMPLES.md
+EVALUATION_README.md
+GPU_SETUP_GUIDE.md
+IMPLEMENTATION_SUMMARY.md
+METHODOLOGY_VERIFICATION.md
+METRICS_CALCULATION_REPORT.md
+OLD_VS_NEW_EVALUATION.md
+PATHS_AND_METHODOLOGY_FINAL.md
+PATH_VERIFICATION.md
+PLEAK_GUIDE.md
+PLEAK_IMPLEMENTATION_SUMMARY.md
+PLEAK_QUICK_START.md
+QUICK_REFERENCE.md
+RUN_EVALUATION_GUIDE.md
+TWO_GPU_SETUP_SUMMARY.md
+WES_METRICS_SUMMARY.md
+
+# ── Ad-hoc analysis scripts (not part of the main pipeline) ───────
+analyze_evaluation_results.py
+calculate_all_metrics.py
+calculate_comparison_metrics.py
+calculate_wes_metrics.py
+
+# ── Generated metric summaries in root ────────────────────────────
+metrics_averages_summary.csv
