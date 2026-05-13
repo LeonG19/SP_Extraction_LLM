@@ -1,0 +1,17 @@
+[0;34m[INFO][0m Starting Full Evaluation Suite
+[0;34m[INFO][0m Log file: evaluation_logs/evaluation_summary_20260511_002723.log
+
+================================================================================
+EVALUATING MODEL: mistral-7b
+================================================================================
+[0;34m[INFO][0m Starting vLLM server for mistral-7b on port 8000...
+[0;34m[INFO][0m vLLM process started (pid=987567)
+[0;34m[INFO][0m Waiting for server on port 8000 to be ready...
+[0;32m[SUCCESS][0m Server on port 8000 is ready
+
+================================================================================
+PHASE 1: BASE ATTACKS (STANDARD MODE) - mistral-7b
+================================================================================
+[0;34m[INFO][0m Evaluating all attack methods in standard mode for mistral-7b
+[0;34m[INFO][0m Cleaning up 1 vLLM server(s)...
+[0;34m[INFO][0m Killing vLLM process (pid=987567)

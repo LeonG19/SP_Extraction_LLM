@@ -1,0 +1,9 @@
+[0;34m[INFO][0m Starting Full Evaluation Suite
+[0;34m[INFO][0m Log file: evaluation_logs/evaluation_summary_20260511_005520.log
+
+================================================================================
+PHASE 1: BASE ATTACKS (STANDARD MODE)
+================================================================================
+[0;34m[INFO][0m Running: pleak vs llama3.1-8b (standard)
+[0;31m[ERROR][0m pleak vs llama3.1-8b (standard) - see evaluation_logs/eval_pleak_llama3.1-8b_standard_20260511_005520.log
+[0;34m[INFO][0m Running: pleak vs llama3.1-70b (standard)

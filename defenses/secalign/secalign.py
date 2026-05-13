@@ -40,6 +40,7 @@ SecAlignBaseModelId = {
     SecAlignModelId.secalign_llama2: SecAlignModelId.base_llama2,
     SecAlignModelId.secalign_llama3: SecAlignModelId.base_llama3,
     SecAlignModelId.secalign_mistral: SecAlignModelId.base_mistral,
+    "facebook/Meta-SecAlign-8B": "meta-llama/Llama-3.1-8B-Instruct",
 }
 
 SecAlignApplyDefensiveFilter = [
@@ -49,6 +50,7 @@ SecAlignApplyDefensiveFilter = [
     SecAlignModelId.secalign_llama2,
     SecAlignModelId.secalign_llama3,
     SecAlignModelId.secalign_mistral,
+    "facebook/Meta-SecAlign-8B",
 ]
 
 SecAlignInputDataList = TypeAdapter(list[SecAlignInputData])
@@ -56,7 +58,10 @@ SecAlignInputDataList = TypeAdapter(list[SecAlignInputData])
 
 class SecAlignModel:
     def __init__(self, model_id: str | SecAlignModelId, batch_size: int = 32):
-        model_id = SecAlignModelId(model_id).value
+        # Handle both enum and string model IDs
+        if isinstance(model_id, SecAlignModelId):
+            model_id = model_id.value
+        # else: keep as string if it's a direct model ID like "facebook/Meta-SecAlign-8B"
 
         self.model_id = model_id
         self.prompt_format = PROMPT_FORMAT["SpclSpclSpcl"]
@@ -66,21 +71,38 @@ class SecAlignModel:
 
     @staticmethod
     def load_model_and_tokenizer(model_id, device_map="auto"):
-        base_model_id = SecAlignBaseModelId.get(
-            SecAlignModelId(model_id), SecAlignModelId(model_id)
-        ).value
+        # Try to get base model ID from mapping, handling both enum and string inputs
+        try:
+            enum_id = SecAlignModelId(model_id)
+            base_model_id = SecAlignBaseModelId.get(enum_id, enum_id).value
+        except ValueError:
+            # If not an enum, look it up in the dict directly as a string
+            base_model_id = SecAlignBaseModelId.get(model_id, model_id)
         use_adapter = base_model_id != model_id
 
-        model: MistralForCausalLM | LlamaForCausalLM = (
-            AutoModelForCausalLM.from_pretrained(
-                base_model_id,
-                torch_dtype=torch.float16,
-                device_map=device_map,
-                attn_implementation="flash_attention_2",
-                low_cpu_mem_usage=True,
-                use_cache=False,
+        # Try to load with flash_attention_2, fallback to default if not available
+        load_kwargs = {
+            "dtype": torch.float16,
+            "device_map": device_map,
+            "low_cpu_mem_usage": True,
+            "use_cache": False,
+        }
+
+        try:
+            load_kwargs["attn_implementation"] = "flash_attention_2"
+            model: MistralForCausalLM | LlamaForCausalLM = (
+                AutoModelForCausalLM.from_pretrained(base_model_id, **load_kwargs)
             )
-        )
+        except Exception as e:
+            # Fallback without flash_attention_2 if it's not available
+            if "flash_attn" in str(e) or "FlashAttention" in str(e):
+                del load_kwargs["attn_implementation"]
+                model: MistralForCausalLM | LlamaForCausalLM = (
+                    AutoModelForCausalLM.from_pretrained(base_model_id, **load_kwargs)
+                )
+            else:
+                raise
+
         if use_adapter:
             model.load_adapter(model_id)
 

@@ -1,0 +1,29 @@
+================================================================================
+PATH VERIFICATION COMPLETE - ALL PATHS CORRECTED ✓
+================================================================================
+
+TRAINING PROMPTS - ALL FOUND:
+  pleak:      4 copies (one for each model, all use same file)
+  fuzz:       4 model-specific files (500KB each)
+  re:         4 model-specific files (212KB each)
+  leakagent:  4 model-specific files (168KB each)
+
+TEST DATA:
+  test_data_pleak.csv: 50 system prompts (24KB)
+
+DEFENSES:
+  ✓ PromptGuard:  prompt_guard.py (all models)
+  ✓ SecAlign:     defenses/secalign/secalign.py (llama3.1-8b)
+  ✓ SFT/LeakAgent-D: defenses/SFTDefense.py (llama3.1-8b)
+
+SCRIPT CORRECTIONS MADE:
+  ✓ Fixed training prompts path resolution
+  ✓ Added model name mapping (short → full names in files)
+  ✓ Implemented fallback logic for missing files
+  ✓ Verified all files exist
+
+READY TO RUN:
+  ./start_vllm_servers.sh start-8b
+  ./run_full_evaluation.sh all
+
+================================================================================

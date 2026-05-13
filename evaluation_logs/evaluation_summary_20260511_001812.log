@@ -1,0 +1,9 @@
+[0;34m[INFO][0m Starting Full Evaluation Suite
+[0;34m[INFO][0m Log file: evaluation_logs/evaluation_summary_20260511_001812.log
+[1;33m[WARNING][0m Model server at http://localhost:8001/v1 may not be running
+[1;33m[WARNING][0m Make sure to start vLLM server before running evaluations
+
+================================================================================
+PHASE 1: BASE ATTACKS (STANDARD MODE)
+================================================================================
+[0;34m[INFO][0m Evaluating all attack methods in standard mode

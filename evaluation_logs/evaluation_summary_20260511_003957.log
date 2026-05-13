@@ -1,0 +1,46 @@
+[0;34m[INFO][0m Starting Full Evaluation Suite
+[0;34m[INFO][0m Log file: evaluation_logs/evaluation_summary_20260511_003957.log
+
+================================================================================
+PHASE 1: BASE ATTACKS (STANDARD MODE)
+================================================================================
+[0;34m[INFO][0m Running: pleak vs mistral-7b (standard)
+[0;31m[ERROR][0m pleak vs mistral-7b (standard) - see evaluation_logs/eval_pleak_mistral-7b_standard_20260511_003957.log
+[0;34m[INFO][0m Running: pleak vs llama3.1-8b (standard)
+[0;31m[ERROR][0m pleak vs llama3.1-8b (standard) - see evaluation_logs/eval_pleak_llama3.1-8b_standard_20260511_003957.log
+[0;34m[INFO][0m Running: pleak vs qwen3.5-27b (standard)
+[0;31m[ERROR][0m pleak vs qwen3.5-27b (standard) - see evaluation_logs/eval_pleak_qwen3.5-27b_standard_20260511_003957.log
+[0;34m[INFO][0m Running: pleak vs llama3.1-70b (standard)
+[0;31m[ERROR][0m pleak vs llama3.1-70b (standard) - see evaluation_logs/eval_pleak_llama3.1-70b_standard_20260511_003957.log
+[0;34m[INFO][0m Running: re vs mistral-7b (standard)
+[0;31m[ERROR][0m re vs mistral-7b (standard) - see evaluation_logs/eval_re_mistral-7b_standard_20260511_003957.log
+[0;34m[INFO][0m Running: re vs llama3.1-8b (standard)
+[0;31m[ERROR][0m re vs llama3.1-8b (standard) - see evaluation_logs/eval_re_llama3.1-8b_standard_20260511_003957.log
+[0;34m[INFO][0m Running: re vs qwen3.5-27b (standard)
+[0;31m[ERROR][0m re vs qwen3.5-27b (standard) - see evaluation_logs/eval_re_qwen3.5-27b_standard_20260511_003957.log
+[0;34m[INFO][0m Running: re vs llama3.1-70b (standard)
+[0;31m[ERROR][0m re vs llama3.1-70b (standard) - see evaluation_logs/eval_re_llama3.1-70b_standard_20260511_003957.log
+[0;34m[INFO][0m Running: fuzz vs mistral-7b (standard)
+[0;31m[ERROR][0m fuzz vs mistral-7b (standard) - see evaluation_logs/eval_fuzz_mistral-7b_standard_20260511_003957.log
+[0;34m[INFO][0m Running: fuzz vs llama3.1-8b (standard)
+[0;31m[ERROR][0m fuzz vs llama3.1-8b (standard) - see evaluation_logs/eval_fuzz_llama3.1-8b_standard_20260511_003957.log
+[0;34m[INFO][0m Running: fuzz vs qwen3.5-27b (standard)
+[0;31m[ERROR][0m fuzz vs qwen3.5-27b (standard) - see evaluation_logs/eval_fuzz_qwen3.5-27b_standard_20260511_003957.log
+[0;34m[INFO][0m Running: fuzz vs llama3.1-70b (standard)
+[0;31m[ERROR][0m fuzz vs llama3.1-70b (standard) - see evaluation_logs/eval_fuzz_llama3.1-70b_standard_20260511_003957.log
+[0;34m[INFO][0m Running: leakagent vs mistral-7b (standard)
+[0;31m[ERROR][0m leakagent vs mistral-7b (standard) - see evaluation_logs/eval_leakagent_mistral-7b_standard_20260511_003957.log
+[0;34m[INFO][0m Running: leakagent vs llama3.1-8b (standard)
+[0;31m[ERROR][0m leakagent vs llama3.1-8b (standard) - see evaluation_logs/eval_leakagent_llama3.1-8b_standard_20260511_003957.log
+[0;34m[INFO][0m Running: leakagent vs qwen3.5-27b (standard)
+[0;31m[ERROR][0m leakagent vs qwen3.5-27b (standard) - see evaluation_logs/eval_leakagent_qwen3.5-27b_standard_20260511_003957.log
+[0;34m[INFO][0m Running: leakagent vs llama3.1-70b (standard)
+[0;31m[ERROR][0m leakagent vs llama3.1-70b (standard) - see evaluation_logs/eval_leakagent_llama3.1-70b_standard_20260511_003957.log
+[0;34m[INFO][0m Phase 1 Summary: 0/16 successful
+
+================================================================================
+EVALUATION SUITE COMPLETE
+================================================================================
+[0;32m[SUCCESS][0m All evaluations completed!
+[0;34m[INFO][0m Results directory: evaluation_results
+[0;34m[INFO][0m Summary log: evaluation_logs/evaluation_summary_20260511_003957.log

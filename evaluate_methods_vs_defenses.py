@@ -28,6 +28,7 @@ import argparse
 import asyncio
 import subprocess
 import threading
+import pandas as pd
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Any
@@ -118,7 +119,6 @@ signal.signal(signal.SIGINT, _signal_handler)
 
 ATTACK_METHODS: Dict[str, str] = {
     "fuzz":      "llama3_fuzz_finetune",
-    "fuzz-ft":   "llama3_fuzz_finetune",
     "re":        "llama3_re_finetune",
     "leakagent": "llama3_rl_finetune",
     "pleak":     "pleak_results",
@@ -134,6 +134,7 @@ MODELS: Dict[str, str] = {
     "llama3.1-8b":  "meta-llama/Llama-3.1-8B-Instruct",
     "llama3.1-70b": "meta-llama/Llama-3.1-70B-Instruct",
     "mistral-7b":   "mistralai/Mistral-7B-Instruct-v0.1",
+    "qwen3.5-27b":  "Qwen/Qwen3.5-27B",
 }
 
 API_KEY = os.getenv("OPENAI_API_KEY", "not-set")
@@ -375,21 +376,19 @@ def _apply_secalign(text: str) -> Dict[str, Any]:
     We generate a response using the SecAlign model and check if it refuses the request.
     """
     try:
-        from defenses.secalign.secalign import SecAlignModel, SecAlignModelId
+        from defenses.secalign.secalign import SecAlignModel
         import torch
 
-        # Load model once and cache it (using Llama3 model)
+        # Load model once and cache it (using Meta-SecAlign-8B model)
         if _secalign_cache["model"] is None:
-            logger.info("Loading SecAlign model (Llama3)...")
-            _secalign_cache["model"] = SecAlignModel(SecAlignModelId.secalign_llama3)
-            # Move to single GPU
-            if torch.cuda.is_available():
-                _secalign_cache["model"].model = _secalign_cache["model"].model.to("cuda:0")
+            logger.info("Loading SecAlign model (facebook/Meta-SecAlign-8B)...")
+            _secalign_cache["model"] = SecAlignModel("facebook/Meta-SecAlign-8B")
 
         secalign = _secalign_cache["model"]
 
         # Test the text as a user input to see how SecAlign responds
         messages = [
+            {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": text}
         ]
 
@@ -582,6 +581,19 @@ def evaluate_attack_vs_defense(
             )
             return False
 
+    # SecAlign is only evaluated on llama3.1-8b
+    if defense_method == "secalign":
+        if model_name != "llama3.1-8b":
+            logger.warning(
+                f"Skipping {attack_method} vs {defense_method} on {model_name}: "
+                f"SecAlign evaluation only on llama3.1-8b"
+            )
+            tracker.add_result(
+                attack_method, defense_method, model_name, "skipped",
+                "SecAlign evaluation only on llama3.1-8b"
+            )
+            return False
+
     logger.info(f"\nEvaluating {attack_method} vs {defense_method} on {model_name}")
 
     # Get the attack prompts file
@@ -592,7 +604,9 @@ def evaluate_attack_vs_defense(
         return False
 
     attack_dir = ATTACK_METHODS[attack_method]
-    prompts_file = Path(attack_dir) / f"{attack_method}_prompts.json"
+
+    # Try to find the prompts file (CSV format)
+    prompts_file = Path(attack_dir) / "good_prompts.csv"
 
     if not prompts_file.exists():
         logger.warning(f"Prompts file not found: {prompts_file}")
@@ -601,9 +615,22 @@ def evaluate_attack_vs_defense(
         return False
 
     try:
-        # Load attack prompts
-        with open(prompts_file) as f:
-            attack_prompts = json.load(f)
+        # Load attack prompts from CSV
+        df = pd.read_csv(prompts_file)
+
+        # Determine which column contains the prompts
+        prompt_column = None
+        for col in ["text", "prompt", "jailbreak", "attack"]:
+            if col in df.columns:
+                prompt_column = col
+                break
+
+        if prompt_column is None:
+            logger.warning(f"No prompt column found in {prompts_file}. Available columns: {df.columns.tolist()}")
+            # Use first column if no known column found
+            prompt_column = df.columns[0]
+
+        attack_prompts = df[prompt_column].tolist()
 
         # Evaluate each prompt against the defense
         detection_stats = {
@@ -613,18 +640,26 @@ def evaluate_attack_vs_defense(
             "detection_scores": [],
         }
 
-        for i, prompt in enumerate(attack_prompts[:10]):  # Limit to 10 for speed
-            result = apply_defense(defense_method, prompt.get("text", prompt))
-            detection_stats["detection_scores"].append(result.get("score", 0.0))
-            if result.get("detected", False):
-                detection_stats["detected"] += 1
-            else:
-                detection_stats["not_detected"] += 1
+        # Evaluate up to 10 prompts for speed
+        num_to_eval = min(10, len(attack_prompts))
+        for i in range(num_to_eval):
+            prompt = attack_prompts[i]
+            if isinstance(prompt, str):
+                result = apply_defense(defense_method, prompt)
+                detection_stats["detection_scores"].append(result.get("score", 0.0))
+                if result.get("detected", False):
+                    detection_stats["detected"] += 1
+                else:
+                    detection_stats["not_detected"] += 1
 
         # Calculate average detection rate
-        detection_rate = detection_stats["detected"] / max(1, len(detection_stats["detection_scores"]))
-        detection_stats["detection_rate"] = detection_rate
-        detection_stats["avg_score"] = sum(detection_stats["detection_scores"]) / max(1, len(detection_stats["detection_scores"]))
+        if detection_stats["detection_scores"]:
+            detection_rate = detection_stats["detected"] / len(detection_stats["detection_scores"])
+            detection_stats["detection_rate"] = detection_rate
+            detection_stats["avg_score"] = sum(detection_stats["detection_scores"]) / len(detection_stats["detection_scores"])
+        else:
+            detection_stats["detection_rate"] = 0.0
+            detection_stats["avg_score"] = 0.0
 
         tracker.add_result(
             attack_method, defense_method, model_name, "success",

@@ -1,0 +1,7 @@
+[0;34m[INFO][0m Starting Full Evaluation Suite
+[0;34m[INFO][0m Log file: evaluation_logs/evaluation_summary_20260511_005341.log
+
+================================================================================
+PHASE 1: BASE ATTACKS (STANDARD MODE)
+================================================================================
+[0;34m[INFO][0m Running: pleak vs mistral-7b (standard)
